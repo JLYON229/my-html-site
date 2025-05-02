@@ -130,6 +130,23 @@
     background-color: #44B2E5;
   }
 
+.progress-container {
+  width: 100%;
+  background-color: #44B2E5; /* Unfilled background */
+  height: 10px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0%;
+  background-color: #112663; /* Filled color */
+  transition: width 0.4s ease-in-out;
+}
+
+
   @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
@@ -137,10 +154,10 @@
 </style>
 </head>
 <body>
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
   <div class="container">
-
-
-
 
 
 
@@ -1220,7 +1237,7 @@ Split:  [25th Apr / $900] → [28th Apr / $500] & [EOP / $400]
 <script>
   let selectedDepartment = "";
   let selectedCallType = "";
-  let stepHistory = ["step1"];
+  let stepHistory = [];
 
   // Hide all steps
   function hideAllSteps() {
@@ -1234,6 +1251,8 @@ Split:  [25th Apr / $900] → [28th Apr / $500] & [EOP / $400]
     if (step) {
       step.classList.add('visible');
       stepHistory.push(id);
+      updateProgressBar(); // this now starts once agent manually moves
+
     }
 
     document.querySelectorAll('.back-button').forEach(btn => {
@@ -1248,6 +1267,8 @@ Split:  [25th Apr / $900] → [28th Apr / $500] & [EOP / $400]
       const prev = stepHistory[stepHistory.length - 1];
       hideAllSteps();
       document.getElementById(prev).classList.add('visible');
+      updateProgressBar(); // ✅ New line
+
     }
   }
 
@@ -1258,7 +1279,18 @@ Split:  [25th Apr / $900] → [28th Apr / $500] & [EOP / $400]
     stepHistory = ["step1"];
     document.getElementById("finalMessage").innerText = "";
     showStep("step1");
+    updateProgressBar(); // ✅ This line resets the bar visually to 0%
+
   }
+
+function updateProgressBar() {
+  const bar = document.getElementById("progressBar");
+  const totalSteps = 10; // You can adjust if needed
+  const current = stepHistory.length;
+  const percent = Math.min((current / totalSteps) * 100, 100);
+  bar.style.width = percent + "%";
+}
+
 
   // Department selection
   function selectDepartment(dept) {
@@ -1322,6 +1354,16 @@ Split:  [25th Apr / $900] → [28th Apr / $500] & [EOP / $400]
     showStep("debtChecklist");
   }
 
+document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("progressBar").style.width = "0%";
+});
+
   // Start journey at main step
-  window.onload = () => showStep("step1");
+window.onload = () => {
+  stepHistory = ["step1"];
+  hideAllSteps();
+  document.getElementById("step1").classList.add("visible");
+  document.getElementById("progressBar").style.width = "0%"; // force-start at zero
+};
+
 </script>
