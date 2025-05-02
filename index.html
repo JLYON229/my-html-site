@@ -37,6 +37,40 @@
     text-align: center;
   }
 
+.left-align-text {
+  text-align: left;
+}
+
+.button.full-width {
+  width: 100%;
+}
+
+.left-align-text {
+  text-align: left;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+
+.left-align {
+  text-align: left;
+}
+
+#step3 {
+  text-align: left;
+}
+
+#step3 .whats-your-path {
+  font-size: 19px;     /* 1px bigger */
+  font-weight: 600;    /* Bold */
+  margin-top: 20px;    /* Optional: adds space above for clarity */
+}
+
+#step3 .left-text {
+  text-align: left;
+}
+
+
   .button {
     background-color: #112663;
     color: white;
@@ -59,13 +93,14 @@
     transform: scale(1.03);
   }
 
-  .button-grid {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-    margin-top: 25px;
-  }
+.button-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* 👈 align left */
+  gap: 15px;
+  margin-top: 25px;
+}
+
 
   .button-grid.grid-2 {
     display: grid;
@@ -214,19 +249,23 @@
 
 
     <!-- Step 3: Customer Service – Inbound Paths -->
-    <div id="step3" class="step">
+<div id="step3" class="step left-align">
       <h2>Customer Service – Inbound Paths</h2>
 
       <!-- Inbound Authentication -->
-      <h3><strong>Client Authentication</strong> and Verification</h3>
+<h3 class="left-text"><strong>Client Authentication</strong> and Verification</h3>
       <div class="button-grid grid-1">
         <label><input type="checkbox"> Verify Full Name</label>
         <label><input type="checkbox"> Verify Date of Birth</label>
         <label><input type="checkbox"> Verify Full Address</label>
         
       </div>
-      <p style="color: red; font-style: italic;">At least two of these details must be verified before proceeding.</p>
-      <p style="font-style: italic;">Ask the client: <strong>“Have any of your contact details changed since our last conversation?”</strong></p>
+<p class="left-text" style="color: red; font-style: italic;">
+  At least two of these details must be verified before proceeding.
+</p>
+<p class="left-text" style="font-style: italic;">
+  Ask the client: <strong>“Have any of your contact details changed since our last conversation?”</strong>
+</p>
         
       <div class="button-grid grid-1">
 
@@ -234,7 +273,7 @@
         <label><input type="checkbox"> Verify Additional Phone Numbers</label>
 
       </div>
-  <p><br>What's your path?</br></p>
+ <p class="whats-your-path">What's your path?</p>
 
 
       <!-- Inbound Action Buttons -->
@@ -280,9 +319,6 @@
   </div>
   <button class="back-button" onclick="goBack()">🔙 Back</button>
 </div>
-
-
-
 <!-- Debt Checklist (dynamically loaded) -->
 <div id="debtChecklist" class="step">
   <h2>Steps to Add a Debt</h2>
@@ -295,76 +331,142 @@
 
 
 
-<!-- Remove a Debt -->
-<div id="removeDebt" class="step">
-  <h2>➖ Remove a Debt</h2>
+
+
+
+<!-- Step 1: Verify Caller -->
+<div id="cancelVerify" class="step">
+  <h2>❌ Cancellation Request – Verify Caller</h2>
+  <p>Is the person requesting the cancellation the client?</p>
+  <div class="button-grid grid-2">
+    <button class="button" onclick="showStep('cancelFileActions')">✅ Yes, it's the client</button>
+    <button class="button" onclick="showStep('cancelEnd')">❌ No, authorized speaker</button>
+  </div>
+  <button class="back-button" onclick="goBack()">🔙 Back</button>
+</div>
+<!-- End Call -->
+<div id="cancelEnd" class="step">
+  <h2>End of Call</h2>
+  <p>We cannot cancel the program without the client’s request.</p>
+  <div class="button-grid">
+    <button class="button" onclick="resetFlow()">🏠 Home Page </button>
+  </div>
+  <button class="back-button" onclick="goBack()">🔙 Back</button>
+</div>
+<!-- Step 2: File Actions -->
+<div id="cancelFileActions" class="step">
+  <h2>Step 2: File Actions</h2>
   <ul>
-    <li><label><input type="checkbox"> Open “Request to Remove a Debt” note template.</label></li>
-    <li><label><input type="checkbox"> Complete the template properly and save it to the client file.</label></li>
-    <li><label><input type="checkbox"> Attempt to transfer to ACH for confirmation and task assignment.</label></li>
+    <li><label><input type="checkbox"> Go to Enrollment tab → Click on "Pause Payments"</label></li> <!--Pause payments in Enrollment tab.-->
+    <li><label><input type="checkbox"> Add note → Use “Cancel Request” template.</label></li>  <!-- Create a note using “Cancel Request” template. -->
+    <li><label><input type="checkbox"> Update FORTH status to “Cancellation Requested.”</label></li>
   </ul>
   <div class="button-grid">
-    <button class="button" onclick="showStep('ach')">Transfer to ACH</button>
+    <button class="button" onclick="showStep('cancelSpecialCases')">➡️ Next</button>
+  </div>
+  <button class="back-button" onclick="goBack()">🔙 Back</button>
+</div>
+<!-- Step 3: Case Transfers -->
+<div id="cancelSpecialCases" class="step">
+  <h2>Step 3: Case Transfers</h2>
+    <p class="left-align-text"> If the file belongs to one of the providers below, follow specific transfer instructions: </p>
+
+  <ul style="list-style: none; padding-left: 0; margin-top: 15px;">
+    <li><strong style="color:red;">CREDIT CARE SOLUTION:</strong> Transfer to +1-949-787-6008 or +1-949-490-6316 and tag <code>retentions@clientcare.com</code> + sales rep.</li>
+    <li><strong style="color:red;">LOAN RATE PAL:</strong> Transfer to +1-561-678-5408 and tag <code>jsamuels@loanratepal.com</code>, <code>processing@loanratepal.com</code> + sales rep.</li>
+    <li><strong style="color:red;">BOTTOM LINE ACCESS:</strong> Transfer to +1-516-202-6237 and tag <code>info@saldardeudas.com</code> + sales rep.</li>
+    <li><strong style="color:red;">MITIGATELY:</strong> Follow internal Retention Team process.</li>
+  </ul>
+
+  <p>If not in the list, transfer to the <strong>Retention Department</strong>.</p>
+
+  <div class="button-grid">
+    <button class="button" onclick="showStep('cancelTimeline')">➡️ Next</button>
+  </div>
+  <button class="back-button" onclick="goBack()">🔙 Back</button>
+</div>
+<!-- Step 4: Cancellation Timeline -->
+<div id="cancelTimeline" class="step">
+  <h2>Step 4: Cancellation Timeline</h2>
+  <ul>
+    <li>📆 5–7 business days to complete cancellation.</li>
+    <li>💸 Refund processed within 7–10 business days after cancellation.</li>
+  </ul>
+  <div class="button-grid">
+    <button class="button" onclick="showStep('cancelEscalation')">➡️ Next</button>
+  </div>
+  <button class="back-button" onclick="goBack()">🔙 Back</button>
+</div>
+<!-- Step 5: Escalation -->
+<div id="cancelEscalation" class="step">
+  <h2>Step 5: Escalation Note</h2>
+  <p style="background:#fff9e6; border-left: 4px solid #ffc107; padding: 15px;">
+    ⏰ <strong>If file is not cancelled within 7 business days, notify your lead immediately.</strong>
+  </p>
+  <div class="button-grid">
+    <button class="button" onclick="resetFlow()">🏠 Home Page </button>
   </div>
   <button class="back-button" onclick="goBack()">🔙 Back</button>
 </div>
 
 
 
-<!-- Updating Bank Information -->
-<div id="updateBank" class="step">
-  <h2>🏦 Updating Bank Information</h2>
-  <h3>🔄 Change Banking Details</h3>
+
+
+
+<!-- Client’s Passing -->
+<div id="clientPassing" class="step">
+  <h2>🕊️ Client’s Passing</h2>
+  <p>If a client has passed away, handle with professionalism and compassion.</p>
+
+  <p><strong>Important:</strong> If a relative calls, you do not need to authenticate them, but you cannot share account details.</p>
+
   <ul>
-    <li><label><input type="checkbox"> Go to the Bank Account tab in the client’s file.</label></li>
-    <li><label><input type="checkbox"> Enter new Routing and Account Number.</label></li>
-    <li><label><input type="checkbox"> Confirm Account Type (Checking or Savings).</label></li>
-    <li><label><input type="checkbox"> Save changes in the system.</label></li>
+    <li><label><input type="checkbox"> Request a scanned copy of the death certificate and provide the appropriate upload email.</label></li>
+    <li><label><input type="checkbox"> Upload the document to the client’s file.</label></li>
+    <li><label><input type="checkbox"> Add note → Use “Document Uploaded” template. </label></li>
+    <li><label><input type="checkbox"> Go to Tasks → Create a task assigned to the file's team color.</label></li>
+    <li><label><input type="checkbox"> Go to Tasks → Create a task type: “Follow Up: Death Certificate." for <strong>JR Negotiations</strong></label></li>
   </ul>
 
-  <h3>📄 Generate & Send Document</h3>
-  <ul>
-    <li><label><input type="checkbox"> Go to Docs Section → Generate Document.</label></li>
-    <li><label><input type="checkbox"> Select the correct template:
-      <ul>
-        <li><strong>FORTH:</strong> “Forth Bank Change Request”</li>
-        <li><strong>CFT:</strong> “CFT - Draft Modification Form (Payments Made) - UPDATED”</li>
-      </ul>
-    </label></li>
-    <li><label><input type="checkbox"> Send for electronic signature.</label></li>
-    <li><label><input type="checkbox"> Add note using Bank Change template.</label></li>
-  </ul>
-
-  <h3>📥 Upload Confirmation</h3>
-  <ul>
-    <li><label><input type="checkbox"> Verify that “Signers Left” is zero in Clixign.</label></li>
-    <li><label><input type="checkbox"> Download and upload signed document under “ACH Authorization.”</label></li>
-  </ul>
+  <p style="background:#fff5f5; padding:10px; border-left: 4px solid red; font-style: italic;">
+    If asked about the debt status: “I’m not authorized to provide legal advice. Please consult with a local attorney.”
+  </p>
 
   <div class="button-grid">
-    <button class="button" onclick="resetFlow()">✔️ Finish</button>
+    <button class="button" onclick="resetFlow()">🏠 Home Page </button>
   </div>
   <button class="back-button" onclick="goBack()">🔙 Back</button>
 </div>
+
+
+
 
 
 
 <!-- Draft Change -->
 <div id="draftChange" class="step">
   <h2>✏️ Draft Change Request</h2>
-  <p>Clients may request changes including:</p>
-  <ul>
+
+  <p class="left-align-text">Clients may request changes including:</p>
+  <ul class="left-align-text">
     <li>📅 Modifying the draft date</li>
     <li>⏭️ Skipping a draft</li>
     <li>➗ Splitting a draft</li>
   </ul>
-  <p><strong>Note:</strong> Requests must be made at least 2–3 business days in advance. Client must say “Yes” to the disclosure.</p>
-  <div class="button-grid grid-2">
-    <button class="button" onclick="showStep('settlementStatus')">Continue to Settlement Status</button>
+
+  <p class="left-align-text">
+    <strong>Note:</strong> Requests must be made at least 2–3 business days in advance. Client must say “Yes” to the disclosure.
+  </p>
+
+  <div class="button-grid">
+    <button class="button full-width" onclick="showStep('settlementStatus')">
+      Continue to Settlement Status
+    </button>
   </div>
+
   <button class="back-button" onclick="goBack()">🔙 Back</button>
 </div>
-
 
 
 <!-- Check Settlement Status -->
@@ -377,8 +479,6 @@
   <button class="back-button" onclick="goBack()">🔙 Back</button>
 </div>
 
-
-
 <!-- Draft Disclosure -->
 <div id="draftDisclosure" class="step">
   <h2>Disclosure Script</h2>
@@ -390,14 +490,12 @@
   <button class="back-button" onclick="goBack()">🔙 Back</button>
 </div>
 
-
-
 <!-- Instructions -->
 <div id="draftInstructions" class="step">
   <h2>📝 Draft Change Instructions</h2>
   <ul>
     <li><label><input type="checkbox"> Apply the proper disclosure based on settlement status.</label></li>
-    <li><label><input type="checkbox"> Open and complete “Draft Change Request” template.</label></li>
+    <li><label><input type="checkbox"> Add note → Use “Draft Change Request” template.” template.</label></li>
     <li><label><input type="checkbox"> Ask if the request is One-Time or Permanent.</label></li>
   </ul>
   <div class="button-grid">
@@ -405,8 +503,6 @@
   </div>
   <button class="back-button" onclick="goBack()">🔙 Back</button>
 </div>
-
-
 
 <!-- Arrangement Type -->
 <div id="draftArrangement" class="step">
@@ -417,8 +513,6 @@
   </div>
   <button class="back-button" onclick="goBack()">🔙 Back</button>
 </div>
-
-
 
 <!-- Permanent Arrangement -->
 <div id="permanent" class="step">
@@ -433,8 +527,6 @@
   </div>
   <button class="back-button" onclick="goBack()">🔙 Back</button>
 </div>
-
-
 
 <!-- One-Time Arrangement -->
 <div id="onetime" class="step">
@@ -457,42 +549,58 @@ Split:  [25th Apr / $900] → [28th Apr / $500] & [EOP / $400]
 
 
 
+
+
 <!-- Draft Decrease -->
 <div id="draftDecrease" class="step">
   <h2>📉 Draft Decrease Request</h2>
-  <p>Clients may request to lower their drafts due to hardship or personal changes.</p>
+
+  <p class="left-align-text">
+    Clients may request to lower their drafts due to hardship or personal changes.
+  </p>
+
   <ul>
     <li><label><input type="checkbox"> Check if client has any active settlements.</label></li>
     <li><label><input type="checkbox"> If so, read the required disclosure below.</label></li>
   </ul>
+
   <p style="background: #f9f9f9; padding: 15px; border-left: 4px solid #112663; font-style: italic;">
     “I can make this adjustment for you, but please note that by lowering your draft amount, there is a risk that the creditor could void the settlement.  
     If that happens, the payments made so far will go toward the original balance, and we may need to renegotiate.  
     The new terms may be less favorable. Would you still like to proceed?”
   </p>
+
   <div class="button-grid grid-2">
     <button class="button" onclick="showStep('draftDecreaseConsent')">Client Wants to Proceed</button>
     <button class="button" onclick="showStep('endCall')">Client Declines</button>
   </div>
+
   <button class="back-button" onclick="goBack()">🔙 Back</button>
 </div>
-
-
 
 <!-- Draft Decrease Consent -->
 <div id="draftDecreaseConsent" class="step">
   <h2>📝 Next Steps</h2>
+
   <ul>
     <li><label><input type="checkbox"> Create a task and tag the correct team.</label></li>
     <li><label><input type="checkbox"> Include the reason, the amount, and duration of decrease.</label></li>
     <li><label><input type="checkbox"> Inform client they’ll receive an email and may need to e-sign.</label></li>
   </ul>
-  <p><strong>Note:</strong> If approved, client will be contacted for ACH. If no response, create a follow-up task.</p>
+
+  <p class="left-align-text">
+    <strong>Note:</strong> If approved, client will be contacted for ACH. If no response, create a follow-up task.
+  </p>
+
   <div class="button-grid">
     <button class="button" onclick="showStep('ach')">Transfer to ACH</button>
   </div>
+
   <button class="back-button" onclick="goBack()">🔙 Back</button>
 </div>
+
+
+
 
 
 
@@ -507,7 +615,7 @@ Split:  [25th Apr / $900] → [28th Apr / $500] & [EOP / $400]
   </ul>
   <p>This may be a permanent increase or a one-time boost.</p>
   <ul>
-    <li><label><input type="checkbox"> Complete the “Draft Increase Request” note template.</label></li>
+    <li><label><input type="checkbox"> Add note → Use “Draft Increase Request” template.</label></li>
     <li><label><input type="checkbox"> Attempt to transfer to ACH.</label></li>
     <li><label><input type="checkbox"> If ACH fails/unavailable, create a task for ACH team lead.</label></li>
     <li><label><input type="checkbox"> Paste the increase request note into the task.</label></li>
@@ -520,26 +628,251 @@ Split:  [25th Apr / $900] → [28th Apr / $500] & [EOP / $400]
 
 
 
+
+
+
+<!-- Legal Inquiries – Approved Responses -->
+<div id="legalInquiries" class="step">
+  <h2>📘 Legal Inquiries – Approved Responses</h2>
+  <p class="left-align-text">Use these responses to remain compliant when clients ask legal questions:</p>
+  <ul>
+    <li>❓ <strong>“Will I go to jail?”</strong><br>🚫 I can't give legal advice, but that’s not typical in these cases.</li>
+    <li>❓ <strong>“Can they garnish my wages?”</strong><br>🚫 Please speak with your creditor or consult a licensed attorney.</li>
+    <li>❓ <strong>“Do I have to go to court?”</strong><br>🚫 Some clients do attend hearings while we continue working on the account.</li>
+    <li>❓ <strong>“Should I stop paying?”</strong><br>🚫 Most clients find it helpful when payments are voluntarily past due.</li>
+    <li>❓ <strong>“Can I block creditor calls?”</strong><br>🚫 Many use RWC (Request for Written Communication) under FDCPA.</li>
+    <li>❓ <strong>“Will you guarantee a settlement?”</strong><br>🚫 We cannot promise one, but most legal accounts are resolved over time.</li>
+  </ul>
+  <div class="button-grid">
+    <button class="button" onclick="resetFlow()">✔️ Back to Start</button>
+  </div>
+  <button class="back-button" onclick="goBack()">🔙 Back</button>
+</div>
+
+
+
+
+
+
+<!-- Legal Summons Received -->
+<div id="legalSummons" class="step">
+  <h2>🏛️ Legal Summons Received</h2>
+  <p class="left-align-text">Client has received an official court summons for an enrolled account.</p>
+  <ul>
+    <li><label><input type="checkbox"> Ask client to email or FAX a scanned copy (no photos).</label></li>
+    <li><label><input type="checkbox"> Upload it to file as: <strong>Legal Document</strong>.</label></li>
+    <li><label><input type="checkbox"> Add note → Use “Summons – Legal Document Received” template.</label></li>
+    <li><label><input type="checkbox"> Create task:</label></li>
+<li></li>
+      <ul>
+        <li>Type: Follow-Up</li>
+        <li>Due Date: [Date Received]</li>
+        <li>Assigned To: CS Legal Support</li>
+        <li>Paste note into task</li>
+      </ul>
+    </label></li>
+  </ul>
+  <div class="button-grid">
+    <button class="button" onclick="showStep('legalProcedure')">➡️ Continue to Legal Procedure</button>
+  </div>
+  <button class="back-button" onclick="goBack()">🔙 Back</button>
+</div>
+
+
+
+<!-- Pre-Legal Notice -->
+<div id="preLegal" class="step">
+  <h2>⚠️ Pre-Legal Document Received</h2>
+  <p>Client has received a Pre-Legal Turnover Letter or Legal Advertisement.</p>
+  <ul>
+    <li><label><input type="checkbox"> Ask the client to email a copy of the document.</label></li>
+    <li><label><input type="checkbox"> Confirm it is a pre-legal notice and linked to an enrolled account.</label></li>
+    <li><label><input type="checkbox"> Upload it as: <strong>Turnover Letter</strong>.</label></li>
+    <li><label><input type="checkbox"> Add note → Use “Document Uploaded” template.</label></li>
+    <li><label><input type="checkbox"> Create a task for the file’s team color.</label></li>
+    <li><label><input type="checkbox"> Create task</label></li>
+    <li><label><input type="checkbox"> Type: Pre-Legal</label></li>
+    <li><label><input type="checkbox"> Due Date: [Document Date]</label></li>
+    <li><label><input type="checkbox"> Assigned To: Pre-Legal Team.</label></li>
+    <li><label><input type="checkbox"> Note: “Please assign a PLN.”</label></li>
+    </ul>
+  <div class="button-grid">
+    <button class="button" onclick="showStep('legalProcedure')">➡️ Continue to Legal Procedure</button>
+  </div>
+  <button class="back-button" onclick="goBack()">🔙 Back</button>
+</div>
+
+
+
+<!-- Legal Procedure -->
+<div id="legalProcedure" class="step">
+  <h2>🧾 Legal Procedure</h2>
+
+  <p class="left-align-text">
+    Steps to prepare the file for legal negotiation:
+  </p>
+
+  <ul>
+    <li><label><input type="checkbox"> Conduct a Budget Analysis (monthly income vs. expenses).</label></li>
+    <li><label><input type="checkbox"> Update Hardship section under Additional Info.</label></li>
+    <li><label><input type="checkbox"> Ask the client if they can provide additional funds to speed up settlement.</label></li>
+  </ul>
+
+  <p class="left-align-text"><strong>If client agrees to add funds:</strong></p>
+
+  <ul>
+    <li><label><input type="checkbox"> Add note → Use “Draft Date Change” template.</label></li>
+    <li><label><input type="checkbox"> Attempt to transfer to ACH. If unavailable, create task to ACH team.</label></li>
+  </ul>
+
+  <p class="left-align-text">
+    <strong>If client cannot add funds:</strong><br>
+    Let them know we’ll still work on the file, but resolution may take longer.
+  </p>
+
+  <div class="button-grid">
+    <button class="button" onclick="resetFlow()">🏠 Home Page </button>
+  </div>
+
+  <button class="back-button" onclick="goBack()">🔙 Back</button>
+</div>
+
+
+
+
+
+
+<!-- Lending Eligibility -->
+<div id="lending" class="step">
+  <h2>💼 Lending Eligibility</h2>
+
+  <p class="left-align-text">
+    This path determines if the client qualifies for a Debt Consolidation Loan (Fresh Loan Program).
+  </p>
+
+  <h3 class="left-align-text">Eligibility Criteria</h3>
+  <ul>
+    <li><label><input type="checkbox"> Client must have successfully cleared 6 drafts (no skipped or rescheduled drafts).</label></li>
+    <li><label><input type="checkbox"> Client must have no Non-Sufficient Funds (NSF) charges.</label></li>
+  </ul>
+
+  <h3 class="left-align-text">If the Client Is Interested</h3>
+  <ul>
+    <li><label><input type="checkbox"> Open the client’s file and confirm eligibility.</label></li>
+    <li><label><input type="checkbox"> Create a task titled “Eligibility.”</label></li>
+    <li><label><input type="checkbox"> Assign the task to the Lending Operations Team.</label></li>
+    <li><label><input type="checkbox"> Include all relevant details.</label></li>
+  </ul>
+
+  <div class="button-grid">
+    <button class="button" onclick="resetFlow()">🏠 Home Page </button>
+  </div>
+
+  <button class="back-button" onclick="goBack()">🔙 Back</button>
+</div>
+
+
+
+
+
+
 <!-- Payoff Request -->
 <div id="payoffRequest" class="step">
   <h2>💳 Payoff Request</h2>
-  <p>Clients may wish to pay off:</p>
   <ul>
-    <li>A specific settlement</li>
-    <li>Their entire program</li>
-    <li>Or all remaining balances</li>
-  </ul>
-  <ul>
-    <li><label><input type="checkbox"> Complete the “Payoff Request” note template.</label></li>
+    <li><label><input type="checkbox"> Add note → Use “Payoff Request” template.</label></li>
     <li><label><input type="checkbox"> Tag the note with “Payoff & Extension.”</label></li>
     <li><label><input type="checkbox"> Inform client it takes 3–5 business days for a response.</label></li>
     <li><label><input type="checkbox"> Call back once a response is received or task is updated.</label></li>
   </ul>
   <div class="button-grid">
-    <button class="button" onclick="showStep('final')">✔️ Finish</button>
+    <button class="button" onclick="showStep('final')">🏠 Home Page </button>
   </div>
   <button class="back-button" onclick="goBack()">🔙 Back</button>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Remove a Debt -->
+<div id="removeDebt" class="step">
+  <h2>➖ Remove a Debt</h2>
+  <ul>
+    <li><label><input type="checkbox"> Add note → Use “Request to Remove a Debt” template.</label></li>
+    <li><label><input type="checkbox"> Attempt to transfer to ACH for confirmation and task assignment.</label></li>
+  </ul>
+  <div class="button-grid">
+    <button class="button" onclick="showStep('ach')">Transfer to ACH</button>
+  </div>
+  <button class="back-button" onclick="goBack()">🔙 Back</button>
+</div>
+
+
+
+<!-- Updating Bank Information -->
+<div id="updateBank" class="step">
+  <h2>🏦 Updating Bank Information</h2>
+
+  <h3 class="left-align-text">🔄 Change Banking Details</h3>
+  <ul>
+    <li><label><input type="checkbox"> Go to the Bank Account tab in the client’s file.</label></li>
+    <li><label><input type="checkbox"> Enter new Routing and Account Number.</label></li>
+    <li><label><input type="checkbox"> Confirm Account Type (Checking or Savings).</label></li>
+    <li><label><input type="checkbox"> Save changes in the system.</label></li>
+  </ul>
+
+  <h3 class="left-align-text">📄 Generate & Send Document</h3>
+  <ul>
+    <li><label><input type="checkbox"> Go to Docs Section → Generate Document.</label></li>
+    <li>
+      <span>Select the correct template:</span>
+      <ul style="list-style: none; padding-left: 0; margin-top: 10px;">
+        <li><label><input type="radio" name="bankTemplate"> <strong>FORTH:</strong> “Forth Bank Change Request”</label></li>
+        <li><label><input type="radio" name="bankTemplate"> <strong>CFT:</strong> “CFT - Draft Modification Form (Payments Made) - UPDATED”</label></li>
+      </ul>
+    </li>
+    <li><label><input type="checkbox"> Send for electronic signature.</label></li>
+    <li><label><input type="checkbox"> Add note → Use “Bank Change” template.</label></li>
+  </ul>
+
+  <h3 class="left-align-text">📥 Upload Confirmation</h3>
+  <ul>
+    <li><label><input type="checkbox"> Verify that “Signers Left” is zero in Clixign.</label></li>
+    <li><label><input type="checkbox"> Download and upload signed document under “ACH Authorization.”</label></li>
+  </ul>
+
+  <div class="button-grid">
+    <button class="button" onclick="resetFlow()">🏠 Home Page </button>
+  </div>
+  <button class="back-button" onclick="goBack()">🔙 Back</button>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -567,7 +900,7 @@ Split:  [25th Apr / $900] → [28th Apr / $500] & [EOP / $400]
   </ul>
   <p><strong>Timeline:</strong> 7–10 business days for refund to reflect in bank account.</p>
   <div class="button-grid">
-    <button class="button" onclick="showStep('final')">✔️ Finish</button>
+    <button class="button" onclick="showStep('final')">🏠 Home Page </button>
   </div>
   <button class="back-button" onclick="goBack()">🔙 Back</button>
 </div>
@@ -577,7 +910,7 @@ Split:  [25th Apr / $900] → [28th Apr / $500] & [EOP / $400]
 <!-- Cancellation Refund -->
 <div id="cancellationRefund" class="step">
   <h2>📤 Cancellation Refund Request</h2>
-  <p>Client has cancelled the program and is expecting a refund.</p>
+  <p class="left-align-text">Client has cancelled the program and is expecting a refund.</p>
   <ul>
     <li><label><input type="checkbox"> Allow 5–7 business days for cancellation to complete.</label></li>
     <li><label><input type="checkbox"> Refund is processed within 7–10 business days after cancellation.</label></li>
@@ -594,20 +927,20 @@ Split:  [25th Apr / $900] → [28th Apr / $500] & [EOP / $400]
 <div id="programExtension" class="step">
   <h2>📅 Program Extension</h2>
 
-  <h3>When Should You Review for Extension?</h3>
+  <h3 class="left-align-text">When Should You Review for Extension?</h3>
   <ul>
     <li><label><input type="checkbox"> File is ending soon but has unresolved enrolled debts.</label></li>
     <li><label><input type="checkbox"> There are unpaid settlements or incomplete negotiations.</label></li>
   </ul>
 
-  <h3>Steps to Request a Program Extension:</h3>
+  <h3 class="left-align-text">Steps to Request a Program Extension:</h3>
   <ul>
-    <li><label><input type="checkbox"> Use the “Program Extension Review Requested” template.</label></li>
+    <li><label><input type="checkbox"> Add note → Use “Program Extension Review Requested” template.</label></li>
     <li><label><input type="checkbox"> Write: “Kindly review the file to determine if an extension is necessary.” and tag “Payoff and Extension.”</label></li>
   </ul>
 
   <div class="button-grid">
-    <button class="button" onclick="resetFlow()">✔️ Finish</button>
+    <button class="button" onclick="resetFlow()">🏠 Home Page </button>
   </div>
   <button class="back-button" onclick="goBack()">🔙 Back</button>
 </div>
@@ -624,289 +957,62 @@ Split:  [25th Apr / $900] → [28th Apr / $500] & [EOP / $400]
     <li><label><input type="checkbox"> Click “Update Status.”</label></li>
   </ul>
   <div class="button-grid">
-    <button class="button" onclick="resetFlow()">✔️ Finish</button>
+    <button class="button" onclick="resetFlow()">🏠 Home Page </button>
   </div>
   <button class="back-button" onclick="goBack()">🔙 Back</button>
 </div>
 
 
 
-<!-- Step 1: Verify Caller -->
-<div id="cancelVerify" class="step">
-  <h2>❌ Cancellation Request – Verify Caller</h2>
-  <p>Is the person requesting the cancellation the client?</p>
-  <div class="button-grid grid-2">
-    <button class="button" onclick="showStep('cancelFileActions')">✅ Yes, it's the client</button>
-    <button class="button" onclick="showStep('cancelEnd')">❌ No, authorized speaker</button>
-  </div>
-  <button class="back-button" onclick="goBack()">🔙 Back</button>
-</div>
-
-
-
-<!-- End Call -->
-<div id="cancelEnd" class="step">
-  <h2>End of Call</h2>
-  <p>We cannot cancel the program without the client’s request.</p>
-  <div class="button-grid">
-    <button class="button" onclick="resetFlow()">🔁 Start Over</button>
-  </div>
-  <button class="back-button" onclick="goBack()">🔙 Back</button>
-</div>
-
-
-
-<!-- Step 2: File Actions -->
-<div id="cancelFileActions" class="step">
-  <h2>Step 2: File Actions</h2>
-  <ul>
-    <li><label><input type="checkbox"> Pause payments in Enrollment tab.</label></li>
-    <li><label><input type="checkbox"> Create a note using “Cancel Request” template.</label></li>
-    <li><label><input type="checkbox"> Update FORTH status to “Cancellation Requested.”</label></li>
-  </ul>
-  <div class="button-grid">
-    <button class="button" onclick="showStep('cancelSpecialCases')">➡️ Next</button>
-  </div>
-  <button class="back-button" onclick="goBack()">🔙 Back</button>
-</div>
-
-
-
-<!-- Step 3: Case Transfers -->
-<div id="cancelSpecialCases" class="step">
-  <h2>Step 3: Case Transfers</h2>
-  <p>If the file belongs to one of the providers below, follow specific transfer instructions:</p>
-  <ul style="list-style: disc; padding-left: 20px;">
-    <li><strong style="color:red;">CREDIT CARE SOLUTION:</strong> Transfer to +1-949-787-6008 or +1-949-490-6316 and tag <code>retentions@clientcare.com</code> + sales rep.</li>
-    <li><strong style="color:red;">LOAN RATE PAL:</strong> Transfer to +1-561-678-5408 and tag <code>jsamuels@loanratepal.com</code>, <code>processing@loanratepal.com</code> + sales rep.</li>
-    <li><strong style="color:red;">BOTTOM LINE ACCESS:</strong> Transfer to +1-516-202-6237 and tag <code>info@saldardeudas.com</code> + sales rep.</li>
-    <li><strong style="color:red;">MITIGATELY:</strong> Follow internal Retention Team process.</li>
-  </ul>
-  <p>If not in the list, transfer to the <strong>Retention Department</strong>.</p>
-  <div class="button-grid">
-    <button class="button" onclick="showStep('cancelTimeline')">➡️ Next</button>
-  </div>
-  <button class="back-button" onclick="goBack()">🔙 Back</button>
-</div>
-
-
-
-<!-- Step 4: Cancellation Timeline -->
-<div id="cancelTimeline" class="step">
-  <h2>Step 4: Cancellation Timeline</h2>
-  <ul>
-    <li>📆 5–7 business days to complete cancellation.</li>
-    <li>💸 Refund processed within 7–10 business days after cancellation.</li>
-  </ul>
-  <div class="button-grid">
-    <button class="button" onclick="showStep('cancelEscalation')">➡️ Next</button>
-  </div>
-  <button class="back-button" onclick="goBack()">🔙 Back</button>
-</div>
-
-
-
-<!-- Step 5: Escalation -->
-<div id="cancelEscalation" class="step">
-  <h2>Step 5: Escalation Note</h2>
-  <p style="background:#fff9e6; border-left: 4px solid #ffc107; padding: 15px;">
-    ⏰ <strong>If file is not cancelled within 7 business days, notify your lead immediately.</strong>
-  </p>
-  <div class="button-grid">
-    <button class="button" onclick="resetFlow()">✔️ Finish</button>
-  </div>
-  <button class="back-button" onclick="goBack()">🔙 Back</button>
-</div>
 
 
 
 <!-- Settlement Authorization – Inbound -->
 <div id="settlementAuthIB" class="step">
   <h2>🗂️ Settlement Authorization – Inbound</h2>
-  <p>The client has called back to confirm a settlement offer.</p>
+  <p class="left-align-text">The client has called back to confirm a settlement offer.</p>
   <ul>
     <li>
       <label><input type="checkbox"> <strong>Confirm reason for the call.</strong></label>
-      <p><em>“Thank you for returning our call. We’ve reached a settlement on your account ending in XXXX. Would you like to proceed?”</em></p>
+      <p class="left-align-text"><em>“Thank you for returning our call. We’ve reached a settlement on your account ending in XXXX. Would you like to proceed?”</em></p>
     </li>
     <li>
       <label><input type="checkbox"> <strong>Provide account balance and settlement amount.</strong></label>
-      <p><em>“Your balance is [$Amount]. We’ve negotiated a settlement of [$Settlement Amount].”</em></p>
+      <p class="left-align-text"><em>“Your balance is [$Amount]. We’ve negotiated a settlement of [$Settlement Amount].”</em></p>
     </li>
     <li>
       <label><input type="checkbox"> <strong>Ask for clear authorization.</strong></label>
-      <p><em>“Do you authorize us to proceed with the settlement?”</em></p>
+      <p class="left-align-text"><em>“Do you authorize us to proceed with the settlement?”</em></p>
     </li>
     <li>
-      <label><input type="checkbox"> <strong>Complete “AUTH OBTAINED” template and tag:</strong></label>
-      <p><em>Tag: Samantha Foster, David Martinez, and the negotiator who posted the offer.</em></p>
+      <label><input type="checkbox"> <strong>Add note → Use “AUTH OBTAINED” template and tag:</strong></label>
+      <p class="left-align-text"><em>Tag: Samantha Foster, David Martinez, and the negotiator who posted the offer.</em></p>
     </li>
     <li>
       <label><input type="checkbox"> <strong>Read settlement disclosure script.</strong></label>
-      <p><em>“By agreeing, you confirm that you understand the settlement terms. Once accepted, the account will reflect a resolved status upon full payment.”</em></p>
+      <p class="left-align-text"><em>“By agreeing, you confirm that you understand the settlement terms. Once accepted, the account will reflect a resolved status upon full payment.”</em></p>
     </li>
     <li>
       <label><input type="checkbox"> <strong>Post the note to the client’s file.</strong></label>
     </li>
   </ul>
   <div class="button-grid">
-    <button class="button" onclick="resetFlow()">✔️ Finish</button>
+    <button class="button" onclick="resetFlow()">🏠 Home Page </button>
   </div>
   <button class="back-button" onclick="goBack()">🔙 Back</button>
 </div>
 
 
 
-<!-- Lending Eligibility -->
-<div id="lending" class="step">
-  <h2>💼 Lending Eligibility</h2>
-  <p>This path determines if the client qualifies for a Debt Consolidation Loan (Fresh Loan Program).</p>
-
-  <h3>Eligibility Criteria</h3>
-  <ul>
-    <li><label><input type="checkbox"> Client must have successfully cleared 6 drafts (no skipped or rescheduled drafts).</label></li>
-    <li><label><input type="checkbox"> Client must have no Non-Sufficient Funds (NSF) charges.</label></li>
-  </ul>
-
-  <h3>If the Client Is Interested</h3>
-  <ul>
-    <li><label><input type="checkbox"> Open the client’s file and confirm eligibility.</label></li>
-    <li><label><input type="checkbox"> Create a task titled “Eligibility.”</label></li>
-    <li><label><input type="checkbox"> Assign the task to the Lending Operations Team.</label></li>
-    <li><label><input type="checkbox"> Include all relevant details.</label></li>
-  </ul>
-
-  <div class="button-grid">
-    <button class="button" onclick="resetFlow()">✔️ Finish</button>
-  </div>
-  <button class="back-button" onclick="goBack()">🔙 Back</button>
-</div>
 
 
 
-<!-- Client’s Passing -->
-<div id="clientPassing" class="step">
-  <h2>🕊️ Client’s Passing</h2>
-  <p>If a client has passed away, handle with professionalism and compassion.</p>
-
-  <p><strong>Important:</strong> If a relative calls, you do not need to authenticate them — but you cannot share account details.</p>
-
-  <ul>
-    <li><label><input type="checkbox"> Request a scanned copy of the death certificate and provide the appropriate upload email.</label></li>
-    <li><label><input type="checkbox"> Retrieve and upload the document to the client’s file.</label></li>
-    <li><label><input type="checkbox"> Use the “Document Uploaded” template in your note.</label></li>
-    <li><label><input type="checkbox"> Create a task assigned to the file's team color.</label></li>
-    <li><label><input type="checkbox"> Create a task for <strong>JR Negotiations</strong> with task type: “Follow Up: Death Certificate.”</label></li>
-  </ul>
-
-  <p style="background:#fff5f5; padding:10px; border-left: 4px solid red; font-style: italic;">
-    If asked about the debt status: “I’m not authorized to provide legal advice. Please consult with a local attorney.”
-  </p>
-
-  <div class="button-grid">
-    <button class="button" onclick="resetFlow()">✔️ Finish</button>
-  </div>
-  <button class="back-button" onclick="goBack()">🔙 Back</button>
-</div>
 
 
 
-<!-- Legal Inquiries – Approved Responses -->
-<div id="legalInquiries" class="step">
-  <h2>📘 Legal Inquiries – Approved Responses</h2>
-  <p>Use these responses to remain compliant when clients ask legal questions:</p>
-  <ul>
-    <li>❓ <strong>“Will I go to jail?”</strong><br>🚫 I can't give legal advice, but that’s not typical in these cases.</li>
-    <li>❓ <strong>“Can they garnish my wages?”</strong><br>🚫 Please speak with your creditor or consult a licensed attorney.</li>
-    <li>❓ <strong>“Do I have to go to court?”</strong><br>🚫 Some clients do attend hearings while we continue working on the account.</li>
-    <li>❓ <strong>“Should I stop paying?”</strong><br>🚫 Most clients find it helpful when payments are voluntarily past due.</li>
-    <li>❓ <strong>“Can I block creditor calls?”</strong><br>🚫 Many use RWC (Request for Written Communication) under FDCPA.</li>
-    <li>❓ <strong>“Will you guarantee a settlement?”</strong><br>🚫 We cannot promise one, but most legal accounts are resolved over time.</li>
-  </ul>
-  <div class="button-grid">
-    <button class="button" onclick="resetFlow()">✔️ Back to Start</button>
-  </div>
-  <button class="back-button" onclick="goBack()">🔙 Back</button>
-</div>
 
 
 
-<!-- Legal Summons Received -->
-<div id="legalSummons" class="step">
-  <h2>🏛️ Legal Summons Received</h2>
-  <p>Client has received an official court summons for an enrolled account.</p>
-  <ul>
-    <li><label><input type="checkbox"> Ask client to email or FAX a scanned copy (no photos).</label></li>
-    <li><label><input type="checkbox"> Upload it to file as: <strong>Legal Document</strong>.</label></li>
-    <li><label><input type="checkbox"> Complete “Summons – Legal Document Received” template.</label></li>
-    <li><label><input type="checkbox"> Create task:
-      <ul>
-        <li>Type: Follow-Up</li>
-        <li>Due Date: [Date Received]</li>
-        <li>Assigned To: CS Legal Support</li>
-        <li>Paste note into task</li>
-      </ul>
-    </label></li>
-  </ul>
-  <div class="button-grid">
-    <button class="button" onclick="showStep('legalProcedure')">➡️ Continue to Legal Procedure</button>
-  </div>
-  <button class="back-button" onclick="goBack()">🔙 Back</button>
-</div>
-
-
-
-<!-- Pre-Legal Notice -->
-<div id="preLegal" class="step">
-  <h2>⚠️ Pre-Legal Document Received</h2>
-  <p>Client has received a Pre-Legal Turnover Letter or Legal Advertisement.</p>
-  <ul>
-    <li><label><input type="checkbox"> Ask the client to email a copy of the document.</label></li>
-    <li><label><input type="checkbox"> Confirm it is a pre-legal notice and linked to an enrolled account.</label></li>
-    <li><label><input type="checkbox"> Upload it as: <strong>Turnover Letter</strong>.</label></li>
-    <li><label><input type="checkbox"> Complete the “Document Uploaded” template.</label></li>
-    <li><label><input type="checkbox"> Create a task for the file’s team color.</label></li>
-    <li><label><input type="checkbox"> Create task:
-      <ul>
-        <li>Type: Pre-Legal</li>
-        <li>Due Date: [Document Date]</li>
-        <li>Assigned To: Pre-Legal Team</li>
-        <li>Note: “Please assign a PLN.”</li>
-      </ul>
-    </label></li>
-  </ul>
-  <div class="button-grid">
-    <button class="button" onclick="showStep('legalProcedure')">➡️ Continue to Legal Procedure</button>
-  </div>
-  <button class="back-button" onclick="goBack()">🔙 Back</button>
-</div>
-
-
-
-<!-- Legal Procedure -->
-<div id="legalProcedure" class="step">
-  <h2>🧾 Legal Procedure</h2>
-  <p>Steps to prepare the file for legal negotiation:</p>
-  <ul>
-    <li><label><input type="checkbox"> Conduct a Budget Analysis (monthly income vs. expenses).</label></li>
-    <li><label><input type="checkbox"> Update Hardship section under Additional Info.</label></li>
-    <li><label><input type="checkbox"> Ask the client if they can provide additional funds to speed up settlement.</label></li>
-  </ul>
-
-  <p><strong>If client agrees to add funds:</strong></p>
-  <ul>
-    <li><label><input type="checkbox"> Use the “Draft Date Change” template.</label></li>
-    <li><label><input type="checkbox"> Attempt to transfer to ACH. If unavailable, create task to ACH team.</label></li>
-  </ul>
-
-  <p><strong>If client cannot add funds:</strong><br>
-  Let them know we’ll still work on the file, but resolution may take longer.</p>
-
-  <div class="button-grid">
-    <button class="button" onclick="resetFlow()">✔️ Finish</button>
-  </div>
-  <button class="back-button" onclick="goBack()">🔙 Back</button>
-</div>
 
 
 
@@ -922,21 +1028,28 @@ Split:  [25th Apr / $900] → [28th Apr / $500] & [EOP / $400]
   <h2>Customer Service – Outbound</h2>
 
   <!-- Outbound Authentication -->
-  <h3><strong>Client Authentication</strong> and Verification</h3>
+  <h3 class="left-align-text">Client Authentication and Verification</h3>
+
   <div class="button-grid grid-1">
     <label><input type="checkbox"> Verify Date of Birth</label>
     <label><input type="checkbox"> Verify Full Address</label>
   </div>
-  <p style="color: red; font-style: italic;">Date of Birth and Address must be verified before proceeding.</p>
-  <p style="font-style: italic;">Ask: <strong>“Have any of your contact details changed since our last conversation?”</strong></p>
-  
 
-<div class="button-grid grid-1">
+  <p class="left-align-text" style="color: red; font-style: italic;">
+    Date of Birth and Address must be verified before proceeding.
+  </p>
+
+  <p class="left-align-text" style="font-style: italic;">
+    Ask: <strong>“Have any of your contact details changed since our last conversation?”</strong>
+  </p>
+
+  <div class="button-grid grid-1">
     <label><input type="checkbox"> Verify Email Address</label>
     <label><input type="checkbox"> Verify Additional Phone Numbers</label>
   </div>
 
-  <p><br>What's your path?</br></p>
+  <p class="whats-your-path">What's your path?</p>
+
 
   <!-- Outbound Action Buttons -->
   <div class="button-grid grid-3">
@@ -957,6 +1070,27 @@ Split:  [25th Apr / $900] → [28th Apr / $500] & [EOP / $400]
 
 
 
+<!-- Monthly Account Review (MAR) -->
+<div id="marReview" class="step">
+  <h2>📊 Monthly Account Review (MAR)</h2>
+
+  <p class="left-align-text">
+    This is where you'd provide guidance on what to review monthly, such as:
+  </p>
+
+  <ul>
+    <li><label><input type="checkbox"> Review payment history for missed or rescheduled drafts.</label></li>
+    <li><label><input type="checkbox"> Check for new creditor activity or balances added.</label></li>
+    <li><label><input type="checkbox"> Ensure settlement negotiations are progressing.</label></li>
+    <li><label><input type="checkbox"> Create internal task if action or follow-up is needed.</label></li>
+  </ul>
+
+  <div class="button-grid">
+    <button class="button" onclick="resetFlow()">🏠 Home Page</button>
+  </div>
+
+  <button class="back-button" onclick="goBack()">🔙 Back</button>
+</div>
 
 
 
@@ -965,34 +1099,34 @@ Split:  [25th Apr / $900] → [28th Apr / $500] & [EOP / $400]
 <!-- Settlement Authorization – Outbound -->
 <div id="settlementAuthOB" class="step">
   <h2>🗂️ Settlement Authorization – Outbound</h2>
-  <p>You are calling the client to request authorization for a new settlement offer.</p>
+  <p class="left-align-text">You are calling the client to request authorization for a new settlement offer.</p>
   <ul>
     <li>
       <label><input type="checkbox"> <strong>Explain the reason for your call.</strong></label>
-      <p><em>“Hi [Client’s Name], I’m calling to inform you that we’ve reached a settlement on your account ending in XXXX.”</em></p>
+      <p class="left-align-text"><em>“Hi [Client’s Name], I’m calling to inform you that we’ve reached a settlement on your account ending in XXXX.”</em></p>
     </li>
     <li>
       <label><input type="checkbox"> <strong>Share settlement details.</strong></label>
-      <p><em>“Your balance is [$Amount], and the settlement amount is [$Settlement Amount].”</em></p>
+      <p class="left-align-text"><em>“Your balance is [$Amount], and the settlement amount is [$Settlement Amount].”</em></p>
     </li>
     <li>
       <label><input type="checkbox"> <strong>Ask for a clear “yes.”</strong></label>
-      <p><em>“Do you authorize us to proceed with this settlement?”</em></p>
+      <p class="left-align-text"><em>“Do you authorize us to proceed with this settlement?”</em></p>
     </li>
     <li>
       <label><input type="checkbox"> <strong>Complete the “AUTH OBTAINED” note and tag:</strong></label>
-      <p><em>Samantha Foster, David Martinez, and the negotiator who posted the settlement.</em></p>
+      <p class="left-align-text"><em>Samantha Foster, David Martinez, and the negotiator who posted the settlement.</em></p>
     </li>
     <li>
       <label><input type="checkbox"> <strong>Read settlement disclosure to ensure compliance.</strong></label>
-      <p><em>“By saying yes, you acknowledge the settlement terms. The account will reflect as resolved once full payment is made.”</em></p>
+      <p class="left-align-text"><em>“By saying yes, you acknowledge the settlement terms. The account will reflect as resolved once full payment is made.”</em></p>
     </li>
     <li>
       <label><input type="checkbox"> <strong>Save the note and complete the file update.</strong></label>
     </li>
   </ul>
   <div class="button-grid">
-    <button class="button" onclick="resetFlow()">✔️ Finish</button>
+    <button class="button" onclick="resetFlow()">🏠 Home Page </button>
   </div>
   <button class="back-button" onclick="goBack()">🔙 Back</button>
 </div>
@@ -1002,16 +1136,15 @@ Split:  [25th Apr / $900] → [28th Apr / $500] & [EOP / $400]
 <!-- Legal Plan -->
 <div id="legalPlan" class="step">
   <h2>⚖️ Legal Plan Providers</h2>
-  <p>We offer an optional legal plan that provides clients with extra protection via a trusted third-party attorney service (e.g., Veritas Legal Plan).</p>
 
-  <h3>🧾 Explaining the Plan</h3>
+  <h3 class="left-align-text">🧾 Explaining the Plan</h3>
   <ul>
     <li><label><input type="checkbox"> Clarify this is optional for added protection.</label></li>
     <li><label><input type="checkbox"> Explain it includes a one-time enrollment + monthly subscription fee.</label></li>
     <li><label><input type="checkbox"> Emphasize it helps when legal action is taken by creditors.</label></li>
   </ul>
 
-  <h3>📢 Communication & Expectations</h3>
+  <h3 class="left-align-text">📢 Communication & Expectations</h3>
   <ul>
     <li><label><input type="checkbox"> Never promise that a VLP attorney will call the client directly.</label></li>
     <li><label><input type="checkbox"> Inform client that attorney communication is not guaranteed.</label></li>
@@ -1020,8 +1153,9 @@ Split:  [25th Apr / $900] → [28th Apr / $500] & [EOP / $400]
   </ul>
 
   <div class="button-grid">
-    <button class="button" onclick="resetFlow()">✔️ Finish</button>
+    <button class="button" onclick="resetFlow()">🏠 Home Page </button>
   </div>
+
   <button class="back-button" onclick="goBack()">🔙 Back</button>
 </div>
 
@@ -1049,7 +1183,7 @@ Split:  [25th Apr / $900] → [28th Apr / $500] & [EOP / $400]
     <li><label><input type="checkbox"> Add note: “Please send UTC to client, unable to contact client.”</label></li>
   </ul>
   <div class="button-grid">
-    <button class="button" onclick="resetFlow()">✔️ Finish</button>
+    <button class="button" onclick="resetFlow()">🏠 Home Page </button>
   </div>
   <button class="back-button" onclick="goBack()">🔙 Back</button>
 </div>
@@ -1066,7 +1200,7 @@ Split:  [25th Apr / $900] → [28th Apr / $500] & [EOP / $400]
   </ul>
   <p>✅ Continue follow-up attempts after UTC is sent.</p>
   <div class="button-grid">
-    <button class="button" onclick="resetFlow()">✔️ Finish</button>
+    <button class="button" onclick="resetFlow()">🏠 Home Page </button>
   </div>
   <button class="back-button" onclick="goBack()">🔙 Back</button>
 </div>
@@ -1089,19 +1223,36 @@ Split:  [25th Apr / $900] → [28th Apr / $500] & [EOP / $400]
 <!-- Banking is Correct -->
 <div id="bankCorrect" class="step">
   <h2>✅ Banking is Correct</h2>
+
   <ul>
-    <li><label><input type="checkbox"> Send document to allow draft to proceed:
-      <ul>
-        <li><strong>FORTH:</strong> Amended Authorization</li>
-        <li><strong>CFT:</strong> Draft Modification Form (Payments Made – Updated)</li>
+    <li>
+      <label><input type="checkbox"> Send document to allow draft to proceed:</label>
+      <ul style="list-style: none; padding-left: 0; margin-top: 10px;">
+        <li>
+          <label><input type="radio" name="bankCorrectTemplate"> 
+            <strong>FORTH:</strong> Amended Authorization
+          </label>
+        </li>
+        <li>
+          <label><input type="radio" name="bankCorrectTemplate"> 
+            <strong>CFT:</strong> Draft Modification Form (Payments Made – Updated)
+          </label>
+        </li>
       </ul>
-    </label></li>
-    <li><label><input type="checkbox"> Create internal request for processing team.</label></li>
-    <li><label><input type="checkbox"> Transfer to Retention for missed draft rescheduling.</label></li>
+    </li>
+
+    <li>
+      <label><input type="checkbox"> Create internal request for processing team.</label>
+    </li>
+    <li>
+      <label><input type="checkbox"> Transfer to Retention for missed draft rescheduling.</label>
+    </li>
   </ul>
+
   <div class="button-grid">
-    <button class="button" onclick="resetFlow()">✔️ Finish</button>
+    <button class="button" onclick="resetFlow()">🏠 Home Page </button>
   </div>
+
   <button class="back-button" onclick="goBack()">🔙 Back</button>
 </div>
 
@@ -1110,14 +1261,14 @@ Split:  [25th Apr / $900] → [28th Apr / $500] & [EOP / $400]
 <!-- Stopped Payment / Revoked -->
 <div id="stoppedPayment" class="step">
   <h2>⛔ Stopped Payment / Revoked</h2>
-  <p>If the file shows “Stopped Payment” or “Reversed,” it means the client or their bank stopped the payment.</p>
+  <p class="left-align-text">If the file shows “Stopped Payment” or “Reversed,” it means the client or their bank stopped the payment.</p>
   <ul>
     <li><label><input type="checkbox"> Call the client and ask why the payment was stopped.</label></li>
     <li><label><input type="checkbox"> Create internal request for review.</label></li>
     <li><label><input type="checkbox"> Transfer the call to Retention to reschedule the missed draft.</label></li>
   </ul>
   <div class="button-grid">
-    <button class="button" onclick="resetFlow()">✔️ Finish</button>
+    <button class="button" onclick="resetFlow()">🏠 Home Page </button>
   </div>
   <button class="back-button" onclick="goBack()">🔙 Back</button>
 </div>
@@ -1127,15 +1278,21 @@ Split:  [25th Apr / $900] → [28th Apr / $500] & [EOP / $400]
 <!-- Error Processing / Blocked -->
 <div id="errorProcessing" class="step">
   <h2>🛑 Error Processing / Blocked</h2>
-  <p>If the file status is “Error Processing” or “Blocked,” it usually means an issue with the draft transaction or system hold.</p>
+
+  <p class="left-align-text">
+    If the file status is “Error Processing” or “Blocked,” it usually means an issue with the draft transaction or system hold.
+  </p>
+
   <ul>
     <li><label><input type="checkbox"> Contact your team lead to investigate the cause of the error.</label></li>
     <li><label><input type="checkbox"> Create an internal request with detailed notes.</label></li>
     <li><label><input type="checkbox"> Transfer the call to Retention to help reschedule or reroute the draft.</label></li>
   </ul>
+
   <div class="button-grid">
-    <button class="button" onclick="resetFlow()">✔️ Finish</button>
+    <button class="button" onclick="resetFlow()">🏠 Home Page </button>
   </div>
+
   <button class="back-button" onclick="goBack()">🔙 Back</button>
 </div>
 
@@ -1157,7 +1314,7 @@ Split:  [25th Apr / $900] → [28th Apr / $500] & [EOP / $400]
 <!-- POA Request -->
 <div id="poaRequest" class="step">
   <h2>📝 Power of Attorney (POA) Request</h2>
-  <p>A POA allows us to act on behalf of a client when communicating with their creditors.</p>
+  <p class="left-align-text">A POA allows us to act on behalf of a client when communicating with their creditors.</p>
   <ul>
     <li><label><input type="checkbox"> Navigate to the <strong>Tasks</strong> tab.</label></li>
     <li><label><input type="checkbox"> Click <strong>Create Task</strong>.</label></li>
@@ -1166,7 +1323,7 @@ Split:  [25th Apr / $900] → [28th Apr / $500] & [EOP / $400]
     <li><label><input type="checkbox"> In the note, list specific account(s) for the POA.</label></li>
   </ul>
   <div class="button-grid">
-    <button class="button" onclick="resetFlow()">✔️ Finish</button>
+    <button class="button" onclick="resetFlow()">🏠 Home Page </button>
   </div>
   <button class="back-button" onclick="goBack()">🔙 Back</button>
 </div>
@@ -1176,7 +1333,7 @@ Split:  [25th Apr / $900] → [28th Apr / $500] & [EOP / $400]
 <!-- SIF Request -->
 <div id="sifRequest" class="step">
   <h2>📄 Settlement in Full (SIF) Request</h2>
-  <p>A SIF letter confirms a debt was resolved and no further collections will occur.</p>
+  <p class="left-align-text">A SIF letter confirms a debt was resolved and no further collections will occur.</p>
   <ul>
     <li><label><input type="checkbox"> Navigate to the <strong>Tasks</strong> tab.</label></li>
     <li><label><input type="checkbox"> Click <strong>Create Task</strong>.</label></li>
@@ -1185,7 +1342,7 @@ Split:  [25th Apr / $900] → [28th Apr / $500] & [EOP / $400]
     <li><label><input type="checkbox"> In the note, list which account(s) need SIF confirmation.</label></li>
   </ul>
   <div class="button-grid">
-    <button class="button" onclick="resetFlow()">✔️ Finish</button>
+    <button class="button" onclick="resetFlow()">🏠 Home Page </button>
   </div>
   <button class="back-button" onclick="goBack()">🔙 Back</button>
 </div>
@@ -1209,7 +1366,7 @@ Split:  [25th Apr / $900] → [28th Apr / $500] & [EOP / $400]
   <h2>📞 End of Call</h2>
   <p>The client does not wish to proceed. Kindly thank them for their time and end the call.</p>
   <div class="button-grid">
-    <button class="button" onclick="resetFlow()">🔁 Start Over</button>
+    <button class="button" onclick="resetFlow()">🏠 Home Page </button>
   </div>
   <button class="back-button" onclick="goBack()">🔙 Back</button>
 </div>
@@ -1221,7 +1378,7 @@ Split:  [25th Apr / $900] → [28th Apr / $500] & [EOP / $400]
   <h2>🎉 Process Complete</h2>
   <p id="finalMessage"></p>
   <div class="button-grid">
-    <button class="button" onclick="resetFlow()">🔁 Start Over</button>
+    <button class="button" onclick="resetFlow()">🏠 Home Page </button>
   </div>
   <button class="back-button" onclick="goBack()">🔙 Back</button>
 </div>
@@ -1342,8 +1499,8 @@ function updateProgressBar() {
     const items = [
       "Obtain documents from the client (Bank Statement and Proof of Payment)",
       "Upload documents to the file",
-      "Complete the Document Uploaded template",
-      "Fill out the Request to Add Debt template",
+      "Add note → Use “Document Uploaded” template",
+      "Add note → Use “Request to Add Debt” template",
       "Attempt to transfer funds to ACH"
     ];
     items.forEach(i => {
