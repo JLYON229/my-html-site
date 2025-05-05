@@ -16,6 +16,7 @@
   }
    
   .container {
+    display: none; /* Hide until login is verified */
     max-width: 850px;
     margin: auto;
     background: white;
@@ -190,10 +191,10 @@
 </style>
 
   <!-- Firebase SDK -->
-<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js"></script>
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+  import { getAuth, sendSignInLinkToEmail, isSignInWithEmailLink, signInWithEmailLink } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
 
-<script>
   const firebaseConfig = {
     apiKey: "AIzaSyDBnicB2JPFZRFtd88CmKOCkG6sJzLpBrU",
     authDomain: "agent-journey-interactive-flow.firebaseapp.com",
@@ -201,10 +202,58 @@
     appId: "1:454017962013:web:a363c04ad64af19176b6f4"
   };
 
-  firebase.initializeApp(firebaseConfig);
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth(app);
+
+  const loginSection = document.getElementById("loginSection");
+  const container = document.querySelector(".container");
+
+  const sendOTP = async () => {
+    const emailInput = document.getElementById("email");
+    const errorMsg = document.getElementById("errorMsg");
+    const email = emailInput.value;
+
+    if (!email || !email.endsWith("@usclarity.com")) {
+      errorMsg.textContent = "Please enter a valid @usclarity.com email.";
+      return;
+    }
+
+    try {
+      await sendSignInLinkToEmail(auth, email, {
+        url: window.location.href,
+        handleCodeInApp: true
+      });
+      window.localStorage.setItem("emailForSignIn", email);
+      alert("📩 OTP link sent! Check your inbox.");
+    } catch (error) {
+      errorMsg.textContent = error.message;
+    }
+  };
+
+  window.sendSignInLink = sendOTP;
+
+  window.addEventListener("DOMContentLoaded", async () => {
+    if (isSignInWithEmailLink(auth, window.location.href)) {
+      let email = localStorage.getItem("emailForSignIn");
+      if (!email) {
+        email = prompt("Please confirm your email:");
+      }
+      try {
+        await signInWithEmailLink(auth, email, window.location.href);
+        localStorage.removeItem("emailForSignIn");
+        loginSection.style.display = "none";
+        container.style.display = "block";
+        alert("✅ Signed in successfully!");
+      } catch (error) {
+        document.getElementById("errorMsg").textContent = error.message;
+      }
+    } else {
+      container.style.display = "none";
+    }
+  });
 </script>
 
-  
+
 </head>
 <body>
 
@@ -1417,8 +1466,6 @@ Split:  [25th Apr / $900] → [28th Apr / $500] & [EOP / $400]
 
 
 
-
-
 <script>
 
   const actionCodeSettings = {
@@ -1560,34 +1607,10 @@ window.onload = () => {
   document.getElementById("progressBar").style.width = "0%"; // force-start at zero
 };
 
-  function sendSignInLink() {
-  const email = document.getElementById("email").value;
-  const errorMsg = document.getElementById("errorMsg");
-
-  if (!email || !email.endsWith("@usclarity.com")) {
-  errorMsg.textContent = "Please enter a valid @usclarity.com email.";
-  return;
-}
-
-
-  const actionCodeSettings = {
-    url: "https://cdraji.netlify.app",
-    handleCodeInApp: true
-  };
-
-  firebase.auth().sendSignInLinkToEmail(email, actionCodeSettings)
-    .then(() => {
-      window.localStorage.setItem('emailForSignIn', email);
-      alert("📩 OTP link sent! Check your inbox.");
-    })
-    .catch(error => {
-      errorMsg.textContent = error.message;
-    });
-}
 
 // Handle redirect after clicking email link
 window.addEventListener('load', () => {
-  if (firebase.auth().isSignInWithEmailLink(window.location.href)) {
+if (isSignInWithEmailLink(auth, window.location.href)) {
     let email = window.localStorage.getItem('emailForSignIn');
     if (!email) {
       email = window.prompt('Please confirm your email:');
