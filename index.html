@@ -8,23 +8,26 @@
  <style>
 
 body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: white; /* 💡 Set solid white */
   margin: 0;
   padding: 0;
-  width: 100vw;
-  overflow-x: hidden;
-  font-family: 'Montserrat', sans-serif;
-  background: linear-gradient(to right, #eef3fc, #ffffff);
-}
-  
-.container {
-  width: 95vw;
-  margin: auto;
-  padding: 40px;
-  background: white;
-  border-radius: 24px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  min-height: 100vh;
   box-sizing: border-box;
 }
+
+.container {
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  background: white;
+  padding: 40px 20px;
+  border-radius: 0; /* Optional: set to 0 for flat layout, or keep your 24px if you prefer */
+  box-shadow: none;  /* Optional: remove for flat embed look */
+  animation: fadeIn 0.6s ease-in-out;
+  box-sizing: border-box;
+}
+
    
    h1, h2, h3 {
     text-align: center;
