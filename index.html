@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Agent Journey - Super Portal</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet"/>
-
  <style>
   body {
     font-family: 'Montserrat', sans-serif;
@@ -14,9 +13,8 @@
     padding: 20px;
     min-height: 100vh;
   }
-   
+
   .container {
-    display: none; /* Hide until login is verified */
     max-width: 850px;
     margin: auto;
     background: white;
@@ -189,83 +187,8 @@
     to { opacity: 1; transform: translateY(0); }
   }
 </style>
-
-  <!-- Firebase SDK -->
-<script type="module">
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
-  import { getAuth, sendSignInLinkToEmail, isSignInWithEmailLink, signInWithEmailLink } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
-
-  const firebaseConfig = {
-    apiKey: "AIzaSyDBnicB2JPFZRFtd88CmKOCkG6sJzLpBrU",
-    authDomain: "agent-journey-interactive-flow.firebaseapp.com",
-    projectId: "agent-journey-interactive-flow",
-    appId: "1:454017962013:web:a363c04ad64af19176b6f4"
-  };
-
-  const app = initializeApp(firebaseConfig);
-  const auth = getAuth(app);
-
-  const loginSection = document.getElementById("loginSection");
-  const container = document.querySelector(".container");
-
-  const sendOTP = async () => {
-    const emailInput = document.getElementById("email");
-    const errorMsg = document.getElementById("errorMsg");
-    const email = emailInput.value;
-
-    if (!email || !email.endsWith("@usclarity.com")) {
-      errorMsg.textContent = "Please enter a valid @usclarity.com email.";
-      return;
-    }
-
-    try {
-      await sendSignInLinkToEmail(auth, email, {
-        url: window.location.href,
-        handleCodeInApp: true
-      });
-      window.localStorage.setItem("emailForSignIn", email);
-      alert("📩 OTP link sent! Check your inbox.");
-    } catch (error) {
-      errorMsg.textContent = error.message;
-    }
-  };
-
-  window.sendSignInLink = sendOTP;
-
-  window.addEventListener("DOMContentLoaded", async () => {
-    if (isSignInWithEmailLink(auth, window.location.href)) {
-      let email = localStorage.getItem("emailForSignIn");
-      if (!email) {
-        email = prompt("Please confirm your email:");
-      }
-      try {
-        await signInWithEmailLink(auth, email, window.location.href);
-        localStorage.removeItem("emailForSignIn");
-        loginSection.style.display = "none";
-        container.style.display = "block";
-        alert("✅ Signed in successfully!");
-      } catch (error) {
-        document.getElementById("errorMsg").textContent = error.message;
-      }
-    } else {
-      container.style.display = "none";
-    }
-  });
-</script>
-
-
 </head>
 <body>
-
-<!-- OTP -->
-<div id="loginSection" style="max-width: 400px; margin: auto; padding: 20px;">
-  <h2>🔐 Sign In</h2>
-  <input type="email" id="email" placeholder="Enter your @usclarity.com email" style="width: 100%; padding: 10px;" />
-  <button class="button" onclick="sendSignInLink()">Send OTP Link</button>
-  <p id="errorMsg" style="color: red;"></p>
-</div>
-
-  
   <div class="progress-container">
     <div class="progress-bar" id="progressBar"></div>
   </div>
@@ -1466,14 +1389,9 @@ Split:  [25th Apr / $900] → [28th Apr / $500] & [EOP / $400]
 
 
 
+
+
 <script>
-
-  const actionCodeSettings = {
-  url: "https://cdraji.netlify.app",  // Your site address
-  handleCodeInApp: true
-};
-
-  
   let selectedDepartment = "";
   let selectedCallType = "";
   let stepHistory = [];
@@ -1489,9 +1407,7 @@ Split:  [25th Apr / $900] → [28th Apr / $500] & [EOP / $400]
     const step = document.getElementById(id);
     if (step) {
       step.classList.add('visible');
-      if (stepHistory[stepHistory.length - 1] !== id) {
-          stepHistory.push(id);
-         }      
+      stepHistory.push(id);
       updateProgressBar(); // this now starts once agent manually moves
 
     }
@@ -1526,7 +1442,7 @@ Split:  [25th Apr / $900] → [28th Apr / $500] & [EOP / $400]
 
 function updateProgressBar() {
   const bar = document.getElementById("progressBar");
-  const totalSteps = document.querySelectorAll('.step').length;
+  const totalSteps = 10; // You can adjust if needed
   const current = stepHistory.length;
   const percent = Math.min((current / totalSteps) * 100, 100);
   bar.style.width = percent + "%";
@@ -1606,30 +1522,5 @@ window.onload = () => {
   document.getElementById("step1").classList.add("visible");
   document.getElementById("progressBar").style.width = "0%"; // force-start at zero
 };
-
-
-// Handle redirect after clicking email link
-window.addEventListener('load', () => {
-if (isSignInWithEmailLink(auth, window.location.href)) {
-    let email = window.localStorage.getItem('emailForSignIn');
-    if (!email) {
-      email = window.prompt('Please confirm your email:');
-    }
-
-    firebase.auth().signInWithEmailLink(email, window.location.href)
-      .then(() => {
-        window.localStorage.removeItem('emailForSignIn');
-        document.getElementById("loginSection").style.display = "none";
-        document.querySelector(".container").style.display = "block";
-        alert("✅ Signed in successfully!");
-      })
-      .catch(error => {
-        document.getElementById("errorMsg").textContent = error.message;
-      });
-  } else {
-    document.querySelector(".container").style.display = "none";
-  }
-});
-
 
 </script>
