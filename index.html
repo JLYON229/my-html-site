@@ -2707,8 +2707,7 @@
   <h2 style="text-align: center;">Lead is Eligible</h2>
   <label><input type="checkbox"> Inform the Client that you will be transferring them to the Account Manager.</label>
   <p>Hello (Lead Name), thank you for holding. It looks like we have everything we need. I'll be putting my account manager on the line, who will be able to help you further with your application. The transfer process will take about 2-3 minutes, so please stay on the line.</p>
-  <label><input type="checkbox"> Transfer to the Account Manager</label><br>
-  <label><input type="checkbox"> Add note → Use “Credit pulled, Live Xfer” template.</label><br>
+
   <div class="button-grid grid-2">
     <button class="button" onclick="showOnly('telemarketingLiveTransfer')">Live Transfer</button>
     <button class="button" onclick="showOnly('telemarketingTransferAppt')">Transfer Appointment</button>
@@ -2721,6 +2720,8 @@
 <!-- Live Transfer -->
 <div class="container section" id="telemarketingLiveTransfer">
   <h2 style="text-align: center;">Live Transfer</h2>
+  <label><input type="checkbox"> Transfer to the Account Manager</label><br>
+  <label><input type="checkbox"> Add note → Use “Credit pulled, Live Xfer” template.</label><br>
   <p>✅ Inform the Account Manager of the amount & purpose for the loan.</p>
   <p>✅ Release the Lead from the hold.</p>
   <div class="button-grid grid-2" style="margin-top: 30px;">
