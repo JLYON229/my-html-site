@@ -254,7 +254,7 @@
 <div class="container section" id="customerService">
   <h2>Customer Service</h2>
   <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-bottom: 30px;">
-    <button class="button" style="flex: 1 1 250px;" onclick="showOnly('customerServiceInbound')">📞 Inbound Call</button>
+    <button class="button" style="flex: 1 1 250px;" onclick="showOnly('customerServiceInbound')">📥 Inbound Call</button>
     <button class="button" style="flex: 1 1 250px;" onclick="showOnly('customerServiceOutbound')">📤 Outbound Call</button>
   </div>
   <div style="display: flex; justify-content: center;">
@@ -1111,9 +1111,7 @@
   </div>
 </div>
 <!-- Update Bank Info End -->
-
-<!-- OUTBOUND PATHS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-
+  
 <!-- Error Processing / Blocked Start -->
 <div class="container section" id="errorProcessing">
   <h2>🛑 Error Processing / Blocked</h2>
@@ -1568,9 +1566,9 @@
 <div class="container section" id="retention">
   <h2 style="text-align: center;">Retention</h2>
   <div class="button-grid grid-3">
-    <button class="button" onclick="showOnly('retentionInbound')">Inbound</button>
-    <button class="button" onclick="showOnly('retentionOutbound')">Outbound</button>
-    <button class="button" onclick="showOnly('retentionTransfer')">Transfer</button>
+    <button class="button" onclick="showOnly('retentionInbound')">📥 Inbound Call</button>
+    <button class="button" onclick="showOnly('retentionOutbound')">📤 Outbound Call</button>
+    <button class="button" onclick="showOnly('retentionTransfer')">📞 Transferred </button>
   </div>
   <div class="button-grid-back">
 <button class="back-button" onclick="goBackToPrevious()">⬅️ Back</button>
@@ -1603,7 +1601,6 @@
 <button class="back-button" onclick="goBackToPrevious()">⬅️ Back</button>
   </div>
 </div>
-
 
 <!-- Retention Inbound - Add a Debt -->
 <div class="container section" id="retentionAddDebt">
@@ -1705,7 +1702,6 @@
     <button class="back-button" onclick="showOnly('homepage')">✅ Finish</button>
   </div>
 </div>
-
 
 <!-- Retention Inbound - Remove a Debt -->
 <div class="container section" id="retentionRemoveDebt">
@@ -1998,7 +1994,7 @@
   </div>
 </div>
 
-<!-- Retention Outbound Start!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+<!-- Retention Outbound Start! -->
 <div class="container section" id="retentionOutbound">
   <h2 style="text-align: center; font-weight: bold;">Greeting / Intro</h2>
   <div class="left-align-text">
@@ -2420,6 +2416,15 @@
 
 
 
+
+
+
+
+
+
+
+
+
   <div class="container section" id="sales">
     <h2>Sales</h2>
 <button class="back-button" onclick="goBackToPrevious()">⬅️ Back</button>
@@ -2434,10 +2439,310 @@
 
 
 
-  <div class="container section" id="telemarketing">
-    <h2>Telemarketing</h2>
-<button class="back-button" onclick="goBackToPrevious()">⬅️ Back</button>
+<div class="container section" id="telemarketing">
+  <h2 style="text-align: center; font-weight: bold;">Telemarketing</h2>
+  <div class="button-grid grid-2">
+    <button class="button" onclick="showOnly('telemarketingInbound')">📞 Inbound Call</button>
+    <button class="button" onclick="showOnly('telemarketingOutbound')">📤 Outbound Call</button>
   </div>
+  <div class="button-grid" style="margin-top: 30px;">
+    <button class="button" style="width: 100%;" onclick="goBackToPrevious()">⬅️ Back</button>
+  </div>
+</div>
+
+<!-- Inbound Script -->
+<div class="container section" id="telemarketingInbound">
+  <h2 style="text-align: center; font-weight: bold;">Inbound Script</h2>
+  <div class="left-align-text">
+    <p>Hello this is (Agent Alias) with (Entity Name) on a recorded line. Am I speaking to (Lead Name)?</p>
+    <p>I’m reaching out because you’re pre-selected for a <strong>personal loan</strong> with a promotional interest rate <strong>starting at 5%</strong>.</p>
+    <p>So do you have just a few minutes for a free quote?</p>
+  </div>
+  <div class="button-grid grid-2">
+    <button class="button" onclick="showOnly('telemarketingInterested')">Interested</button>
+    <button class="button" onclick="showOnly('telemarketingNotInterested')">Not Interested</button>
+  </div>
+  <div class="button-grid" style="margin-top: 30px;">
+    <button class="button" style="width: 100%;" onclick="goBackToPrevious()">⬅️ Back</button>
+  </div>
+</div>
+
+<!-- Outbound Script -->
+<div class="container section" id="telemarketingOutbound">
+  <h2 style="text-align: center; font-weight: bold;">Outbound Script</h2>
+  <div class="left-align-text">
+    <p>Hello am I speaking to (Lead Name)?</p>
+    <p>This is (Agent Alias) with (Entity Name) on a recorded line. I’m reaching out because you’re pre-selected for a <strong>personal loan</strong> with a promotional interest rate <strong>starting at 5%</strong>.</p>
+    <p>So do you have just a few minutes for a free quote?</p>
+  </div>
+  <div class="button-grid grid-2">
+    <button class="button" onclick="showOnly('telemarketingInterested')">Interested</button>
+    <button class="button" onclick="showOnly('telemarketingNotInterested')">Not Interested</button>
+  </div>
+  <div class="button-grid" style="margin-top: 30px;">
+    <button class="button" style="width: 100%;" onclick="goBackToPrevious()">⬅️ Back</button>
+  </div>
+</div>
+
+<!-- Not Interested -->
+<div class="container section" id="telemarketingNotInterested">
+  <h2 style="text-align: center;">Encouragement</h2>
+  <p style="text-align: center;">Not every lead will say yes — and that’s okay! You’re building experience and planting seeds. Keep up the great work! 💪</p>
+  <div class="button-grid grid-2" style="margin-top: 30px;">
+    <button class="button" onclick="goBackToPrevious()">⬅️ Back</button>
+    <button class="button" onclick="showOnly('homepage')">✅ Finish</button>
+  </div>
+</div>
+
+<!-- Interested -->
+<div class="container section" id="telemarketingInterested">
+  <h2 style="text-align: center; font-weight: bold;">Lead is Interested</h2>
+  <div class="left-align-text">
+    <label><input type="checkbox"> Ask for the <strong>amount</strong> the Lead is interested in.</label><br>
+    <label><input type="checkbox"> Ask for the <strong>purpose</strong> of the loan.</label><br>
+    <p>Ok, I'll be happy to help with that. Let me quickly verify the information I have on file, and make updates as needed.</p>
+    <label><input type="checkbox"> Verify Full Name</label><br>
+    <label><input type="checkbox"> Verify Phone Number</label><br>
+    <label><input type="checkbox"> Verify Email</label><br>
+    <label><input type="checkbox"> Verify Address</label><br>
+    <label><input type="checkbox"> Verify Date of Birth</label><br>
+    <label><input type="checkbox"> Verify the Last 4-digits of the SSN</label><br>
+    <label><input type="checkbox"> <strong>Pull Credit Report with Lead's consent</strong></label><br>
+  </div>
+  <div class="button-grid grid-2" style="margin-top: 30px;">
+    <button class="button" onclick="goBackToPrevious()">⬅️ Back</button>
+    <button class="button" onclick="showOnly('telemarketingNextStep')">➡️ Next Step</button>
+  </div>
+</div>
+  
+<!-- Eligibility Check -->
+<div class="container section" id="telemarketingNextStep" style="font-family: 'Montserrat', sans-serif; font-size: 18px;">
+  <h2 style="text-align: center; font-weight: bold;">Eligibility Check</h2>
+  <p style="text-align: center; font-weight: 600;"><strong>The Lead must have at least $8,000 in acceptable debts.</strong></p>
+
+  <h2 style="text-align: center; margin-top: 30px;">Eligibility Table</h2>
+  <input type="text" id="searchInput" onkeyup="searchTable()" placeholder="Search for a Debt Type or a Financial Institution..." 
+         style="width: 100%; padding: 14px; font-size: 16px; margin-bottom: 25px; border-radius: 6px; border: 1px solid #ccc; box-sizing: border-box;">
+  
+  <div style="max-height: 450px; overflow-y: auto; border: 1px solid #ccc; border-radius: 8px;">
+    <table id="institutionTable" style="width: 100%; border-collapse: collapse; background: #fdfdfd; font-size: 18px;">
+      <thead style="position: sticky; top: 0; z-index: 1;">
+        <tr style="background-color: #112663; color: white; border-bottom: 2px solid #ccc;">
+          <th onclick="sortTable(0)" style="padding: 14px 16px; text-align: left; border-right: 1px solid #ccc;">Debt Type or Financial Institution</th>
+          <th onclick="sortTable(1)" style="padding: 14px 16px; text-align: center;">Eligible</th>
+        </tr>
+      </thead>
+      <tbody>
+<tr><td style="text-align: left;">1st Franklin</td><td style="text-align: center;">NO</td></tr>
+<tr><td style="text-align: left;">1st Heritage (FSHERTAG)</td><td style="text-align: center;">NO</td></tr>
+<tr><td style="text-align: left;">1st Midwest Bank</td><td style="text-align: center;">NO</td></tr>
+<tr><td style="text-align: left;">Abandoned Timeshares</td><td style="text-align: center;">NO</td></tr>
+<tr><td style="text-align: left;">Accion USA Inc. (NM)</td><td style="text-align: center;">NO</td></tr>
+<tr><td style="text-align: left;">Advance Financial</td><td style="text-align: center;">NO</td></tr>
+<tr><td style="text-align: left;">Alimony</td><td style="text-align: center;">NO</td></tr>
+<tr><td style="text-align: left;">American Honda Financing</td><td style="text-align: center;">NO</td></tr>
+<tr><td style="text-align: left;">American Collection Systems (ACS)</td><td style="text-align: center;">YES</td></tr>
+<tr><td style="text-align: left;">American Education Services (AES)</td><td style="text-align: center;">YES</td></tr>
+<tr><td style="text-align: left;">Apartment Leases/Rent (if NOT in collections)</td><td style="text-align: center;">NO</td></tr>
+<tr><td style="text-align: left;">Andrews Federal Credit Union</td><td style="text-align: center;">YES</td></tr>
+<tr><td style="text-align: left;">Armed Forces Bank</td><td style="text-align: center;">NO</td></tr>
+<tr><td style="text-align: left;">Armed Forces Loans</td><td style="text-align: center;">NO</td></tr>
+<tr><td style="text-align: left;">Army Airforce Exchange</td><td style="text-align: center;">NO</td></tr>
+<tr><td style="text-align: left;">Army Exchange Service (used primarily by military personnel)</td><td style="text-align: center;">NO</td></tr>
+<tr><td style="text-align: left;">Ariens</td><td style="text-align: center;">NO</td></tr>
+<tr><td style="text-align: left;">Ashly Furniture</td><td style="text-align: center;">NO</td></tr>
+<tr><td style="text-align: left;">Authorized user</td><td style="text-align: center;">YES</td></tr>
+<tr><td style="text-align: left;">Auto Loans (Unless in "Collection" or "Charged Off")</td><td style="text-align: center;">NO</td></tr>
+<tr><td style="text-align: left;">AVIO CREDIT</td><td style="text-align: center;">NO</td></tr>
+<tr><td style="text-align: left;">Balance Transfers (if more than 25% of the debt was incurred less than 4 months ago)</td><td style="text-align: center;">NO</td></tr>
+<tr><td style="text-align: left;">Bank and Credit Union CC’s</td><td style="text-align: center;">YES</td></tr>
+<tr><td style="text-align: left;">Bank of America Student Loans</td><td style="text-align: center;">YES</td></tr>
+<tr><td style="text-align: left;">Bail Loans</td><td style="text-align: center;">NO</td></tr>
+<tr><td style="text-align: left;">B&F Finance</td><td style="text-align: center;">NO</td></tr>
+<tr><td style="text-align: left;">BANNERBANK</td><td style="text-align: center;">NO</td></tr>
+<tr><td style="text-align: left;">Best Egg (Sister Company)</td><td style="text-align: center;">YES</td></tr>
+<tr><td style="text-align: left;">Blue Green Corp</td><td style="text-align: center;">NO</td></tr>
+<tr><td style="text-align: left;">Boing FCU</td><td style="text-align: center;">NO</td></tr>
+<tr><td style="text-align: left;">Business Accounts (Unless "Business Inactive" or under "Personal Guarantee")</td><td style="text-align: center;">NO</td></tr>
+<tr><td style="text-align: left;">Caine Weiner</td><td style="text-align: center;">NO</td></tr>
+<tr><td style="text-align: left;">CA Wilson B&T</td><td style="text-align: center;">NO</td></tr>
+<tr><td style="text-align: left;">Catalogue Accounts</td><td style="text-align: center;">YES</td></tr>
+<tr><td style="text-align: left;">CC Flow</td><td style="text-align: center;">NO</td></tr>
+<tr><td style="text-align: left;">CC Flow (Sister Company)</td><td style="text-align: center;">YES</td></tr>
+<tr><td style="text-align: left;">Chase Student Loans</td><td style="text-align: center;">YES</td></tr>
+<tr><td style="text-align: left;">Charged Off Accounts</td><td style="text-align: center;">YES</td></tr>
+<tr><td style="text-align: left;">Charge cards/Retail</td><td style="text-align: center;">YES</td></tr>
+<tr><td style="text-align: left;">Child Support</td><td style="text-align: center;">NO</td></tr>
+<tr><td style="text-align: left;">Civil Suits/Accounts Pending Litigation</td><td style="text-align: center;">NO</td></tr>
+<tr><td style="text-align: left;">Citibank Student Loans</td><td style="text-align: center;">YES</td></tr>
+<tr><td style="text-align: left;">Collection Accounts</td><td style="text-align: center;">YES</td></tr>
+<tr><td style="text-align: left;">CommonWealth Credit Union</td><td style="text-align: center;">NO</td></tr>
+<tr><td style="text-align: left;">Credit America</td><td style="text-align: center;">NO</td></tr>
+<tr><td style="text-align: left;">Credit Cards</td><td style="text-align: center;">YES</td></tr>
+<tr><td style="text-align: left;">Credit Karma (Sister Company)</td><td style="text-align: center;">YES</td></tr>
+<tr><td style="text-align: left;">Credible Student Loans</td><td style="text-align: center;">YES</td></tr>
+<tr><td style="text-align: left;">Department of Education (DOE)</td><td style="text-align: center;">NO</td></tr>
+<tr><td style="text-align: left;">Department Store Credit Cards</td><td style="text-align: center;">YES</td></tr>
+<tr><td style="text-align: left;">Diamond Resorts</td><td style="text-align: center;">NO</td></tr>
+<tr><td style="text-align: left;">EdFinancial (EDFIN)</td><td style="text-align: center;">NO</td></tr>
+<tr><td style="text-align: left;">Education Management Corp (EDMC)</td><td style="text-align: center;">YES</td></tr>
+<tr><td style="text-align: left;">Elevate (Sister Company)</td><td style="text-align: center;">YES</td></tr>
+<tr><td style="text-align: left;">ETrade HELOC</td><td style="text-align: center;">NO</td></tr>
+<tr><td style="text-align: left;">Farmers Furniture</td><td style="text-align: center;">NO</td></tr>
+<tr><td style="text-align: left;">Fig Loans (Sister Company)</td><td style="text-align: center;">YES</td></tr>
+<tr><td style="text-align: left;">Federal Student Loans/School Tuition</td><td style="text-align: center;">NO</td></tr>
+<tr><td style="text-align: left;">Founders Federal Credit Union</td><td style="text-align: center;">NO</td></tr>
+<tr><td style="text-align: left;">Future Income Payments</td><td style="text-align: center;">NO</td></tr>
+<tr><td style="text-align: left;">Gesa Credit Union</td><td style="text-align: center;">NO</td></tr>
+<tr><td style="text-align: left;">Genesis Financial</td><td style="text-align: center;">YES</td></tr>
+<tr><td style="text-align: left;">Global Payments Check</td><td style="text-align: center;">NO</td></tr>
+<tr><td style="text-align: left;">GoodLeap</td><td style="text-align: center;">YES</td></tr>
+<tr><td style="text-align: left;">Goodleap SOLAR</td><td style="text-align: center;">NO</td></tr>
+<tr><td style="text-align: left;">Gather Federal Credit Union</td><td style="text-align: center;">NO</td></tr>
+<tr><td style="text-align: left;">Hawaii First Federal Credit Union</td><td style="text-align: center;">NO</td></tr>
+<tr><td style="text-align: left;">Hawaii State Federal Credit Union</td><td style="text-align: center;">NO</td></tr>
+<tr><td style="text-align: left;">HC Royal</td><td style="text-align: center;">NO</td></tr>
+<tr><td style="text-align: left;">Happy Money (Sister Company)</td><td style="text-align: center;">YES</td></tr>
+<tr><td style="text-align: left;">Home Choice</td><td style="text-align: center;">NO</td></tr>
+<tr><td style="text-align: left;">Home Equity Line Of Credit (HELOC)</td><td style="text-align: center;">NO</td></tr>
+<tr><td style="text-align: left;">Home Improvement Loans</td><td style="text-align: center;">NO</td></tr>
+<tr><td style="text-align: left;">Home Loans</td><td style="text-align: center;">NO</td></tr>
+<tr><td style="text-align: left;">Hospital Bills (If with a 3rd party collector and have a statement)</td><td style="text-align: center;">YES</td></tr>
+<tr><td style="text-align: left;">Hughes Finance</td><td style="text-align: center;">NO</td></tr>
+<tr><td style="text-align: left;">Individual debt accounts under $250.00 (No combining, e.g., 2 Chase accounts at $100.00 and $150.00)</td><td style="text-align: center;">NO</td></tr>
+<tr><td style="text-align: left;">Installments If the debt does not specify whether it's "Secured" or "Unsecured"</td><td style="text-align: center;">YES</td></tr>
+<tr><td style="text-align: left;">Installments If the debt is labeled “Secured”</td><td style="text-align: center;">NO</td></tr>
+<tr><td style="text-align: left;">Insurance</td><td style="text-align: center;">NO</td></tr>
+<tr><td style="text-align: left;">IRS Debt</td><td style="text-align: center;">NO</td></tr>
+<tr><td style="text-align: left;">JFC Loans</td><td style="text-align: center;">NO</td></tr>
+<tr><td style="text-align: left;">John Deere Financial</td><td style="text-align: center;">NO</td></tr>
+<tr><td style="text-align: left;">Jora Credit of Delaware d/b/a Echo Credit</td><td style="text-align: center;">NO</td></tr>
+<tr><td style="text-align: left;">Justice4Me</td><td style="text-align: center;">NO</td></tr>
+<tr><td style="text-align: left;">Kabbage Loans</td><td style="text-align: center;">NO</td></tr>
+<tr><td style="text-align: left;">Karrot Loans</td><td style="text-align: center;">NO</td></tr>
+<tr><td style="text-align: left;">Key Bank</td><td style="text-align: center;">YES</td></tr>
+<tr><td style="text-align: left;">LendingClub (Sister Company)</td><td style="text-align: center;">YES</td></tr>
+<tr><td style="text-align: left;">Lending USA</td><td style="text-align: center;">NO</td></tr>
+<tr><td style="text-align: left;">Lease Balances (If it had been "Charged off" or in "Collection")</td><td style="text-align: center;">YES</td></tr>
+<tr><td style="text-align: left;">LightStream (Sister Company)</td><td style="text-align: center;">YES</td></tr>
+<tr><td style="text-align: left;">Line of Credit</td><td style="text-align: center;">YES</td></tr>
+<tr><td style="text-align: left;">LoanMart</td><td style="text-align: center;">NO</td></tr>
+<tr><td style="text-align: left;">Loanosity</td><td style="text-align: center;">NO</td></tr>
+<tr><td style="text-align: left;">Marine Federal Credit Union</td><td style="text-align: center;">YES</td></tr>
+<tr><td style="text-align: left;">Medical Bills (If with a "3rd Party Collector" and have a statement or in "Collection")</td><td style="text-align: center;">YES</td></tr>
+<tr><td style="text-align: left;">Medical Debt (Unless in "Collection")</td><td style="text-align: center;">NO</td></tr>
+<tr><td style="text-align: left;">Military Federal Credit Union Accounts</td><td style="text-align: center;">YES</td></tr>
+<tr><td style="text-align: left;">Military Credit Services</td><td style="text-align: center;">NO</td></tr>
+<tr><td style="text-align: left;">Military Star</td><td style="text-align: center;">NO</td></tr>
+<tr><td style="text-align: left;">Mohela</td><td style="text-align: center;">NO</td></tr>
+<tr><td style="text-align: left;">MoneyKey (Sister Company)</td><td style="text-align: center;">YES</td></tr>
+<tr><td style="text-align: left;">Navient</td><td style="text-align: center;">YES</td></tr>
+<tr><td style="text-align: left;">National Collegiate Trust (Private)</td><td style="text-align: center;">YES</td></tr>
+<tr><td style="text-align: left;">Nebraska Furniture</td><td style="text-align: center;">NO</td></tr>
+<tr><td style="text-align: left;">Navy Federal Credit Union (NFCU)</td><td style="text-align: center;">YES</td></tr>
+<tr><td style="text-align: left;">NetCredit</td><td style="text-align: center;">YES</td></tr>
+<tr><td style="text-align: left;">Nelnet</td><td style="text-align: center;">YES</td></tr>
+<tr><td style="text-align: left;">New Credit America</td><td style="text-align: center;">NO</td></tr>
+<tr><td style="text-align: left;">New Orleans Firemen's Federal Credit Union</td><td style="text-align: center;">NO</td></tr>
+<tr><td style="text-align: left;">Note Loan</td><td style="text-align: center;">NO</td></tr>
+<tr><td style="text-align: left;">Okius</td><td style="text-align: center;">NO</td></tr>
+<tr><td style="text-align: left;">Opportune</td><td style="text-align: center;">YES</td></tr>
+<tr><td style="text-align: left;">Orange Lake Country Club</td><td style="text-align: center;">NO</td></tr>
+<tr><td style="text-align: left;">ORNL Federal Credit Union</td><td style="text-align: center;">NO</td></tr>
+<tr><td style="text-align: left;">Overdraft Accounts (linked to checking or savings accounts)</td><td style="text-align: center;">NO</td></tr>
+<tr><td style="text-align: left;">Pathward</td><td style="text-align: center;">YES</td></tr>
+<tr><td style="text-align: left;">PayDay Loans (High-Risk Creditors)</td><td style="text-align: center;">NO</td></tr>
+<tr><td style="text-align: left;">Pentagon Federal Credit Union (PenFed)</td><td style="text-align: center;">YES</td></tr>
+<tr><td style="text-align: left;">Personal Loans</td><td style="text-align: center;">YES</td></tr>
+<tr><td style="text-align: left;">Pinnacle Bank</td><td style="text-align: center;">NO</td></tr>
+<tr><td style="text-align: left;">Pioneer</td><td style="text-align: center;">NO</td></tr>
+<tr><td style="text-align: left;">Police Loans</td><td style="text-align: center;">NO</td></tr>
+<tr><td style="text-align: left;">Private Student Loans</td><td style="text-align: center;">YES</td></tr>
+<tr><td style="text-align: left;">Prosper</td><td style="text-align: center;">YES</td></tr>
+<tr><td style="text-align: left;">Qualstar Credit Union</td><td style="text-align: center;">NO</td></tr>
+<tr><td style="text-align: left;">Recreational Merchandise</td><td style="text-align: center;">NO</td></tr>
+<tr><td style="text-align: left;">Regions Bank</td><td style="text-align: center;">YES</td></tr>
+<tr><td style="text-align: left;">Regional Finance</td><td style="text-align: center;">YES</td></tr>
+<tr><td style="text-align: left;">Reprise Financial</td><td style="text-align: center;">YES</td></tr>
+<tr><td style="text-align: left;">Sallie Mae</td><td style="text-align: center;">YES</td></tr>
+<tr><td style="text-align: left;">Security Service Federal Credit Union (SSFCU)</td><td style="text-align: center;">YES</td></tr>
+<tr><td style="text-align: left;">Secured Loans</td><td style="text-align: center;">NO</td></tr>
+<tr><td style="text-align: left;">SoFi</td><td style="text-align: center;">YES</td></tr>
+<tr><td style="text-align: left;">Splash Financial</td><td style="text-align: center;">YES</td></tr>
+<tr><td style="text-align: left;">Texas Guard</td><td style="text-align: center;">YES</td></tr>
+<tr><td style="text-align: left;">Upgrade</td><td style="text-align: center;">YES</td></tr>
+<tr><td style="text-align: left;">Upstart</td><td style="text-align: center;">YES</td></tr>
+<tr><td style="text-align: left;">Wells Fargo Student Loans</td><td style="text-align: center;">YES</td></tr>
+<tr><td style="text-align: left;">Wright-Patt Credit Union</td><td style="text-align: center;">YES</td></tr>
+<tr><td style="text-align: left;">Yellowstone Capital</td><td style="text-align: center;">NO</td></tr>
+<tr><td style="text-align: left;">Zable</td><td style="text-align: center;">YES</td></tr>
+
+      </tbody>
+    </table>
+  </div>
+  <div class="button-grid grid-2" style="margin-top: 25px; gap: 15px;">
+    <button class="button" onclick="showOnly('telemarketingEligible')" style="padding: 12px 20px; font-size: 18px;">Eligible</button>
+    <button class="button" onclick="showOnly('telemarketingNotEligible')" style="padding: 12px 20px; font-size: 18px;">Not Eligible</button>
+  </div>
+  <div class="button-grid" style="margin-top: 30px;">
+    <button class="button" style="width: 100%; padding: 14px; font-size: 18px;" onclick="goBackToPrevious()">⬅️ Back</button>
+  </div>
+</div>
+
+<!-- Not Eligible -->
+<div class="container section" id="telemarketingNotEligible">
+  <h2 style="text-align: center;">Lead Not Eligible</h2>
+  <label><input type="checkbox"> Inform the Client that they are Not Eligible.</label>
+  <p>Hello (Lead Name), thank you for holding. The system came back with the results and unfortunately we couldn’t manage to get you qualified for any of our options. Thank you and have a great day.</p>
+  <label><input type="checkbox"> Change file status to "NQDS (Not Qualified)"</label><br>
+  <label><input type="checkbox"> Dispo the call as "Not Eligible"</label><br>
+  <label><input type="checkbox"> Add note → Use “Credit pulled, Client Not Eligible” template.</label><br>
+  <div class="button-grid grid-2" style="margin-top: 30px;">
+    <button class="button" onclick="goBackToPrevious()">⬅️ Back</button>
+    <button class="button" onclick="showOnly('homepage')">✅ Finish</button>
+  </div>
+</div>
+
+<!-- Eligible -->
+<div class="container section" id="telemarketingEligible">
+  <h2 style="text-align: center;">Lead is Eligible</h2>
+  <label><input type="checkbox"> Inform the Client that you will be transferring them to the Account Manager.</label>
+  <p>Hello (Lead Name), thank you for holding. It looks like we have everything we need. I'll be putting my account manager on the line, who will be able to help you further with your application. The transfer process will take about 2-3 minutes, so please stay on the line.</p>
+  <label><input type="checkbox"> Transfer to the Account Manager</label><br>
+  <label><input type="checkbox"> Add note → Use “Credit pulled, Live Xfer” template.</label><br>
+  <div class="button-grid grid-2">
+    <button class="button" onclick="showOnly('telemarketingLiveTransfer')">Live Transfer</button>
+    <button class="button" onclick="showOnly('telemarketingTransferAppt')">Transfer Appointment</button>
+  </div>
+  <div class="button-grid" style="margin-top: 30px;">
+    <button class="button" style="width: 100%;" onclick="goBackToPrevious()">⬅️ Back</button>
+  </div>
+</div>
+
+<!-- Live Transfer -->
+<div class="container section" id="telemarketingLiveTransfer">
+  <h2 style="text-align: center;">Live Transfer</h2>
+  <p>✅ Inform the Account Manager of the amount & purpose for the loan.</p>
+  <p>✅ Release the Lead from the hold.</p>
+  <div class="button-grid grid-2" style="margin-top: 30px;">
+    <button class="button" onclick="goBackToPrevious()">⬅️ Back</button>
+    <button class="button" onclick="showOnly('homepage')">✅ Finish</button>
+  </div>
+</div>
+
+<!-- Transfer Appointment -->
+<div class="container section" id="telemarketingTransferAppt">
+  <h2 style="text-align: center;">Transfer Appointment</h2>
+  <label><input type="checkbox"> Ask the Lead what is the Best Time To Call (BTTC)</label><br>
+  <label><input type="checkbox"> Add note → Use “Credit pulled, Transfer Appt” template.</label><br>
+  <label><input type="checkbox"> Change file status to "Transfer Appt"</label><br>
+  <label><input type="checkbox"> Unassign the file</label><br>
+  <div class="button-grid grid-2" style="margin-top: 30px;">
+    <button class="button" onclick="goBackToPrevious()">⬅️ Back</button>
+    <button class="button" onclick="showOnly('homepage')">✅ Finish</button>
+  </div>
+</div>
+
 
 
 
@@ -2497,7 +2802,21 @@ function calculateDraft() {
   document.getElementById('draftResults').innerHTML =
     `New Debt Load: $${newDebt.toFixed(2)}<br>New Monthly Draft Amount: $${newMonthly.toFixed(2)}`;
 }
+
+function searchTable() {
+  const input = document.getElementById("searchInput").value.toLowerCase();
+  const rows = document.querySelectorAll("#institutionTable tbody tr");
+  rows.forEach(row => {
+    const text = row.textContent.toLowerCase();
+    row.style.display = text.includes(input) ? "" : "none";
+  });
+}
+
 </script>
+
+
+
+
 
 </body>
 </html>
