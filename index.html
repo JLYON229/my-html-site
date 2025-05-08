@@ -63,7 +63,13 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 15px;
-    margin-top: 30px;
+    margin-top: 20px;
+  }
+
+  .button-grid.grid-3 .button {
+    padding: 14px;
+    font-size: 16px;
+    width: 100%;
   }
 
   .button-grid.grid-2 {
@@ -2011,11 +2017,12 @@
   </div>
 
   <div class="button-grid grid-3">
+        <button class="button" onclick="showOnly('retentionOutboundNSF')">Non-Sufficient Funds (NSFs)</button>
    <button class="button" onclick="showOnly('retentionOutboundAddPayment')">Adding a New Payment</button>
     <button class="button" onclick="showOnly('retentionOutboundAdjustDraft')">Adjusting Drafts for Active Settlements</button>.
-    <button class="button" onclick="showOnly('retentionOutboundNSF')">Non-Sufficient Funds (NSFs)</button>
   </div>
 
+  
   <div class="button-grid-back">
     <button class="back-button" onclick="goBackToPrevious()">⬅️ Back</button>
   </div>
