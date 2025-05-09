@@ -324,14 +324,13 @@
 
   <div class="left-align-text">
   <h3 style="text-align: left;"><strong>Client Authentication</strong> and Verification</h3>
-  <label><input type="checkbox"> Verify Date of Birth</label><br>
-  <label><input type="checkbox"> Verify Full Address</label><br>
+  <label><input type="checkbox"> Verify <Strong>Date of Birth</Strong>.</label><br>
+  <label><input type="checkbox"> Verify <Strong>Full Address</Strong>.</label><br>
   <p style="color: red; font-style: italic; text-align: left;"><Strong>Both must be verified before proceeding.</Strong></p>
-  <p style="text-align: left;"><em>Ask: “Have any of your contact details changed since our last conversation?”</em></p>
+  <p style="text-align: left;"><em>Ask the client: “Have any of your contact details changed since our last conversation?”</em></p>
   <label><input type="checkbox"> Verify Email Address</label><br>
   <label><input type="checkbox"> Verify Additional Phone Numbers</label>
 </div>
-
 
   <h2>Choose Your Path</h2>
   <div class="button-grid grid-3 left-align">
@@ -1184,7 +1183,7 @@
   
 <!-- Error Processing / Blocked Start -->
 <div class="container section" id="errorProcessing">
-  <h2>🛑 Error Processing / Blocked</h2><br><br>
+  <h2>🛑 Error Processing / Blocked</h2><br>
 
   <p class="left-align-text"><strong>If the file status is “Error Processing” or “Blocked,” it usually means an issue with the draft transaction or system hold.</strong></p>
   
@@ -1203,7 +1202,7 @@
 
 <!-- Invalid Banking Start -->
 <div class="container section" id="invalidBanking">
-  <h2 style="text-align: center;">🏦 Invalid Banking</h2>
+  <h2 style="text-align: center;">🏦 Invalid Banking</h2><br>
   <h3 style="text-align: center;"><strong>If the file status is “Invalid Banking,” verify whether the current information is accurate.</strong></h3>
 
   <div class="button-grid-full">
@@ -1218,7 +1217,7 @@
 
 <!-- Banking is Correct -->
 <div class="container section" id="invalidBankCorrect">
-  <h2 style="text-align: center;">✅ Banking is Correct</h2>
+  <h2 style="text-align: center;">✅ Banking is Correct</h2><br>
   <p class="left-align-text" style="text-align: center; font-weight: bold; font-size: 18px;">Send document to allow draft to proceed:</p>
   <div class="button-grid-full">
     <button class="button" onclick="showOnly('bankingCorrectCFT')">CFT</button>
@@ -1232,7 +1231,7 @@
 
 <!-- CFT Correct Flow -->
 <div class="container section" id="bankingCorrectCFT">
-  <h2 style="text-align: center;">✅ Banking is Correct – CFT</h2><br><br>
+  <h2 style="text-align: center;">✅ Banking is Correct – CFT</h2><br>
   <div class="left-align-text">
     <label><input type="checkbox"> Send "Draft Modification Form (Payments Made – Updated)" document to allow draft to proceed.</label><br>
     <label><input type="checkbox"> Create internal request for processing team.</label><br>
@@ -1246,7 +1245,7 @@
 
 <!-- FORTH Correct Flow -->
 <div class="container section" id="bankingCorrectFORTH">
-  <h2 style="text-align: center;">✅ Banking is Correct – FORTH</h2><br><br>
+  <h2 style="text-align: center;">✅ Banking is Correct – FORTH</h2><br>
   <div class="left-align-text">
     <label><input type="checkbox"> Send "Amended Authorization" document to allow draft to proceed.</label><br>
     <label><input type="checkbox"> Create internal request for processing team.</label><br>
@@ -1260,7 +1259,7 @@
 
 <!-- Banking is Incorrect (Reuse Update Bank Info Flow) -->
 <div class="container section" id="invalidBankIncorrect">
-  <h2 style="text-align: center;">❌ Banking is Incorrect</h2><br><br>
+  <h2 style="text-align: center;">❌ Banking is Incorrect</h2><br>
   <h3 class="left-align-text"><strong>🔄 Change Banking Details</strong></h3>
   <div class="left-align-text">
     <label><input type="checkbox"> Go to the Bank Account tab in the client’s file.</label><br>
@@ -1287,7 +1286,7 @@
 
 <!-- Invalid Banking - CFT -->
 <div class="container section" id="invalidCFT">
-  <h2 style="text-align: center;">❌ Banking is Incorrect – CFT</h2><br><br>
+  <h2 style="text-align: center;">❌ Banking is Incorrect – CFT</h2><br>
   <div class="left-align-text">
     <label><input type="checkbox"> Go to Docs Section → Generate Document → "CFT - Draft Modification Form (Payments Made) - UPDATED”</label><br>
     <label><input type="checkbox"> Send for electronic signature.</label><br>
@@ -1306,7 +1305,7 @@
 
 <!-- Invalid Banking - FORTH -->
 <div class="container section" id="invalidFORTH">
-  <h2 style="text-align: center;">❌ Banking is Incorrect – FORTH</h2><br><br>
+  <h2 style="text-align: center;">❌ Banking is Incorrect – FORTH</h2><br>
   <div class="left-align-text">
     <label><input type="checkbox"> Go to Docs Section → Generate Document → "Forth Bank Change Request”</label><br>
     <label><input type="checkbox"> Send for electronic signature.</label><br>
@@ -1325,9 +1324,9 @@
 
 <!-- Invalid Banking - RAM -->
 <div class="container section" id="invalidRAM">
-  <h2 style="text-align: center;">❌ Banking is Incorrect – RAM</h2><br><br>
+  <h2 style="text-align: center;">❌ Banking is Incorrect – RAM</h2><br>
   <div class="left-align-text">
-    <label><input type="checkbox"> Go to Docs Section → Generate Document → "INSERT NAME BO”</label><br>
+    <label><input type="checkbox"> Go to Docs Section → Generate Document → "XXXXXXXXX”</label><br>
     <label><input type="checkbox"> Send for electronic signature.</label><br>
     <label><input type="checkbox"> Add note → Use “Bank Change” template.</label>
   </div>
@@ -1345,7 +1344,7 @@
 
 <!-- Legal Plan Start -->
 <div class="container section" id="legalPlan">
-  <h2 style="text-align: center;">⚖️ Legal Plan</h2><br><br>
+  <h2 style="text-align: center;">⚖️ Legal Plan</h2><br>
 
   <p class="left-align-text"><strong>🧾 Explaining the Plan</strong></p>
   <div class="left-align-text">
@@ -1371,8 +1370,8 @@
 
 <!-- Monthly Account Review (MAR) Start -->
 <div class="container section" id="marReview">
-  <h2 style="text-align: center;">📊 Monthly Account Review (MAR)</h2><br><br>
-  <h3 style="text-align: center;">Reviewing Enrolled Debts</h3><br><br>
+  <h2 style="text-align: center;">📊 Monthly Account Review (MAR)</h2><br>
+  <h3 class="left-align-text"><strong>Reviewing Enrolled Debts</strong></h3>
   <div class="left-align-text">
     <label><input type="checkbox"> Click the “Debts” tab.</label><br>
     <label><input type="checkbox"> Confirm the last four digits of the creditor’s account number and current balance.</label><br>
@@ -1386,7 +1385,7 @@
 </div>
 
 <div class="container section" id="marSettlements">
-  <h2 style="text-align: center;">Reviewing Active Settlements</h2><br><br>
+  <h2 style="text-align: center;">Reviewing Active Settlements</h2><br>
   <div class="left-align-text">
     <label><input type="checkbox"> Click the “Debts” tab.</label><br>
     <label><input type="checkbox"> Scroll Down to “Settled Debts” section.</label><br>
@@ -1401,7 +1400,7 @@
 </div>
 
 <div class="container section" id="marDrafts">
-  <h2 style="text-align: center;">Reviewing Last and Next Draft</h2><br><br>
+  <h2 style="text-align: center;">Reviewing Last and Next Draft</h2><br>
   <div class="left-align-text">
     <label><input type="checkbox"> Go to the "Client information" section.</label><br>
     <label><input type="checkbox"> Scroll down on the client information, then check the last and next draft.</label><br>
@@ -1414,7 +1413,7 @@
 </div>
 
 <div class="container section" id="marPortal">
-  <h2 style="text-align: center;">Checking Client Access to the Portal</h2><br><br>
+  <h2 style="text-align: center;">Checking Client Access to the Portal</h2><br>
   <div class="left-align-text">
     <label><input type="checkbox"> Check if they have access to the client portal.</label><br>
     <label style="margin-left: 20px;"><input type="checkbox"> "Finally, do you have access to your client portal?"</label>
@@ -1430,7 +1429,7 @@
 </div>
 
 <div class="container section" id="marPortalYes">
-  <h2 style="text-align: center;">Closing the MAR Call</h2><br><br>
+  <h2 style="text-align: center;">Closing the MAR Call</h2><br>
 <p style="background: #f4f7fc; padding: 15px; border-radius: 10px;">
 "Is there anything else I can assist you with today?"<br>
 "That concludes the review. Thank you for your time and for choosing [Company]."
@@ -1442,7 +1441,7 @@
 </div>
 
 <div class="container section" id="marPortalNo">
-  <h2 class="left-align-text">Password Link & Closing the MAR Call</h2><br><br>
+  <h2  style="text-align: center;">Password Link & Closing the MAR Call</h2><br>
   <div class="left-align-text">
     <label><input type="checkbox"> Go to the "Client information" section.</label><br>
     <label><input type="checkbox"> Scroll down on the client information, then click "Reset Password."</label><br>
@@ -1467,14 +1466,14 @@
     <button class="button" onclick="showOnly('nsfSendUTC')">📨 Send UTC</button>
     <button class="button" onclick="showOnly('nsfNoResponse')">🚫 No Response from Client</button>
   </div>
-  <div class="button-grid-full" style="margin-top: 20px;">
-<button class="back-button" onclick="goBackToPrevious()">⬅️ Back</button>
+  <div class="button-grid" style="margin-top: 30px;">
+    <button class="button" style="width: 100%;" onclick="goBackToPrevious()">⬅️ Back</button>
   </div>
 </div>
 
 <!-- Send UTC -->
 <div class="container section" id="nsfSendUTC">
-  <h2 style="text-align: center;">📨 Send UTC</h2>
+  <h2 style="text-align: center;">📨 Send UTC</h2><br>
   <div class="left-align-text">
     <label><input type="checkbox"> Create a task.</label><br>
     <label><input type="checkbox"> Select “Review File” from CS section.</label><br>
@@ -1490,12 +1489,12 @@
 
 <!-- No Response -->
 <div class="container section" id="nsfNoResponse">
-  <h2 style="text-align: center;">🚫 Escalation – No Response from Client</h2>
+  <h2 style="text-align: center;">🚫 Escalation – No Response from Client</h2><br>
   <div class="left-align-text">
     <label><input type="checkbox"> Create internal request based on file’s team color.</label><br>
     <label><input type="checkbox"> Request review for potential force cancellation.</label>
   </div>
-  <p style="color: red; font-weight: bold; text-align: left;">⚠️ ALL FILES ARE ELIGIBLE FOR FORCE CANCELLATION REVIEW EXCEPT CREDIT CARE.</p>
+  <p style="color: red; font-weight: bold; text-align: center;">⚠️ ALL FILES ARE ELIGIBLE FOR FORCE CANCELLATION REVIEW EXCEPT CREDIT CARE.</p>
   <p style="text-align: center;">✅ Continue follow-up attempts after UTC is sent.</p>
   <div class="button-grid-full">
 <button class="back-button" onclick="goBackToPrevious()">⬅️ Back</button>
@@ -1512,14 +1511,14 @@
     <button class="button" onclick="showOnly('poaRequest')">📝 POA Request</button>
     <button class="button" onclick="showOnly('sifRequest')">📄 SIF Request</button>
   </div>
-  <div class="button-grid-full" style="margin-top: 20px;">
-<button class="back-button" onclick="goBackToPrevious()">⬅️ Back</button>
+  <div class="button-grid" style="margin-top: 30px;">
+    <button class="button" style="width: 100%;" onclick="goBackToPrevious()">⬅️ Back</button>
   </div>
 </div>
 
 <!-- POA Request -->
 <div class="container section" id="poaRequest">
-  <h2 style="text-align: center;">📝 Power of Attorney Request</h2>
+  <h2 style="text-align: center;">📝 Power of Attorney Request</h2><br>
   <p class="left-align-text">A POA allows us to act on behalf of a client when communicating with their creditors.</p>
   <div class="left-align-text">
     <label><input type="checkbox"> Navigate to the Tasks tab.</label><br>
@@ -1536,7 +1535,7 @@
 
 <!-- SIF Request -->
 <div class="container section" id="sifRequest">
-  <h2 style="text-align: center;">📄 Settlement in Full Request</h2>
+  <h2 style="text-align: center;">📄 Settlement in Full Request</h2><br>
   <p class="left-align-text">A SIF letter confirms a debt was resolved and no further collections will occur.</p>
   <div class="left-align-text">
     <label><input type="checkbox"> Navigate to the Tasks tab.</label><br>
@@ -1554,7 +1553,7 @@
 
 <!-- Settlement Authorization OB Start -->
 <div class="container section" id="settlementAuthOB">
-  <h2 style="text-align: center;">🗂️ Settlement Authorization – Outbound</h2>
+  <h2 style="text-align: center;">🗂️ Settlement Authorization – Outbound</h2><br>
   <p class="left-align-text">You are calling the client to request authorization for a new settlement offer.</p>
   <div class="left-align-text">
     <label><input type="checkbox"> <strong>Explain the reason for your call.</strong><br>“Hi [Client’s Name], I’m calling to inform you that we’ve reached a settlement on your account ending in XXXX.”</label><br><br>
@@ -1573,7 +1572,7 @@
 
 <!-- Stopped Payment / Revoked Start -->
 <div class="container section" id="stoppedPayment">
-  <h2 style="text-align: center;">⛔ Stopped Payment / Revoked</h2>
+  <h2 style="text-align: center;">⛔ Stopped Payment / Revoked</h2><br>
   <p class="left-align-text">If the file shows “Stopped Payment” or “Reversed,” it means the client or their bank stopped the payment.</p>
   <div class="left-align-text">
     <label><input type="checkbox"> Call the client and ask why the payment was stopped.</label><br>
