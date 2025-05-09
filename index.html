@@ -1648,16 +1648,16 @@
 </div>
 
 <div class="container section" id="retentionInbound">
-  <h2 style="text-align: center; font-weight: bold;">Greeting / Intro</h2><br>
-
+  <h2 style="text-align: center; font-weight: bold;">   Greeting / Intro</h2><br>
+  <h3 style="text-align: left;"><strong>Client Authentication</strong> and Verification</h>
   <div class="left-align-text">
     <p style="text-align: left;">“Hello, this is [Agent’s Name] from [Company's Name]. This call is being recorded for quality assurance and compliance purposes. Do I have your permission to proceed?”</p>
 
     <p style="text-align: left;">“May I have your phone number or Client ID so I can pull up your file?”</p>
 
-    <label style="text-align: left;"><input type="checkbox"> Verify Full Name</label><br>
-    <label style="text-align: left;"><input type="checkbox"> Verify Date of Birth</label><br>
-    <label style="text-align: left;"><input type="checkbox"> Verify Full Address</label>
+  <label><input type="checkbox"> Verify <Strong>Full Name</Strong>.</label><br>
+  <label><input type="checkbox"> Verify <Strong>Date of Birth</Strong>.</label><br>
+  <label><input type="checkbox"> Verify <Strong>Full Address</Strong>.</label><br>
 
     <p style="color: red; text-align: left; font-weight: 600; margin-top: 8px;">
       At least two of these details must be verified before proceeding.
@@ -1668,7 +1668,7 @@
     <label style="text-align: left;"><input type="checkbox"> Phone Number</label><br>
     <label style="text-align: left;"><input type="checkbox"> Email Address</label>
 
-    <p style="text-align: left;">“Have any of your contact details changed since the last conversation?”</p>
+  <p style="text-align: left;"><em>Ask the client: “Have any of your contact details changed since our last conversation?”</em></p>
   </div>
 
   <h3 style="text-align: center; font-weight: bold; margin-top: 30px;">Choose Your Path</h3>
@@ -1702,36 +1702,38 @@
 
 <!-- Credit Card Path -->
 <div class="container section" id="retentionAddCredit">
-  <h2 style="text-align: center; font-weight: bold;">Add a Credit Card</h2>
+  <h2 style="text-align: center; font-weight: bold;">💳 Add a Credit Card</h2><br>
 
-  <div class="left-align-text" style="font-weight: normal;">
-    <p style="text-align: left; font-weight: normal;">
-      Request the latest bank statement from the client’s bank. This statement confirms the most up-to-date balance and account details.
-    </p>
+  <div style="font-weight: normal; max-width: 800px; padding-left: 20px; padding-right: 20px; margin: 0; text-align: left;">
 
-    <label><input type="checkbox"> First go to “Debts” tab to view the enrolled debts.</label><br>
-    <label><input type="checkbox"> Then go to "Edit Debts" — this is where you can add a new debt to the client’s account.</label><br>
-    <label><input type="checkbox"> Review the Document: Carefully read the document the client provided to ensure all details are correct.</label><br>
+    <p style="text-align: left;">📄 Request the latest bank statement from the client to confirm balance and account details.</p>
 
-    <p style="text-align: left;"><strong>Original Creditor:</strong> The name of the original lender or financial institution.</p>
-    <p style="text-align: left;"><strong>Account #:</strong> Enter the Account ID number.</p>
-    <p style="text-align: left;"><strong>Collection / Debt Buyer:</strong> If the account has been sent to collections, enter the name of the collection agency.</p>
-    <p style="text-align: left;"><strong>Account Type:</strong> Specify whether the debt is a credit card, personal loan, or another type of account.</p>
-    <p style="text-align: left;"><strong>For both Original Debt Amount and Current Debt Amount</strong>, enter the same value. For example, if the debt amount is $5,000, you should enter $5,000 in both fields.</p>
+    <p style="font-weight: bold; text-align: left;">🔍 System Steps:</p>
+    <label style="display: block; text-align: left;"><input type="checkbox"> Go to the “Debts” tab to view existing enrolled debts.</label>
+    <label style="display: block; text-align: left;"><input type="checkbox"> Navigate to "Edit Debts" to add a new debt to the account.</label>
+    <label style="display: block; text-align: left;"><input type="checkbox"> Review the client-provided document for accuracy.</label>
 
-    <label><input type="checkbox"> After that, the debt will appear in the "Client Debts/Accounts" section.</label><br>
-    <label><input type="checkbox"> Make sure to click this tab to check the checkbox, allowing the debt to be added to the file.</label><br>
-    <label><input type="checkbox"> Send the client an ACH document.</label><br>
+    <p style="font-weight: bold; margin-top: 25px; text-align: left;">📑 Required Fields:</p>
+    <p style="font-size: 14px; text-align: left;"><strong>Original Creditor:</strong> Name of the lender or financial institution.</p>
+    <p style="font-size: 14px; text-align: left;"><strong>Account #:</strong> Enter the account ID number.</p>
+    <p style="font-size: 14px; text-align: left;"><strong>Collection / Debt Buyer:</strong> Enter the name of the collection agency (if applicable).</p>
+    <p style="font-size: 14px; text-align: left;"><strong>Account Type:</strong> Specify type (e.g., Credit Card, Loan, etc.).</p>
+    <p style="font-size: 14px; text-align: left;"><strong>Debt Amounts:</strong> Enter the same amount for both "Original" and "Current" fields (e.g., $5,000).</p>
 
-    <p style="text-align: left;">If the client requests a document that includes the newly enrolled debt, we use something called "Exhibits."</p>
-    <label><input type="checkbox"> Select the exhibits template. Click on "Generate and Save Document.”</label><br>
+    <p style="font-weight: bold; margin-top: 25px; text-align: left;">✅ Finalize Enrollment:</p>
+    <label style="display: block; text-align: left;"><input type="checkbox"> Confirm the new debt appears in the "Client Debts/Accounts" section.</label>
+    <label style="display: block; text-align: left;"><input type="checkbox"> Check the debt’s box to ensure it’s added to the file.</label>
+    <label style="display: block; text-align: left;"><input type="checkbox"> Send the client an ACH document.</label>
 
-    <p style="text-align: left;">Note: If the client doesn't want to sign a document (since sending an exhibit requires their signature), we can provide a snapshot that includes the accounts we have already settled, and the accounts currently enrolled with us.</p>
+    <p style="font-weight: bold; margin-top: 25px; text-align: left;">📚 Document Requests:</p>
+    <p style="text-align: left;">If the client requests proof of the newly enrolled debt, use the "Exhibits" template.</p>
+    <label style="display: block; text-align: left;"><input type="checkbox"> Generate and save the Exhibits document.</label>
+    <p style="text-align: left;"><em>Note: If the client doesn’t want to sign, offer a snapshot of settled and enrolled debts instead.</em></p>
 
-    <label><input type="checkbox"> Add note → Use “Debt Added” template.</label>
+    <label style="display: block; margin-top: 15px; text-align: left;"><input type="checkbox"> Add note → Use “Debt Added” template.</label>
   </div>
 
-  <div class="button-grid grid-2" style="margin-top: 30px;">
+  <div class="button-grid grid-2" style="margin-top: 30px; text-align: left;">
     <button class="back-button" onclick="goBackToPrevious()">⬅️ Back</button>
     <button class="back-button" onclick="showOnly('retentionUpdateTerm')">📈 Updating the New Term</button>
   </div>
@@ -1740,36 +1742,38 @@
 
 <!-- Loan Path -->
 <div class="container section" id="retentionAddLoan">
-  <h2 style="text-align: center; font-weight: bold;">Add a Loan</h2>
+  <h2 style="text-align: center; font-weight: bold;">💼 Add a Loan</h2><br>
 
-  <div class="left-align-text" style="font-weight: normal;">
-    <p style="text-align: left; font-weight: normal;">
-      Ask the client to provide the loan agreement and proof of payment.
-    </p>
+  <div style="font-weight: normal; max-width: 800px; padding-left: 20px; padding-right: 20px; margin: 0; text-align: left;">
 
-    <label><input type="checkbox"> First go to “Debts” tab to view the enrolled debts.</label><br>
-    <label><input type="checkbox"> Then go to "Edit Debts" — this is where you can add a new debt to the client’s account.</label><br>
-    <label><input type="checkbox"> Review the Document: Carefully read the document the client provided to ensure all details are correct.</label><br>
+    <p style="text-align: left;">📄 Ask the client to provide the loan agreement and proof of payment.</p>
 
-    <p style="text-align: left;"><strong>Original Creditor:</strong> The name of the original lender or financial institution.</p>
-    <p style="text-align: left;"><strong>Account #:</strong> Enter the Account ID number.</p>
-    <p style="text-align: left;"><strong>Collection / Debt Buyer:</strong> If the account has been sent to collections, enter the name of the collection agency.</p>
-    <p style="text-align: left;"><strong>Account Type:</strong> Specify whether the debt is a credit card, personal loan, or another type of account.</p>
-    <p style="text-align: left;"><strong>For both Original Debt Amount and Current Debt Amount</strong>, enter the same value. For example, if the debt amount is $5,000, you should enter $5,000 in both fields.</p>
+    <p style="font-weight: bold; text-align: left;">🔍 System Steps:</p>
+    <label style="display: block; text-align: left;"><input type="checkbox"> Go to the “Debts” tab to view the enrolled debts.</label>
+    <label style="display: block; text-align: left;"><input type="checkbox"> Navigate to "Edit Debts" — this is where you can add a new debt to the client’s account.</label>
+    <label style="display: block; text-align: left;"><input type="checkbox"> Review the document the client provided to ensure all details are correct.</label>
 
-    <label><input type="checkbox"> After that, the debt will appear in the "Client Debts/Accounts" section.</label><br>
-    <label><input type="checkbox"> Make sure to click this tab to check the checkbox, allowing the debt to be added to the file.</label><br>
-    <label><input type="checkbox"> Send the client an ACH document.</label><br>
+    <p style="font-weight: bold; margin-top: 25px; text-align: left;">📑 Required Fields:</p>
+    <p style="font-size: 14px; text-align: left;"><strong>Original Creditor:</strong> The name of the original lender or financial institution.</p>
+    <p style="font-size: 14px; text-align: left;"><strong>Account #:</strong> Enter the Account ID number.</p>
+    <p style="font-size: 14px; text-align: left;"><strong>Collection / Debt Buyer:</strong> If the account has been sent to collections, enter the name of the collection agency.</p>
+    <p style="font-size: 14px; text-align: left;"><strong>Account Type:</strong> Specify whether the debt is a credit card, personal loan, or another type of account.</p>
+    <p style="font-size: 14px; text-align: left;"><strong>Debt Amounts:</strong> Enter the same value for both "Original Debt Amount" and "Current Debt Amount" (e.g., $5,000).</p>
 
-    <p style="text-align: left;">If the client requests a document that includes the newly enrolled debt, we use something called "Exhibits."</p>
-    <label><input type="checkbox"> Select the exhibits template. Click on "Generate and Save Document.”</label><br>
+    <p style="font-weight: bold; margin-top: 25px; text-align: left;">✅ Finalize Enrollment:</p>
+    <label style="display: block; text-align: left;"><input type="checkbox"> Confirm the debt appears in the "Client Debts/Accounts" section.</label>
+    <label style="display: block; text-align: left;"><input type="checkbox"> Check the debt’s box to allow it to be added to the file.</label>
+    <label style="display: block; text-align: left;"><input type="checkbox"> Send the client an ACH document.</label>
 
-    <p style="text-align: left;">Note: If the client doesn't want to sign a document (since sending an exhibit requires their signature), we can provide a snapshot that includes the accounts we have already settled, and the accounts currently enrolled with us.</p>
+    <p style="font-weight: bold; margin-top: 25px; text-align: left;">📚 Document Requests:</p>
+    <p style="text-align: left;">If the client requests a document that includes the newly enrolled debt, use the "Exhibits" template.</p>
+    <label style="display: block; text-align: left;"><input type="checkbox"> Select the exhibits template. Click "Generate and Save Document."</label>
+    <p style="text-align: left;"><em>Note: If the client doesn't want to sign a document, offer a snapshot showing settled and enrolled accounts.</em></p>
 
-    <label><input type="checkbox"> Add note → Use “Debt Added” template.</label>
+    <label style="display: block; margin-top: 15px; text-align: left;"><input type="checkbox"> Add note → Use “Debt Added” template.</label>
   </div>
 
-  <div class="button-grid grid-2" style="margin-top: 30px;">
+  <div class="button-grid grid-2" style="margin-top: 30px; text-align: left;">
     <button class="back-button" onclick="goBackToPrevious()">⬅️ Back</button>
     <button class="back-button" onclick="showOnly('retentionUpdateTerm')">📈 Updating the New Term</button>
   </div>
@@ -1777,27 +1781,31 @@
 
 <!-- Updating the New Term -->
 <div class="container section" id="retentionUpdateTerm">
-  <h2 style="text-align: center; font-weight: bold;">Updating the New Term</h2>
+  <h2 style="text-align: center; font-weight: bold;">📈 Updating the New Term</h2><br>
 
-  <p style="font-weight: bold; text-align: left;">Review the New Debt Load:</p>
-  <label><input type="checkbox"> Check the client’s updated debt load.</label><br>
-  <label><input type="checkbox"> Refer to the Program Terms Table in the Program Guidelines to determine if the term needs to be updated.</label><br>
-  <label><input type="checkbox"> Document the new term in the client’s record.</label><br>
+  <div style="font-weight: normal; width: 100%; max-width: none; padding: 0 20px; text-align: left;">
 
-  <p style="font-weight: bold; text-align: left; margin-top: 30px;">Updating the Enrollment Plan (If the Term Changes):</p>
-  <label><input type="checkbox"> Navigate to the "Enrollment Plan" section.</label><br>
-  <label><input type="checkbox"> Edit Enrollment Plan and update the length of the program based on the new term.</label><br>
-  <label><input type="checkbox"> Save the changes.</label><br>
-  <label><input type="checkbox"> Escalate the file to your Team Lead so they can reset it completely.</label><br>
-  <label><input type="checkbox"> Once the file is reset, update the new draft amount accordingly.</label><br>
+    <p style="font-weight: bold; text-align: left; margin-left: 0;">🧾 Review the New Debt Load:</p>
+    <div><label><input type="checkbox"> Check the client’s updated debt load.</label></div>
+    <div><label><input type="checkbox"> Refer to the Program Terms Table in the Program Guidelines to determine if the term needs to be updated.</label></div>
+    <div><label><input type="checkbox"> Document the new term in the client’s record.</label></div>
 
-  <p style="font-weight: bold; text-align: left; margin-top: 30px;">Adjusting Payments:</p>
-  <label><input type="checkbox"> Navigate to the Adjust Payments tab.</label><br>
-  <label><input type="checkbox"> Select all draft payments and update the amount based on the new term.</label><br>
-  <label><input type="checkbox"> Save the changes.</label><br>
-  <label><input type="checkbox"> Send the client the confirmation document to finalize the update.</label><br>
+    <p style="font-weight: bold; text-align: left; margin-top: 30px; margin-left: 0;">🛠️ Updating the Enrollment Plan (If the Term Changes):</p>
+    <div><label><input type="checkbox"> Navigate to the "Enrollment Plan" section.</label></div>
+    <div><label><input type="checkbox"> Edit Enrollment Plan and update the length of the program based on the new term.</label></div>
+    <div><label><input type="checkbox"> Save the changes.</label></div>
+    <div><label><input type="checkbox"> Escalate the file to your Team Lead so they can reset it completely.</label></div>
+    <div><label><input type="checkbox"> Once the file is reset, update the new draft amount accordingly.</label></div>
 
-  <div class="button-grid grid-2" style="margin-top: 30px;">
+    <p style="font-weight: bold; text-align: left; margin-top: 30px; margin-left: 0;">💵 Adjusting Payments:</p>
+    <div><label><input type="checkbox"> Navigate to the Adjust Payments tab.</label></div>
+    <div><label><input type="checkbox"> Select all draft payments and update the amount based on the new term.</label></div>
+    <div><label><input type="checkbox"> Save the changes.</label></div>
+    <div><label><input type="checkbox"> Send the client the confirmation document to finalize the update.</label></div>
+
+  </div>
+
+  <div class="button-grid grid-2" style="margin-top: 30px; text-align: left;">
     <button class="back-button" onclick="goBackToPrevious()">⬅️ Back</button>
     <button class="back-button" onclick="showOnly('homepage')">✅ Finish</button>
   </div>
@@ -1888,7 +1896,7 @@
 
 <!-- Retention Cancel - EPF -->
 <div class="container section" id="retentionCancelEPF">
-  <h2 style="text-align: center; font-weight: bold;">Earned Performance Fee Concerns</h2>
+  <h2 style="text-align: center; font-weight: bold;">Earned Performance Fee Concerns</h2><br>
   <p style="font-weight: bold; text-align: left;">“Can you lower your fees?”</p>
   <p style="text-align: left;">
     'What exactly about our fees does not suit you? We always make sure to remain competitive with our rates. The rates that apply to you now are designed to keep your file maintained properly. Our fees go to cover the cost of operations to help you reach proper debt freedom.'
@@ -1915,7 +1923,7 @@
 
 <!-- Retention Cancel - Bankruptcy -->
 <div class="container section" id="retentionCancelBankruptcy">
-  <h2 style="text-align: center; font-weight: bold;">Filing Bankruptcy</h2>
+  <h2 style="text-align: center; font-weight: bold;">Filing Bankruptcy</h2><br>
   <p style="font-weight: bold; text-align: left;">“I am filing for bankruptcy”</p>
   <p style="text-align: left;">I understand you are considering bankruptcy, but it has serious downsides. It impacts your credit for 7-10 years, appears on public records, and may put assets like your home and car at risk. If you have a steady income, you may not qualify. Our program offers a safer alternative to help you manage debt without these severe consequences.</p>
   <p style="font-weight: bold; text-align: left;">How to handle it:</p>
@@ -1932,7 +1940,7 @@
 
 <!-- Retention Cancel - Lack of Progress -->
 <div class="container section" id="retentionCancelProgress">
-  <h2 style="text-align: center; font-weight: bold;">Lack of Progress</h2>
+  <h2 style="text-align: center; font-weight: bold;">Lack of Progress</h2><br>
   <p style="font-weight: bold; text-align: left;">“It’s taking so long to settle my accounts”</p>
   <p style="text-align: left;">I understand your concerns and I want to assist you. I will assign our negotiations team to expedite the settlement process. I will personally call you back with updates within 2 to 3 business days to help resolve this issue.</p>
   <p style="font-weight: bold; text-align: left;">How to handle it:</p>
@@ -1950,7 +1958,7 @@
 
 <!-- Retention Cancel - Legal Fees Concerns -->
 <div class="container section" id="retentionCancelLegalFees">
-  <h2 style="text-align: center; font-weight: bold;">Legal Fees Concerns</h2>
+  <h2 style="text-align: center; font-weight: bold;">Legal Fees Concerns</h2><br>
   <p style="font-weight: bold; text-align: left;">“I am concerned about fees such as the legal plan fees”</p>
   <p style="text-align: left;">I understand your concerns. But keep in mind that the legal plan is optional and designed to provide legal protection. However, if you don’t want them, I will consult with my team lead to see if we can cancel the legal plan for you. I will get back to you with updates as soon as possible.</p>
   <p style="font-weight: bold; text-align: left;">How to handle it:</p>
@@ -1967,7 +1975,7 @@
 
 <!-- Retention Cancel - Family Member Helping -->
 <div class="container section" id="retentionCancelFamilyHelp">
-  <h2 style="text-align: center; font-weight: bold;">Family or Other Income Source</h2>
+  <h2 style="text-align: center; font-weight: bold;">Family or Other Income Source</h2><br>
   <p style="font-weight: bold; text-align: left;">“My family is helping with pay the debt.”</p>
   <p style="text-align: left;">That's great to hear. You can add additional funds to your escrow account to expedite the resolution of your accounts.</p>
   <p style="font-weight: bold; text-align: left;">How to handle it:</p>
@@ -1983,7 +1991,7 @@
 
 <!-- Retention Cancel - Manage Independently -->
 <div class="container section" id="retentionCancelManageSelf">
-  <h2 style="text-align: center; font-weight: bold;">Manage Debts Independently</h2>
+  <h2 style="text-align: center; font-weight: bold;">Manage Debts Independently</h2><br>
   <p style="font-weight: bold; text-align: left;">“I want to handle my debt by myself with the creditors”</p>
   <p style="text-align: left;">Of course, you can address your debt on your own. However, having a professional with over 10 years of experience can be more beneficial. In addition, creditors won’t give you good settlement offers as good as we will get you.</p>
   <p style="font-weight: bold; text-align: left;">How to handle it:</p>
@@ -2000,7 +2008,7 @@
 
 <!-- Retention Cancel - Lack of Communication -->
 <div class="container section" id="retentionCancelCommunication">
-  <h2 style="text-align: center; font-weight: bold;">Lack of Communication</h2>
+  <h2 style="text-align: center; font-weight: bold;">Lack of Communication</h2><br>
   <p style="font-weight: bold; text-align: left;">“You guys do not update me on my file. I have no insight on anything”</p>
   <p style="text-align: left;">I apologize for the lack of communication. We usually provide updates, and to address this, I will assign a team lead to investigate and set up monthly reviews to keep you informed. Does that sound good?</p>
   <p style="font-weight: bold; text-align: left;">How to handle it:</p>
@@ -2017,7 +2025,7 @@
 
 <!-- Retention Cancel - Misinformed About the Program -->
 <div class="container section" id="retentionCancelMisinformed">
-  <h2 style="text-align: center; font-weight: bold;">Misinformed about the Program</h2>
+  <h2 style="text-align: center; font-weight: bold;">Misinformed about the Program</h2><br>
   <p style="font-weight: bold; text-align: left;">“I thought that this was a debt consolidation loan”</p>
   <p style="text-align: left;">I apologize for any confusion. Our main service is debt settlement, helping you settle debts for less. Additionally, we do offer a loan program, but it has certain qualifications.
   You need to have made at least six successful payments. Once you qualify, our loan team will reach out to discuss the loan program with you. How does that sound?</p>
@@ -2038,7 +2046,7 @@
 
 <!-- Retention Cancel - Harassed by Creditors -->
 <div class="container section" id="retentionCancelHarassed">
-  <h2 style="text-align: center; font-weight: bold;">Harassed by Creditors</h2>
+  <h2 style="text-align: center; font-weight: bold;">Harassed by Creditors</h2><br>
   <p style="font-weight: bold; text-align: left;">“My creditors are calling me non-stop and its getting frustrating”</p>
   <p style="text-align: left;">I'm sorry to hear that. To address this issue, we can send you a written communication document issued under the FDCPA.
   This document is designed to protect you from creditors. You can easily print it, fill it out, and mail it to the creditor's address. And I will check if we have sent them the POA.</p>
@@ -2076,30 +2084,43 @@
 
 <!-- Retention Transfer Start!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
 <div class="container section" id="retentionTransfer">
-  <h2 style="text-align: center; font-weight: bold;">Greeting / Intro</h2>
+  <h2 style="text-align: center; font-weight: bold;">   Greeting / Intro</h2><br>
+  <h3 style="text-align: left;"><strong>Client Authentication</strong> and Verification</h>
   <div class="left-align-text">
     <p style="text-align: left;">"Hello, this is [Agent’s Name] from Account Services. This call is being recorded for quality assurance and compliance purposes. Do I have your permission to proceed?”</p>
-    <p style="text-align: left;">“Can you please confirm your phone number or Client ID so I can access your file?”</p>
-    <label><input type="checkbox"> Verify Full Name</label><br>
-    <label><input type="checkbox"> Verify Date of Birth</label><br>
-    <label><input type="checkbox"> Verify Full Address</label>
-    <p style="color: red; text-align: left;">At least two of these details must be verified before proceeding.</p>
+
+    <p style="text-align: left;">“May I have your phone number or Client ID so I can pull up your file?”</p>
+
+  <label><input type="checkbox"> Verify <Strong>Full Name</Strong>.</label><br>
+  <label><input type="checkbox"> Verify <Strong>Date of Birth</Strong>.</label><br>
+  <label><input type="checkbox"> Verify <Strong>Full Address</Strong>.</label><br>
+
+    <p style="color: red; text-align: left; font-weight: 600; margin-top: 8px;">
+      At least two of these details must be verified before proceeding.
+    </p>
+
     <p style="text-align: left;">“Can you please confirm your full name, date of birth & address for authentication purposes?”</p>
-    <label><input type="checkbox"> Phone Number</label><br>
-    <label><input type="checkbox"> Email Address</label>
-    <p style="text-align: left;">“Have any of your contact details changed since the last conversation?”</p>
+
+    <label style="text-align: left;"><input type="checkbox"> Phone Number</label><br>
+    <label style="text-align: left;"><input type="checkbox"> Email Address</label>
+
+  <p style="text-align: left;"><em>Ask the client: “Have any of your contact details changed since our last conversation?”</em></p>
   </div>
-  <h3 style="text-align: center; font-weight: bold;">Choose Your Path</h3>
+
+  <h3 style="text-align: center; font-weight: bold; margin-top: 30px;">Choose Your Path</h3>
+
   <div class="button-grid grid-3">
-  <button class="button" onclick="showOnly('retentionAddDebt')">Add a Debt</button>
-  <button class="button" onclick="showOnly('retentionCancellation')">Cancellation Requests</button>
-  <button class="button" onclick="showOnly('retentionRemoveDebt')">Remove a Debt</button>
+    <button class="button" onclick="showOnly('retentionAddDebt')">Add a Debt</button>
+    <button class="button" onclick="showOnly('retentionCancellation')">Cancellation Requests</button>
+    <button class="button" onclick="showOnly('retentionRemoveDebt')">Remove a Debt</button>
+  </div>
+
+  <div class="button-grid-back" style="margin-top: 25px;">
+    <button class="back-button" onclick="goBackToPrevious()">⬅️ Back</button>
+  </div>
 </div>
 
-  <div class="button-grid-back">
-<button class="back-button" onclick="goBackToPrevious()">⬅️ Back</button>
-  </div>
-</div>
+
 
 <!-- Retention Outbound Start! -->
 <div class="container section" id="retentionOutbound">
