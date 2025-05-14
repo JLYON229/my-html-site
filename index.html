@@ -208,16 +208,42 @@
       transform: translateY(0);
     }
   }
+
+.home-button {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background-color: #112663;
+  color: white;
+  padding: 10px 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  z-index: 999;
+  transition: background-color 0.3s ease;
+}
+
+.home-button:hover {
+  background-color: #44B2E5;
+  color: white;
+}
+
+
+
 </style>
 
 
 </head>
 <body>
-
+<button class="home-button" onclick="showOnly('homepage')">Home</button>
   <div class="container section active" id="homepage">
-  <h1>Welcome Agent! 🌟</h1><br>
-  <p>This is your personalized Agent Journey Interactive Flow.<br><br>
-     Please start by selecting your department:</p>
+  <h1>Agent Journey Interactive Flow</h1>
+  <p>Welcome to your dedicated workflow assistant.<br>
+     This portal is built to enhance efficiency, reduce errors, and maintain consistency across all client-facing processes</p>
+
+<h3>Start by selecting your department<h3>
 
   <div class="button-grid grid-3">
     <button class="button" onclick="showOnly('ancillarySupport')">Ancillary Support</button>
@@ -266,6 +292,7 @@
 <!-- Customer Service Main Section -->
 <div class="container section" id="customerService">
   <h2>Customer Service</h2><br>
+<h3>Select the type of call</h3><br>
   <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-bottom: 30px;">
     <button class="button" style="flex: 1 1 250px;" onclick="showOnly('customerServiceInbound')">📥 Inbound Call</button>
     <button class="button" style="flex: 1 1 250px;" onclick="showOnly('customerServiceOutbound')">📤 Outbound Call</button>
@@ -1717,7 +1744,8 @@
 
 <!-- Retention Start -->
 <div class="container section" id="retention">
-  <h2 style="text-align: center;">Retention</h2>
+  <h2 style="text-align: center;">Retention</h2><br>
+<h3>Select the type of call</h3><br>
   <div class="button-grid grid-3">
     <button class="button" onclick="showOnly('retentionInbound')">📥 Inbound Call</button>
     <button class="button" onclick="showOnly('retentionOutbound')">📤 Outbound Call</button>
@@ -2650,7 +2678,9 @@
 
 
 <div class="container section" id="telemarketing">
-  <h2 style="text-align: center; font-weight: bold;">Telemarketing</h2>
+  <h2 style="text-align: center; font-weight: bold;">Telemarketing</h2><br>
+<h3>Select the type of call</h3><br>
+
   <div class="button-grid grid-2">
     <button class="button" onclick="showOnly('telemarketingInbound')">📥 Inbound Call</button>
     <button class="button" onclick="showOnly('telemarketingOutbound')">📤 Outbound Call</button>
