@@ -937,6 +937,7 @@
     <label><input type="checkbox"> Ask the client to email a copy of the document.</label><br>
     <label><input type="checkbox"> Confirm it is a pre-legal notice and linked to an enrolled account.</label><br>
     <label><input type="checkbox"> Upload it as: Turnover Letter.</label><br>
+    <label><input type="checkbox"> Change the debt color to yellow.</label><br>
     <label><input type="checkbox"> Add note → Use “Document Uploaded” template.</label><br>
     <label><input type="checkbox"> Create a task for the file’s team color.</label><br>
     <label><input type="checkbox"> Type: Pre-Legal → Due Date: [Document Date] → Assigned To: Pre-Legal Team → Note: “Please assign a PLN.”</label>
@@ -1024,7 +1025,8 @@
   <div class="left-align-text">
     <label style="font-weight: normal;"><input type="checkbox"> Create a task for "ACH Team"</label><br>
     <label style="font-weight: normal;"><input type="checkbox"> Set the date for 3 business days from the date you created task.</label><br>
-    <label style="font-weight: normal;"><input type="checkbox"> Tag "REFUND PP" on the requested savings template.</label>
+    <label style="font-weight: normal;"><input type="checkbox"> Add note → Use “Requested Savings” template.</label><br>
+    <label style="font-weight: normal;"><input type="checkbox"> Notify "REFUND PP" on the note.</label>
   </div>
 <p style="background: #f4f7fc; padding: 15px; border-radius: 10px;">
     Timeline: 7–10 business days for refund to reflect in bank account.
@@ -1616,10 +1618,88 @@
 
 
 
-  <div class="container section" id="negotiations">
-    <h2>Negotiations</h2>
-<button class="back-button" onclick="goBackToPrevious()">⬅️ Back</button>
+<!-- Negotiations Section -->
+<div class="container section" id="negotiations" style="display: none;">
+  <h2 style="text-align: center; font-weight: bold;">🤝 Negotiations</h2>
+  <p style="text-align: center; margin-top: 10px;">
+    Follow this process to negotiate settlements with creditors on behalf of the client.
+  </p>
+
+  <div class="button-grid grid-2" style="margin-top: 30px;">
+    <button class="back-button" onclick="goBackToPrevious()">⬅️ Back</button>
+    <button class="button" onclick="showOnly('negotiationProcess')">📋 Negotiation Process</button>
   </div>
+</div>
+
+<!-- Negotiation Process -->
+<div class="container section" id="negotiationProcess" style="display: none;">
+  <h2 style="text-align: center; font-weight: bold;">🧾 Verify Funds Availability</h2>
+
+  <p style="font-weight: bold; margin-top: 30px; text-align: left;">Assess Account Status:</p>
+  <div class="left-align-text">
+    <label><input type="checkbox"> Confirm the account is delinquent or charged off.</label><br>
+    <label><input type="checkbox"> Verify if at least two months' drafts have been completed indicating the account is purchased.</label><br>
+    <label><input type="checkbox"> Ensure the file is not categorized under "Hunter Martin" or "funded accounts".</label><br>
+    <label><input type="checkbox"> Check if the debt is with a scrub creditor.</label>
+  </div>
+
+  <p style="font-weight: bold; margin-top: 30px; text-align: left;">Prepare Client Information:</p>
+  <div class="left-align-text">
+    <label><input type="checkbox"> Review the enrollment date to estimate the last payment made to creditors.</label><br>
+    <label><input type="checkbox"> Examine enrolled debts and specific creditors.</label><br>
+    <label><input type="checkbox"> Check debt balances.</label><br>
+    <label><input type="checkbox"> Check whether a POA has been sent to the creditor or needs to be sent.</label>
+    <div style="margin-left: 20px; margin-top: 10px;">
+      <label><input type="checkbox"> Navigate to the Tasks section.</label><br>
+      <label><input type="checkbox"> Select “Send POA to Creditor” as the task type.</label><br>
+      <label><input type="checkbox"> Attach the Power of Attorney document if available.</label><br>
+      <label><input type="checkbox"> Submit the task and confirm its status.</label>
+    </div>
+  </div>
+
+  <div class="button-grid grid-2" style="margin-top: 30px;">
+    <button class="back-button" onclick="goBackToPrevious()">⬅️ Back</button>
+    <button class="button" onclick="showOnly('contactCreditor')">📞 Contact the Creditor</button>
+  </div>
+</div>
+
+<!-- Contact the Creditor Step -->
+<div class="container section" id="contactCreditor" style="display: none;">
+  <h2 style="text-align: center; font-weight: bold;">📞 Contacting the Creditor</h2>
+
+  <p style="font-weight: bold; margin-top: 30px; text-align: left;">Initiate Contact with Creditor:</p>
+  <div class="left-align-text">
+    <label><input type="checkbox"> Call the creditor, introduce our company, and read the phone recording disclosure.</label><br>
+    <label><input type="checkbox"> Confirm the client's information.</label><br>
+    <label><input type="checkbox"> If applicable, mention the name of the attorney assigned.</label><br>
+    <label><input type="checkbox"> Verify the client's current debt balance with the creditor.</label>
+  </div>
+
+  <p style="font-weight: bold; margin-top: 30px; text-align: left;">Negotiate Settlement:</p>
+  <div class="left-align-text">
+    <label><input type="checkbox"> Use the CRM to review the client's budget.</label><br>
+    <label><input type="checkbox"> Discuss with the creditor how much they are willing to reduce the balance.</label><br>
+    <label><input type="checkbox"> Determine the best feasible settlement offer the client can afford.</label><br>
+    <label><input type="checkbox"> Submit the offer through the CRM.</label>
+  </div>
+
+  <p style="font-weight: bold; margin-top: 30px; text-align: left;">Finalize Settlement:</p>
+  <div class="left-align-text">
+    <label><input type="checkbox"> Ensure the creditor sends the settlement agreement letter.</label><br>
+    <label><input type="checkbox"> Upon receiving the settlement letter, it is sent to your email or fax.</label><br>
+    <label><input type="checkbox"> Fill out the 'Settlement Reached' or 'Settlement Exception Needed' template with the correct information.</label>
+  </div>
+
+  <div class="button-grid-full" style="margin-top: 40px;">
+    <button class="back-button" onclick="goBackToPrevious()">⬅️ Back</button>
+    <button class="button" onclick="goNextStep()">✅ Final Review</button>
+  </div>
+</div>
+
+
+
+
+
 
 
 
@@ -2825,7 +2905,7 @@
   <label><input type="checkbox"> Inform the Client that they are Not Eligible.</label>
   <p>Hello (Lead Name), thank you for holding. The system came back with the results and unfortunately we couldn’t manage to get you qualified for any of our options. Thank you and have a great day.</p>
   <label><input type="checkbox"> Change file status to "NQDS (Not Qualified)"</label><br>
-  <label><input type="checkbox"> Dispo the call as "Not Eligible"</label><br>
+  <label><input type="checkbox"> Dispo the call as "NE - Not Eligible"</label><br>
   <label><input type="checkbox"> Add note → Use “Credit pulled, Client Not Eligible” template.</label><br>
   <div class="button-grid grid-2" style="margin-top: 30px;">
     <button class="button" onclick="goBackToPrevious()">⬅️ Back</button>
@@ -2857,6 +2937,7 @@
   <label><input type="checkbox"> Add note → Use “Credit pulled, Live Xfer” template.</label><br>
   <label><input type="checkbox">Inform the Account Manager of the amount & purpose for the loan.</label><br>
   <label><input type="checkbox">Release the Lead from the hold.</label><br>
+  <label><input type="checkbox"> Dispo the call as "XFER - Call Transferred"</label><br>
   <div class="button-grid grid-2" style="margin-top: 30px;">
     <button class="button" onclick="goBackToPrevious()">⬅️ Back</button>
     <button class="button" onclick="showOnly('homepage')">✅ Finish</button>
@@ -2867,6 +2948,7 @@
 <div class="container section" id="telemarketingTransferAppt">
   <h2 style="text-align: center;">Transfer Appointment</h2><br>
   <label><input type="checkbox"> Ask the Lead what is the Best Time To Call (BTTC)</label><br>
+  <label><input type="checkbox"> Dispo the call as "TA - Transfer Appt"</label><br>
   <label><input type="checkbox"> Add note → Use “Credit pulled, Transfer Appt” template.</label><br>
   <label><input type="checkbox"> Change file status to "Transfer Appt"</label><br>
   <label><input type="checkbox"> Unassign the file</label><br>
