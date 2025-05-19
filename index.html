@@ -231,15 +231,48 @@
 }
 
 
+.banner-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.banner-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  padding: 10px;
+}
+
+
 
 </style>
 
 
 </head>
 <body>
+
+<div class="banner-container">
+  <img src="https://i.imgur.com/vyq6NyE.png" alt="Banner" class="banner-image">
+  <div class="banner-text">Welcome to the Agent Journey</div>
+</div>
+
+
 <button class="home-button" onclick="showOnly('homepage')">Home</button>
   <div class="container section active" id="homepage">
-  <h1>Agent Journey Interactive Flow</h1>
   <p>Welcome to your dedicated workflow assistant.<br>
      This portal is built to enhance efficiency, reduce errors, and maintain consistency across all client-facing processes</p>
 
@@ -369,6 +402,7 @@
     <button class="button" onclick="showOnly('poaSifRequest')">📂 POA / SIF Requests</button>
     <button class="button" onclick="showOnly('settlementAuthOB')">🗂️ Settlement Authorization OB</button>
     <button class="button" onclick="showOnly('stoppedPayment')">⛔ Stopped Payment / Revoked</button>
+    <button class="button" onclick="showOnly('stopThePayment')">⏸️ Stop The Payment Task</button>
   </div>
 
   <div class="button-grid" style="margin-top: 30px;">
@@ -2132,7 +2166,22 @@
   </div>
 </div>
 
+<!-- ⏸️ Stop The Payment Task Page -->
+<div class="container section" id="stopThePayment">
+  <h2>⏸️ Stop The Payment Task</h2><br>
 
+
+  <div class="left-align-text" style="margin-top: 30px;">
+    <label><input type="checkbox"> Go to Tasks → Follow up Task (Stop the Auto Payment).</label><br>
+    <label><input type="checkbox"> Call the Client.</label><br>
+    <label><input type="checkbox"> Inform the Client to pause the payment on the account.</label>
+  </div>
+
+  <div style="display: flex; gap: 15px; margin-top: 40px; justify-content: center; flex-wrap: wrap;">
+    <button class="button" style="flex: 1 1 250px;" onclick="goBackToPrevious()">⬅️ Back</button>
+    <button class="button" style="flex: 1 1 250px;" onclick="showOnly('homepage')">✅ Finish</button>
+  </div>
+</div>
 
 
 
