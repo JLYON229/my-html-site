@@ -230,8 +230,6 @@
   color: white;
 }
 
-
-
 </style>
 
 
@@ -241,7 +239,7 @@
   <div class="container section active" id="homepage">
   <h1>Welcome to your dedicated workflow assistant.</h1><br>
   <p>This portal is built to enhance efficiency, reduce errors, and maintain consistency across all client-facing processes</p>
-    
+
 <h3>Start by selecting your department<h3>
 
   <div class="button-grid grid-3">
@@ -1748,50 +1746,52 @@
       </div>
     </div>
 
-    <!-- Right side table -->
-    <div style="flex: 1; min-width: 250px;">
-      <h3 style="text-align: left;">Declined File Statuses:</h3>
-<table style="width: 80%; border-collapse: collapse; font-size: 14px;">
-  <tr>
-    <td style="border: 1px solid #ccc; padding: 6px;">1st Payment NST 1</td>
-    <td style="border: 1px solid #ccc; padding: 6px;">BLOCKED</td>
-  </tr>
-  <tr>
-    <td style="border: 1px solid #ccc; padding: 6px;">Error Processing</td>
-    <td style="border: 1px solid #ccc; padding: 6px;">Five Days</td>
-  </tr>
-  <tr>
-    <td style="border: 1px solid #ccc; padding: 6px;">Force Cancel Pending</td>
-    <td style="border: 1px solid #ccc; padding: 6px;">Forth Hold</td>
-  </tr>
-  <tr>
-    <td style="border: 1px solid #ccc; padding: 6px;">Graduated</td>
-    <td style="border: 1px solid #ccc; padding: 6px;">Graduation Review</td>
-  </tr>
-  <tr>
-    <td style="border: 1px solid #ccc; padding: 6px;">Graduation Review - Lending</td>
-    <td style="border: 1px solid #ccc; padding: 6px;">Invalid Banking</td>
-  </tr>
-  <tr>
-    <td style="border: 1px solid #ccc; padding: 6px;">Loanosity - Pre-Approved</td>
-    <td style="border: 1px solid #ccc; padding: 6px;">Loanosity Funded</td>
-  </tr>
-  <tr>
-    <td style="border: 1px solid #ccc; padding: 6px;">LUSA Funded</td>
-    <td style="border: 1px solid #ccc; padding: 6px;">LUSA Pre-Approved</td>
-  </tr>
-  <tr>
-    <td style="border: 1px solid #ccc; padding: 6px;">LUSA Pre-Qualified</td>
-    <td style="border: 1px solid #ccc; padding: 6px;">Paused/Hold</td>
-  </tr>
-  <tr>
-    <td style="border: 1px solid #ccc; padding: 6px;">Prompt Graduation</td>
-    <td style="border: 1px solid #ccc; padding: 6px;">Stopped Payment/Revoked</td>
-  </tr>
-    <td style="border: 1px solid #ccc; padding: 6px;">Workflow Test</td>
-</table>
+<!-- Right side table -->
+<div style="flex: 1; min-width: 250px;">
+  <h3 style="text-align: left;">Declined File Statuses:</h3>
+  <table style="width: 80%; border-collapse: collapse; font-size: 14px;">
+    <tr>
+      <td style="border: 1px solid #ccc; padding: 6px; text-align: center;">1st Payment NST 1</td>
+      <td style="border: 1px solid #ccc; padding: 6px; text-align: center;">BLOCKED</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ccc; padding: 6px; text-align: center;">Error Processing</td>
+      <td style="border: 1px solid #ccc; padding: 6px; text-align: center;">Five Days</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ccc; padding: 6px; text-align: center;">Force Cancel Pending</td>
+      <td style="border: 1px solid #ccc; padding: 6px; text-align: center;">Forth Hold</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ccc; padding: 6px; text-align: center;">Graduated</td>
+      <td style="border: 1px solid #ccc; padding: 6px; text-align: center;">Graduation Review</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ccc; padding: 6px; text-align: center;">Graduation Review - Lending</td>
+      <td style="border: 1px solid #ccc; padding: 6px; text-align: center;">Invalid Banking</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ccc; padding: 6px; text-align: center;">Loanosity - Pre-Approved</td>
+      <td style="border: 1px solid #ccc; padding: 6px; text-align: center;">Loanosity Funded</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ccc; padding: 6px; text-align: center;">LUSA Funded</td>
+      <td style="border: 1px solid #ccc; padding: 6px; text-align: center;">LUSA Pre-Approved</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ccc; padding: 6px; text-align: center;">LUSA Pre-Qualified</td>
+      <td style="border: 1px solid #ccc; padding: 6px; text-align: center;">Paused/Hold</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ccc; padding: 6px; text-align: center;">Prompt Graduation</td>
+      <td style="border: 1px solid #ccc; padding: 6px; text-align: center;">Stopped Payment/Revoked</td>
+    </tr>
+    <tr>
+      <td colspan="2" style="border: 1px solid #ccc; padding: 6px; text-align: center;">Workflow Test</td>
+    </tr>
+  </table>
+</div>
 
-    </div>
   </div>
 
   <!-- Action buttons -->
@@ -2149,6 +2149,7 @@
   <div class="left-align-text" style="margin-left: 20px; margin-bottom: 30px;">
     <label><input type="checkbox"> Navigate to the client dashboard.</label><br>
     <label><input type="checkbox"> Click the "Edit" icon next to the client status.</label><br>
+    <label><input type="checkbox"> Change the status to “Term Settlement”.</label>
   </div>
 
   <!-- Finish Button -->
@@ -3136,7 +3137,7 @@
       <!-- Image Section -->
       <div style="flex-shrink: 0; height: 0; overflow: visible;">
         <img src="https://imgur.com/SDXzl9s.png" alt="Agent Illustration"
-             style="max-width: 300px; height: auto; border-radius: 8px; transform: translateY(-40px);">
+             style="max-width: 300px; height: auto; border-radius: 8px; transform: translateY(-10px);">
       </div>
 
     </div>
@@ -3167,7 +3168,7 @@
     <!-- Image Section -->
     <div style="flex-shrink: 0; height: 0; overflow: visible;">
       <img src="https://imgur.com/SDXzl9s.png" alt="Agent Illustration"
-           style="max-width: 300px; height: auto; border-radius: 8px; transform: translateY(-30px);">
+           style="max-width: 300px; height: auto; border-radius: 8px; transform: translateY(-10px);">
     </div>
 
   </div>
