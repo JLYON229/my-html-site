@@ -213,21 +213,21 @@
   position: fixed;
   top: 20px;
   left: 20px;
-  background-color: #112663;
-  color: white;
-  padding: 10px 16px;
-  font-weight: bold;
-  border-radius: 8px;
+  background: none;
   border: none;
+  padding: 0;
   cursor: pointer;
-  font-family: 'Montserrat', sans-serif;
   z-index: 999;
-  transition: background-color 0.3s ease;
 }
 
-.home-button:hover {
-  background-color: #44B2E5;
-  color: white;
+.home-button img {
+  height: 45px;
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+.home-button:hover img {
+  transform: scale(1.05);
 }
 
 @font-face {
@@ -247,7 +247,9 @@
 
 </head>
 <body>
-<button class="home-button" onclick="showOnly('homepage')">Home</button>
+<button class="home-button" onclick="showOnly('homepage')">
+  <img src="https://i.imgur.com/zG1Wo76.png" alt="Home">
+</button>
   <div class="container section active" id="homepage">
   <h1>Welcome to your dedicated workflow assistant.</h1><br>
   <p>This portal is built to enhance efficiency, reduce errors, and maintain consistency across all client-facing processes</p>
