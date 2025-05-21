@@ -288,11 +288,90 @@
 
 
 
+<!-- Ancillary Underwriting Start -->
+<div class="container section" id="ancillaryUnderwriting">
+  <h2 style="text-align: center; font-weight: bold;">Ancillary Underwriting</h2>
+  <p style="text-align: center; font-weight: bold; margin-top: 30px;">Choose The Plan you want to add</p>
 
-  <div class="container section" id="ancillaryUnderwriting">
-    <h2>Ancillary Underwriting</h2>
-    <button class="back-button" onclick="goBackToPrevious()">⬅️ Back</button>
+  <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-bottom: 30px;">
+    <button class="button" style="flex: 1 1 250px;" onclick="showOnly('cdpEligibility')">Consumer Debt Plan (CDP)</button>
+    <button class="button" style="flex: 1 1 250px;" onclick="showOnly('vlpEligibility')">Veritas Legal Plan (VLP)</button>
   </div>
+
+  <div class="button-grid" style="margin-top: 30px;">
+    <button class="button" style="width: 100%;" onclick="goBackToPrevious()">⬅️ Back</button>
+  </div>
+</div>
+
+<!-- Shared Eligibility Step -->
+<div class="container section" id="cdpEligibility" style="display: none;">
+  <h2 style="text-align: center; font-weight: bold;">Checking Eligibility</h2>
+  <p style="font-weight: bold; margin-top: 30px;">Monthly Draft Amount:</p>
+
+  <div class="left-align-text">
+    <label><input type="checkbox"> Go to the Enrollment Tab.</label><br>
+    <label><input type="checkbox"> Review the monthly draft schedule.</label><br>
+    <label><input type="checkbox"> Check if the monthly drafts amount consistent of $300 or more.</label>
+  </div>
+
+  <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-bottom: 30px;">
+    <button class="button" style="flex: 1 1 250px;" onclick="showOnly('notEligible')">Not Eligible</button>
+    <button class="button" style="flex: 1 1 250px;" onclick="showOnly('continueEligibility')">Continue</button>
+  </div>
+
+  <div class="button-grid" style="margin-top: 30px;">
+    <button class="button" style="width: 100%;" onclick="goBackToPrevious()">⬅️ Back</button>
+  </div>
+</div>
+
+<!-- Clone for VLP Eligibility (reuses same layout) -->
+<div class="container section" id="vlpEligibility" style="display: none;">
+  <h2 style="text-align: center; font-weight: bold;">Checking Eligibility</h2>
+  <p style="font-weight: bold; margin-top: 30px;">Monthly Draft Amount:</p>
+
+  <div class="left-align-text">
+    <label><input type="checkbox"> Go to the Enrollment Tab.</label><br>
+    <label><input type="checkbox"> Review the monthly draft schedule.</label><br>
+    <label><input type="checkbox"> Check if the monthly drafts amount consistent of $300 or more.</label>
+  </div>
+
+  <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-bottom: 30px;">
+    <button class="button" style="flex: 1 1 250px;" onclick="showOnly('notEligible')">Not Eligible</button>
+    <button class="button" style="flex: 1 1 250px;" onclick="showOnly('continueEligibility')">Continue</button>
+  </div>
+
+
+
+  <div class="button-grid" style="margin-top: 30px;">
+    <button class="button" style="width: 100%;" onclick="goBackToPrevious()">⬅️ Back</button>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3122,17 +3201,27 @@
 
 
 <div class="container section" id="telemarketing">
-  <h2 style="text-align: center; font-weight: bold;">Telemarketing</h2><br>
-<h3>Select the type of call</h3>
+  <br><br><br><br>
 
+  <!-- Centered Image Above Heading -->
+  <div style="text-align: center;">
+    <img src="https://i.imgur.com/y0uFfHf.png" alt="Telemarketing Icon" style="max-width: 120px; height: auto; margin-bottom: 10px;">
+  </div>
+
+  <!-- Heading -->
+  <h2 style="text-align: center; font-weight: bold;">Telemarketing</h2>
+
+  <!-- Buttons -->
   <div class="button-grid grid-2">
     <button class="button" onclick="showOnly('telemarketingInbound')">📥 Inbound Call</button>
     <button class="button" onclick="showOnly('telemarketingOutbound')">📤 Outbound Call</button>
   </div>
+  
   <div class="button-grid" style="margin-top: 30px;">
     <button class="button" style="width: 100%;" onclick="goBackToPrevious()">⬅️ Back</button>
   </div>
 </div>
+
 
 <!-- Inbound Script -->
 <div class="container section" id="telemarketingInbound">
