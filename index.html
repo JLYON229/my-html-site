@@ -293,7 +293,7 @@
 
 <!-- Ancillary Underwriting Start -->
 <div class="container section" id="ancillaryUnderwriting">
-  <h2 style="text-align: center; font-weight: bold;">Ancillary Underwriting</h2>
+  <h2 style="text-align: center; font-weight: bold;">Ancillary Underwriting</h2><br>
   <p style="text-align: center; font-weight: bold; margin-top: 30px;">Choose The Plan you want to add</p>
 
   <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-bottom: 30px;">
@@ -309,17 +309,18 @@
 <!-- Shared Eligibility Step -->
 <div class="container section" id="cdpEligibility" style="display: none;">
   <h2 style="text-align: center; font-weight: bold;">Checking Eligibility</h2>
-  <p style="font-weight: bold; margin-top: 30px;">Monthly Draft Amount:</p>
+  <h3 style="font-weight: bold; margin-top: 30px; text-align: left;">Monthly Draft Amount:</h3>
 
   <div class="left-align-text">
     <label><input type="checkbox"> Go to the Enrollment Tab.</label><br>
     <label><input type="checkbox"> Review the monthly draft schedule.</label><br>
-    <label><input type="checkbox"> Check if the monthly drafts amount consistent of $300 or more.</label>
+    <label><input type="checkbox"> Check if the monthly drafts amount consistent of $300 or more.</label><br>
   </div>
+<br>
 
   <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-bottom: 30px;">
     <button class="button" style="flex: 1 1 250px;" onclick="showOnly('notEligible')">Not Eligible</button>
-    <button class="button" style="flex: 1 1 250px;" onclick="showOnly('continueEligibility')">Continue</button>
+    <button class="button" style="flex: 1 1 250px;" onclick="showOnly('CDPcontinueEligibility')">Continue</button>
   </div>
 
   <div class="button-grid" style="margin-top: 30px;">
@@ -330,19 +331,18 @@
 <!-- Clone for VLP Eligibility (reuses same layout) -->
 <div class="container section" id="vlpEligibility" style="display: none;">
   <h2 style="text-align: center; font-weight: bold;">Checking Eligibility</h2>
-  <p style="font-weight: bold; margin-top: 30px;">Monthly Draft Amount:</p>
+  <h3 style="font-weight: bold; margin-top: 30px; text-align: left;">Monthly Draft Amount:</h3>
 
   <div class="left-align-text">
     <label><input type="checkbox"> Go to the Enrollment Tab.</label><br>
     <label><input type="checkbox"> Review the monthly draft schedule.</label><br>
-    <label><input type="checkbox"> Check if the monthly drafts amount consistent of $300 or more.</label>
+    <label><input type="checkbox"> Check if the monthly drafts amount consistent of $300 or more.</label><br>
   </div>
-
+<br>
   <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-bottom: 30px;">
     <button class="button" style="flex: 1 1 250px;" onclick="showOnly('notEligible')">Not Eligible</button>
-    <button class="button" style="flex: 1 1 250px;" onclick="showOnly('continueEligibility')">Continue</button>
+    <button class="button" style="flex: 1 1 250px;" onclick="showOnly('VLPcontinueEligibility')">Continue</button>
   </div>
-
 
 
   <div class="button-grid" style="margin-top: 30px;">
@@ -351,14 +351,504 @@
 </div>
 
 
+<!-- CDP Not Eligible -->
+<div class="container section" id="notEligible" style="display: none;">
+  <h2 style="text-align: center; font-weight: bold;">CDP Not Eligible</h2>
+  <div class="left-align-text" style="margin-top: 30px;">
+    <label><input type="checkbox"> Navigate to the "Notes" tab.</label><br>
+    <label><input type="checkbox"> Use the appropriate note format:</label><br>
+    <label><input type="radio" name="cdpNote"> File reviewed - cannot add CDP - (Reason)</label><br>
+    <label><input type="radio" name="cdpNote"> File reviewed ~ ATTEMPT # - cannot add CDP: (Reason)</label>
+  </div>
+
+  <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-top: 40px;">
+    <button class="button" style="flex: 1 1 250px;" onclick="goBackToPrevious()">⬅️ Back</button>
+    <button class="button" style="flex: 1 1 250px;" onclick="showOnly('homepage')">Finish</button>
+  </div>
+</div>
+
+<!-- VLP Not Eligible -->
+<div class="container section" id="notEligibleVLP" style="display: none;">
+  <h2 style="text-align: center; font-weight: bold;">VLP Not Eligible</h2>
+  <div class="left-align-text" style="margin-top: 30px;">
+    <label><input type="checkbox"> Navigate to the "Notes" tab.</label><br>
+    <label><input type="checkbox"> Use the appropriate note format:</label><br>
+    <label><input type="radio" name="cdpNote"> File reviewed - cannot add VLP - (Reason)</label><br>
+    <label><input type="radio" name="cdpNote"> File reviewed ~ ATTEMPT # - cannot add VLP: (Reason)</label>
+  </div>
+
+  <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-top: 40px;">
+    <button class="button" style="flex: 1 1 250px;" onclick="goBackToPrevious()">⬅️ Back</button>
+    <button class="button" style="flex: 1 1 250px;" onclick="showOnly('homepage')">Finish</button>
+  </div>
+</div>
+
+
+<!-- CDP Continue Eligibility -->
+<div class="container section" id="CDPcontinueEligibility" style="display: none;">
+  <br><h2 style="text-align: left; font-weight: bold;">Legal Accounts (Summons):</h2>
+
+  <div class="left-align-text" style="margin-top: 20px;">
+    <label><input type="checkbox"> Navigate to the "Debts" tab.</label><br>
+    <label><input type="checkbox"> Look for Red Accounts.</label><br>
+    <label><input type="checkbox"> Navigate to the "Notes" tab.</label><br>
+    <label><input type="checkbox"> Use the notes search bar.</label><br>
+    <label><input type="checkbox"> Use keywords like “legal” or “summons”.</label><br>
+    <label><input type="checkbox"> Confirm that there are no ongoing legal matters.</label>
+  </div>
+
+  <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-top: 30px;">
+    <button class="button" style="flex: 1 1 250px;" onclick="showOnly('notEligible')">Not Eligible</button>
+    <button class="button" style="flex: 1 1 250px;" onclick="showOnly('nextCDPStep')">Continue</button>
+  </div>
+
+  <div class="button-grid" style="margin-top: 20px;">
+    <button class="button" style="width: 100%;" onclick="goBackToPrevious()">⬅️ Back</button>
+  </div>
+</div>
+
+<!-- VLP Continue Eligibility -->
+<div class="container section" id="VLPcontinueEligibility" style="display: none;">
+  <br><h2 style="text-align: left; font-weight: bold;">Legal Accounts (Summons):</h2>
+
+  <div class="left-align-text" style="margin-top: 20px;">
+    <label><input type="checkbox"> Navigate to the "Debts" tab.</label><br>
+    <label><input type="checkbox"> Look for Red Accounts.</label><br>
+    <label><input type="checkbox"> Navigate to the "Notes" tab.</label><br>
+    <label><input type="checkbox"> Use the notes search bar.</label><br>
+    <label><input type="checkbox"> Use keywords like “legal” or “summons”.</label><br>
+    <label><input type="checkbox"> Confirm that there are no ongoing legal matters.</label>
+  </div>
+
+  <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-top: 30px;">
+    <button class="button" style="flex: 1 1 250px;" onclick="showOnly('notEligibleVLP')">Not Eligible</button>
+    <button class="button" style="flex: 1 1 250px;" onclick="showOnly('nextVLPStep')">Continue</button>
+  </div>
+
+  <div class="button-grid" style="margin-top: 20px;">
+    <button class="button" style="width: 100%;" onclick="goBackToPrevious()">⬅️ Back</button>
+  </div>
+</div>
+
+<!-- CDP Settlements in Progress -->
+<div class="container section" id="nextCDPStep" style="display: none;">
+  <br><h2 style="text-align: left; font-weight: bold;">Settlements in Progress:</h2>
+
+  <div class="left-align-text" style="margin-top: 20px;">
+    <label><input type="checkbox"> Navigate to the "Debts" tab.</label><br>
+    <label><input type="checkbox"> Navigate to the enrolled accounts.</label><br>
+    <label><input type="checkbox"> Make sure there are no blue handshake icon.</label><br>
+    <div style="background: #f4f7fc; padding: 15px; border-radius: 10px;">
+      🔎 Click on the handshake icon to review the settlement details and verify if the agreement is still active.
+    </div>
+    <label><input type="checkbox"> Navigate to the "Notes" tab.</label><br>
+    <label><input type="checkbox"> Use the notes search bar.</label><br>
+    <label><input type="checkbox"> Use keywords like “Settlement Reached” or “Authorization Needed” or "Submitted to Payment Processing".</label><br>
+    <label><input type="checkbox"> Confirm that there are no settlements being processed.</label>
+  </div>
+
+  <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-top: 30px;">
+    <button class="button" style="flex: 1 1 250px;" onclick="showOnly('notEligible')">Not Eligible</button>
+    <button class="button" style="flex: 1 1 250px;" onclick="showOnly('cdpFinalStep')">Continue</button>
+  </div>
+
+  <div class="button-grid" style="margin-top: 20px;">
+    <button class="button" style="width: 100%;" onclick="goBackToPrevious()">⬅️ Back</button>
+  </div>
+</div>
+
+<!-- VLP Settlements in Progress -->
+<div class="container section" id="nextVLPStep" style="display: none;">
+  <br><h2 style="text-align: left; font-weight: bold;">Settlements in Progress:</h2>
+
+  <div class="left-align-text" style="margin-top: 20px;">
+    <label><input type="checkbox"> Navigate to the "Debts" tab.</label><br>
+    <label><input type="checkbox"> Navigate to the enrolled accounts.</label><br>
+    <label><input type="checkbox"> Make sure there are no blue handshake icon.</label><br>
+    <div style="background: #f4f7fc; padding: 15px; border-radius: 10px;">
+      🔎 Click on the handshake icon to review the settlement details and verify if the agreement is still active.
+    </div>
+    <label><input type="checkbox"> Navigate to the "Notes" tab.</label><br>
+    <label><input type="checkbox"> Use the notes search bar.</label><br>
+    <label><input type="checkbox"> Use keywords like “Settlement Reached” or “Authorization Needed” or "Submitted to Payment Processing".</label><br>
+    <label><input type="checkbox"> Confirm that there are no settlements being processed.</label>
+  </div>
+
+  <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-top: 30px;">
+    <button class="button" style="flex: 1 1 250px;" onclick="showOnly('notEligibleVLP')">Not Eligible</button>
+    <button class="button" style="flex: 1 1 250px;" onclick="showOnly('vlpFinalStep')">Continue</button>
+  </div>
+
+  <div class="button-grid" style="margin-top: 20px;">
+    <button class="button" style="width: 100%;" onclick="goBackToPrevious()">⬅️ Back</button>
+  </div>
+</div>
+
+<!-- CDP Final Step -->
+<div class="container section" id="cdpFinalStep" style="display: none;">
+  <h2 style="text-align: center; font-weight: bold;">Financial Status & Funded Accounts:</h2>
+
+  <div style="background: #f4f7fc; padding: 15px; border-radius: 10px; margin: 20px 0;">
+    <p>NSF (Non-Sufficient Funds) Status: Clients flagged for NSF should not be enrolled.</p>
+    <p>Invalid Banking Information: If the client’s banking details are invalid, they must be corrected before proceeding.</p>
+    <p>Paused Accounts: If a client’s account is paused, they are not eligible for enrollment.</p>
+    <p>Clients funded by our lending partners, such as Lending USA (LUSA) or Loanosity, should not be enrolled in the Legal Plan Service.</p>
+  </div>
+
+  <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-top: 30px;">
+    <button class="button" style="flex: 1 1 250px;" onclick="showOnly('notEligible')">Not Eligible</button>
+    <button class="button" style="flex: 1 1 250px;" onclick="showOnly('cdpEnrollmentEditPlan')">Continue</button>
+  </div>
+
+  <div class="button-grid" style="margin-top: 20px;">
+    <button class="button" style="width: 100%;" onclick="goBackToPrevious()">⬅️ Back</button>
+  </div>
+</div>
+
+<!-- VLP Final Step -->
+<div class="container section" id="vlpFinalStep" style="display: none;">
+  <h2 style="text-align: center; font-weight: bold;">Financial Status & Funded Accounts:</h2>
+
+  <div style="background: #f4f7fc; padding: 15px; border-radius: 10px; margin: 20px 0;">
+    <p>NSF (Non-Sufficient Funds) Status: Clients flagged for NSF should not be enrolled.</p>
+    <p>Invalid Banking Information: If the client’s banking details are invalid, they must be corrected before proceeding.</p>
+    <p>Paused Accounts: If a client’s account is paused, they are not eligible for enrollment.</p>
+    <p>Clients funded by our lending partners, such as Lending USA (LUSA) or Loanosity, should not be enrolled in the Legal Plan Service.</p>
+  </div>
+
+  <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-top: 30px;">
+    <button class="button" style="flex: 1 1 250px;" onclick="showOnly('notEligibleVLP')">Not Eligible</button>
+    <button class="button" style="flex: 1 1 250px;" onclick="showOnly('vlpEnrollmentEditPlan')">Continue</button>
+  </div>
+
+  <div class="button-grid" style="margin-top: 20px;">
+    <button class="button" style="width: 100%;" onclick="goBackToPrevious()">⬅️ Back</button>
+  </div>
+</div>
+
+<!-- CDP: Edit Enrollment Plan -->
+<div class="container section" id="cdpEnrollmentEditPlan" style="display: none;">
+  <h2 style="text-align: center; font-weight: bold;">Enrollment Steps</h2>
+  <h3 style="font-weight: bold; margin-top: 30px; text-align: left;">Editing the Enrollment Plan:</h3>
+
+  <div class="left-align-text">
+    <label><input type="checkbox"> Click on “Edit Enrollment Plan.”</label><br>
+    <label><input type="checkbox"> Select the VLP Base Plan from the dropdown menu.</label><br>
+    <label><input type="checkbox"> Adjust the program length and negotiation fee.</label><br>
+    <label><input type="checkbox"> If necessary, to match the client’s program and original program duration.</label><br>
+    <label><input type="checkbox"> Save the Enrollment Plan.</label>
+  </div>
+
+  <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-top: 30px;">
+    <button class="button" style="flex: 1 1 250px;" onclick="showOnly('cdpEnrollmentAdjustPayments')">Continue</button>
+  </div>
+
+  <div class="button-grid" style="margin-top: 20px;">
+    <button class="button" style="width: 100%;" onclick="goBackToPrevious()">⬅️ Back</button>
+  </div>
+</div>
+
+<!-- VLP: Edit Enrollment Plan -->
+<div class="container section" id="vlpEnrollmentEditPlan" style="display: none;">
+  <h2 style="text-align: center; font-weight: bold;">Enrollment Steps</h2>
+  <p style="font-weight: bold; margin-top: 30px; text-align: left;">Editing the Enrollment Plan:</p>
+
+  <div class="left-align-text">
+    <label><input type="checkbox"> Click on “Edit Enrollment Plan.”</label><br>
+    <label><input type="checkbox"> Select the VLP Base Plan from the dropdown menu.</label><br>
+    <label><input type="checkbox"> Adjust the program length and negotiation fee.</label><br>
+    <label><input type="checkbox"> If necessary, to match the client’s program and original program duration.</label><br>
+    <label><input type="checkbox"> Save the Enrollment Plan.</label>
+  </div>
+
+  <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-top: 30px;">
+    <button class="button" style="flex: 1 1 250px;" onclick="showOnly('vlpEnrollmentAdjustPayments')">Continue</button>
+  </div>
+
+  <div class="button-grid" style="margin-top: 20px;">
+    <button class="button" style="width: 100%;" onclick="goBackToPrevious()">⬅️ Back</button>
+  </div>
+</div>
+<!-- CDP: Adjust Payments -->
+<div class="container section" id="cdpEnrollmentAdjustPayments" style="display: none;">
+  <h2 style="text-align: center; font-weight: bold;">Enrollment Steps</h2>
+  <h3 style="font-weight: bold; margin-top: 30px; text-align: left;">Adjust Payments:</h3>
+
+  <div class="left-align-text">
+    <label><input type="checkbox"> Click on “Adjust Payments.”</label><br>
+    <label><input type="checkbox"> Enter the client’s monthly draft amount in the “Amount” field.</label><br>
+    <label><input type="checkbox"> Check the box next to the amount.</label><br>
+    <label><input type="checkbox"> Tick the “Sub type” if the client does not have an Esign/wet signature.</label><br>
+    <label><input type="checkbox"> Click the “Select all” button.</label><br>
+    <label><input type="checkbox"> Select all fees and tick the “Cancel the Transaction” button.</label><br>
+    <label><input type="checkbox"> Click on “Save Changes”.</label>
+  </div>
+
+  <div style="background: #f4f7fc; padding: 15px; border-radius: 10px; margin: 20px 0;">
+       <u>How to Check for eSign/Wet Signature:</u><br><br>
+    Agents should verify whether the client has an eSign or wet signature by reviewing the original enrollment. Look for the “Sub Type” field in the enrollment details.<br><br>
+    ✅ If Sub Type is already listed in the client’s file: <strong>Do NOT</strong> tick the Sub Type box.<br>
+    ❌ If it’s missing, and the client has no eSign or wet signature, make sure to tick the box manually.
+  </div>
+
+  <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-top: 30px;">
+    <button class="button" style="flex: 1 1 250px;" onclick="showOnly('cdpFinalEnrollmentStep')">Continue</button>
+  </div>
+
+  <div class="button-grid" style="margin-top: 20px;">
+    <button class="button" style="width: 100%;" onclick="goBackToPrevious()">⬅️ Back</button>
+  </div>
+</div>
+<!-- VLP: Adjust Payments -->
+<div class="container section" id="vlpEnrollmentAdjustPayments" style="display: none;">
+  <h2 style="text-align: center; font-weight: bold;">Enrollment Steps</h2>
+  <h3 style="font-weight: bold; margin-top: 30px; text-align: left;">Adjust Payments:</h3>
+
+  <div class="left-align-text">
+    <label><input type="checkbox"> Click on “Adjust Payments.”</label><br>
+    <label><input type="checkbox"> Enter the client’s monthly draft amount in the “Amount” field.</label><br>
+    <label><input type="checkbox"> Check the box next to the amount.</label><br>
+    <label><input type="checkbox"> Tick the “Sub type” if the client does not have an Esign/wet signature.</label><br>
+    <label><input type="checkbox"> Click the “Select all” button.</label><br>
+    <label><input type="checkbox"> Select all fees and tick the “Cancel the Transaction” button.</label><br>
+    <label><input type="checkbox"> Click on “Save Changes”.</label>
+  </div>
+
+  <div style="background: #f4f7fc; padding: 15px; border-radius: 10px; margin: 20px 0;">
+    <u>How to Check for eSign/Wet Signature:</u><br><br>
+    Agents should verify whether the client has an eSign or wet signature by reviewing the original enrollment. Look for the “Sub Type” field in the enrollment details.<br><br>
+    ✅ If Sub Type is already listed in the client’s file: <strong>Do NOT</strong> tick the Sub Type box.<br>
+    ❌ If it’s missing, and the client has no eSign or wet signature, make sure to tick the box manually.
+  </div>
+
+  <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-top: 30px;">
+    <button class="button" style="flex: 1 1 250px;" onclick="showOnly('vlpFinalEnrollmentStep')">Continue</button>
+  </div>
+
+  <div class="button-grid" style="margin-top: 20px;">
+    <button class="button" style="width: 100%;" onclick="goBackToPrevious()">⬅️ Back</button>
+  </div>
+</div>
+
+<!-- CDP: Final Enrollment Step -->
+<div class="container section" id="cdpFinalEnrollmentStep" style="display: none;">
+  <h2 style="text-align: center; font-weight: bold;">Enrollment Steps</h2>
+
+  <h3 style="text-align: left; font-weight: bold; margin-top: 30px;">Remove Past Opened Drafts:</h3>
+  <div class="left-align-text">
+    <label><input type="checkbox"> Check the client’s draft progress for example, (3/60).</label><br>
+    <label><input type="checkbox"> Manually select the first 3 drafts in the list and tick the box next to each one.</label><br>
+    <label><input type="checkbox"> Click “Cancel” to remove these drafts.</label><br>
+    <label><input type="checkbox"> Click “Save Changes”.</label>
+  </div>
+
+  <h3 style="text-align: left; font-weight: bold; margin-top: 30px;">Resetting the Client’s File:</h3>
+  <div class="left-align-text">
+    <label><input type="checkbox"> Click the "Reset Client" button.</label><br>
+    <label><input type="checkbox"> Tick the box labeled All Cancelled Transactions to clear them from the system.</label><br>
+    <label><input type="checkbox"> Click the "✅ Reset Client" button.</label>
+  </div>
+
+  <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-top: 30px;">
+    <button class="button" style="flex: 1 1 250px;" onclick="showOnly('cdpConfirmationStep')">Continue</button>
+  </div>
+
+  <div class="button-grid" style="margin-top: 20px;">
+    <button class="button" style="width: 100%;" onclick="goBackToPrevious()">⬅️ Back</button>
+  </div>
+</div>
+
+<!-- VLP: Final Enrollment Step -->
+<div class="container section" id="vlpFinalEnrollmentStep" style="display: none;">
+  <h2 style="text-align: center; font-weight: bold;">Enrollment Steps</h2>
+
+  <h3 style="text-align: left; font-weight: bold; margin-top: 30px;">Remove Past Opened Drafts:</h3>
+  <div class="left-align-text">
+    <label><input type="checkbox"> Check the client’s draft progress for example, (3/60).</label><br>
+    <label><input type="checkbox"> Manually select the first 3 drafts in the list and tick the box next to each one.</label><br>
+    <label><input type="checkbox"> Click “Cancel” to remove these drafts.</label><br>
+    <label><input type="checkbox"> Click “Save Changes”.</label>
+  </div>
+
+  <h3 style="text-align: left; font-weight: bold; margin-top: 30px;">Resetting the Client’s File:</h3>
+  <div class="left-align-text">
+    <label><input type="checkbox"> Click the "Reset Client" button.</label><br>
+    <label><input type="checkbox"> Tick the box labeled All Cancelled Transactions to clear them from the system.</label><br>
+    <label><input type="checkbox"> Click the "✅ Reset Client" button.</label>
+  </div>
+
+  <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-top: 30px;">
+    <button class="button" style="flex: 1 1 250px;" onclick="showOnly('vlpConfirmationStep')">Continue</button>
+  </div>
+
+  <div class="button-grid" style="margin-top: 20px;">
+    <button class="button" style="width: 100%;" onclick="goBackToPrevious()">⬅️ Back</button>
+  </div>
+</div>
+
+
+<!-- CDP: Add Legal Plan Payments -->
+<div class="container section" id="cdpConfirmationStep" style="display: none;">
+  <h2 style="text-align: center; font-weight: bold;">Adding Legal Plan Payments</h2>
+
+  <h3 style="font-weight: bold; margin-top: 30px; text-align: left;">Add the one-time enrollment fee:</h3>
+  <div class="left-align-text">
+    <label><input type="checkbox"> Click the "Add Payment" button to start.</label><br>
+    <label><input type="checkbox"> Complete all required fields.</label><br>
+    <label><input type="checkbox"> Amount: enrollment fee is $150</label><br>
+    <label><input type="checkbox"> Type: ACH Credit Fee.</label><br>
+    <label><input type="checkbox"> System account: 34340 Consumer First Legal Network.</label><br>
+    <label><input type="checkbox"> Occurrence: (Depends on how many payments).</label><br>
+    <label><input type="checkbox"> Action: Schedule Transaction.</label>
+  </div>
+
+  <h3 style="font-weight: bold; margin-top: 30px; text-align: left;">Uploading the Contract:</h3>
+  <div class="left-align-text">
+    <label><input type="checkbox"> Download the Legal Plan Contract to your device.</label><br>
+    <label><input type="checkbox"> Rename the file using the client’s full name.</label><br>
+    <label><input type="checkbox"> Re-upload the contract to the client’s file under the category: Internal – CDP Agreement.</label>
+  </div>
+
+  <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-top: 30px;">
+    <button class="button" style="flex: 1 1 250px;" onclick="showOnly('cdpMonthlyPayments')">Continue</button>
+  </div>
+
+  <div class="button-grid" style="margin-top: 20px;">
+    <button class="button" style="width: 100%;" onclick="goBackToPrevious()">⬅️ Back</button>
+  </div>
+</div>
+
+<!-- VLP: Add Legal Plan Payments -->
+<div class="container section" id="vlpConfirmationStep" style="display: none;">
+  <h2 style="text-align: center; font-weight: bold;">Adding Legal Plan Payments</h2>
+
+  <h3 style="font-weight: bold; margin-top: 30px; text-align: left;">Add the one-time enrollment fee:</h3>
+  <div class="left-align-text">
+    <label><input type="checkbox"> Click the "Add Payment" button to start.</label><br>
+    <label><input type="checkbox"> Complete all required fields.</label><br>
+    <label><input type="checkbox"> Amount: enrollment fee is $550</label><br>
+    <div style="margin-left: 20px;">
+      <label><input type="checkbox"> 137.5 if you are splitting it into four payments.</label><br>
+      <label><input type="checkbox"> $275 if you are splitting it into two payments.</label>
+    </div>
+    <label><input type="checkbox"> Type: ACH Credit Fee.</label><br>
+    <label><input type="checkbox"> Sub Type: Veritas Setup Fee.</label><br>
+    <label><input type="checkbox"> Paid To: 10362 - *Veritas Legal Plan.</label><br>
+    <label><input type="checkbox"> Occurrence: (Depends on how many payments).</label><br>
+    <label><input type="checkbox"> Memo: Veritas Setup Fee.</label><br>
+    <label><input type="checkbox"> Action: Schedule Transaction.</label>
+  </div>
+
+  <h3 style="font-weight: bold; margin-top: 30px; text-align: left;">Uploading the Contract:</h3>
+  <div class="left-align-text">
+    <label><input type="checkbox"> Download the Legal Plan Contract to your device.</label><br>
+    <label><input type="checkbox"> Rename the file using the client’s full name.</label><br>
+    <label><input type="checkbox"> Re-upload the contract to the client’s file under the category: Internal – VLP Agreement.</label>
+  </div>
+
+  <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-top: 30px;">
+    <button class="button" style="flex: 1 1 250px;" onclick="showOnly('vlpMonthlyPayments')">Continue</button>
+  </div>
+
+  <div class="button-grid" style="margin-top: 20px;">
+    <button class="button" style="width: 100%;" onclick="goBackToPrevious()">⬅️ Back</button>
+  </div>
+</div>
+
+<!-- CDP: Monthly Legal Plan Payments -->
+<div class="container section" id="cdpMonthlyPayments" style="display: none;">
+  <h2 style="text-align: center; font-weight: bold;">Adding Legal Plan Payments</h2>
+
+  <h3 style="font-weight: bold; margin-top: 30px; text-align: left;">Adding Legal Plan Payments:</h3>
+  <div class="left-align-text">
+    <label><input type="checkbox"> Click the Add Payment button to start.</label><br>
+    <label><input type="checkbox"> Amount: $59.99.</label><br>
+    <label><input type="checkbox"> Process Date: Schedule the first payment two business days from today, one month ahead.</label><br>
+    <label><input type="checkbox"> Type: ACH Credit Fee.</label><br>
+    <label><input type="checkbox"> System account: 34340 Consumer First Legal Network.</label><br>
+    <label><input type="checkbox"> Occurrence: Set the number of occurrences based on the client’s program length minus the drafts already paid.</label><br>
+    <label><input type="checkbox"> Action: Schedule Transaction.</label>
+  </div>
+
+  <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-top: 30px;">
+    <button class="button" style="flex: 1 1 250px;" onclick="showOnly('cdpNotationStep')">Continue</button>
+  </div>
+
+  <div class="button-grid" style="margin-top: 20px;">
+    <button class="button" style="width: 100%;" onclick="goBackToPrevious()">⬅️ Back</button>
+  </div>
+</div>
 
 
 
+<!-- VLP: Monthly Legal Plan Payments -->
+<div class="container section" id="vlpMonthlyPayments" style="display: none;">
+  <h2 style="text-align: center; font-weight: bold;">Adding Legal Plan Payments</h2>
 
+  <h3 style="font-weight: bold; margin-top: 30px; text-align: left;">Adding Legal Plan Payments:</h3>
+  <div class="left-align-text">
+    <label><input type="checkbox"> Click the Add Payment button to start.</label><br>
+    <label><input type="checkbox"> When adding a payment, it’s essential to complete all required fields to ensure the transaction is scheduled properly in the client’s file.</label><br>
+    <label><input type="checkbox"> Amount: $59.99.</label><br>
+    <label><input type="checkbox"> Process Date: Schedule the first payment two business days from today, one month ahead.</label><br>
+    <label><input type="checkbox"> Type: ACH Credit Fee.</label><br>
+    <label><input type="checkbox"> Sub Type: Veritas Monthly Fee.</label><br>
+    <label><input type="checkbox"> Paid To: 10362 - *Veritas Legal Plan.</label><br>
+    <label><input type="checkbox"> Occurrence: Set the number of occurrences based on the client’s program length minus the drafts already paid.</label><br>
+    <label><input type="checkbox"> Memo: Veritas Monthly Fee.</label><br>
+    <label><input type="checkbox"> Action: Schedule Transaction.</label>
+  </div>
 
+  <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-top: 30px;">
+    <button class="button" style="flex: 1 1 250px;" onclick="showOnly('vlpNotationStep')">Continue</button>
+  </div>
 
+  <div class="button-grid" style="margin-top: 20px;">
+    <button class="button" style="width: 100%;" onclick="goBackToPrevious()">⬅️ Back</button>
+  </div>
+</div>
 
+<!-- CDP: Final Notation Step -->
+<div class="container section" id="cdpNotationStep" style="display: none;">
+  <h2 style="text-align: center; font-weight: bold;">Notation</h2>
 
+  <h3 style="font-weight: bold; margin-top: 30px; text-align: left;">Notation:</h3>
+  <div style="margin-bottom: 20px;">
+    <label><input type="radio" name="cdpNote"> CDP added ... payments to remain the same.</label><br>
+    <label><input type="radio" name="cdpNote"> CDP added -- New payment will be - Increase</label><br>
+    <label><input type="checkbox"> Add the case to the commission Excel sheet</label><br>
+    <label><input type="checkbox"> Remove the case from the main Excel sheet (to avoid duplication).</label>
+  </div>
+
+  <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-top: 30px;">
+    <button class="button" style="flex: 1 1 250px;" onclick="showOnly('ancillaryUnderwriting')">Finish</button>
+  </div>
+
+  <div class="button-grid" style="margin-top: 20px;">
+    <button class="button" style="width: 100%;" onclick="goBackToPrevious()">⬅️ Back</button>
+  </div>
+</div>
+
+<!-- VLP: Final Notation Step -->
+<div class="container section" id="vlpNotationStep" style="display: none;">
+  <h2 style="text-align: center; font-weight: bold;">Notation</h2>
+
+  <h3 style="font-weight: bold; margin-top: 30px; text-align: left;">Notation:</h3>
+  <div style="margin-bottom: 20px;">
+    <label><input type="radio" name="vlpNote"> VLP added ... payments to remain the same.</label><br>
+    <label><input type="radio" name="vlpNote"> VLP added -- New payment will be - Increase</label><br>
+    <label><input type="checkbox"> Add the case to the commission Excel sheet</label><br>
+    <label><input type="checkbox"> Remove the case from the main Excel sheet (to avoid duplication).</label>
+  </div>
+
+  <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-top: 30px;">
+    <button class="button" style="flex: 1 1 250px;" onclick="showOnly('ancillaryUnderwriting')">Finish</button>
+  </div>
+
+  <div class="button-grid" style="margin-top: 20px;">
+    <button class="button" style="width: 100%;" onclick="goBackToPrevious()">⬅️ Back</button>
+  </div>
+</div>
 
 
 
