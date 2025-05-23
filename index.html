@@ -244,6 +244,21 @@
   color: #112663;
 }
 
+  #institutionTable tbody tr:nth-child(even) {
+    background-color: #f7f7f7;
+  }
+
+  #institutionTable tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+  }
+
+  #institutionTable td {
+    padding: 12px 16px;
+    border-top: 1px solid #eee;
+    font-size: 17px;
+  }
+
+
 
 </style>
 
@@ -3710,7 +3725,6 @@
 
 <div class="container section" id="telemarketing">
 
-
   <!-- Centered Image Above Heading -->
   <div style="text-align: center;">
     <img src="https://i.imgur.com/y0uFfHf.png" alt="Telemarketing Icon" style="max-width: 120px; height: auto; margin-bottom: 10px;">
@@ -3738,7 +3752,7 @@
 
       <!-- Text Section -->
       <div style="flex: 1; padding: 25px 40px; text-align: left; line-height: 1.6; min-width: 280px; display: flex; flex-direction: column; justify-content: center;">
-<h2 style="text-align: left; font-weight: bold; color: #112663; margin-top: 0; font-family: 'Handmade17', sans-serif; font-size: 32px;">Inbound Script:</h2>
+<h2 style="text-align: left; font-weight: bold; color: #112663; margin-top: 0; font-size: 32px;">Inbound Script:</h2>
         <p style="color: #112663; margin: 0;text-align: left;">"Hello this is (Agent Alias) with (Entity Name) on a recorded line. Am I speaking to (Lead Name)?"</p>
         <p style="color: #112663; margin: 10px 0;text-align: left;">"I’m reaching out because you’re pre-selected for a <strong>personal loan</strong> with a promotional interest rate <strong>starting at 5%</strong>."</p>
         <p style="color: #112663; margin: 0;text-align: left;">"So do you have just a few minutes for a free quote?"</p>
@@ -3752,7 +3766,6 @@
 
     </div>
   </div>
-
   <div class="button-grid grid-2">
     <button class="button" onclick="showOnly('telemarketingInterested')">Interested</button>
     <button class="button" onclick="showOnly('telemarketingNotInterested')">Not Interested</button>
@@ -3762,6 +3775,7 @@
   </div>
 </div>
 
+
 <!-- Outbound Script -->
 <div class="container section" id="telemarketingOutbound">
 <br><br><br><br><div style="background-color: #fff7f0; padding: 50px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box;">
@@ -3769,7 +3783,7 @@
 
     <!-- Text Section -->
     <div style="flex: 1; padding: 25px 40px; text-align: left; line-height: 1.6; min-width: 280px; display: flex; flex-direction: column; justify-content: center;">
-<h2 style="text-align: left; font-weight: bold; color: #112663; margin-top: 0; font-family: 'Handmade17', sans-serif; font-size: 32px;">Outbound Script:</h2>
+<h2 style="text-align: left; font-weight: bold; color: #112663; margin-top: 0; font-size: 32px;">Outbound Script:</h2>
       <p style="color: #112663; margin: 0;text-align: left;">Hello am I speaking to (Lead Name)?</p>
       <p style="color: #112663; margin: 10px 0;text-align: left;">"This is (Agent Alias) with (Entity Name) on a recorded line. I’m reaching out because you’re pre-selected for a <strong>personal loan</strong> with a promotional interest rate <strong>starting at 5%</strong>."</p>
       <p style="color: #112663; margin: 0;text-align: left;">"So do you have just a few minutes for a free quote?"</p>
@@ -3798,22 +3812,20 @@
 
 <!-- Not Interested -->
 <div class="container section" id="telemarketingNotInterested">
- <br><br><br><br> <div style="background-color: #fff7f0; padding: 40px; border-radius: 12px; color: #112663; box-sizing: border-box;">
-
-    <h2 style="text-align: center; font-weight: bold; color: #112663;">Encouragement</h2><br>
-
+    <h2 style="text-align: center; font-weight: bold; color: #112663;">Encouragement</h2>
+  <div style="background-color: #fff7f0; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
     <p style="padding: 15px 25px; border-radius: 12px; text-align: center; color: #112663;">
-      Not every lead will say yes and that’s okay! You’re building experience and planting seeds. Keep up the great work! 💪
+      Not every lead will say yes and that’s okay! You’re building experience and planting seeds. Keep up the great work!
     </p>
-  <div style="overflow-x: auto; margin-top: 20px;">
-    <table style="width: 100%; border-collapse: collapse; font-size: 14px; color: #112663;">
-      <thead>
-        <tr style="background-color: #ed7120; color: white;">
-          <th style="text-align: left; padding: 12px; border: 1px solid #ccc;">Objection</th>
-          <th style="text-align: left; padding: 12px; border: 1px solid #ccc;">Rebuttal</th>
-        </tr>
-      </thead>
-      <tbody>
+<div style="max-height: 400px; overflow-y: auto; border: 1px solid #ccc; border-radius: 8px;">
+  <table style="width: 100%; border-collapse: collapse; font-size: 14px; color: #112663;">
+    <thead style="position: sticky; top: 0; background-color: #112663; z-index: 1;">
+      <tr style="color: white;">
+        <th style="text-align: left; padding: 12px; border: 1px solid #ccc;">Objection</th>
+        <th style="text-align: left; padding: 12px; border: 1px solid #ccc;">Rebuttal</th>
+      </tr>
+    </thead>
+    <tbody>
         <tr><td style="padding: 10px; border: 1px solid #ccc;">Not interested</td><td style="padding: 10px; border: 1px solid #ccc;">Are you sure? This is a rare opportunity to lock in a loan with an interest rate starting at just 5%. If you apply elsewhere, you risk a hard credit pull that could lower your credit score. Why not take a minute to see what you qualify for? How much were you looking to borrow?</td></tr>
         <tr><td style="padding: 10px; border: 1px solid #ccc;">What company is this?</td><td style="padding: 10px; border: 1px solid #ccc;">We’re (Entity Name), a provider of personal loans. You either applied online with us directly or through one of our affiliates. Does that sound familiar?</td></tr>
         <tr><td style="padding: 10px; border: 1px solid #ccc;">What are your options?</td><td style="padding: 10px; border: 1px solid #ccc;">That’s a great question. Once I confirm your details, I’ll connect you with one of our account managers, who will review all the available options and find the best fit for you. Let’s quickly verify your information to move forward.</td></tr>
@@ -3838,7 +3850,7 @@
 </div>
   <div class="button-grid grid-2" style="margin-top: 30px;">
     <button class="button" onclick="goBackToPrevious()">⬅️ Back</button>
-    <button class="button" onclick="showOnly('homepage')">✅ Finish</button>
+    <button class="button" onclick="showOnly('telemarketing')">✅ Finish</button>
   </div>
 </div>
 
@@ -3864,13 +3876,6 @@
       <label><input type="checkbox"> Verify Date of Birth</label><br>
       <label><input type="checkbox"> Verify the Last 4-digits of the SSN</label><br>
 
-<!-- Image floated to align with "Verify Email" -->
-<div style="position: relative; height: 0;">
-  <img src="https://i.imgur.com/w5J5FDm.png"
-       alt="Email Icon"
-       style="max-height: 229px; position: absolute; top: -200px; left: calc(100% - 165px);">
-</div>
-
 
 <div style="background-color: #ffe8d9; padding: 20px 40px; border-radius: 10px; color: #112663; margin: 15px 0; text-align: center;">
   "We review thousands of applications daily, your social is as familiar as a phone number to me, however if you’d like to apply to apply online, feel free to do that."
@@ -3889,7 +3894,7 @@
 
 <!-- Pull Credit Report Step -->
 <div class="container section" id="telemarketingPullCredit" style="display: none;">
-  <h2 style="text-align: center; font-weight: bold; color: #112663;">📄 Pull Credit Report</h2>
+  <h2 style="text-align: center; font-weight: bold; color: #112663;">Pull Credit Report</h2>
 
   <div style="background-color: #fff7f0; padding: 30px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; position: relative;">
     
@@ -3925,24 +3930,23 @@
   
 <!-- Eligibility Check -->
 <div class="container section" id="telemarketingNextStep" style="font-family: 'Inter', sans-serif; font-size: 18px;">
-  <h2 style="text-align: center; font-weight: bold;">Eligibility Check</h2><br>
+  <h2 style="text-align: center; font-weight: bold;">Eligibility Check</h2>
 
 <div style="background-color: #fff7f0; padding: 20px 30px; border-radius: 12px; color: #112663; margin: 20px 0; text-align: center;">
-  <Strong>The Lead must have at least $8,000 in acceptable debts.</Strong>
+  <h3><Strong>The Lead must have at least $8,000 in acceptable debts.</Strong></h3><br>
 
 
-  <h2 style="text-align: center; margin-top: 30px;">Eligibility Table</h2>
   <input type="text" id="searchInput" onkeyup="searchTable()" placeholder="Search for a Debt Type or a Financial Institution..." 
          style="width: 100%; padding: 14px; font-size: 16px; margin-bottom: 25px; border-radius: 6px; border: 1px solid #ccc; box-sizing: border-box;">
   
   <div style="max-height: 450px; overflow-y: auto; border: 1px solid #ccc; border-radius: 8px;">
-  <table id="institutionTable" style="width: 100%; border-collapse: collapse; background: #fdfdfd; font-size: 20px; color: #112663;">
-      <thead style="position: sticky; top: 0; z-index: 1;">
-        <tr style="background-color: #112663; color: white; border-bottom: 2px solid #ccc;">
-          <th onclick="sortTable(0)" style="padding: 14px 16px; text-align: left; border-right: 1px solid #ccc;">Debt Type or Financial Institution</th>
-          <th onclick="sortTable(1)" style="padding: 14px 16px; text-align: center;">Eligible</th>
-        </tr>
-      </thead>
+ <table id="institutionTable" style="width: 100%; border-collapse: collapse; background: #fdfdfd; color: #112663;">
+  <thead style="position: sticky; top: 0; z-index: 1;">
+    <tr style="background-color: #112663; color: white; border-bottom: 2px solid #ccc;">
+      <th onclick="sortTable(0)" style="padding: 14px 16px; text-align: left; border-right: 1px solid #ccc;">Debt Type or Financial Institution</th>
+      <th onclick="sortTable(1)" style="padding: 14px 16px; text-align: center;">Eligible</th>
+    </tr>
+  </thead>
       <tbody>
 <tr><td style="text-align: left;">1st Franklin</td><td style="text-align: center;">NO</td></tr>
 <tr><td style="text-align: left;">1st Heritage (FSHERTAG)</td><td style="text-align: center;">NO</td></tr>
@@ -4103,21 +4107,28 @@
 <!-- Not Eligible -->
 <div class="container section" id="telemarketingNotEligible">
   <h2 style="text-align: center;">Lead Not Eligible</h2>
-  <label><input type="checkbox"> Inform the Client that they are Not Eligible.</label>
+
+  <div style="background-color: #fff7f0; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
+
+      <!-- Quote in slightly darker box -->
+<div style="background-color: #ffe8d9; padding: 20px 40px; border-radius: 10px; color: #112663; margin: 15px 0; text-align: center;">
   <p>Hello (Lead Name), thank you for holding. The system came back with the results and unfortunately we couldn’t manage to get you qualified for any of our options. Thank you and have a great day.</p>
+</div>
   <label><input type="checkbox"> Change file status to "NQDS (Not Qualified)"</label><br>
   <label><input type="checkbox"> Dispo the call as "NE - Not Eligible"</label><br>
   <label><input type="checkbox"> Add note → Use “Credit pulled, Client Not Eligible” template.</label><br>
+</div>
   <div class="button-grid grid-2" style="margin-top: 30px;">
     <button class="button" onclick="goBackToPrevious()">⬅️ Back</button>
-    <button class="button" onclick="showOnly('homepage')">✅ Finish</button>
+    <button class="button" onclick="showOnly('telemarketing')">✅ Finish</button>
   </div>
 </div>
 
+
+
 <!-- Eligible -->
 <div class="container section" id="telemarketingEligible">
-  <h2 style="text-align: center;">Lead is Eligible</h2><br>
-  <label><input type="checkbox"> Inform the Client that you will be transferring them to the Account Manager.</label>
+  <h2 style="text-align: center;">Lead is Eligible</h2>
 
 <p style="background: #fff7f0; padding: 15px; border-radius: 10px;">Hello (Lead Name), thank you for holding. It looks like we have everything we need. I'll be putting my account manager on the line, who will be able to help you further with your application. The transfer process will take about 2-3 minutes, so please stay on the line.</p>  
 
@@ -4133,29 +4144,33 @@
 
 <!-- Live Transfer -->
 <div class="container section" id="telemarketingLiveTransfer">
-  <h2 style="text-align: center;">Live Transfer</h2><br>
+  <h2 style="text-align: center;">Live Transfer</h2>
+  <div style="background-color: #fff7f0; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
   <label><input type="checkbox"> Transfer to the Account Manager</label><br>
   <label><input type="checkbox"> Add note → Use “Credit pulled, Live Xfer” template.</label><br>
   <label><input type="checkbox">Inform the Account Manager of the amount & purpose for the loan.</label><br>
   <label><input type="checkbox">Release the Lead from the hold.</label><br>
   <label><input type="checkbox"> Dispo the call as "XFER - Call Transferred"</label><br>
+</div>
   <div class="button-grid grid-2" style="margin-top: 30px;">
     <button class="button" onclick="goBackToPrevious()">⬅️ Back</button>
-    <button class="button" onclick="showOnly('homepage')">✅ Finish</button>
+    <button class="button" onclick="showOnly('telemarketing')">✅ Finish</button>
   </div>
 </div>
 
 <!-- Transfer Appointment -->
 <div class="container section" id="telemarketingTransferAppt">
-  <h2 style="text-align: center;">Transfer Appointment</h2><br>
+  <h2 style="text-align: center;">Transfer Appointment</h2>
+  <div style="background-color: #fff7f0; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
   <label><input type="checkbox"> Ask the Lead what is the Best Time To Call (BTTC)</label><br>
   <label><input type="checkbox"> Dispo the call as "TA - Transfer Appt"</label><br>
   <label><input type="checkbox"> Add note → Use “Credit pulled, Transfer Appt” template.</label><br>
   <label><input type="checkbox"> Change file status to "Transfer Appt"</label><br>
   <label><input type="checkbox"> Unassign the file</label><br>
+</div>
   <div class="button-grid grid-2" style="margin-top: 30px;">
     <button class="button" onclick="goBackToPrevious()">⬅️ Back</button>
-    <button class="button" onclick="showOnly('homepage')">✅ Finish</button>
+    <button class="button" onclick="showOnly('telemarketing')">✅ Finish</button>
   </div>
 </div>
 
