@@ -2251,22 +2251,26 @@
 
 <!-- Negotiations Section -->
 <div class="container section" id="negotiations" style="display: none;">
-  <h2 style="text-align: center; font-weight: bold;">🤝 Negotiations</h2>
-  <p style="text-align: center; margin-top: 10px;">
-    Follow this process to negotiate settlements with creditors on behalf of the client.
-  </p>
+
+  <!-- Centered Image Above Heading -->
+  <div style="text-align: center;">
+    <img src="https://imgur.com/ZcJbNB6.png" alt="Negotiations Icon" style="max-width: 120px; height: auto; margin-bottom: 10px;">
+  </div>
+
+  <!-- Heading -->
+  <h2 style="text-align: center; font-weight: bold;">Negotiations</h2>
 
   <div class="button-grid grid-2" style="margin-top: 30px;">
     <button class="back-button" onclick="goBackToPrevious()">⬅️ Back</button>
-    <button class="button" onclick="showOnly('negotiationProcess')">📋 Negotiation Process</button>
+    <button class="button" onclick="showOnly('negotiationProcess')">Let's begin!</button>
   </div>
 </div>
 
 <!-- Negotiation Process -->
 <div class="container section" id="negotiationProcess" style="display: none;">
-  <h2 style="text-align: center; font-weight: bold;">🧾 Verify Funds Availability</h2>
-
-  <p style="font-weight: bold; margin-top: 30px; text-align: left;">Assess Account Status:</p>
+  <h2 style="text-align: center; font-weight: bold;">Verify Funds Availability</h2>
+    <div style="background-color: #faf4fb ; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
+  <h3 style="font-weight: bold; margin-top: 30px; text-align: left;">Assess Account Status:</h3>
   <div class="left-align-text">
     <label><input type="checkbox"> Confirm the account is delinquent or charged off.</label><br>
     <label><input type="checkbox"> Verify if at least two months' drafts have been completed indicating the account is purchased.</label><br>
@@ -2274,7 +2278,7 @@
     <label><input type="checkbox"> Check if the debt is with a scrub creditor.</label>
   </div>
 
-  <p style="font-weight: bold; margin-top: 30px; text-align: left;">Prepare Client Information:</p>
+  <h3 style="font-weight: bold; margin-top: 30px; text-align: left;">Prepare Client Information:</h3>
   <div class="left-align-text">
     <label><input type="checkbox"> Review the enrollment date to estimate the last payment made to creditors.</label><br>
     <label><input type="checkbox"> Examine enrolled debts and specific creditors.</label><br>
@@ -2283,11 +2287,12 @@
     <div style="margin-left: 20px; margin-top: 10px;">
       <label><input type="checkbox"> Navigate to the Tasks section.</label><br>
       <label><input type="checkbox"> Select “Send POA to Creditor” as the task type.</label><br>
+      <label><input type="checkbox"> Assign the Task to "Function Support"</label><br>
       <label><input type="checkbox"> Attach the Power of Attorney document if available.</label><br>
       <label><input type="checkbox"> Submit the task and confirm its status.</label>
     </div>
   </div>
-
+ </div>
   <div class="button-grid grid-2" style="margin-top: 30px;">
     <button class="back-button" onclick="goBackToPrevious()">⬅️ Back</button>
     <button class="button" onclick="showOnly('contactCreditor')">📞 Contact the Creditor</button>
@@ -2296,9 +2301,10 @@
 
 <!-- Contact the Creditor Step -->
 <div class="container section" id="contactCreditor" style="display: none;">
-  <h2 style="text-align: center; font-weight: bold;">📞 Contacting the Creditor</h2>
+  <h2 style="text-align: center; font-weight: bold;">Contacting the Creditor</h2>
+    <div style="background-color: #faf4fb ; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
 
-  <p style="font-weight: bold; margin-top: 30px; text-align: left;">Initiate Contact with Creditor:</p>
+  <h3 style="font-weight: bold; margin-top: 30px; text-align: left;">Initiate Contact with Creditor:</h3>
   <div class="left-align-text">
     <label><input type="checkbox"> Call the creditor, introduce our company, and read the phone recording disclosure.</label><br>
     <label><input type="checkbox"> Confirm the client's information.</label><br>
@@ -2306,7 +2312,7 @@
     <label><input type="checkbox"> Verify the client's current debt balance with the creditor.</label>
   </div>
 
-  <p style="font-weight: bold; margin-top: 30px; text-align: left;">Negotiate Settlement:</p>
+  <h3 style="font-weight: bold; margin-top: 30px; text-align: left;">Negotiate Settlement:</h3>
   <div class="left-align-text">
     <label><input type="checkbox"> Use the CRM to review the client's budget.</label><br>
     <label><input type="checkbox"> Discuss with the creditor how much they are willing to reduce the balance.</label><br>
@@ -2314,19 +2320,18 @@
     <label><input type="checkbox"> Submit the offer through the CRM.</label>
   </div>
 
-  <p style="font-weight: bold; margin-top: 30px; text-align: left;">Finalize Settlement:</p>
+  <h3 style="font-weight: bold; margin-top: 30px; text-align: left;">Finalize Settlement:</h3>
   <div class="left-align-text">
     <label><input type="checkbox"> Ensure the creditor sends the settlement agreement letter.</label><br>
     <label><input type="checkbox"> Upon receiving the settlement letter, it is sent to your email or fax.</label><br>
     <label><input type="checkbox"> Fill out the 'Settlement Reached' or 'Settlement Exception Needed' template with the correct information.</label>
   </div>
-
+</div>
   <div class="button-grid-full" style="margin-top: 40px;">
     <button class="back-button" onclick="goBackToPrevious()">⬅️ Back</button>
-    <button class="button" onclick="goNextStep()">✅ Final Review</button>
+    <button class="back-button" onclick="showOnly('negotiations')">✅ Finish</button>
   </div>
 </div>
-
 
 
 
