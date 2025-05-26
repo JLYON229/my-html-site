@@ -2993,43 +2993,35 @@ Note: If approved, client will be contacted for ACH. If no response, create a fo
   <div style="text-align: center;">
     <img src="https://imgur.com/0Y4Q79L.png" alt="Retention Icon" style="max-width: 120px; height: auto; margin-bottom: 10px;">
   </div>
-
   <!-- Heading -->
   <h2 style="text-align: center; font-weight: bold;">Retention</h2>
-
-
   <div class="button-grid grid-3">
-    <button class="button" onclick="showOnly('retentionInbound')">📥 Inbound Call</button>
-    <button class="button" onclick="showOnly('retentionOutbound')">📤 Outbound Call</button>
-    <button class="button" onclick="showOnly('retentionTransfer')">📞 Transferred </button>
+    <button class="button" onclick="showOnly('retentionInbound')">Inbound Call</button>
+    <button class="button" onclick="showOnly('retentionOutbound')">Outbound Call</button>
+    <button class="button" onclick="showOnly('retentionTransfer')">Transferred Call</button>
   </div>
   <div class="button-grid-back">
-<button class="back-button" onclick="goBackToPrevious()">⬅️ Back</button>
+<button class="back-button" onclick="goBackToPrevious()">Back</button>
   </div>
 </div>
 
 <div class="container section" id="retentionInbound">
-  <h2 style="text-align: center; font-weight: bold;">   Greeting / Intro</h2><br>
-  <h3 style="text-align: left;"><strong>Client Authentication</strong> and Verification</h>
+  <h2 style="text-align: center; font-weight: bold;">Greeting / Intro</h2>
+  <div style="background-color: #eaf3ee; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
   <div class="left-align-text">
+  <h3 style="text-align: left;"><strong>Client Authentication</strong> and Verification</h3>
+<div style="background-color: #D5E7DD; padding: 20px 40px; border-radius: 10px; color: #112663; margin: 15px 0; text-align: center;">
     <p style="text-align: left;">“Hello, this is [Agent’s Name] from [Company's Name]. This call is being recorded for quality assurance and compliance purposes. Do I have your permission to proceed?”</p>
-
     <p style="text-align: left;">“May I have your phone number or Client ID so I can pull up your file?”</p>
-
+</div>
   <label><input type="checkbox"> Verify <Strong>Full Name</Strong>.</label><br>
   <label><input type="checkbox"> Verify <Strong>Date of Birth</Strong>.</label><br>
   <label><input type="checkbox"> Verify <Strong>Full Address</Strong>.</label><br>
-
-    <p style="color: red; text-align: left; font-weight: 600; margin-top: 8px;">
-      At least two of these details must be verified before proceeding.
-    </p>
-
-    <p style="text-align: left;">“Can you please confirm your full name, date of birth & address for authentication purposes?”</p>
-
+<div style="background-color: #D5E7DD; padding: 20px 40px; border-radius: 10px; color: #112663; margin: 15px 0; text-align: center;">
+  <p style="text-align: left;"><em>Ask the client: “Have any of your contact details changed since our last conversation?”</em></p>
+</div>
     <label style="text-align: left;"><input type="checkbox"> Phone Number</label><br>
     <label style="text-align: left;"><input type="checkbox"> Email Address</label>
-
-  <p style="text-align: left;"><em>Ask the client: “Have any of your contact details changed since our last conversation?”</em></p>
   </div>
 
   <h3 style="text-align: center; font-weight: bold; margin-top: 30px;">Choose Your Path</h3>
@@ -3039,7 +3031,7 @@ Note: If approved, client will be contacted for ACH. If no response, create a fo
     <button class="button" onclick="showOnly('retentionCancellation')">Cancellation Requests</button>
     <button class="button" onclick="showOnly('retentionRemoveDebt')">Remove a Debt</button>
   </div>
-
+  </div>
   <div class="button-grid-back" style="margin-top: 25px;">
     <button class="back-button" onclick="goBackToPrevious()">⬅️ Back</button>
   </div>
@@ -3941,12 +3933,12 @@ Note: If approved, client will be contacted for ACH. If no response, create a fo
 
   <!-- Buttons -->
   <div class="button-grid grid-2">
-    <button class="button" onclick="showOnly('telemarketingInbound')">📥 Inbound Call</button>
-    <button class="button" onclick="showOnly('telemarketingOutbound')">📤 Outbound Call</button>
+    <button class="button" onclick="showOnly('telemarketingInbound')">Inbound Call</button>
+    <button class="button" onclick="showOnly('telemarketingOutbound')">Outbound Call</button>
   </div>
   
   <div class="button-grid" style="margin-top: 30px;">
-    <button class="button" style="width: 100%;" onclick="goBackToPrevious()">⬅️ Back</button>
+    <button class="button" style="width: 100%;" onclick="goBackToPrevious()">Back</button>
   </div>
 </div>
 
@@ -3977,7 +3969,7 @@ Note: If approved, client will be contacted for ACH. If no response, create a fo
     <button class="button" onclick="showOnly('telemarketingNotInterested')">Not Interested</button>
   </div>
   <div class="button-grid" style="margin-top: 30px;">
-    <button class="button" style="width: 100%;" onclick="goBackToPrevious()">⬅️ Back</button>
+    <button class="button" style="width: 100%;" onclick="goBackToPrevious()">Back</button>
   </div>
 </div>
 
@@ -4012,7 +4004,7 @@ Note: If approved, client will be contacted for ACH. If no response, create a fo
   </div>
 
   <div class="button-grid" style="margin-top: 30px;">
-    <button class="button" style="width: 100%;" onclick="goBackToPrevious()">⬅️ Back</button>
+    <button class="button" style="width: 100%;" onclick="goBackToPrevious()">Back</button>
   </div>
 </div>
 
@@ -4037,17 +4029,17 @@ Note: If approved, client will be contacted for ACH. If no response, create a fo
         <tr><td style="padding: 10px; border: 1px solid #ccc;">What are your options?</td><td style="padding: 10px; border: 1px solid #ccc;">That’s a great question. Once I confirm your details, I’ll connect you with one of our account managers, who will review all the available options and find the best fit for you. Let’s quickly verify your information to move forward.</td></tr>
         <tr><td style="padding: 10px; border: 1px solid #ccc;">Is this a debt settlement/consolidation/credit repair company?</td><td style="padding: 10px; border: 1px solid #ccc;">No, this is a personal loan application. We provide loans to help meet your financial needs. How much were you looking to borrow today?</td></tr>
         <tr><td style="padding: 10px; border: 1px solid #ccc;">My credit score is not very good” or “What does the credit score have to be?</td><td style="padding: 10px; border: 1px solid #ccc;">That’s okay, your credit score isn’t the only factor we consider. We look at multiple aspects of your financial profile to determine eligibility. Let’s get started and see what we can do for you. How much do you need to borrow?</td></tr>
-        <tr><td style="padding: 10px; border: 1px solid #ccc;">I’m not sure I’m comfortable giving my Social Security Number over the phone.</td><td style="padding: 10px; border: 1px solid #ccc;">I completely understand. For now, I can work with just the last four digits of your Social.</td></tr>
+        <tr><td style="padding: 10px; border: 1px solid #ccc;">I’m not sure I’m comfortable giving my Social Security Number over the phone</td><td style="padding: 10px; border: 1px solid #ccc;">I completely understand. For now, I can work with just the last four digits of your Social.</td></tr>
         <tr><td style="padding: 10px; border: 1px solid #ccc;">Not comfortable providing the last four digits of SSN either</td><td style="padding: 10px; border: 1px solid #ccc;">Just to clarify, we handle thousands of applications every day, and your Social is treated with confidentiality. If you’re still not comfortable, you’re welcome to complete the application directly on our website at unityfundingcorp.com.</td></tr>
         <tr><td style="padding: 10px; border: 1px solid #ccc;">Am I approved?</td><td style="padding: 10px; border: 1px solid #ccc;">Not yet. We still need to complete your application and verify your information. Once that’s done, my account manager will go over your eligibility and options with you.</td></tr>
         <tr><td style="padding: 10px; border: 1px solid #ccc;">What’s my interest rate?</td><td style="padding: 10px; border: 1px solid #ccc;">The promotional interest rate starts at 5%, but the final rate depends on your loan amount and qualifications. Once we complete your application, my account manager will go over all the details with you.</td></tr>
-        <tr><td style="padding: 10px; border: 1px solid #ccc;">I’m not interested anymore.</td><td style="padding: 10px; border: 1px solid #ccc;">I completely understand, but just to let you know, this process is quick, easy, and comes with no obligation. Why not take a few minutes to see what you qualify for? It never hurts to have options.</td></tr>
+        <tr><td style="padding: 10px; border: 1px solid #ccc;">I’m not interested anymore</td><td style="padding: 10px; border: 1px solid #ccc;">I completely understand, but just to let you know, this process is quick, easy, and comes with no obligation. Why not take a few minutes to see what you qualify for? It never hurts to have options.</td></tr>
         <tr><td style="padding: 10px; border: 1px solid #ccc;">Is this a scam?</td><td style="padding: 10px; border: 1px solid #ccc;">I totally understand why you’d ask that. Rest assured, we’re a financial institution, and this call is being recorded for transparency. If you’d like, you can verify our company by visiting our website.</td></tr>
         <tr><td style="padding: 10px; border: 1px solid #ccc;">How did you get my information?</td><td style="padding: 10px; border: 1px solid #ccc;">You were pre-selected based on publicly available information and partnerships with our affiliates. We use this process to offer personalized promotional rates to applicants like yourself.</td></tr>
-        <tr><td style="padding: 10px; border: 1px solid #ccc;">I already have a loan.</td><td style="padding: 10px; border: 1px solid #ccc;">That’s great! Many of our clients already have loans but choose to work with us to consolidate their debts or save on interest rates. Would you like to explore how we can help you lower your payments or pay off your loan faster?</td></tr>
+        <tr><td style="padding: 10px; border: 1px solid #ccc;">I already have a loan</td><td style="padding: 10px; border: 1px solid #ccc;">That’s great! Many of our clients already have loans but choose to work with us to consolidate their debts or save on interest rates. Would you like to explore how we can help you lower your payments or pay off your loan faster?</td></tr>
         <tr><td style="padding: 10px; border: 1px solid #ccc;">Can I think about it?</td><td style="padding: 10px; border: 1px solid #ccc;">Of course! This is just a no-obligation quote to give you more options. Why don’t we complete the application now so you can review everything and make an informed decision later?</td></tr>
         <tr><td style="padding: 10px; border: 1px solid #ccc;">What if I don’t qualify?</td><td style="padding: 10px; border: 1px solid #ccc;">That’s a valid concern. If you don’t qualify, there’s no negative impact on your credit score, and you’re under no obligation. At the very least, you’ll know where you stand for future opportunities. Shall we go ahead and see what’s possible?</td></tr>
-        <tr><td style="padding: 10px; border: 1px solid #ccc;">I don’t want my credit checked.</td><td style="padding: 10px; border: 1px solid #ccc;">I understand. The good news is that we only run a soft credit check, which has no impact on your credit score and doesn’t appear on your credit report. It’s simply to determine your eligibility. Can we proceed?</td></tr>
+        <tr><td style="padding: 10px; border: 1px solid #ccc;">I don’t want my credit checked</td><td style="padding: 10px; border: 1px solid #ccc;">I understand. The good news is that we only run a soft credit check, which has no impact on your credit score and doesn’t appear on your credit report. It’s simply to determine your eligibility. Can we proceed?</td></tr>
         <tr><td style="padding: 10px; border: 1px solid #ccc;">How long does this take?</td><td style="padding: 10px; border: 1px solid #ccc;">This process is very quick; it only takes a few minutes to verify your details and see what you qualify for. After that, my account manager will go over your options with you. Do you have a moment now?</td></tr>
         <tr><td style="padding: 10px; border: 1px solid #ccc;">Are there any fees?</td><td style="padding: 10px; border: 1px solid #ccc;">There are no upfront fees for this process. We’ll only present options that are clear and transparent, with all terms explained to you before you decide. Does that sound good?</td></tr>
       </tbody>
@@ -4055,8 +4047,8 @@ Note: If approved, client will be contacted for ACH. If no response, create a fo
   </div>
 </div>
   <div class="button-grid grid-2" style="margin-top: 30px;">
-    <button class="button" onclick="goBackToPrevious()">⬅️ Back</button>
-    <button class="button" onclick="showOnly('telemarketing')">✅ Finish</button>
+    <button class="button" onclick="goBackToPrevious()">Back</button>
+    <button class="button" onclick="showOnly('telemarketing')">Finish</button>
   </div>
 </div>
 
@@ -4067,8 +4059,8 @@ Note: If approved, client will be contacted for ACH. If no response, create a fo
 
   <div style="background-color: #fff7f0; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
     <div style="text-align: left; line-height: 1.8;">
-      <label><input type="checkbox"> Ask for the <strong>amount</strong> the Lead is interested in.</label><br>
-      <label><input type="checkbox"> Ask for the <strong>purpose</strong> of the loan.</label><br>
+      <label><input type="checkbox"> Ask for the <strong>amount</strong> the Lead is interested in</label><br>
+      <label><input type="checkbox"> Ask for the <strong>purpose</strong> of the loan</label><br>
 
       <!-- Quote in slightly darker box -->
 <div style="background-color: #ffe8d9; padding: 20px 40px; border-radius: 10px; color: #112663; margin: 15px 0; text-align: center;">
@@ -4092,8 +4084,8 @@ Note: If approved, client will be contacted for ACH. If no response, create a fo
   </div>
 
     <div class="button-grid grid-2" style="margin-top: 30px;">
-       <button class="button" onclick="goBackToPrevious()">⬅️ Back</button>
-       <button class="button" onclick="showOnly('telemarketingPullCredit')">➡️ Pull Credit Report</button>
+       <button class="button" onclick="goBackToPrevious()">Back</button>
+       <button class="button" onclick="showOnly('telemarketingPullCredit')">Pull Credit Report</button>
    </div>
 </div>
 
@@ -4113,21 +4105,21 @@ Note: If approved, client will be contacted for ACH. If no response, create a fo
 
     <!-- Checklist -->
     <div style="text-align: left; line-height: 1.8;">
-      <label><input type="checkbox"> Navigate to the <strong>"Debts"</strong> tab.</label><br>
-      <label><input type="checkbox"> Click on the <strong>"Pull Credit Report"</strong> dropdown.</label><br>
-      <label><input type="checkbox"> Click on the <strong>"Meridian Link"</strong> button.</label><br>
-      <label><input type="checkbox"> Select <strong>"Identity Connect"</strong>.</label><br>
-      <label><input type="checkbox"> Enter the Lead's <strong>Cellphone number</strong>.</label><br>
-      <label><input type="checkbox"> Enter the Lead's <strong>Date of Birth</strong>.</label><br>
-      <label><input type="checkbox"> Check the consent box.</label><br>
-      <label><input type="checkbox"> Click on the <strong>"Continue"</strong> button.</label><br>
-      <label><input type="checkbox"> Retrieve the <strong>6-digit code</strong> from the Lead to complete the pull.</label>
+      <label><input type="checkbox"> Navigate to the <strong>"Debts"</strong> tab</label><br>
+      <label><input type="checkbox"> Click on the <strong>"Pull Credit Report"</strong> dropdown</label><br>
+      <label><input type="checkbox"> Click on the <strong>"Meridian Link"</strong> button</label><br>
+      <label><input type="checkbox"> Select <strong>"Identity Connect"</strong></label><br>
+      <label><input type="checkbox"> Enter the Lead's <strong>Cellphone number</strong></label><br>
+      <label><input type="checkbox"> Enter the Lead's <strong>Date of Birth</strong></label><br>
+      <label><input type="checkbox"> Check the consent box</label><br>
+      <label><input type="checkbox"> Click on the <strong>"Continue"</strong> button</label><br>
+      <label><input type="checkbox"> Retrieve the <strong>6-digit code</strong> from the Lead to complete the pull</label>
     </div>
   </div>
 
   <div class="button-grid grid-2" style="margin-top: 25px;">
-    <button class="button" onclick="goBackToPrevious()">⬅️ Back</button>
-    <button class="button" onclick="showOnly('telemarketingNextStep')">➡️ Next Step</button>
+    <button class="button" onclick="goBackToPrevious()">Back</button>
+    <button class="button" onclick="showOnly('telemarketingNextStep')">Next Step</button>
   </div>
 </div>
 
@@ -4139,7 +4131,7 @@ Note: If approved, client will be contacted for ACH. If no response, create a fo
   <h2 style="text-align: center; font-weight: bold;">Eligibility Check</h2>
 
 <div style="background-color: #fff7f0; padding: 20px 30px; border-radius: 12px; color: #112663; margin: 20px 0; text-align: center;">
-  <h3><Strong>The Lead must have at least $8,000 in acceptable debts.</Strong></h3><br>
+  <h3><Strong>The Lead must have at least $8,000 in acceptable debts</Strong></h3><br>
 
 
   <input type="text" id="searchInput" onkeyup="searchTable()" placeholder="Search for a Debt Type or a Financial Institution..." 
@@ -4306,7 +4298,7 @@ Note: If approved, client will be contacted for ACH. If no response, create a fo
     <button class="button" onclick="showOnly('telemarketingNotEligible')" style="padding: 12px 20px; font-size: 18px;">Not Eligible</button>
   </div>
   <div class="button-grid" style="margin-top: 30px;">
-    <button class="button" style="width: 100%; padding: 14px; font-size: 18px;" onclick="goBackToPrevious()">⬅️ Back</button>
+    <button class="button" style="width: 100%; padding: 14px; font-size: 18px;" onclick="goBackToPrevious()">Back</button>
   </div>
 </div>
 
@@ -4318,15 +4310,15 @@ Note: If approved, client will be contacted for ACH. If no response, create a fo
 
       <!-- Quote in slightly darker box -->
 <div style="background-color: #ffe8d9; padding: 20px 40px; border-radius: 10px; color: #112663; margin: 15px 0; text-align: center;">
-  <p>Hello (Lead Name), thank you for holding. The system came back with the results and unfortunately we couldn’t manage to get you qualified for any of our options. Thank you and have a great day.</p>
+  <p>"Hello (Lead Name), thank you for holding. The system came back with the results and unfortunately we couldn’t manage to get you qualified for any of our options. Thank you and have a great day."</p>
 </div>
   <label><input type="checkbox"> Change file status to "NQDS (Not Qualified)"</label><br>
   <label><input type="checkbox"> Dispo the call as "NE - Not Eligible"</label><br>
-  <label><input type="checkbox"> Add note → Use “Credit pulled, Client Not Eligible” template.</label><br>
+  <label><input type="checkbox"> Add note → Use “Credit pulled, Client Not Eligible” template</label><br>
 </div>
   <div class="button-grid grid-2" style="margin-top: 30px;">
-    <button class="button" onclick="goBackToPrevious()">⬅️ Back</button>
-    <button class="button" onclick="showOnly('telemarketing')">✅ Finish</button>
+    <button class="button" onclick="goBackToPrevious()">Back</button>
+    <button class="button" onclick="showOnly('telemarketing')">Finish</button>
   </div>
 </div>
 
@@ -4336,7 +4328,7 @@ Note: If approved, client will be contacted for ACH. If no response, create a fo
 <div class="container section" id="telemarketingEligible">
   <h2 style="text-align: center;">Lead is Eligible</h2>
 
-<p style="background: #fff7f0; padding: 15px; border-radius: 10px;">Hello (Lead Name), thank you for holding. It looks like we have everything we need. I'll be putting my account manager on the line, who will be able to help you further with your application. The transfer process will take about 2-3 minutes, so please stay on the line.</p>  
+<p style="background: #fff7f0; padding: 15px; border-radius: 10px;">"Hello (Lead Name), thank you for holding. It looks like we have everything we need. I'll be putting my account manager on the line, who will be able to help you further with your application. The transfer process will take about 2-3 minutes, so please stay on the line."</p>  
 
 
   <div class="button-grid grid-2">
@@ -4344,7 +4336,7 @@ Note: If approved, client will be contacted for ACH. If no response, create a fo
     <button class="button" onclick="showOnly('telemarketingTransferAppt')">Transfer Appointment</button>
   </div>
   <div class="button-grid" style="margin-top: 30px;">
-    <button class="button" style="width: 100%;" onclick="goBackToPrevious()">⬅️ Back</button>
+    <button class="button" style="width: 100%;" onclick="goBackToPrevious()">Back</button>
   </div>
 </div>
 
@@ -4353,14 +4345,14 @@ Note: If approved, client will be contacted for ACH. If no response, create a fo
   <h2 style="text-align: center;">Live Transfer</h2>
   <div style="background-color: #fff7f0; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
   <label><input type="checkbox"> Transfer to the Account Manager</label><br>
-  <label><input type="checkbox"> Add note → Use “Credit pulled, Live Xfer” template.</label><br>
-  <label><input type="checkbox">Inform the Account Manager of the amount & purpose for the loan.</label><br>
-  <label><input type="checkbox">Release the Lead from the hold.</label><br>
+  <label><input type="checkbox"> Add note → Use “Credit pulled, Live Xfer” template</label><br>
+  <label><input type="checkbox"> Inform the Account Manager of the amount & purpose for the loan</label><br>
+  <label><input type="checkbox"> Release the Lead from the hold</label><br>
   <label><input type="checkbox"> Dispo the call as "XFER - Call Transferred"</label><br>
 </div>
   <div class="button-grid grid-2" style="margin-top: 30px;">
-    <button class="button" onclick="goBackToPrevious()">⬅️ Back</button>
-    <button class="button" onclick="showOnly('telemarketing')">✅ Finish</button>
+    <button class="button" onclick="goBackToPrevious()">Back</button>
+    <button class="button" onclick="showOnly('telemarketing')">Finish</button>
   </div>
 </div>
 
@@ -4370,13 +4362,13 @@ Note: If approved, client will be contacted for ACH. If no response, create a fo
   <div style="background-color: #fff7f0; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
   <label><input type="checkbox"> Ask the Lead what is the Best Time To Call (BTTC)</label><br>
   <label><input type="checkbox"> Dispo the call as "TA - Transfer Appt"</label><br>
-  <label><input type="checkbox"> Add note → Use “Credit pulled, Transfer Appt” template.</label><br>
+  <label><input type="checkbox"> Add note → Use “Credit pulled, Transfer Appt” template</label><br>
   <label><input type="checkbox"> Change file status to "Transfer Appt"</label><br>
   <label><input type="checkbox"> Unassign the file</label><br>
 </div>
   <div class="button-grid grid-2" style="margin-top: 30px;">
-    <button class="button" onclick="goBackToPrevious()">⬅️ Back</button>
-    <button class="button" onclick="showOnly('telemarketing')">✅ Finish</button>
+    <button class="button" onclick="goBackToPrevious()">Back</button>
+    <button class="button" onclick="showOnly('telemarketing')">Finish</button>
   </div>
 </div>
 
