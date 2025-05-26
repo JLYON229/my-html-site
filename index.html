@@ -913,18 +913,16 @@
   <div style="background-color: #e5eff9; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
   <div class="left-align-text">
   <h3 style="text-align: left;"><strong>Client Authentication</strong> and Verification</h3>
-  <label><input type="checkbox"> Verify <Strong>Full Name</Strong>.</label><br>
-  <label><input type="checkbox"> Verify <Strong>Date of Birth</Strong>.</label><br>
-  <label><input type="checkbox"> Verify <Strong>Full Address</Strong>.</label><br>
+  <label><input type="checkbox"> Verify <Strong>Full Name</Strong></label><br>
+  <label><input type="checkbox"> Verify <Strong>Date of Birth</Strong></label><br>
+  <label><input type="checkbox"> Verify <Strong>Full Address</Strong></label><br>
       <!-- Quote in slightly darker box -->
 <div style="background-color: #d5e5f5; padding: 20px 40px; border-radius: 10px; color: #112663; margin: 15px 0; text-align: center;">
-  <p style="text-align: left;"><em>Ask the client: “Have any of your contact details changed since our last conversation?”</em></p>
+  <p style="text-align: center;"><em>“Have any of your contact details changed since our last conversation?”</em></p>
 </div>
   <label><input type="checkbox"> Verify Email Address</label><br>
   <label><input type="checkbox"> Verify Additional Phone Numbers</label>
 </div>
-
-  <h2>Choose Your Path</h2>
 <div class="button-grid grid-3 left-align">
   <button class="button" onclick="showOnly('addDebt')">Add a Debt</button>
   <button class="button" onclick="showOnly('cancellationRequest')">Cancellation Request</button>
@@ -942,13 +940,11 @@
   <button class="button" onclick="showOnly('refundRequest')">Refund Request</button>
   <button class="button" onclick="showOnly('removeDebt')">Remove a Debt</button>
 </div>
-
 <!-- Side-by-side full-width buttons -->
 <div style="display: flex; gap: 20px; margin-top: 20px;">
   <button class="button" style="flex: 1;" onclick="showOnly('settlementAuthIB')">Settlement Authorization IB</button>
   <button class="button" style="flex: 1;" onclick="showOnly('updateBankInfo')">Update Bank Info</button>
 </div>
-
 </div>
   <div class="button-grid" style="margin-top: 30px;">
     <button class="button" style="width: 100%;" onclick="goBackToPrevious()">Back</button>
@@ -962,17 +958,15 @@
   <div style="background-color: #e5eff9; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
   <div class="left-align-text">
   <h3 style="text-align: left;"><strong>Client Authentication</strong> and Verification</h3>
-  <label><input type="checkbox"> Verify <Strong>Date of Birth</Strong>.</label><br>
-  <label><input type="checkbox"> Verify <Strong>Full Address</Strong>.</label><br>
+  <label><input type="checkbox"> Verify <Strong>Date of Birth</Strong></label><br>
+  <label><input type="checkbox"> Verify <Strong>Full Address</Strong></label><br>
       <!-- Quote in slightly darker box -->
 <div style="background-color: #d5e5f5; padding: 20px 40px; border-radius: 10px; color: #112663; margin: 15px 0; text-align: center;">
-  <p style="text-align: left;"><em>Ask the client: “Have any of your contact details changed since our last conversation?”</em></p>
+  <p style="text-align: center;"><em>“Have any of your contact details changed since our last conversation?”</em></p>
 </div>
   <label><input type="checkbox"> Verify Email Address</label><br>
   <label><input type="checkbox"> Verify Additional Phone Numbers</label>
 </div>
-
-  <h2>Choose Your Path</h2>
   <div class="button-grid grid-3 left-align">
     <button class="button" onclick="showOnly('errorProcessing')">Error Processing / Blocked</button>
     <button class="button" onclick="showOnly('invalidBanking')">Invalid Banking</button>
@@ -1012,24 +1006,17 @@
   <h2>Add a Loan</h2>
 
   <!-- Flex wrapper for text and image -->
-  <div style="background-color: #e5eff9; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px; display: flex; justify-content: space-between; align-items: flex-start;">
+<div style="background-color: #e5eff9; padding: 25px 25px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin: 6px 0;">
+  <h3 style="margin: 0 0 12px 0; text-align: left;">Steps to Add a Loan:</h3>
+  <label><input type="checkbox"> Obtain "Bank Statement", "Proof of Payment" & "Original Loan Agreement" documents from the client</label><br>
+  <label><input type="checkbox"> Upload documents to the file</label><br>
+  <label><input type="checkbox"> Add note → Use “Document Uploaded” template</label><br>
+  <label><input type="checkbox"> Add note → Use “Request to Add Debt” template</label><br>
+  <label><input type="checkbox"> Notify "Payments ACH"</label><br>
+  <label><input type="checkbox"> Go to Tasks → Create a task assigned to ACH</label>
 
-    <!-- Text Section -->
-    <div class="left-align-text" style="flex: 2;">
-      <h3 style="text-align: left;">Steps to Add a Loan:</h3>
-      <label><input type="checkbox"> Obtain "Bank Statement", "Proof of Payment" & "Original Loan Agreement" documents from the client.</label><br>
-      <label><input type="checkbox"> Upload documents to the file.</label><br>
-      <label><input type="checkbox"> Add note → Use “Document Uploaded” template.</label><br>
-      <label><input type="checkbox"> Add note → Use “Request to Add Debt” template.</label><br>
-      <label><input type="checkbox"> Notify "Payments ACH".</label><br>
-      <label><input type="checkbox"> Go to Tasks → Create a task assigned to ACH.</label>
-    </div>
-
-    <!-- Image Section -->
-    <div style="flex: 1; text-align: right;">
-      <img src="https://imgur.com/dbYSMnX.png" alt="Agent Illustration"
-           style="max-width: 150px; height: auto; border-radius: 8px; transform: translate(40px, 20px);">
-    </div>
+  <img src="https://imgur.com/dbYSMnX.png" alt="Agent Illustration"
+       style="position: absolute; bottom: 125px; right: 20px; max-width: 110px; height: auto; border-radius: 8px; pointer-events: none; opacity: 0.9;">
 </div>
   <div style="display: flex; gap: 15px; margin-top: 40px; justify-content: center; flex-wrap: wrap;">
     <button class="button" style="flex: 1 1 250px;" onclick="goBackToPrevious()">Back</button>
@@ -1040,23 +1027,20 @@
 <!-- ➕ Add Credit Card Page -->
 <div class="container section" id="addCreditCard">
   <h2>Add a Credit Card</h2>
-  <!-- Flex wrapper for text and image -->
-  <div style="background-color: #e5eff9; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px; display: flex; justify-content: space-between; align-items: flex-start;">
-
-    <!-- Text Section -->
+<div style="background-color: #e5eff9; padding: 25px 25px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin: 6px 0;">
+  <h3 style="margin: 0 0 12px 0; text-align: left;">Steps to Add a Credit Card:</h3>
   <div class="left-align-text">
-    <h3 style="text-align: left;">Steps to Add a Credit Card:</h3>
-    <label><input type="checkbox"> Obtain "Bank Statement" & "Proof of Payment" documents from the client.</label><br>
-    <label><input type="checkbox"> Upload documents to the file.</label><br>
-    <label><input type="checkbox"> Add note → Use “Document Uploaded” template.</label><br>
-    <label><input type="checkbox"> Add note → Use “Request to Add Debt” template.</label><br>
-    <label><input type="checkbox"> Notify "Payments ACH".</label><br>
-    <label><input type="checkbox"> Go to Tasks → Create a task assigned to ACH.</label>
+    <label><input type="checkbox"> Obtain "Bank Statement" & "Proof of Payment" documents from the client</label><br>
+    <label><input type="checkbox"> Upload documents to the file</label><br>
+    <label><input type="checkbox"> Add note → Use “Document Uploaded” template</label><br>
+    <label><input type="checkbox"> Add note → Use “Request to Add Debt” template</label><br>
+    <label><input type="checkbox"> Notify "Payments ACH"</label><br>
+    <label><input type="checkbox"> Go to Tasks → Create a task assigned to ACH</label>
   </div>
     <!-- Image Section -->
     <div style="flex: 1; text-align: right;">
-      <img src="https://imgur.com/dbYSMnX.png" alt="Agent Illustration"
-           style="max-width: 150px; height: auto; border-radius: 8px; transform: translate(40px, 20px);">
+  <img src="https://imgur.com/dbYSMnX.png" alt="Agent Illustration"
+       style="position: absolute; bottom: 125px; right: 20px; max-width: 110px; height: auto; border-radius: 8px; pointer-events: none; opacity: 0.9;">
     </div>
 </div>
   <div style="display: flex; gap: 15px; margin-top: 40px; justify-content: center; flex-wrap: wrap;">
@@ -1646,7 +1630,7 @@ Note: If approved, client will be contacted for ACH. If no response, create a fo
 <!-- Pre-Legal Notice Start -->
 <div class="container section" id="preLegalNotice">
   <h2><strong>Pre-Legal Document Received</strong></h2>
-  <div style="background-color: #e5eff9; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
+<div style="background-color: #e5eff9; padding: 10px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin: 4px 0; display: flex; justify-content: space-between; align-items: flex-start;">
   <div class="left-align-text">
     <label><input type="checkbox"> Ask the client to email a copy of the document.</label><br>
     <label><input type="checkbox"> Confirm it is a pre-legal notice and linked to an enrolled account.</label><br>
