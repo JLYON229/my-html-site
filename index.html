@@ -317,13 +317,13 @@
   <button class="home-grid-button" onclick="showOnly('sales')">
     <img src="https://imgur.com/Ad1cASF.jpg" alt="Sales">
   </button>
-  <button class="home-grid-button" onclick="showOnly('payments')">
+  <button class="home-grid-button" onclick="showOnly('payments1')">
     <img src="https://imgur.com/rtacuCd.jpg" alt="Payments">
   </button>
-  <button class="home-grid-button" onclick="showOnly('ancillaryUnderwriting')">
+  <button class="home-grid-button" onclick="showOnly('lending')">
     <img src="https://imgur.com/ZPSjHAY.jpg" alt="Lending">
   </button>
-  <button class="home-grid-button" onclick="showOnly('ancillarySupport')">
+  <button class="home-grid-button" onclick="showOnly('ancillary')">
     <img src="https://imgur.com/Rp2CzFR.jpg" alt="Ancillary Support">
   </button>
   <button class="home-grid-button" onclick="showOnly('customerService')">
@@ -345,22 +345,44 @@
 
 
 
-  <div class="container section" id="ancillarySupport">
-    <h2>Ancillary Support</h2>
-    <!-- Add your content here -->
-    <button class="back-button" onclick="goBackToPrevious()">⬅️ Back</button>
+  <div class="container section" id="lending">
+     <div style="text-align: center;">
+    <img src="https://imgur.com/uuejOAh.png" alt="Ancillary" style="max-width: 120px; height: auto; margin-bottom: 10px;">
+  </div>
+
+ <h2>Lending</h2>
+
+  <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-bottom: 30px;">
+    <button class="button" style="flex: 1 1 250px;" onclick="showOnly('lendigUnderwriting')">Ancillary Underwriting</button>
+    <button class="button" style="flex: 1 1 250px;" onclick="showOnly('lendingSpecialist')">Ancillary Support</button>
+  </div>
+    <button class="back-button" onclick="goBackToPrevious()">Back</button>
   </div>
 
 
 
 
+<!-- Ancillary Section Selector -->
+<div class="container section" id="ancillary">
+  <!-- Centered Image Above Heading -->
+  <div style="text-align: center;">
+    <img src="https://imgur.com/qxQhOZB.png" alt="Ancillary" style="max-width: 120px; height: auto; margin-bottom: 10px;">
+  </div>
 
+  <!-- Heading -->
+  <h2 style="text-align: center; font-weight: bold;">Ancillary</h2>
+  <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-bottom: 30px;">
+    <button class="button" style="flex: 1 1 250px;" onclick="showOnly('ancillaryUnderwriting')">Ancillary Underwriting</button>
+    <button class="button" style="flex: 1 1 250px;" onclick="showOnly('ancillarySupport')">Ancillary Support</button>
+  </div>
+  <div class="button-grid" style="margin-top: 30px;">
+    <button class="button" style="width: 100%;" onclick="goBackToPrevious()">Back</button>
+  </div>
+</div>
 
 <!-- Ancillary Underwriting Start -->
 <div class="container section" id="ancillaryUnderwriting">
-  <h2 style="text-align: center; font-weight: bold;">Ancillary Underwriting</h2><br>
-  <p style="text-align: center; font-weight: bold; margin-top: 30px;">Choose The Plan you want to add</p>
-
+  <h2 style="text-align: center; font-weight: bold;">Ancillary Underwriting</h2>
   <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-bottom: 30px;">
     <button class="button" style="flex: 1 1 250px;" onclick="showOnly('cdpEligibility')">Consumer Debt Plan (CDP)</button>
     <button class="button" style="flex: 1 1 250px;" onclick="showOnly('vlpEligibility')">Veritas Legal Plan (VLP)</button>
@@ -2485,9 +2507,22 @@ If the file status is “Invalid Banking,” verify whether the current informat
 
 
 
-
 <!-- Payments Section -->
+<div class="container section" id="payments1" style="display: none;">
+  <div style="text-align: center;">
+    <img src="https://imgur.com/Jzt6xXZ.png" alt="Payments Icon" style="max-width: 120px; height: auto; margin-bottom: 10px;">
+  </div>
+  <h2 style="text-align: center; font-weight: bold;">Payments</h2>
+
+  <div class="button-grid grid-2" style="margin-top: 30px;">
+    <button class="back-button" onclick="goBackToPrevious()">Back</button>
+    <button class="button" onclick="showOnly('payments')">Let's begin!</button>
+  </div>
+</div>
+
+
 <div class="container section" id="payments" style="display: none;">
+
   <h2 style="text-align: center; font-weight: bold;">Payments Processing</h2>
 
   <div style="display: flex; flex-wrap: wrap; gap: 40px; justify-content: space-between; margin-top: 30px;">
@@ -2866,7 +2901,6 @@ If the file status is “Invalid Banking,” verify whether the current informat
   <h2 style="text-align: center; font-weight: bold;">Final Processing Steps</h2><br>
 
   <!-- Add an Alert -->
-  <div style="background-color: #d6aee2; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
   <h3 style="text-align: left; font-weight: bold; margin-top: 30px;">Add an Alert:</h3>
   <div class="left-align-text" style="margin-left: 20px; margin-bottom: 30px;">
     <label><input type="checkbox"> Click on "Add Alert".</label><br>
@@ -2876,9 +2910,7 @@ If the file status is “Invalid Banking,” verify whether the current informat
     <label><input type="checkbox"> Mention that this settlement is a term settlement with '[Creditor's Name + Last Four]' until '[Last Payment Date].'</label><br>
     <label><input type="checkbox"> Click on "Save Alert".</label>
   </div>
-</div>
   <!-- Notate the File -->
-  <div style="background-color: #d6aee2; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
   <h3 style="text-align: left; font-weight: bold;">Notate the File:</h3>
   <div class="left-align-text" style="margin-left: 20px; margin-bottom: 30px;">
     <label><input type="checkbox"> Navigate to the "Notes" tab.</label><br>
@@ -2887,9 +2919,7 @@ If the file status is “Invalid Banking,” verify whether the current informat
     <label><input type="checkbox"> Tag/Notify the assigned Negotiator in the note.</label><br>
     <label><input type="checkbox"> Click on "Save Note".</label>
   </div>
-</div>
   <!-- Send an Email -->
-  <div style="background-color: #d6aee2; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
   <h3 style="text-align: left; font-weight: bold;">Send an Email:</h3>
   <div class="left-align-text" style="margin-left: 20px; margin-bottom: 30px;">
     <label><input type="checkbox"> Navigate to the "Emails" tab.</label><br>
@@ -2903,23 +2933,20 @@ If the file status is “Invalid Banking,” verify whether the current informat
     <label><input type="checkbox"> Attach the "Settlement Letter".</label><br>
     <label><input type="checkbox"> Click on "Send Email".</label>
   </div>
-</div>
+
   <!-- Update Account Status -->
-  <div style="background-color: #d6aee2; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
   <h3 style="text-align: left; font-weight: bold;">Update the Account Status:</h3>
   <div class="left-align-text" style="margin-left: 20px; margin-bottom: 30px;">
     <label><input type="checkbox"> Navigate to the client dashboard.</label><br>
     <label><input type="checkbox"> Click the "Edit" icon next to the client status.</label><br>
     <label><input type="checkbox"> Change the status to “Term Settlement”.</label>
   </div>
-</div>
+
   <!-- Finish Button -->
-  <div style="background-color: #d6aee2; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
   <div class="button-grid grid-2" style="margin-top: 30px; text-align: left;">
     <button class="back-button" onclick="goBackToPrevious()">⬅️ Back</button>
     <button class="back-button" onclick="showOnly('homepage')">✅ Finish</button>
   </div>
-</div>
 </div>
 
 
