@@ -911,7 +911,7 @@
 <div class="container section" id="customerServiceInbound">
   <h2>Customer Service Inbound Call</h2>
   <div style="background-color: #e5eff9; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
-  <div class="left-align-text">
+      <div style="text-align: left; line-height: 1.8;">
   <h3 style="text-align: left;"><strong>Client Authentication</strong> and Verification</h3>
   <label><input type="checkbox"> Verify <Strong>Full Name</Strong></label><br>
   <label><input type="checkbox"> Verify <Strong>Date of Birth</Strong></label><br>
@@ -956,7 +956,7 @@
 <div class="container section" id="customerServiceOutbound">
   <h2>Customer Service Outbound Call</h2>
   <div style="background-color: #e5eff9; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
-  <div class="left-align-text">
+    <div style="text-align: left; line-height: 1.8;">
   <h3 style="text-align: left;"><strong>Client Authentication</strong> and Verification</h3>
   <label><input type="checkbox"> Verify <Strong>Date of Birth</Strong></label><br>
   <label><input type="checkbox"> Verify <Strong>Full Address</Strong></label><br>
@@ -1008,19 +1008,20 @@
   <!-- Flex wrapper for text and image -->
 <div style="background-color: #e5eff9; padding: 25px 25px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin: 6px 0;">
   <h3 style="margin: 0 0 12px 0; text-align: left;">Steps to Add a Loan:</h3>
+    <div style="text-align: left; line-height: 1.8;">
   <label><input type="checkbox"> Obtain "Bank Statement", "Proof of Payment" & "Original Loan Agreement" documents from the client</label><br>
   <label><input type="checkbox"> Upload documents to the file</label><br>
   <label><input type="checkbox"> Add note → Use “Document Uploaded” template</label><br>
   <label><input type="checkbox"> Add note → Use “Request to Add Debt” template</label><br>
   <label><input type="checkbox"> Notify "Payments ACH"</label><br>
   <label><input type="checkbox"> Go to Tasks → Create a task assigned to ACH</label>
-
+</div>
   <img src="https://imgur.com/dbYSMnX.png" alt="Agent Illustration"
        style="position: absolute; bottom: 125px; right: 20px; max-width: 110px; height: auto; border-radius: 8px; pointer-events: none; opacity: 0.9;">
 </div>
   <div style="display: flex; gap: 15px; margin-top: 40px; justify-content: center; flex-wrap: wrap;">
     <button class="button" style="flex: 1 1 250px;" onclick="goBackToPrevious()">Back</button>
-    <button class="button" style="flex: 1 1 250px;" onclick="showOnly('homepage')">Finish</button>
+    <button class="button" style="flex: 1 1 250px;" onclick="showOnly('customerService')">Finish</button>
   </div>
 </div>
 
@@ -1029,7 +1030,7 @@
   <h2>Add a Credit Card</h2>
 <div style="background-color: #e5eff9; padding: 25px 25px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin: 6px 0;">
   <h3 style="margin: 0 0 12px 0; text-align: left;">Steps to Add a Credit Card:</h3>
-  <div class="left-align-text">
+    <div style="text-align: left; line-height: 1.8;">
     <label><input type="checkbox"> Obtain "Bank Statement" & "Proof of Payment" documents from the client</label><br>
     <label><input type="checkbox"> Upload documents to the file</label><br>
     <label><input type="checkbox"> Add note → Use “Document Uploaded” template</label><br>
@@ -1045,7 +1046,7 @@
 </div>
   <div style="display: flex; gap: 15px; margin-top: 40px; justify-content: center; flex-wrap: wrap;">
     <button class="button" style="flex: 1 1 250px;" onclick="goBackToPrevious()">Back</button>
-    <button class="button" style="flex: 1 1 250px;" onclick="showOnly('homepage')">Finish</button>
+    <button class="button" style="flex: 1 1 250px;" onclick="showOnly('customerService')">Finish</button>
   </div>
 </div>
 
@@ -1065,11 +1066,13 @@
 <!-- ❌ Not the client -->
 <div class="container section" id="cancelNotClient">
   <h2>Not The Client</h2>
-<h3 style="background-color: #e5eff9; padding: 25px 25px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin: 6px 0;">We cannot cancel the program without the client’s request.</h3>  
+<div style="background-color: #d5e5f5; padding: 20px 20px; border-radius: 10px; color: #112663; margin: 15px 0; text-align: center;">
+We cannot cancel the program without the client’s request.
+</div>
 
   <div style="display: flex; gap: 15px; margin-top: 40px; justify-content: center; flex-wrap: wrap;">
     <button class="button" style="flex: 1 1 250px;" onclick="goBackToPrevious()">Back</button>
-    <button class="button" style="flex: 1 1 250px;" onclick="showOnly('homepage')">Finish</button>
+    <button class="button" style="flex: 1 1 250px;" onclick="showOnly('customerService')">Finish</button>
   </div>
 </div>
 
@@ -1079,7 +1082,7 @@
 
   <!-- Blue Box with steps -->
 <div style="background-color: #e5eff9; padding: 25px 25px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin: 6px 0;">
-  <div style="text-align: left; line-height: 1;">
+    <div style="text-align: left; line-height: 1.8;">
     <label><input type="checkbox"> Navigate to Enrollment tab → Click on "Pause Payments"</label><br>
     <label><input type="checkbox"> Add note → Use “Cancel Request” template</label><br>
     <label><input type="checkbox"> Update FORTH status to “Cancellation Requested”</label>
@@ -1098,8 +1101,8 @@
 <div class="container section" id="cancelTransfers">
   <h2 style="color: #112663;">Case Transfers</h2>
   <div style="background-color: #e5eff9; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
-  <div style="background-color: #d5e5f5; padding: 20px 40px; border-radius: 10px; color: #112663; margin: 15px 0; text-align: center;">
-    <h3 style="text-align: center; color: #112663;">If the file belongs to one of the providers below, follow specific transfer instructions:</h3>
+<div style="background-color: #d5e5f5; padding: 20px 20px; border-radius: 10px; color: #112663; margin: 15px 0; text-align: center;">
+If the file belongs to one of the providers below, follow specific transfer instructions:
 </div>
     <div style="overflow-x:auto; font-family: 'Inter', sans-serif; color: #112663;">
       <table style="margin: 30px auto; border-collapse: collapse; border-radius: 12px; overflow: hidden; box-shadow: 0 0 0 1px #ccc; min-width: 900px;">
@@ -1182,7 +1185,7 @@ If file is not cancelled within 7 business days, notify your lead immediately.<b
 
   <div style="display: flex; gap: 15px; margin-top: 40px; justify-content: center; flex-wrap: wrap;">
     <button class="button" style="flex: 1 1 250px;" onclick="goBackToPrevious()">Back</button>
-    <button class="button" style="flex: 1 1 250px;" onclick="showOnly('homepage')">Finish</button>
+    <button class="button" style="flex: 1 1 250px;" onclick="showOnly('customerService')">Finish</button>
   </div>
 </div>
 
@@ -1190,7 +1193,7 @@ If file is not cancelled within 7 business days, notify your lead immediately.<b
 <div class="container section" id="clientsPassing">
   <h2>Client’s Passing</h2>
 <div style="background-color: #e5eff9; padding: 25px 25px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin: 6px 0;">
-  <div style="text-align: left; line-height: 1;">
+    <div style="text-align: left; line-height: 1.8;">
     <label><input type="checkbox"> Request a scanned copy of the death certificate and provide the appropriate upload email</label><br>
     <label><input type="checkbox"> Upload the document to the client’s file</label><br>
     <label><input type="checkbox"> Add note → Use “Document Uploaded” template</label><br>
@@ -1205,7 +1208,7 @@ If file is not cancelled within 7 business days, notify your lead immediately.<b
 
   <div style="display: flex; gap: 15px; margin-top: 40px; justify-content: center; flex-wrap: wrap;">
     <button class="button" style="flex: 1 1 250px;" onclick="goBackToPrevious()">Back</button>
-    <button class="button" style="flex: 1 1 250px;" onclick="showOnly('homepage')">Finish</button>
+    <button class="button" style="flex: 1 1 250px;" onclick="showOnly('customerService')">Finish</button>
   </div>
 </div>
 </div>
@@ -1214,7 +1217,9 @@ If file is not cancelled within 7 business days, notify your lead immediately.<b
 <!-- Step 1: Draft Change Intro -->
 <div class="container section" id="draftChange">
   <h2>Draft Change</h2>
-<h3 style="background-color: #e5eff9; padding: 25px 25px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin: 6px 0;">Requests must be made at least 2–3 business days in advance. Client must say “Yes” to the disclosure.</h3>  
+<div style="background-color: #d5e5f5; padding: 20px 20px; border-radius: 10px; color: #112663; margin: 15px 0; text-align: center;">
+Requests must be made at least 2–3 business days in advance. Client must say “Yes” to the disclosure.
+</div>
 
   <div class="button-grid-full">
 <button class="back-button" onclick="goBackToPrevious()">Back</button>
@@ -1238,7 +1243,9 @@ If file is not cancelled within 7 business days, notify your lead immediately.<b
 <div class="container section" id="draftActiveSettlement">
   <h2>Disclosure</h2>
 
-<h3 style="background-color: #e5eff9; padding: 25px 25px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin: 6px 0;">"I can make this change for you, but I must inform you that your settlement payment may not clear on time, and the creditor could void the settlement. If this occurs, all payments made so far will be applied to the principal balance. We would then need to renegotiate, and the new settlement may be less favorable."</h3>  
+<div style="background-color: #d5e5f5; padding: 20px 20px; border-radius: 10px; color: #112663; margin: 15px 0; text-align: center;">
+"I can make this change for you, but I must inform you that your settlement payment may not clear on time, and the creditor could void the settlement. If this occurs, all payments made so far will be applied to the principal balance. We would then need to renegotiate, and the new settlement may be less favorable."
+</div>
 
 <div class="button-grid-full">
     <button class="button" onclick="showOnly('draftInstructions')">Client Agrees</button>
@@ -1253,7 +1260,9 @@ If file is not cancelled within 7 business days, notify your lead immediately.<b
 <!-- Disclosure: No Active -->
 <div class="container section" id="draftNoSettlement">
   <h2>Disclosure</h2>
-<h3 style="background-color: #e5eff9; padding: 25px 25px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin: 6px 0;">"I can make this change for you. However, please keep in mind that for us to secure and maintain settlements, we need to ensure consistent drafts."</h3>  
+<div style="background-color: #d5e5f5; padding: 20px 20px; border-radius: 10px; color: #112663; margin: 15px 0; text-align: center;">
+"I can make this change for you. However, please keep in mind that for us to secure and maintain settlements, we need to ensure consistent drafts."
+</div>
 
   <div class="button-grid-full">
     <button class="button" onclick="showOnly('draftInstructions')">Client Agrees</button>
@@ -1268,11 +1277,13 @@ If file is not cancelled within 7 business days, notify your lead immediately.<b
 <div class="container section" id="draftEndCall">
   <h2>End of Call</h2>
 
-<h3 style="background-color: #e5eff9; padding: 25px 25px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin: 6px 0;">The client does not wish to proceed. Kindly thank them for their time and end the call.</h3>  
+<div style="background-color: #d5e5f5; padding: 20px 20px; border-radius: 10px; color: #112663; margin: 15px 0; text-align: center;">
+The client does not wish to proceed. Kindly thank them for their time and end the call.
+</div>
 
   <div class="button-grid-full">
 <button class="back-button" onclick="goBackToPrevious()">Back</button>
-    <button class="button" onclick="showOnly('homepage')">Finish</button>
+    <button class="button" onclick="showOnly('customerService')">Finish</button>
   </div>
 </div>
 
@@ -1280,7 +1291,7 @@ If file is not cancelled within 7 business days, notify your lead immediately.<b
 <div class="container section" id="draftInstructions">
   <h2>Draft Change Instructions</h2>
  <div style="background-color: #e5eff9; padding: 25px 25px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin: 6px 0;">
-  <div style="text-align: left; line-height: 1;">
+    <div style="text-align: left; line-height: 1.8;">
     <label><input type="checkbox"> Apply the proper disclosure based on settlement status</label><br>
     <label><input type="checkbox"> Add note → Use “Draft Change Request” template</label><br>
     <label><input type="checkbox"> Notify "Payments ACH"</label><br>
@@ -1300,7 +1311,7 @@ If file is not cancelled within 7 business days, notify your lead immediately.<b
 <div class="container section" id="draftPermanent">
   <h2>Permanent Draft Arrangement</h2>
   <div style="background-color: #e5eff9; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
-  <div class="left-align-text">
+    <div style="text-align: left; line-height: 1.8;">
     <label><input type="checkbox"> Confirm new amount and date with the client</label><br>
     <label><input type="checkbox"> Go to Tasks → Create a task assigned to ACH</label><br>
   </div>
@@ -1308,7 +1319,7 @@ If file is not cancelled within 7 business days, notify your lead immediately.<b
   </div>
   <div class="button-grid-full">
 <button class="back-button" onclick="goBackToPrevious()">Back</button>
-    <button class="button" onclick="showOnly('homepage')">Finish</button>
+    <button class="button" onclick="showOnly('customerService')">Finish</button>
   </div>
 </div>
 
@@ -1316,7 +1327,7 @@ If file is not cancelled within 7 business days, notify your lead immediately.<b
 <div class="container section" id="draftOneTime">
   <h2>One-Time Draft Arrangement</h2>
   <div style="background-color: #e5eff9; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
-  <div class="left-align-text">
+    <div style="text-align: left; line-height: 1.8;">
     <label><input type="checkbox"> Document the change clearly in the file note</label><br>
     <label><input type="checkbox"> Go to Tasks → Create a task assigned to ACH</label>
   </div>
@@ -1328,7 +1339,7 @@ If file is not cancelled within 7 business days, notify your lead immediately.<b
   </div>
   <div class="button-grid-full">
 <button class="back-button" onclick="goBackToPrevious()">Back</button>
-    <button class="button" onclick="showOnly('homepage')">Finish</button>
+    <button class="button" onclick="showOnly('customerService')">Finish</button>
   </div>
 </div>
 
@@ -1337,7 +1348,7 @@ If file is not cancelled within 7 business days, notify your lead immediately.<b
 <div class="container section" id="draftDecrease">
   <h2>Draft Decrease</h2>
   <div style="background-color: #e5eff9; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
-  <div class="left-align-text">
+    <div style="text-align: left; line-height: 1.8;">
     <label><input type="checkbox"> Check if client has any active settlements</label><br>
     <label><input type="checkbox"> If so, read the required disclosure below</label><br><br>
   </div>
@@ -1366,7 +1377,7 @@ If file is not cancelled within 7 business days, notify your lead immediately.<b
 
   <div class="button-grid-full">
 <button class="back-button" onclick="goBackToPrevious()">Back</button>
-    <button class="button" onclick="showOnly('homepage')">Finish</button>
+    <button class="button" onclick="showOnly('customerService')">Finish</button>
   </div>
 </div>
 
@@ -1374,7 +1385,7 @@ If file is not cancelled within 7 business days, notify your lead immediately.<b
 <div class="container section" id="draftDecreaseNext">
   <h2>Next Steps</h2>
   <div style="background-color: #e5eff9; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
-  <div class="left-align-text">
+    <div style="text-align: left; line-height: 1.8;">
     <label><input type="checkbox"> Create a task for the Team Color "Draft Decrease Request" to be viewed by the Team Lead</label><br>    
     <label><input type="checkbox"> If approved by the Team Lead → Create a task under ACH Team</label><br>
     <label><input type="checkbox"> Add a note → notify "Payments ACH"</label><br>
@@ -1388,7 +1399,7 @@ Note: If approved, client will be contacted for ACH. If no response, create a fo
 
   <div class="button-grid-full">
 <button class="back-button" onclick="goBackToPrevious()">Back</button>
-    <button class="button" onclick="showOnly('homepage')">Finish</button>
+    <button class="button" onclick="showOnly('customerService')">Finish</button>
   </div>
 </div>
 </div>
@@ -1398,7 +1409,7 @@ Note: If approved, client will be contacted for ACH. If no response, create a fo
 <div class="container section" id="draftIncrease">
   <h2>Draft Increase Request</h2>
   <div style="background-color: #e5eff9; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
-  <div class="left-align-text">
+    <div style="text-align: left; line-height: 1.8;">
     <label><input type="radio" name="feeCheck"> If permanent boost → Add note → Use “Draft Change Request” template</label><br>
     <label><input type="radio" name="feeCheck"> If one-time boost → Add note → Use “Additional Funds” template</label><br>
    <label><input type="checkbox"> Create a task under ACH TEAM</label><br>
@@ -1412,7 +1423,7 @@ Note: If approved, client will be contacted for ACH. If no response, create a fo
 </div>
   <div class="button-grid-full">
 <button class="back-button" onclick="goBackToPrevious()">Back</button>
-    <button class="button" onclick="showOnly('homepage')">Finish</button>
+    <button class="button" onclick="showOnly('customerService')">Finish</button>
   </div>
 </div>
 <!-- Draft Increase End -->
@@ -1425,14 +1436,16 @@ Note: If approved, client will be contacted for ACH. If no response, create a fo
   <h3 style="margin: 4px 0;" class="left-align-text">
     Use these responses to remain compliant when clients ask legal questions:
   </h3><br>
-<div style="color: #112663; width: 100%; font-size: 12px; text-align: left;">
-  <p style="margin: 4px 0;" class="left-align-text"><strong>Will I go to jail?</strong> I can't give legal advice, but that’s not typical in these cases.</p>
-  <p style="margin: 4px 0;" class="left-align-text"><strong>Can they garnish my wages?</strong> Please speak with your creditor or consult a licensed attorney.</p>
-  <p style="margin: 4px 0;" class="left-align-text"><strong>Do I have to go to court?</strong> Some clients do attend hearings while we continue working on the account.</p>
-  <p style="margin: 4px 0;" class="left-align-text"><strong>Should I stop paying?</strong> Most clients find it helpful when payments are voluntarily past due.</p>
-  <p style="margin: 4px 0;" class="left-align-text"><strong>Can I block creditor calls?</strong> Many use RWC (Request for Written Communication) under FDCPA.</p>
-  <p style="margin: 4px 0;" class="left-align-text"><strong>Will you guarantee a settlement?</strong> We cannot promise one, but most legal accounts are resolved over time.</p>
+
+<div style="text-align: left; line-height: 1.8; color: #112663; font-size: 11px;">
+  <p style="margin: 4px 0; text-align: left;"><strong>Will I go to jail?</strong> I can't give legal advice, but that’s not typical in these cases.</p>
+  <p style="margin: 4px 0; text-align: left;"><strong>Can they garnish my wages?</strong> Please speak with your creditor or consult a licensed attorney.</p>
+  <p style="margin: 4px 0; text-align: left;"><strong>Do I have to go to court?</strong> Some clients do attend hearings while we continue working on the account.</p>
+  <p style="margin: 4px 0; text-align: left;"><strong>Should I stop paying?</strong> Most clients find it helpful when payments are voluntarily past due.</p>
+  <p style="margin: 4px 0; text-align: left;"><strong>Can I block creditor calls?</strong> Many use RWC (Request for Written Communication) under FDCPA.</p>
+  <p style="margin: 4px 0; text-align: left;"><strong>Will you guarantee a settlement?</strong> We cannot promise one, but most legal accounts are resolved over time.</p>
 </div>
+
 </div>
   <!-- Floating Image overlapping the button area -->
   <img src="https://imgur.com/dbYSMnX.png" alt="Agent Illustration"
@@ -1441,7 +1454,7 @@ Note: If approved, client will be contacted for ACH. If no response, create a fo
   </div>
   <div class="button-grid-full">
 <button class="back-button" onclick="goBackToPrevious()">Back</button>
-    <button class="button" onclick="showOnly('homepage')">Finish</button>
+    <button class="button" onclick="showOnly('customerService')">Finish</button>
   </div>
 </div>
 <!-- Legal Inquiries End -->
@@ -1450,7 +1463,7 @@ Note: If approved, client will be contacted for ACH. If no response, create a fo
 <div class="container section" id="legalSummons">
   <h2>Legal Summons</h2>
  <div style="background-color: #e5eff9; padding: 25px 25px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin: 6px 0;">
-  <div style="text-align: left; line-height: 1;">
+    <div style="text-align: left; line-height: 1.8;">
     <label><input type="checkbox"> Ask client to email or FAX a scanned copy (no photos)</label><br>
     <label><input type="checkbox"> Upload it to file as: Legal Document</label><br>
     <label><input type="checkbox"> Check the court date</label>
@@ -1469,7 +1482,7 @@ Note: If approved, client will be contacted for ACH. If no response, create a fo
 <div class="container section" id="legalSummonsUrgent">
   <h2>Court Date Within 14 Days</h2>
  <div style="background-color: #e5eff9; padding: 25px 25px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin: 6px 0;">
-  <div style="text-align: left; line-height: 1;">
+    <div style="text-align: left; line-height: 1.8;">
     <label><input type="checkbox"> Add note → Use “Urgent summons – Legal Document Received” template</label><br>
     <label><input type="checkbox"> Create task → Type: Follow-Up → Due Date: [Date Received] → Assigned To: CS Legal Support → Paste note into task</label>
   </div>
@@ -1484,7 +1497,7 @@ Note: If approved, client will be contacted for ACH. If no response, create a fo
 <div class="container section" id="legalSummonsNormal">
   <h2>Court Date More Than 14 Days</h2>
  <div style="background-color: #e5eff9; padding: 25px 25px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin: 6px 0;">
-  <div style="text-align: left; line-height: 1;">
+    <div style="text-align: left; line-height: 1.8;">
     <label><input type="checkbox"> Add note → Use “Summons – Legal Document Received” template</label><br>
     <label><input type="checkbox"> Create task → Type: Follow-Up → Due Date: [Date Received] → Assigned To: CS Legal Support → Paste note into task</label>
   </div>
@@ -1500,7 +1513,7 @@ Note: If approved, client will be contacted for ACH. If no response, create a fo
   <h2>Steps to Prepare the File for Legal Negotiation</h2>
 <div style="background-color: #e5eff9; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
 
-  <div class="left-align-text" style="color: #112663; text-align: left;">
+  <div class="left-align-text" style="color: #112663; text-align: left; line-height: 1.8;">
     <label><input type="checkbox"> Conduct a Budget Analysis (monthly income vs. expenses)</label><br>
     <label><input type="checkbox"> Update Hardship section under Additional Info</label><br>
     <label><input type="checkbox"> Ask the client if they can provide additional funds to speed up settlement</label>
@@ -1508,7 +1521,7 @@ Note: If approved, client will be contacted for ACH. If no response, create a fo
 
   <p style="color: #112663; text-align: left; margin: 12px 0;"><strong>If client agrees to add funds:</strong></p>
 
-  <div class="left-align-text" style="color: #112663; text-align: left;">
+  <div class="left-align-text" style="color: #112663; text-align: left; line-height: 1.8;">
     <label><input type="checkbox"> Add note → Use “Draft Date Change” template</label><br>
     <label><input type="checkbox"> Create a task under ACH TEAM</label>
   </div>
@@ -1522,7 +1535,7 @@ Note: If approved, client will be contacted for ACH. If no response, create a fo
   </div>
   <div class="button-grid-full">
     <button class="back-button" onclick="goBackToPrevious()">Back</button>
-    <button class="button" onclick="showOnly('homepage')">Finish</button>
+    <button class="button" onclick="showOnly('customerService')">Finish</button>
   </div>
 </div>
 <!-- Legal Summons End -->
@@ -1534,24 +1547,24 @@ Note: If approved, client will be contacted for ACH. If no response, create a fo
   <div style="background-color: #e5eff9; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
 
 <p style="color: #112663; text-align: left;"><strong>Eligibility Criteria:</strong></p>
-<div class="left-align-text" style="color: #112663; text-align: left;">
+<div class="left-align-text" style="color: #112663; text-align: left; line-height: 1.8;">
   <label><input type="checkbox"> Client must have successfully cleared 6 drafts (no skipped or rescheduled drafts)</label><br>
   <label><input type="checkbox"> Client must have no Non-Sufficient Funds (NSF) charges</label>
 </div>
 
 <p style="color: #112663; text-align: left; margin-top: 25px;"><strong>If the Client Is Interested</strong></p>
-<div class="left-align-text" style="color: #112663; text-align: left;">
+<div class="left-align-text" style="color: #112663; text-align: left; line-height: 1.8;">
   <label><input type="checkbox"> Open the client’s file and confirm eligibility</label><br>
   <label><input type="checkbox"> Create a task titled “Eligibility”</label><br>
   <label><input type="checkbox"> Assign the task to the Lending Operations Team</label><br>
   <label><input type="checkbox"> Include all relevant details</label>
 </div>
   <img src="https://imgur.com/dbYSMnX.png" alt="Agent Illustration"
-       style="position: absolute; bottom: 110px; right: 20px; max-width: 130px; height: auto; border-radius: 8px; pointer-events: none; opacity: 0.9;">
+       style="position: absolute; bottom: 110px; right: 20px; max-width: 160px; height: auto; border-radius: 8px; pointer-events: none; opacity: 0.9;">
   </div>
   <div class="button-grid-full" style="margin-top: 30px;">
 <button class="back-button" onclick="goBackToPrevious()">Back</button>
-    <button class="button" onclick="showOnly('homepage')">Finish</button>
+    <button class="button" onclick="showOnly('customerService')">Finish</button>
   </div>
 </div>
 <!-- Lending Eligibility End -->
@@ -1561,7 +1574,7 @@ Note: If approved, client will be contacted for ACH. If no response, create a fo
 <div class="container section" id="payoffRequest">
   <h2>Payoff Request</h2>
  <div style="background-color: #e5eff9; padding: 25px 25px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin: 6px 0;">
-  <div style="text-align: left; line-height: 1;">
+  <div style="text-align: left; line-height: 1.8;">
     <label><input type="checkbox"> Add note → Use “Payoff Request” template</label><br>
     <label><input type="checkbox"> Tag the note with “Payoff & Extension”</label><br>
     <label><input type="checkbox"> Inform client it takes 3–5 business days for a response</label><br>
@@ -1570,7 +1583,7 @@ Note: If approved, client will be contacted for ACH. If no response, create a fo
   </div>
   <div class="button-grid-full" style="margin-top: 30px;">
 <button class="back-button" onclick="goBackToPrevious()">Back</button>
-    <button class="button" onclick="showOnly('homepage')">Finish</button>
+    <button class="button" onclick="showOnly('customerService')">Finish</button>
   </div>
 </div>
 <!-- Payoff Request End -->
@@ -1579,7 +1592,7 @@ Note: If approved, client will be contacted for ACH. If no response, create a fo
 <div class="container section" id="preLegalNotice">
   <h2><strong>Pre-Legal Document Received</strong></h2>
  <div style="background-color: #e5eff9; padding: 25px 25px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin: 6px 0;">
-  <div style="text-align: left; line-height: 1;">
+    <div style="text-align: left; line-height: 1.8;">
     <label><input type="checkbox"> Ask the client to email a copy of the document</label><br>
     <label><input type="checkbox"> Confirm it is a pre-legal notice and linked to an enrolled account</label><br>
     <label><input type="checkbox"> Upload it as: Turnover Letter</label><br>
@@ -1589,11 +1602,11 @@ Note: If approved, client will be contacted for ACH. If no response, create a fo
     <label><input type="checkbox"> Type: Pre-Legal → Due Date: [Document Date] → Assigned To: Pre-Legal Team → Note: “Please assign a PLN”</label>
   </div>
   <img src="https://imgur.com/dbYSMnX.png" alt="Agent Illustration"
-       style="position: absolute; bottom: 110px; right: 20px; max-width: 100px; height: auto; border-radius: 8px; pointer-events: none; opacity: 0.9;">
+       style="position: absolute; bottom: 110px; right: 20px; max-width: 125px; height: auto; border-radius: 8px; pointer-events: none; opacity: 0.9;">
   </div>
   <div class="button-grid-full" style="margin-top: 30px;">
 <button class="back-button" onclick="goBackToPrevious()">Back</button>
-    <button class="button" onclick="showOnly('homepage')">Finish</button>
+    <button class="button" onclick="showOnly('customerService')">Finish</button>
   </div>
 </div>
 <!-- Pre-Legal Notice End -->
@@ -1604,13 +1617,13 @@ Note: If approved, client will be contacted for ACH. If no response, create a fo
 <div style="background-color: #e5eff9; padding: 25px 40px; border-radius: 12px; width: 100%; box-sizing: border-box; margin-top: 20px;">
   
   <p style="color: #112663; text-align: left; margin-bottom: 10px;"><strong>When Should You Review for Extension?</strong></p>
-  <div style="color: #112663; text-align: left;">
+  <div style="color: #112663; text-align: left; line-height: 1.8;">
     <label><input type="checkbox"> File is ending soon but has unresolved enrolled debts</label><br>
     <label><input type="checkbox"> There are unpaid settlements or incomplete negotiations</label>
   </div>
 
   <p style="color: #112663; text-align: left; margin: 25px 0 10px;"><strong>Steps to Request a Program Extension:</strong></p>
-  <div style="color: #112663; text-align: left;">
+  <div style="color: #112663; text-align: left; line-height: 1.8;">
     <label><input type="checkbox"> Add note → Use “Program Extension Review Requested” template</label><br>
     <label><input type="checkbox"> Write: “Kindly review the file to determine if an extension is necessary” and tag “Payoff and Extension”</label>
   </div>
@@ -1619,7 +1632,7 @@ Note: If approved, client will be contacted for ACH. If no response, create a fo
   </div>
   <div class="button-grid-full" style="margin-top: 30px;">
 <button class="back-button" onclick="goBackToPrevious()">Back</button>
-    <button class="button" onclick="showOnly('homepage')">Finish</button>
+    <button class="button" onclick="showOnly('customerService')">Finish</button>
   </div>
 </div>
 <!-- Program Extension End -->
@@ -1628,7 +1641,7 @@ Note: If approved, client will be contacted for ACH. If no response, create a fo
 <div class="container section" id="programGraduation">
   <h2>Program Graduation</h2>
 <div style="background-color: #e5eff9; padding: 25px 25px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin: 6px 0;">
-  <div style="text-align: left; line-height: 1;">
+    <div style="text-align: left; line-height: 1.8;">
     <label style="font-weight: normal;"><input type="checkbox"> Confirm all enrolled accounts are paid off</label><br>
     <label style="font-weight: normal;"><input type="checkbox"> Navigate to the file status section in FORTH</label><br>
     <label style="font-weight: normal;"><input type="checkbox"> Select “Graduation Review” from the dropdown</label><br>
@@ -1637,7 +1650,7 @@ Note: If approved, client will be contacted for ACH. If no response, create a fo
   </div>
   <div class="button-grid-full" style="margin-top: 30px;">
 <button class="back-button" onclick="goBackToPrevious()">Back</button>
-    <button class="button" onclick="showOnly('homepage')">Finish</button>
+    <button class="button" onclick="showOnly('customerService')">Finish</button>
   </div>
 </div>
 <!-- Program Graduation End -->
@@ -1658,8 +1671,8 @@ Note: If approved, client will be contacted for ACH. If no response, create a fo
 <div class="container section" id="cancellationRefund">
   <h2>Cancellation Refund</h2>
 <div style="background-color: #e5eff9; padding: 25px 25px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin: 6px 0;">
-  <p class="left-align-text"><strong>Client has cancelled the program and is expecting a refund.</strong></p>
-  <div style="text-align: left; line-height: 1;">
+  <h3 class="left-align-text"><strong>Client has cancelled the program and is expecting a refund.</strong></h3>
+    <div style="text-align: left; line-height: 1.8;">
     <label style="font-weight: normal;"><input type="checkbox"> Allow 5–7 business days for cancellation to complete</label><br>
     <label style="font-weight: normal;"><input type="checkbox"> Refund is processed within 7–10 business days after cancellation</label><br>
     <label style="font-weight: normal;"><input type="checkbox"> Transfer to Retention</label>
@@ -1667,7 +1680,7 @@ Note: If approved, client will be contacted for ACH. If no response, create a fo
   </div>
   <div class="button-grid-full">
 <button class="back-button" onclick="goBackToPrevious()">Back</button>
-    <button class="button" onclick="showOnly('homepage')">Finish</button>
+    <button class="button" onclick="showOnly('customerService')">Finish</button>
   </div>
 </div>
 
@@ -1675,8 +1688,8 @@ Note: If approved, client will be contacted for ACH. If no response, create a fo
 <div class="container section" id="standardRefund">
   <h2>Standard Refund</h2>
   <div style="background-color: #e5eff9; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
-  <p class="left-align-text"><strong>Client is requesting a refund from their trust account due to personal reasons.</strong></p>
-  <div class="left-align-text">
+  <h3 class="left-align-text"><strong>Client is requesting a refund from their trust account due to personal reasons.</strong></h3>
+    <div style="text-align: left; line-height: 1.8;">
     <label style="font-weight: normal;"><input type="checkbox"> Create a task for "ACH Team"</label><br>
     <label style="font-weight: normal;"><input type="checkbox"> Set the date for 3 business days from the date you created task</label><br>
     <label style="font-weight: normal;"><input type="checkbox"> Add note → Use “Requested Savings” template</label><br>
@@ -1688,7 +1701,7 @@ Note: If approved, client will be contacted for ACH. If no response, create a fo
   </div>
   <div class="button-grid-full">
 <button class="back-button" onclick="goBackToPrevious()">Back</button>
-    <button class="button" onclick="showOnly('homepage')">Finish</button>
+    <button class="button" onclick="showOnly('customerService')">Finish</button>
   </div>
 </div>
 <!-- Refund Request End -->
@@ -1697,7 +1710,7 @@ Note: If approved, client will be contacted for ACH. If no response, create a fo
 <div class="container section" id="removeDebt">
   <h2>Remove a Debt</h2>
  <div style="background-color: #e5eff9; padding: 25px 25px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin: 6px 0;">
-  <div style="text-align: left; line-height: 1;">
+    <div style="text-align: left; line-height: 1.8;">
     <label><input type="checkbox"> Add note → Use “Request to Remove a Debt” template</label><br>
     <label><input type="checkbox"> Notify "Payment ACH"</label><br>
     <label><input type="checkbox"> Create a task under "ACH Request"</label><br>
@@ -1706,7 +1719,7 @@ Note: If approved, client will be contacted for ACH. If no response, create a fo
   </div>
   <div class="button-grid-full" style="margin-top: 30px;">
 <button class="back-button" onclick="goBackToPrevious()">Back</button>
-    <button class="button" onclick="showOnly('homepage')">Finish</button>
+    <button class="button" onclick="showOnly('customerService')">Finish</button>
   </div>
 </div>
 <!-- Remove a Debt End -->
@@ -1715,24 +1728,23 @@ Note: If approved, client will be contacted for ACH. If no response, create a fo
 <div class="container section" id="settlementAuthIB">
   <h2>Settlement Authorization – Inbound</h2>
   <div style="background-color: #e5eff9; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
-  <p class="left-align-text">The client has called back to confirm a settlement offer.</p>
+  <h3 class="left-align-text"><strong>The client has called back to confirm a settlement offer.</strong></h3>
 
-  <div class="left-align-text">
-    <label><input type="checkbox"> <strong>Confirm reason for the call</strong></label><br>
-
-    <label><input type="checkbox"> <strong>Provide account balance and settlement amount</strong></label><br>
-    <label><input type="checkbox"> <strong>Ask for clear authorization</strong></label><br>
-    <label><input type="checkbox"> <strong>Add note → Use “AUTH OBTAINED” template</strong></label><br>
-    <label><input type="checkbox"> <strong>Tag: Samantha Foster, David Martinez, and the negotiator who posted the settlement</strong></label><br>
-    <label><input type="checkbox"> <strong>Read settlement disclosure script</strong></label><br>
-    <label><input type="checkbox"> <strong>Post the note to the client’s file</strong></label>
+    <div style="text-align: left; line-height: 1.8;">
+    <label><input type="checkbox"> Confirm reason for the call</label><br>
+    <label><input type="checkbox"> Provide account balance and settlement amount</label><br>
+    <label><input type="checkbox"> Ask for clear authorization</label><br>
+    <label><input type="checkbox"> Add note → Use “AUTH OBTAINED” template</label><br>
+    <label><input type="checkbox"> Tag: Samantha Foster, David Martinez, and the negotiator who posted the settlement</label><br>
+    <label><input type="checkbox"> Read settlement disclosure script</label><br>
+    <label><input type="checkbox"> Post the note to the client’s file</label>
   </div>
   <img src="https://imgur.com/dbYSMnX.png" alt="Agent Illustration"
        style="position: absolute; bottom: 110px; right: 20px; max-width: 130px; height: auto; border-radius: 8px; pointer-events: none; opacity: 0.9;">
   </div>
   <div class="button-grid-full">
     <button class="back-button" onclick="goBackToPrevious()">Back</button>
-    <button class="button" onclick="showOnly('homepage')">Finish</button>
+    <button class="button" onclick="showOnly('customerService')">Finish</button>
   </div>
 </div>
 <!-- Settlement Authorization IB End -->
@@ -1742,7 +1754,7 @@ Note: If approved, client will be contacted for ACH. If no response, create a fo
   <div style="background-color: #e5eff9; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
 
   <p class="left-align-text"><strong>Change Banking Details</strong></p>
-  <div class="left-align-text">
+    <div style="text-align: left; line-height: 1.8;">
     <label><input type="checkbox"> Go to the Bank Account tab in the client’s file</label><br>
     <label><input type="checkbox"> Enter new Routing and Account Number</label><br>
     <label><input type="checkbox"> Confirm Account Type (Checking or Savings)</label><br>
@@ -1754,7 +1766,7 @@ Note: If approved, client will be contacted for ACH. If no response, create a fo
     <label><input type="checkbox"> Go to Docs Section → Generate Document</label>
   </div>
   <img src="https://imgur.com/dbYSMnX.png" alt="Agent Illustration"
-       style="position: absolute; bottom: 180px; right: 20px; max-width: 130px; height: auto; border-radius: 8px; pointer-events: none; opacity: 0.9;">
+       style="position: absolute; bottom: 165px; right: 20px; max-width: 130px; height: auto; border-radius: 8px; pointer-events: none; opacity: 0.9;">
 
   </div>
   <div class="button-grid grid-3" style="margin-top: 20px;">
@@ -1772,14 +1784,14 @@ Note: If approved, client will be contacted for ACH. If no response, create a fo
 <div class="container section" id="updateBankCFT">
   <h2>CFT</h2>
   <div style="background-color: #e5eff9; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
-  <div class="left-align-text">
+    <div style="text-align: left; line-height: 1.8;">
     <label><input type="checkbox"> Go to Docs Section → Generate Document → "CFT - Draft Modification Form (Payments Made) - UPDATED”</label><br>
     <label><input type="checkbox"> Send for electronic signature</label><br>
     <label><input type="checkbox"> Add note → Use “Bank Change” template</label>
   </div>
 
   <p class="left-align-text"><strong>Upload Confirmation</strong></p>
-  <div class="left-align-text">
+    <div style="text-align: left; line-height: 1.8;">
     <label><input type="checkbox"> Verify that “Signers Left” is zero in Clixign</label><br>
     <label><input type="checkbox"> Download and upload signed document under “ACH Authorization”</label>
   </div>
@@ -1788,7 +1800,7 @@ Note: If approved, client will be contacted for ACH. If no response, create a fo
   </div>
   <div class="button-grid-full">
     <button class="back-button" onclick="goBackToPrevious()">Back</button>
-    <button class="button" onclick="showOnly('homepage')">Finish</button>
+    <button class="button" onclick="showOnly('customerService')">Finish</button>
   </div>
 </div>
 
@@ -1796,14 +1808,14 @@ Note: If approved, client will be contacted for ACH. If no response, create a fo
 <div class="container section" id="updateBankFORTH">
   <h2>FORTH</h2>
   <div style="background-color: #e5eff9; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
-  <div class="left-align-text">
+    <div style="text-align: left; line-height: 1.8;">
     <label><input type="checkbox"> Go to Docs Section → Generate Document → "Forth Bank Change Request”</label><br>
     <label><input type="checkbox"> Send for electronic signature</label><br>
     <label><input type="checkbox"> Add note → Use “Bank Change” template</label>
   </div>
 
   <p class="left-align-text"><strong>Upload Confirmation</strong></p>
-  <div class="left-align-text">
+    <div style="text-align: left; line-height: 1.8;">
     <label><input type="checkbox"> Verify that “Signers Left” is zero in Clixign</label><br>
     <label><input type="checkbox"> Download and upload signed document under “ACH Authorization”</label>
   </div>
@@ -1812,7 +1824,7 @@ Note: If approved, client will be contacted for ACH. If no response, create a fo
   </div>
   <div class="button-grid-full">
     <button class="back-button" onclick="goBackToPrevious()">Back</button>
-    <button class="button" onclick="showOnly('homepage')">Finish</button>
+    <button class="button" onclick="showOnly('customerService')">Finish</button>
   </div>
 </div>
 
@@ -1820,14 +1832,14 @@ Note: If approved, client will be contacted for ACH. If no response, create a fo
 <div class="container section" id="updateBankRAM">
   <h2>RAM</h2>
   <div style="background-color: #e5eff9; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
-  <div class="left-align-text">
+    <div style="text-align: left; line-height: 1.8;">
     <label><input type="checkbox"> Go to Docs Section → Generate Document → "RAM Agreement”</label><br>
     <label><input type="checkbox"> Send for electronic signature</label><br>
     <label><input type="checkbox"> Add note → Use “Bank Change” template</label>
   </div>
 
   <p class="left-align-text"><strong>Upload Confirmation</strong></p>
-  <div class="left-align-text">
+    <div style="text-align: left; line-height: 1.8;">
     <label><input type="checkbox"> Verify that “Signers Left” is zero in Clixign</label><br>
     <label><input type="checkbox"> Download and upload signed document under “ACH Authorization”</label>
   </div>
@@ -1836,7 +1848,7 @@ Note: If approved, client will be contacted for ACH. If no response, create a fo
   </div>
   <div class="button-grid-full">
     <button class="back-button" onclick="goBackToPrevious()">Back</button>
-    <button class="button" onclick="showOnly('homepage')">Finish</button>
+    <button class="button" onclick="showOnly('customerService')">Finish</button>
   </div>
 </div>
 <!-- Update Bank Info End -->
@@ -1845,7 +1857,7 @@ Note: If approved, client will be contacted for ACH. If no response, create a fo
 <div class="container section" id="errorProcessing">
   <h2>Error Processing / Blocked</h2>
  <div style="background-color: #e5eff9; padding: 25px 25px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin: 6px 0;">
-  <div style="text-align: left; line-height: 1;">
+    <div style="text-align: left; line-height: 1.8;">
     <label><input type="checkbox"> Contact your team lead to investigate the cause of the error</label><br>
     <label><input type="checkbox"> Create an internal request with detailed notes</label><br>
     <label><input type="checkbox"> Transfer the call to Retention to help reschedule or reroute the draft</label>
@@ -1853,7 +1865,7 @@ Note: If approved, client will be contacted for ACH. If no response, create a fo
   </div>
   <div class="button-grid-full">
 <button class="back-button" onclick="goBackToPrevious()">Back</button>
-    <button class="button" onclick="showOnly('homepage')">Finish</button>
+    <button class="button" onclick="showOnly('customerService')">Finish</button>
   </div>
 </div>
 <!-- Error Processing / Blocked End -->
@@ -1861,8 +1873,8 @@ Note: If approved, client will be contacted for ACH. If no response, create a fo
 <!-- Invalid Banking Start -->
 <div class="container section" id="invalidBanking">
   <h2 style="text-align: center;">Invalid Banking</h2>
-<div style="background-color: #e5eff9; padding: 25px 25px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin: 6px 0;">
-  <h3 style="margin: 0 0 12px 0; text-align: center;">If the file status is “Invalid Banking,” verify whether the current information is accurate.</h3>
+<div style="background-color: #d5e5f5; padding: 20px 20px; border-radius: 10px; color: #112663; margin: 15px 0; text-align: center;">
+If the file status is “Invalid Banking,” verify whether the current information is accurate.
 </div>
   <div class="button-grid-full">
     <button class="button" onclick="showOnly('invalidBankCorrect')">Banking is Correct</button>
@@ -1890,15 +1902,15 @@ Note: If approved, client will be contacted for ACH. If no response, create a fo
 <div class="container section" id="bankingCorrectCFT">
   <h2 style="text-align: center;">Banking is Correct – CFT</h2>
  <div style="background-color: #e5eff9; padding: 25px 25px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin: 6px 0;">
-  <div style="text-align: left; line-height: 1;">
-    <label><input type="checkbox"> Send "Draft Modification Form (Payments Made – Updated)" document to allow draft to proceed.</label><br>
-    <label><input type="checkbox"> Create internal request for processing team.</label><br>
-    <label><input type="checkbox"> Transfer to Retention for missed draft rescheduling.</label>
+    <div style="text-align: left; line-height: 1.8;">
+    <label><input type="checkbox"> Send "Draft Modification Form (Payments Made – Updated)" document to allow draft to proceed</label><br>
+    <label><input type="checkbox"> Create internal request for processing team</label><br>
+    <label><input type="checkbox"> Transfer to Retention for missed draft rescheduling</label>
   </div>
   </div>
   <div class="button-grid-full">
 <button class="back-button" onclick="goBackToPrevious()">Back</button>
-    <button class="button" onclick="showOnly('homepage')">Finish</button>
+    <button class="button" onclick="showOnly('customerService')">Finish</button>
   </div>
 </div>
 
@@ -1906,15 +1918,15 @@ Note: If approved, client will be contacted for ACH. If no response, create a fo
 <div class="container section" id="bankingCorrectFORTH">
   <h2 style="text-align: center;">Banking is Correct – FORTH</h2>
  <div style="background-color: #e5eff9; padding: 25px 25px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin: 6px 0;">
-  <div style="text-align: left; line-height: 1;">
-    <label><input type="checkbox"> Send "Amended Authorization" document to allow draft to proceed.</label><br>
-    <label><input type="checkbox"> Create internal request for processing team.</label><br>
-    <label><input type="checkbox"> Transfer to Retention for missed draft rescheduling.</label>
+    <div style="text-align: left; line-height: 1.8;">
+    <label><input type="checkbox"> Send "Amended Authorization" document to allow draft to proceed</label><br>
+    <label><input type="checkbox"> Create internal request for processing team</label><br>
+    <label><input type="checkbox"> Transfer to Retention for missed draft rescheduling</label>
   </div>
   </div>
   <div class="button-grid-full">
 <button class="back-button" onclick="goBackToPrevious()">Back</button>
-    <button class="button" onclick="showOnly('homepage')">Finish</button>
+    <button class="button" onclick="showOnly('customerService')">Finish</button>
   </div>
 </div>
 
@@ -1923,7 +1935,7 @@ Note: If approved, client will be contacted for ACH. If no response, create a fo
   <h2 style="text-align: center;">Banking is Incorrect</h2>
   <div style="background-color: #e5eff9; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
   <h3 class="left-align-text"><strong>Change Banking Details</strong></h3>
-  <div class="left-align-text">
+    <div style="text-align: left; line-height: 1.8;">
     <label><input type="checkbox"> Go to the Bank Account tab in the client’s file</label><br>
     <label><input type="checkbox"> Enter new Routing and Account Number</label><br>
     <label><input type="checkbox"> Confirm Account Type (Checking or Savings)</label><br>
@@ -1931,7 +1943,7 @@ Note: If approved, client will be contacted for ACH. If no response, create a fo
   </div>
 
   <h3 class="left-align-text" style="margin-top: 25px;"><strong>Generate & Send Document:</strong></h3>
-  <div class="left-align-text">
+    <div style="text-align: left; line-height: 1.8;">
     <label><input type="checkbox"> Go to Docs Section → Generate Document</label>
   </div>
   <img src="https://imgur.com/dbYSMnX.png" alt="Agent Illustration"
@@ -1952,13 +1964,13 @@ Note: If approved, client will be contacted for ACH. If no response, create a fo
 <div class="container section" id="invalidCFT">
   <h2 style="text-align: center;">Banking is Incorrect – CFT</h2>
   <div style="background-color: #e5eff9; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
-  <div class="left-align-text">
+    <div style="text-align: left; line-height: 1.8;">
     <label><input type="checkbox"> Go to Docs Section → Generate Document → "CFT - Draft Modification Form (Payments Made) - UPDATED”</label><br>
     <label><input type="checkbox"> Send for electronic signature</label><br>
     <label><input type="checkbox"> Add note → Use “Bank Change” template</label>
   </div>
   <h3 class="left-align-text"><strong>Upload Confirmation</strong></h3>
-  <div class="left-align-text">
+    <div style="text-align: left; line-height: 1.8;">
     <label><input type="checkbox"> Verify that “Signers Left” is zero in Clixign</label><br>
     <label><input type="checkbox"> Download and upload signed document under “ACH Authorization”</label>
   </div>
@@ -1967,7 +1979,7 @@ Note: If approved, client will be contacted for ACH. If no response, create a fo
   </div>
   <div class="button-grid-full">
 <button class="back-button" onclick="goBackToPrevious()">Back</button>
-    <button class="button" onclick="showOnly('homepage')">Finish</button>
+    <button class="button" onclick="showOnly('customerService')">Finish</button>
   </div>
 </div>
 
@@ -1975,13 +1987,13 @@ Note: If approved, client will be contacted for ACH. If no response, create a fo
 <div class="container section" id="invalidFORTH">
   <h2 style="text-align: center;">Banking is Incorrect – FORTH</h2>
   <div style="background-color: #e5eff9; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
-  <div class="left-align-text">
+    <div style="text-align: left; line-height: 1.8;">
     <label><input type="checkbox"> Go to Docs Section → Generate Document → "Forth Bank Change Request”</label><br>
     <label><input type="checkbox"> Send for electronic signature</label><br>
     <label><input type="checkbox"> Add note → Use “Bank Change” template</label>
   </div>
   <h3 class="left-align-text"><strong>Upload Confirmation</strong></h3>
-  <div class="left-align-text">
+    <div style="text-align: left; line-height: 1.8;">
     <label><input type="checkbox"> Verify that “Signers Left” is zero in Clixign</label><br>
     <label><input type="checkbox"> Download and upload signed document under “ACH Authorization”</label>
   </div>
@@ -1990,7 +2002,7 @@ Note: If approved, client will be contacted for ACH. If no response, create a fo
   </div>
   <div class="button-grid-full">
 <button class="back-button" onclick="goBackToPrevious()">Back</button>
-    <button class="button" onclick="showOnly('homepage')">Finish</button>
+    <button class="button" onclick="showOnly('customerService')">Finish</button>
   </div>
 </div>
 
@@ -1998,13 +2010,13 @@ Note: If approved, client will be contacted for ACH. If no response, create a fo
 <div class="container section" id="invalidRAM">
   <h2 style="text-align: center;">Banking is Incorrect – RAM</h2>
   <div style="background-color: #e5eff9; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
-  <div class="left-align-text">
+    <div style="text-align: left; line-height: 1.8;">
     <label><input type="checkbox"> Go to Docs Section → Generate Document → "RAM Agreement”</label><br>
     <label><input type="checkbox"> Send for electronic signature</label><br>
     <label><input type="checkbox"> Add note → Use “Bank Change” template</label>
   </div>
   <h3 class="left-align-text"><strong>Upload Confirmation</strong></h3>
-  <div class="left-align-text">
+    <div style="text-align: left; line-height: 1.8;">
     <label><input type="checkbox"> Verify that “Signers Left” is zero in Clixign</label><br>
     <label><input type="checkbox"> Download and upload signed document under “ACH Authorization”</label>
   </div>
@@ -2013,7 +2025,7 @@ Note: If approved, client will be contacted for ACH. If no response, create a fo
   </div>
   <div class="button-grid-full">
 <button class="back-button" onclick="goBackToPrevious()">Back</button>
-    <button class="button" onclick="showOnly('homepage')">Finish</button>
+    <button class="button" onclick="showOnly('customerService')">Finish</button>
   </div>
 </div>
 <!-- Invalid Banking End -->
@@ -2023,25 +2035,25 @@ Note: If approved, client will be contacted for ACH. If no response, create a fo
   <h2 style="text-align: center;">Legal Plan</h2>
 <div style="background-color: #e5eff9; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
   <p class="left-align-text" style="color: #112663;"><strong>Explaining the Plan</strong></p>
-  <div class="left-align-text" style="color: #112663;">
+  <div class="left-align-text" style="color: #112663; line-height: 1.8;">
     <label><input type="checkbox"> Clarify this is optional for added protection</label><br>
     <label><input type="checkbox"> Explain it includes a one-time enrollment + monthly subscription fee</label><br>
     <label><input type="checkbox"> Emphasize it helps when legal action is taken by creditors</label>
   </div>
 
   <p class="left-align-text" style="margin-top: 25px; color: #112663;"><strong>Communication & Expectations</strong></p>
-  <div class="left-align-text" style="color: #112663;">
+  <div class="left-align-text" style="color: #112663; line-height: 1.8;">
     <label><input type="checkbox"> Never promise that a VLP attorney will call the client directly</label><br>
     <label><input type="checkbox"> Inform client that attorney communication is not guaranteed</label><br>
     <label><input type="checkbox"> Tell them all updates will come through our team</label><br>
     <label><input type="checkbox"> Instruct them to contact us for legal case updates</label>
   </div>
   <img src="https://imgur.com/dbYSMnX.png" alt="Agent Illustration"
-       style="position: absolute; bottom: 110px; right: 20px; max-width: 140px; height: auto; border-radius: 8px; pointer-events: none; opacity: 0.9;">
+       style="position: absolute; bottom: 110px; right: 20px; max-width: 160px; height: auto; border-radius: 8px; pointer-events: none; opacity: 0.9;">
   </div>
   <div class="button-grid-full">
 <button class="back-button" onclick="goBackToPrevious()">Back</button>
-    <button class="button" onclick="showOnly('homepage')">Finish</button>
+    <button class="button" onclick="showOnly('customerService')">Finish</button>
   </div>
 </div>
 <!-- Legal Plan End -->
@@ -2051,14 +2063,14 @@ Note: If approved, client will be contacted for ACH. If no response, create a fo
   <h2 style="text-align: center;">Monthly Account Review (MAR)</h2>
   <div style="background-color: #e5eff9; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
   <h3 class="left-align-text"><strong>Reviewing Enrolled Debts</strong></h3>
-  <div class="left-align-text">
+    <div style="text-align: left; line-height: 1.8;">
     <label><input type="checkbox"> Click the “Debts” tab</label><br>
     <label><input type="checkbox"> Confirm the last four digits of the creditor’s account number and current balance</label><br>
-    <label style="margin-left: 20px;"><input type="checkbox"> "I see we have an account with [Creditor Name] for [Amount] Does that sound correct?"</label><br>
+    <label><input type="checkbox"> "I see we have an account with [Creditor Name] for [Amount] Does that sound correct?"</label><br>
     <label><input type="checkbox"> Repeat for each enrolled debt</label>
   </div>
   <img src="https://imgur.com/dbYSMnX.png" alt="Agent Illustration"
-       style="position: absolute; bottom: 110px; right: 20px; max-width: 100px; height: auto; border-radius: 8px; pointer-events: none; opacity: 0.9;">
+       style="position: absolute; bottom: 110px; right: 20px; max-width: 110px; height: auto; border-radius: 8px; pointer-events: none; opacity: 0.9;">
   </div>
   <div class="button-grid-full">
 <button class="back-button" onclick="goBackToPrevious()">Back</button>
@@ -2069,11 +2081,11 @@ Note: If approved, client will be contacted for ACH. If no response, create a fo
 <div class="container section" id="marSettlements">
   <h2 style="text-align: center;">Reviewing Active Settlements</h2>
   <div style="background-color: #e5eff9; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
-  <div class="left-align-text">
+    <div style="text-align: left; line-height: 1.8;">
     <label><input type="checkbox"> Click the “Debts” tab</label><br>
     <label><input type="checkbox"> Scroll Down to “Settled Debts” section</label><br>
     <label><input type="checkbox"> Confirm the creditor's last four digits of the account number and the summary</label><br>
-    <label style="margin-left: 20px;"><input type="checkbox"> "I see you have an active settlement with [Creditor Name]. It's currently at the [x/x] payment stage"</label><br>
+    <label><input type="checkbox"> "I see you have an active settlement with [Creditor Name]. It's currently at the [x/x] payment stage"</label><br>
     <label><input type="checkbox"> Repeat for each active settlement</label>
   </div>
   </div>
@@ -2086,10 +2098,10 @@ Note: If approved, client will be contacted for ACH. If no response, create a fo
 <div class="container section" id="marDrafts">
   <h2 style="text-align: center;">Reviewing Last and Next Draft</h2>
   <div style="background-color: #e5eff9; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
-  <div class="left-align-text">
+    <div style="text-align: left; line-height: 1.8;">
     <label><input type="checkbox"> Go to the "Client information" section</label><br>
     <label><input type="checkbox"> Scroll down on the client information, then check the last and next draft</label><br>
-    <label style="margin-left: 20px;"><input type="checkbox"> "Your last payment cleared on [Date], and your next payment is scheduled for [Date] for [Amount]"</label>
+    <label><input type="checkbox"> "Your last payment cleared on [Date], and your next payment is scheduled for [Date] for [Amount]"</label>
   </div>
   </div>
   <div class="button-grid-full">
@@ -2100,9 +2112,9 @@ Note: If approved, client will be contacted for ACH. If no response, create a fo
 
 <div class="container section" id="marPortal">
   <h2 style="text-align: center;">Checking Client Access to the Portal</h2>
-<div style="background-color: #e5eff9; padding: 25px 25px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin: 6px 0;">
-  <h3 style="margin: 0 0 12px 0; text-align: center;">"Finally, do you have access to your client portal?"</h3>
-  </div>
+<div style="background-color: #d5e5f5; padding: 20px 20px; border-radius: 10px; color: #112663; margin: 15px 0; text-align: center;">
+"Finally, do you have access to your client portal?"
+</div>
 
   <div class="button-grid-full">
     <button class="button" onclick="showOnly('marPortalYes')">Yes</button>
@@ -2117,6 +2129,8 @@ Note: If approved, client will be contacted for ACH. If no response, create a fo
 <div class="container section" id="marPortalYes">
   <h2 style="text-align: center;">Closing the MAR Call</h2>
   <div style="background-color: #e5eff9; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
+    <div style="text-align: left; line-height: 1.8;">
+  </div>
     <label><input type="checkbox"> Add note → Use “MAR complete” template</label><br>
 <p style="background: #d5e5f5; padding: 15px; border-radius: 10px;">
 "Is there anything else I can assist you with today?"<br>
@@ -2125,17 +2139,17 @@ Note: If approved, client will be contacted for ACH. If no response, create a fo
   </div>
   <div class="button-grid-full">
 <button class="back-button" onclick="goBackToPrevious()">Back</button>
-    <button class="button" onclick="showOnly('homepage')">Finish</button>
+    <button class="button" onclick="showOnly('customerService')">Finish</button>
   </div>
 </div>
 
 <div class="container section" id="marPortalNo">
   <h2  style="text-align: center;">Password Link & Closing the MAR Call</h2>
   <div style="background-color: #e5eff9; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
-  <div class="left-align-text">
+    <div style="text-align: left; line-height: 1.8;">
     <label><input type="checkbox"> Go to the "Client information" section</label><br>
     <label><input type="checkbox"> Scroll down on the client information, then click "Reset Password"</label><br>
-    <label style="margin-left: 20px;"><input type="checkbox"> "I'm going to send you a link that will grant you access. Through the portal, you can monitor your program details anytime, 24/7"</label><br>
+    <label><input type="checkbox"> "I'm going to send you a link that will grant you access. Through the portal, you can monitor your program details anytime, 24/7"</label><br>
     <label><input type="checkbox"> Add note → Use “MAR complete” template</label><br>
 <p style="background: #d5e5f5; padding: 15px; border-radius: 10px;">
 "Is there anything else I can assist you with today?"<br>
@@ -2145,7 +2159,7 @@ Note: If approved, client will be contacted for ACH. If no response, create a fo
   </div>
   <div class="button-grid-full">
 <button class="back-button" onclick="goBackToPrevious()">Back</button>
-    <button class="button" onclick="showOnly('homepage')">Finish</button>
+    <button class="button" onclick="showOnly('customerService')">Finish</button>
   </div>
 </div>
 <!-- Monthly Account Review (MAR) End -->
@@ -2166,7 +2180,7 @@ Note: If approved, client will be contacted for ACH. If no response, create a fo
 <div class="container section" id="nsfSendUTC">
   <h2 style="text-align: center;">Send UTC</h2>
  <div style="background-color: #e5eff9; padding: 25px 25px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin: 6px 0;">
-  <div style="text-align: left; line-height: 1;">
+    <div style="text-align: left; line-height: 1.8;">
     <label><input type="checkbox"> Create a task</label><br>
     <label><input type="checkbox"> Select “Review File” from CS section</label><br>
     <label><input type="checkbox"> Assign to the appropriate team</label><br>
@@ -2176,7 +2190,7 @@ Note: If approved, client will be contacted for ACH. If no response, create a fo
   </div>
   <div class="button-grid-full">
 <button class="back-button" onclick="goBackToPrevious()">Back</button>
-    <button class="button" onclick="showOnly('homepage')">Finish</button>
+    <button class="button" onclick="showOnly('customerService')">Finish</button>
   </div>
 </div>
 
@@ -2184,18 +2198,16 @@ Note: If approved, client will be contacted for ACH. If no response, create a fo
 <div class="container section" id="nsfNoResponse">
   <h2 style="text-align: center;">Escalation – No Response from Client</h2>
  <div style="background-color: #e5eff9; padding: 25px 25px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin: 6px 0;">
-  <div style="text-align: left; line-height: 1;">
+    <div style="text-align: left; line-height: 1.8;">
     <label><input type="checkbox"> Create internal request based on file’s team color</label><br>
     <label><input type="checkbox"> Request review for potential force cancellation</label><br>
-<div class="sub-checkbox" style="margin-left: 25px;">
-    <label><input type="checkbox"> All files are eligible for cancellation review  except Credit Care</label>
-  </div>
+    <label><input type="checkbox"> All files are eligible for cancellation review  except Credit Care</label><br>
     <label><input type="checkbox"> Continue follow-up attempts after UTC is sent</label><br>
   </div>
 </div>
   <div class="button-grid-full">
     <button class="back-button" onclick="goBackToPrevious()">Back</button>
-    <button class="button" onclick="showOnly('homepage')">Finish</button>
+    <button class="button" onclick="showOnly('customerService')">Finish</button>
   </div>
 </div>
 <!-- NSF End -->
@@ -2216,7 +2228,7 @@ Note: If approved, client will be contacted for ACH. If no response, create a fo
 <div class="container section" id="poaRequest">
   <h2 style="text-align: center;">Power of Attorney Request</h2>
  <div style="background-color: #e5eff9; padding: 25px 25px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin: 6px 0;">
-  <div style="text-align: left; line-height: 1;">
+    <div style="text-align: left; line-height: 1.8;">
     <label><input type="checkbox"> Navigate to the Tasks tab</label><br>
     <label><input type="checkbox"> Click Create Task</label><br>
     <label><input type="checkbox"> Choose POA Request from Task Type dropdown</label><br>
@@ -2226,7 +2238,7 @@ Note: If approved, client will be contacted for ACH. If no response, create a fo
   </div>
   <div class="button-grid-full">
 <button class="back-button" onclick="goBackToPrevious()">Back</button>
-    <button class="button" onclick="showOnly('homepage')">Finish</button>
+    <button class="button" onclick="showOnly('customerService')">Finish</button>
   </div>
 </div>
 
@@ -2234,7 +2246,7 @@ Note: If approved, client will be contacted for ACH. If no response, create a fo
 <div class="container section" id="sifRequest">
   <h2 style="text-align: center;">Settlement in Full Request</h2>
  <div style="background-color: #e5eff9; padding: 25px 25px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin: 6px 0;">
-  <div style="text-align: left; line-height: 1;">
+    <div style="text-align: left; line-height: 1.8;">
     <label><input type="checkbox"> Navigate to the Tasks tab</label><br>
     <label><input type="checkbox"> Click Create Task</label><br>
     <label><input type="checkbox"> Choose SIF Request from Task Type dropdown</label><br>
@@ -2244,7 +2256,7 @@ Note: If approved, client will be contacted for ACH. If no response, create a fo
   </div>
   <div class="button-grid-full">
 <button class="back-button" onclick="goBackToPrevious()">Back</button>
-    <button class="button" onclick="showOnly('homepage')">Finish</button>
+    <button class="button" onclick="showOnly('customerService')">Finish</button>
   </div>
 </div>
 <!-- POA / SIF Requests End -->
@@ -2255,23 +2267,23 @@ Note: If approved, client will be contacted for ACH. If no response, create a fo
   <h2 style="text-align: center;">Settlement Authorization – Outbound</h2>
 
   <div style="background-color: #e5eff9; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
-  <p class="left-align-text">You are calling the client to request authorization for a new settlement offer.</p>
+  <h3 class="left-align-text"><strong>You are calling the client to request authorization for a new settlement offer.</strong></h3>
 
-  <div class="left-align-text">
-    <label><input type="checkbox"> <strong>Explain the reason for your call.</strong></label><br>
-    <label><input type="checkbox"> <strong>Provide account balance and settlement amount</strong></label><br>
-    <label><input type="checkbox"> <strong>Ask for clear authorization</strong></label><br>
-    <label><input type="checkbox"> <strong>Add note → Use “AUTH OBTAINED” template</strong></label><br>
-    <label><input type="checkbox"> <strong>Tag: Samantha Foster, David Martinez, and the negotiator who posted the settlement</strong></label><br>
-    <label><input type="checkbox"> <strong>Read settlement disclosure script</strong></label><br>
-    <label><input type="checkbox"> <strong>Post the note to the client’s file</strong></label>
+    <div style="text-align: left; line-height: 1.8;">
+    <label><input type="checkbox"> Explain the reason for your call</label><br>
+    <label><input type="checkbox"> Provide account balance and settlement amount</label><br>
+    <label><input type="checkbox"> Ask for clear authorization</label><br>
+    <label><input type="checkbox"> Add note → Use “AUTH OBTAINED” template</label><br>
+    <label><input type="checkbox"> Tag: Samantha Foster, David Martinez, and the negotiator who posted the settlement</label><br>
+    <label><input type="checkbox"> Read settlement disclosure script</label><br>
+    <label><input type="checkbox"> Post the note to the client’s file</label>
   </div>
   <img src="https://imgur.com/dbYSMnX.png" alt="Agent Illustration"
        style="position: absolute; bottom: 110px; right: 20px; max-width: 130px; height: auto; border-radius: 8px; pointer-events: none; opacity: 0.9;">
   </div>
   <div class="button-grid-full">
     <button class="back-button" onclick="goBackToPrevious()">Back</button>
-    <button class="button" onclick="showOnly('homepage')">Finish</button>
+    <button class="button" onclick="showOnly('customerService')">Finish</button>
   </div>
 </div>
 <!-- Settlement Authorization OB End -->
@@ -2280,7 +2292,7 @@ Note: If approved, client will be contacted for ACH. If no response, create a fo
 <div class="container section" id="stoppedPayment">
   <h2 style="text-align: center;">Stopped Payment / Revoked</h2>
  <div style="background-color: #e5eff9; padding: 25px 25px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin: 6px 0;">
-  <div style="text-align: left; line-height: 1;">
+    <div style="text-align: left; line-height: 1.8;">
     <label><input type="checkbox"> Call the client and ask why the payment was stopped</label><br>
     <label><input type="checkbox"> Create internal request for review</label><br>
     <label><input type="checkbox"> Transfer the call to Retention to reschedule the missed draft</label>
@@ -2288,7 +2300,7 @@ Note: If approved, client will be contacted for ACH. If no response, create a fo
   </div>
   <div class="button-grid-full">
 <button class="back-button" onclick="goBackToPrevious()">Back</button>
-    <button class="button" onclick="showOnly('homepage')">Finish</button>
+    <button class="button" onclick="showOnly('customerService')">Finish</button>
   </div>
 </div>
 <!-- Stopped Payment / Revoked End -->
