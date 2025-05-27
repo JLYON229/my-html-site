@@ -261,7 +261,7 @@
 /* Container holding the grid */
 .button-grid.grid-3.home-buttons {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
   width: 100%;
   padding: 30px 40px;
@@ -278,7 +278,7 @@
 
 .home-grid-button img {
   width: 100%;
-  max-width: 400px; /* reduced from 500px to 450px */
+  max-width: 500px;
   height: 100px;
   object-fit: cover;
   border-radius: 12px;
