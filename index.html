@@ -2524,129 +2524,134 @@ If the file status is “Invalid Banking,” verify whether the current informat
 
 
 <div class="container section" id="payments" style="display: none;">
-
   <h2 style="text-align: center; font-weight: bold;">Payments Processing</h2>
-
+  <div style="background-color: #f5f6fe; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
   <div style="display: flex; flex-wrap: wrap; gap: 40px; justify-content: space-between; margin-top: 30px;">
-
-    <!-- Left side checklist -->
-    <div style="flex: 1; min-width: 300px; margin-left: 60px;">
-      <br><br><br><br><br><h3 style="text-align: left; margin-bottom: 10px;">Steps to Begin Processing a Payment</h3>
-      <div class="left-align-text" style="margin-top: 30px;">
-        <label><input type="checkbox"> Log into FORTH.</label><br>
-        <label><input type="checkbox"> Navigate to the "Contacts" tab.</label><br>
-        <label><input type="checkbox"> Look for the file you were assigned to process.</label><br>
-        <label><input type="checkbox"> Check the File Status.</label><br>
+    <!-- Left side table -->
+    <div style="flex: 1; min-width: 250px; margin-left: 130px;">
+      <h3 style="text-align: left;">Declined File Statuses:</h3>
+      <table style="width: 80%; border-collapse: collapse; font-size: 14px;">
+        <tr>
+          <td style="border: 1px solid #ccc; padding: 6px; text-align: center;">1st Payment NST 1</td>
+          <td style="border: 1px solid #ccc; padding: 6px; text-align: center;">BLOCKED</td>
+        </tr>
+        <tr>
+          <td style="border: 1px solid #ccc; padding: 6px; text-align: center;">Error Processing</td>
+          <td style="border: 1px solid #ccc; padding: 6px; text-align: center;">Five Days</td>
+        </tr>
+        <tr>
+          <td style="border: 1px solid #ccc; padding: 6px; text-align: center;">Force Cancel Pending</td>
+          <td style="border: 1px solid #ccc; padding: 6px; text-align: center;">Forth Hold</td>
+        </tr>
+        <tr>
+          <td style="border: 1px solid #ccc; padding: 6px; text-align: center;">Graduated</td>
+          <td style="border: 1px solid #ccc; padding: 6px; text-align: center;">Graduation Review</td>
+        </tr>
+        <tr>
+          <td style="border: 1px solid #ccc; padding: 6px; text-align: center;">Graduation Review - Lending</td>
+          <td style="border: 1px solid #ccc; padding: 6px; text-align: center;">Invalid Banking</td>
+        </tr>
+        <tr>
+          <td style="border: 1px solid #ccc; padding: 6px; text-align: center;">Loanosity - Pre-Approved</td>
+          <td style="border: 1px solid #ccc; padding: 6px; text-align: center;">Loanosity Funded</td>
+        </tr>
+        <tr>
+          <td style="border: 1px solid #ccc; padding: 6px; text-align: center;">LUSA Funded</td>
+          <td style="border: 1px solid #ccc; padding: 6px; text-align: center;">LUSA Pre-Approved</td>
+        </tr>
+        <tr>
+          <td style="border: 1px solid #ccc; padding: 6px; text-align: center;">LUSA Pre-Qualified</td>
+          <td style="border: 1px solid #ccc; padding: 6px; text-align: center;">Paused/Hold</td>
+        </tr>
+        <tr>
+          <td style="border: 1px solid #ccc; padding: 6px; text-align: center;">Prompt Graduation</td>
+          <td style="border: 1px solid #ccc; padding: 6px; text-align: center;">Stopped Payment/Revoked</td>
+        </tr>
+        <tr>
+          <td colspan="2" style="border: 1px solid #ccc; padding: 6px; text-align: center;">Workflow Test</td>
+        </tr>
+      </table>
+    </div>
+    <!-- Right side checklist -->
+    <div style="flex: 1; min-width: 300px; margin-right: 60px;">
+      <h3 style="text-align: left; margin-bottom: 10px;">Steps to Begin Processing a Payment</h3>
+      <div class="left-align-text" style="margin-top: 30px; text-align: left; line-height: 1.8;">
+        <label><input type="checkbox"> Log into FORTH</label><br>
+        <label><input type="checkbox"> Navigate to the "Contacts" tab</label><br>
+        <label><input type="checkbox"> Look for the file you were assigned to process</label><br>
+        <label><input type="checkbox"> Check the File Status</label><br>
       </div>
     </div>
+    </div>
 
-<!-- Right side table -->
-<div style="flex: 1; min-width: 250px;">
-  <h3 style="text-align: left; margin-left: 60px;">Declined File Statuses:</h3>
-  <table style="width: 80%; border-collapse: collapse; font-size: 14px; margin-left: 60px;">
-    <tr>
-      <td style="border: 1px solid #ccc; padding: 6px; text-align: center;">1st Payment NST 1</td>
-      <td style="border: 1px solid #ccc; padding: 6px; text-align: center;">BLOCKED</td>
-    </tr>
-    <tr>
-      <td style="border: 1px solid #ccc; padding: 6px; text-align: center;">Error Processing</td>
-      <td style="border: 1px solid #ccc; padding: 6px; text-align: center;">Five Days</td>
-    </tr>
-    <tr>
-      <td style="border: 1px solid #ccc; padding: 6px; text-align: center;">Force Cancel Pending</td>
-      <td style="border: 1px solid #ccc; padding: 6px; text-align: center;">Forth Hold</td>
-    </tr>
-    <tr>
-      <td style="border: 1px solid #ccc; padding: 6px; text-align: center;">Graduated</td>
-      <td style="border: 1px solid #ccc; padding: 6px; text-align: center;">Graduation Review</td>
-    </tr>
-    <tr>
-      <td style="border: 1px solid #ccc; padding: 6px; text-align: center;">Graduation Review - Lending</td>
-      <td style="border: 1px solid #ccc; padding: 6px; text-align: center;">Invalid Banking</td>
-    </tr>
-    <tr>
-      <td style="border: 1px solid #ccc; padding: 6px; text-align: center;">Loanosity - Pre-Approved</td>
-      <td style="border: 1px solid #ccc; padding: 6px; text-align: center;">Loanosity Funded</td>
-    </tr>
-    <tr>
-      <td style="border: 1px solid #ccc; padding: 6px; text-align: center;">LUSA Funded</td>
-      <td style="border: 1px solid #ccc; padding: 6px; text-align: center;">LUSA Pre-Approved</td>
-    </tr>
-    <tr>
-      <td style="border: 1px solid #ccc; padding: 6px; text-align: center;">LUSA Pre-Qualified</td>
-      <td style="border: 1px solid #ccc; padding: 6px; text-align: center;">Paused/Hold</td>
-    </tr>
-    <tr>
-      <td style="border: 1px solid #ccc; padding: 6px; text-align: center;">Prompt Graduation</td>
-      <td style="border: 1px solid #ccc; padding: 6px; text-align: center;">Stopped Payment/Revoked</td>
-    </tr>
-    <tr>
-      <td colspan="2" style="border: 1px solid #ccc; padding: 6px; text-align: center;">Workflow Test</td>
-    </tr>
-  </table>
-</div>
+  <img src="https://imgur.com/wcrXotr.png" alt="Agent Illustration"
+       style="position: absolute; bottom: 180px; right: 20px; max-width: 210px; height: auto; border-radius: 8px; pointer-events: none; opacity: 0.9;">
 
-  </div>
-
+    </div>
   <!-- Action buttons -->
   <div class="button-grid-full" style="margin-top: 30px;">
     <button class="button" onclick="showOnly('paymentsDecline')">Decline the file</button>
     <button class="button" onclick="showOnly('paymentsProceed')">Proceed</button>
   </div>
-
   <div class="button-grid-back">
-<button class="back-button" onclick="goBackToPrevious()">⬅️ Back</button>
+<button class="back-button" onclick="goBackToPrevious()">Back</button>
   </div>
 </div>
 
 
 <!-- Decline File Subsection -->
 <div class="container section" id="paymentsDecline" style="display: none;">
-  <h2 style="text-align: center; font-weight: bold;">Declining a File</h2><br>
-
+  <h2 style="text-align: center; font-weight: bold;">Declining a File</h2>
+  <div style="background-color: #f5f6fe; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
   <h3 style="font-weight: bold; text-align: left;">How to decline a file:</h3>
-  <div class="left-align-text" style="margin-bottom: 20px;">
-    <label><input type="checkbox"> Navigate to "Settlement" Tab.</label><br>
-    <label><input type="checkbox"> Adjust the status to QC Fail → Click "Save".</label><br>
-    <label><input type="checkbox"> Add a Note → Use "PPX-DECLINED" template.</label><br>
-    <label><input type="checkbox"> Mention the "Reason", the "Solution", and the "Account Number".</label><br>
+  <div class="left-align-text" style="margin-bottom: 20px; text-align: left; line-height: 1.8;">
+    <label><input type="checkbox"> Navigate to "Settlement" Tab</label><br>
+    <label><input type="checkbox"> Adjust the status to QC Fail → Click "Save"</label><br>
+    <label><input type="checkbox"> Add a Note → Use "PPX-DECLINED" template</label><br>
+    <label><input type="checkbox"> Mention the "Reason", the "Solution", and the "Account Number"</label><br>
   </div>
 
   <h3 style="font-weight: bold; text-align: left;">Fill the Decline Form:</h3>
-  <div class="left-align-text">
-    <label><input type="checkbox"> Select a decline reason.</label><br>
-    <label><input type="checkbox"> Add the client ID.</label><br>
-    <label><input type="checkbox"> Retrieve the Negotiator's email.</label><br>
-    <label><input type="checkbox"> Submit the form.</label><br>
+  <div class="left-align-text" style="text-align: left; line-height: 1.8;">
+    <label><input type="checkbox"> Select a decline reason</label><br>
+    <label><input type="checkbox"> Add the client ID</label><br>
+    <label><input type="checkbox"> Retrieve the Negotiator's email</label><br>
+    <label><input type="checkbox"> Submit the form</label><br>
   </div>
 
+  <img src="https://imgur.com/wcrXotr.png" alt="Agent Illustration"
+       style="position: absolute; bottom: 110px; right: 20px; max-width: 210px; height: auto; border-radius: 8px; pointer-events: none; opacity: 0.9;">
+
+</div>
+
   <div class="button-grid grid-2" style="margin-top: 30px; text-align: left;">
-    <button class="back-button" onclick="goBackToPrevious()">⬅️ Back</button>
-    <button class="back-button" onclick="showOnly('homepage')">✅ Finish</button>
+    <button class="back-button" onclick="goBackToPrevious()">Back</button>
+    <button class="back-button" onclick="showOnly('homepage')">Finish</button>
   </div>
 </div>
 
 <!-- Proceed Subsection -->
 <div class="container section" id="paymentsProceed" style="display: none;">
-  <h2 style="text-align: center; font-weight: bold;">Continue Payment Validation</h2><br>
-
+  <h2 style="text-align: center; font-weight: bold;">Continue Payment Validation</h2>
+  <div style="background-color: #f5f6fe; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
   <!-- Check Client’s Address -->
   <h3 style="text-align: left; font-weight: bold; margin-top: 30px;">Check the Client’s Address:</h3>
-  <div class="left-align-text" style="margin-left: 20px; margin-bottom: 20px;">
-    <label><input type="radio" name="addressCheck"> Iowa: The earned performance fees are collected in a lump sum payment one day after the last payment.</label><br>
-    <label><input type="radio" name="addressCheck"> Minnesota: Minnesota also has an exception when the Negotiations fees are 15%.</label>
+  <div class="left-align-text" style="margin-left: 20px; margin-bottom: 20px; text-align: left; line-height: 1.8;">
+    <label><input type="radio" name="addressCheck"> Iowa: The earned performance fees are collected in a lump sum payment one day after the last payment</label><br>
+    <label><input type="radio" name="addressCheck"> Minnesota: Minnesota also has an exception when the Negotiations fees are 15%</label>
   </div>
 
   <!-- Check Negotiations Fees -->
   <h3 style="text-align: left; font-weight: bold;">Check the Negotiations Fees:</h3>
-  <div class="left-align-text" style="margin-left: 20px; margin-bottom: 20px;">
-    <label><input type="radio" name="feeCheck"> Clarity Debt Resolution clients: Negotiation fee must be 25%.</label><br>
-    <label><input type="radio" name="feeCheck"> Palisade Legal Group clients: Negotiation fee must be 27.5%.</label><br>
-    <label><input type="radio" name="feeCheck"> Concordia Legal Group clients: Negotiation fee must be 27.5%.</label>
+  <div class="left-align-text" style="margin-left: 20px; margin-bottom: 20px; text-align: left; line-height: 1.8;">
+    <label><input type="radio" name="feeCheck"> Clarity Debt Resolution clients: Negotiation fee must be 25%</label><br>
+    <label><input type="radio" name="feeCheck"> Palisade Legal Group clients: Negotiation fee must be 27.5%</label><br>
+    <label><input type="radio" name="feeCheck"> Concordia Legal Group clients: Negotiation fee must be 27.5%</label>
   </div>
 
   <!-- Disclosure -->
-  <div style="background-color: #f9f9f9; border-left: 5px solid #112663; padding: 15px; margin: 20px 0; font-size: 15px;">
+      <!-- Quote in slightly darker box -->
+<div style="background-color: #e3e4fd; padding: 20px 40px; border-radius: 10px; color: #112663; margin: 15px 0; text-align: left;">
     PLG and CLA clients: <br>
     Fees can be 29% in some cases. <br>
     Fees can be 25%, but in this case, attorney fees must be added manually.
@@ -2654,49 +2659,49 @@ If the file status is “Invalid Banking,” verify whether the current informat
 
   <!-- Check Purchase Status -->
 <!-- Check Purchase Status -->
-<h3 style="text-align: left; font-weight: bold;">Check the Purchase Status:</h3>
-<div class="left-align-text" style="margin-left: 20px; margin-bottom: 20px;">
-  <label><input type="radio" name="purchaseStatus"> The Purchase status is either "Purchased" or "Rev Share" → proceed.</label><br>
-  <label><input type="radio" name="purchaseStatus"> The Purchase status is "Purchase Eligible" → decline the file.</label>
+<h3 style="text-align: left; font-weight: bold; ">Check the Purchase Status:</h3>
+<div class="left-align-text" style="margin-left: 20px; margin-bottom: 20px; text-align: left; line-height: 1.8;">
+  <label><input type="radio" name="purchaseStatus"> The Purchase status is either "Purchased" or "Rev Share" → proceed</label><br>
+  <label><input type="radio" name="purchaseStatus"> The Purchase status is "Purchase Eligible" → decline the file</label>
+</div>
 </div>
 
-
   <!-- Decision Buttons -->
-  <div class="button-grid-full" style="margin-top: 30px;">
+  <div class="button-grid-full" style="margin-top: 30px; ">
     <button class="button" onclick="showOnly('paymentsDecline')">Decline</button>
     <button class="button" onclick="showOnly('paymentsFinalReview')">Proceed</button>
   </div>
 
   <div class="button-grid-back">
-<button class="back-button" onclick="goBackToPrevious()">⬅️ Back</button>
+<button class="back-button" onclick="goBackToPrevious()">Back</button>
   </div>
 
 </div>
 
 <!-- Proceed Step -->
 <div class="container section" id="paymentsFinalReview" style="display: none;">
-  <h2 style="text-align: center; font-weight: bold;">Processing Verification</h2><br>
-
+  <h2 style="text-align: center; font-weight: bold;">Processing Verification</h2>
+  <div style="background-color: #f5f6fe; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
   <!-- Check for Other Agents -->
   <h3 style="text-align: left; font-weight: bold;">Check If Other Agents Are Working on the File:</h3>
-  <div class="left-align-text" style="margin-left: 20px; margin-bottom: 20px;">
-    <label><input type="checkbox"> Navigate to the "Tasks" tab.</label><br>
-    <label><input type="checkbox"> Check if a “Settlement at Risk agent” is working on the file.</label>
-    <br><br>
-    <label><input type="radio" name="agentCheck"> Yes, decline the file.</label><br>
-    <label><input type="radio" name="agentCheck"> No, proceed.</label>
+  <div class="left-align-text" style="margin-left: 20px; margin-bottom: 20px; line-height: 1.8;">
+    <label><input type="checkbox"> Navigate to the "Tasks" tab</label><br>
+    <label><input type="checkbox"> Check if a “Settlement at Risk agent” is working on the file</label><br>
+    <label><input type="radio" name="agentCheck"> Yes, decline the file</label><br>
+    <label><input type="radio" name="agentCheck"> No, proceed</label>
   </div>
 
   <!-- Review Notes -->
   <h3 style="text-align: left; font-weight: bold;">Review Notes:</h3>
-  <div class="left-align-text" style="margin-left: 20px; margin-bottom: 20px;">
-    <label><input type="checkbox"> Navigate to the "Notes" tab.</label><br>
-    <label><input type="checkbox"> Using the search bar, check for any summons on the file.</label>
-    <br><br>
-    <label><input type="radio" name="summonsCheck"> Yes, decline the file.</label><br>
-    <label><input type="radio" name="summonsCheck"> No, proceed.</label>
+  <div class="left-align-text" style="margin-left: 20px; margin-bottom: 20px; line-height: 1.8;">
+    <label><input type="checkbox"> Navigate to the "Notes" tab</label><br>
+    <label><input type="checkbox"> Using the search bar, check for any summons on the file</label><br>
+    <label><input type="radio" name="summonsCheck"> Yes, decline the file</label><br>
+    <label><input type="radio" name="summonsCheck"> No, proceed</label>
   </div>
-
+  <img src="https://imgur.com/wcrXotr.png" alt="Agent Illustration"
+       style="position: absolute; bottom: 180px; right: 20px; max-width: 160px; height: auto; border-radius: 8px; pointer-events: none; opacity: 0.9;">
+</div>
   <!-- Action Buttons -->
   <div class="button-grid-full" style="margin-top: 30px;">
     <button class="button" onclick="showOnly('paymentsDecline')">Decline</button>
@@ -2704,39 +2709,39 @@ If the file status is “Invalid Banking,” verify whether the current informat
   </div>
 
   <div class="button-grid-back">
-<button class="back-button" onclick="goBackToPrevious()">⬅️ Back</button>
+<button class="back-button" onclick="goBackToPrevious()">Back</button>
   </div>
 </div>
 
 
 <!-- Final Step: Compare Info & Confirm Details -->
 <div class="container section" id="paymentsFinalStep" style="display: none;">
-  <h2 style="text-align: center; font-weight: bold;">Compare Info & Confirm Details</h2><br>
-
+  <h2 style="text-align: center; font-weight: bold;">Compare Info & Confirm Details</h2>
+  <div style="background-color: #f5f6fe; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
   <!-- Compare Notes -->
   <h3 style="text-align: left; font-weight: bold; margin-top: 30px;">Look for two notes and compare them:</h3>
-  <div class="left-align-text" style="margin-left: 20px; margin-bottom: 20px;">
-    <label><input type="checkbox"> Search for "Settlement Submitted to Payment Processing" & "Settlement Authorization Obtained from Client" notes.</label><br>
-    <label><input type="checkbox"> Compare the original creditor.</label><br>
-    <label><input type="checkbox"> The last four digits of the account number.</label><br>
-    <label><input type="checkbox"> The client's current balance.</label><br>
-    <label><input type="checkbox"> The settlement amount.</label>
+  <div class="left-align-text" style="margin-left: 20px; margin-bottom: 20px; line-height: 1.8;">
+    <label><input type="checkbox"> Search for "Settlement Submitted to Payment Processing" & "Settlement Authorization Obtained from Client" notes</label><br>
+    <label><input type="checkbox"> Compare the original creditor</label><br>
+    <label><input type="checkbox"> The last four digits of the account number</label><br>
+    <label><input type="checkbox"> The client's current balance</label><br>
+    <label><input type="checkbox"> The settlement amount</label>
   </div>
 
   <!-- Disclosure -->
-  <div style="background-color: #f9f9f9; border-left: 5px solid #112663; padding: 15px; margin: 20px 0; font-size: 15px;">
+<div style="background-color: #e3e4fd; padding: 20px 40px; border-radius: 10px; color: #112663; margin: 15px 0; text-align: left;">
     Make sure that the settlement matches the authorization obtained from the client.
   </div>
 
   <!-- Authorization Method -->
   <h3 style="text-align: left; font-weight: bold;">“Settlement Submitted to Payment Processing” note.</h3>
-  <div class="left-align-text" style="margin-left: 20px; margin-bottom: 20px;">
-    <label><input type="checkbox"> Check and confirm the authorization method:</label><br><br>
-    <label><input type="radio" name="authMethod"><strong>Verbal:</strong> If the authorization method is verbal, that means the client authorized the settlement verbally on call, so you can continue processing.</label><br><br>
-    <label><input type="radio" name="authMethod"><strong>Email/SMS:</strong> If the authorization method is Email/SMS, you need to compare the document with the note.</label><br><br>
-    <label><input type="radio" name="authMethod"><strong>Docsign:</strong> If the authorization method is DOCUSIGN, you need to check the document from the “Docs” tab under “Clixsign Docs” and compare it with the note.</label>
+  <div class="left-align-text" style="margin-left: 20px; margin-bottom: 20px; line-height: 1.8;">
+    <label><input type="checkbox"> Check and confirm the authorization method:</label><br>
+    <label><input type="radio" name="authMethod"><strong>Verbal:</strong> If the authorization method is verbal, that means the client authorized the settlement verbally on call, so you can continue processing</label><br>
+    <label><input type="radio" name="authMethod"><strong>Email/SMS:</strong> If the authorization method is Email/SMS, you need to compare the document with the note</label><br>
+    <label><input type="radio" name="authMethod"><strong>Docsign:</strong> If the authorization method is DOCUSIGN, you need to check the document from the “Docs” tab under “Clixsign Docs” and compare it with the note</label>
   </div>
-
+</div>
   <!-- Action Buttons -->
   <div class="button-grid-full" style="margin-top: 30px;">
     <button class="button" onclick="showOnly('paymentsDecline')">Decline</button>
@@ -2744,49 +2749,49 @@ If the file status is “Invalid Banking,” verify whether the current informat
   </div>
 
   <div class="button-grid-back">
-    <button class="back-button" onclick="showOnly('paymentsFinalReview')">⬅️ Back</button>
+    <button class="back-button" onclick="showOnly('paymentsFinalReview')">Back</button>
   </div>
 </div>
 
 <!-- Final Step: Review the Settlement Letter -->
 <div class="container section" id="paymentsWrapUp" style="display: none;">
-  <h2 style="text-align: center; font-weight: bold;">Review the Settlement Letter</h2><br>
-
+  <h2 style="text-align: center; font-weight: bold;">Review the Settlement Letter</h2>
+  <div style="background-color: #f5f6fe; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
   <!-- Step-by-step instructions -->
-  <div class="left-align-text" style="margin-left: 20px; margin-bottom: 20px;">
-    <label><input type="checkbox"> Navigate to the "Settlements" tab.</label><br>
-    <label><input type="checkbox"> Choose the “Offers in Progress” option.</label><br>
-    <label><input type="checkbox"> Open the offer by clicking on the small arrow on the right.</label><br>
-    <label><input type="checkbox"> Click on "Documents".</label><br>
-    <label><input type="checkbox"> Click on the "Settlement Letter".</label>
+  <div class="left-align-text" style="margin-left: 20px; margin-bottom: 20px; line-height: 1.8;">
+    <label><input type="checkbox"> Navigate to the "Settlements" tab</label><br>
+    <label><input type="checkbox"> Choose the “Offers in Progress” option</label><br>
+    <label><input type="checkbox"> Open the offer by clicking on the small arrow on the right</label><br>
+    <label><input type="checkbox"> Click on "Documents"</label><br>
+    <label><input type="checkbox"> Click on the "Settlement Letter"</label>
   </div>
 
   <!-- First Disclosure -->
-  <div style="background-color: #f9f9f9; border-left: 5px solid #112663; padding: 15px; margin: 20px 0; font-size: 15px;">
+<div style="background-color: #e3e4fd; padding: 20px 40px; border-radius: 10px; color: #112663; margin: 15px 0; text-align: left;">
     This information needs to be compared with the information in the notes, and it must match it.
   </div>
 
   <!-- Comparison Checkboxes -->
-  <div class="left-align-text" style="margin-left: 20px; margin-bottom: 20px;">
+  <div class="left-align-text" style="margin-left: 20px; margin-bottom: 20px; line-height: 1.8;">
     <label><input type="checkbox"> Compare the "Last 4-Digits".</label><br>
     <label><input type="checkbox"> Compare the "Payment Address".</label><br>
-    <label><input type="checkbox"> Compare the "The Client’s name matches the details in FORTH".</label><br>
-    <label><input type="checkbox"> Compare how the payments are broken down on the settlement tab.</label><br>
-    <label><input type="checkbox"> Compare how the Creditor wants the breakdown of the payments.</label><br>
-    <label><input type="checkbox"> Verify the "Debts" tab to ensure that the account has not been voided previously.</label><br>
-    <label><input type="checkbox"> Check that all the drafts have been cleared and make sure there are no "Low Balances" or "Open" Payments.</label><br>
-    <label><input type="checkbox"> Verify if there are any "Legal" or "Pre-Legal" accounts on the file.</label>
+    <label><input type="checkbox"> Compare the "The Client’s name matches the details in FORTH"</label><br>
+    <label><input type="checkbox"> Compare how the payments are broken down on the settlement tab</label><br>
+    <label><input type="checkbox"> Compare how the Creditor wants the breakdown of the payments</label><br>
+    <label><input type="checkbox"> Verify the "Debts" tab to ensure that the account has not been voided previously</label><br>
+    <label><input type="checkbox"> Check that all the drafts have been cleared and make sure there are no "Low Balances" or "Open" Payments</label><br>
+    <label><input type="checkbox"> Verify if there are any "Legal" or "Pre-Legal" accounts on the file</label>
   </div>
 
   <!-- Final Disclosure -->
-  <div style="background-color: #f9f9f9; border-left: 5px solid #112663; padding: 15px; margin: 20px 0; font-size: 15px;">
-    If a file contains legal or pre-legal accounts, we decline it, stating that priority for processing should be given to them. <br><br>
+<div style="background-color: #e3e4fd; padding: 20px 40px; border-radius: 10px; color: #112663; margin: 15px 0; text-align: left;">
+    If a file contains legal or pre-legal accounts, we decline it, stating that priority for processing should be given to them. <br>
     <strong>Settlements are prioritized in the following order:</strong><br>
     1. Legal<br>
     2. Pre-Legal<br>
     3. Regular
   </div>
-
+</div>
   <!-- Action Buttons -->
   <div class="button-grid-full" style="margin-top: 30px;">
     <button class="button" onclick="showOnly('paymentsDecline')">Decline</button>
@@ -2794,60 +2799,61 @@ If the file status is “Invalid Banking,” verify whether the current informat
   </div>
 
   <div class="button-grid-back">
-    <button class="back-button" onclick="showOnly('paymentsFinalStep')">⬅️ Back</button>
+    <button class="back-button" onclick="showOnly('paymentsFinalStep')">Back</button>
   </div>
 </div>
 
 <!-- Schedule Payments Step -->
 <div class="container section" id="paymentsSchedule" style="display: none;">
-  <h2 style="text-align: center; font-weight: bold;">Schedule Payments</h2><br>
-
+  <h2 style="text-align: center; font-weight: bold;">Schedule Payments</h2>
+  <div style="background-color: #f5f6fe; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
   <!-- Align the Information -->
   <h3 style="text-align: left; font-weight: bold; margin-top: 30px;">Align the information:</h3>
-  <div class="left-align-text" style="margin-left: 20px; margin-bottom: 20px;">
-    <label><input type="checkbox"> Navigate to the "Settlement" tab.</label><br>
-    <label><input type="checkbox"> Update all the details to align with the information in the "Settlement Letter".</label><br>
-    <label><input type="checkbox"> Match the payments listed on the "Settlement Letter" to those in FORTH.</label><br>
-    <label><input type="checkbox"> Adjust the dates accordingly.</label><br>
-    <label><input type="checkbox"> Schedule the first payment as close as possible to the intended date.</label>
+  <div class="left-align-text" style="margin-left: 20px; margin-bottom: 20px; line-height: 1.8;">
+    <label><input type="checkbox"> Navigate to the "Settlement" tab</label><br>
+    <label><input type="checkbox"> Update all the details to align with the information in the "Settlement Letter"</label><br>
+    <label><input type="checkbox"> Match the payments listed on the "Settlement Letter" to those in FORTH</label><br>
+    <label><input type="checkbox"> Adjust the dates accordingly</label><br>
+    <label><input type="checkbox"> Schedule the first payment as close as possible to the intended date</label>
   </div>
 
   <!-- Disclosure -->
-  <div style="background-color: #f9f9f9; border-left: 5px solid #112663; padding: 15px; margin: 20px 0; font-size: 15px;">
+<div style="background-color: #e3e4fd; padding: 20px 40px; border-radius: 10px; color: #112663; margin: 15px 0; text-align: center;">
     You always need to double-check the final payment, as it is sometimes set earlier than the other payments.
   </div>
 
+</div>
   <!-- Proceed Button -->
   <div class="button-grid grid-2" style="margin-top: 30px;">
-    <button class="back-button" onclick="goBackToPrevious()">⬅️ Back</button>
+    <button class="back-button" onclick="goBackToPrevious()">Back</button>
     <button class="button" onclick="showOnly('paymentsScheduleConfirmation')">Proceed</button>
   </div>
 </div>
 
 <!-- Payment Method Step -->
 <div class="container section" id="paymentsScheduleConfirmation" style="display: none;">
-  <h2 style="text-align: center; font-weight: bold;">Payment Method</h2><br>
-
+  <h2 style="text-align: center; font-weight: bold;">Payment Method</h2>
+  <div style="background-color: #f5f6fe; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
   <!-- Check Payment Method -->
   <h3 style="text-align: left; font-weight: bold; margin-top: 30px;">Check the designated payment method:</h3>
-  <div class="left-align-text" style="margin-left: 20px; margin-bottom: 20px;">
-    <label><input type="radio" name="paymentMethod"><strong>2nd Day Check:</strong> Payment dates must be set 5 business days before the due date.</label><br><br>
-    <label><input type="radio" name="paymentMethod"><strong>Overnight Check:</strong> Payment dates must be set 2-3 business days before the due date.</label><br><br>
-    <label><input type="radio" name="paymentMethod"><strong>Check by Phone:</strong> This can be set on the due date.</label><br><br>
-    <label><input type="radio" name="paymentMethod"><strong>Direct Pay:</strong> Can be set on the due date.</label>
+  <div class="left-align-text" style="margin-left: 20px; margin-bottom: 20px; line-height: 1.8;">
+    <label><input type="radio" name="paymentMethod"><strong>2nd Day Check:</strong> Payment dates must be set 5 business days before the due date</label><br>
+    <label><input type="radio" name="paymentMethod"><strong>Overnight Check:</strong> Payment dates must be set 2-3 business days before the due date</label><br>
+    <label><input type="radio" name="paymentMethod"><strong>Check by Phone:</strong> This can be set on the due date</label><br>
+    <label><input type="radio" name="paymentMethod"><strong>Direct Pay:</strong> Can be set on the due date</label>
   </div>
 
   <!-- Disclosure -->
-  <div style="background-color: #f9f9f9; border-left: 5px solid #112663; padding: 15px; margin: 20px 0; font-size: 15px;">
+<div style="background-color: #e3e4fd; padding: 20px 40px; border-radius: 10px; color: #112663; margin: 15px 0; text-align: left;">
     Check if the Creditor accepts "Direct Pay". If not, set it as <strong>Check 2nd Day</strong> if we have 5 business days or more until the settlement payment due date. <br>
     If we have between 2–3 business days, set it as <strong>Check Overnight</strong>.<br><br>
     <strong>ACH Direct Creditors Method</strong> → Enter as "Check by Mail" (RAM will convert it).<br>
     <strong>ACH Direct Pay Method</strong> → Select "Direct Pay" for customers using CFT Payment Processor.
   </div>
-
+</div>
   <!-- Proceed Button -->
   <div class="button-grid grid-2" style="margin-top: 30px;">
-    <button class="back-button" onclick="goBackToPrevious()">⬅️ Back</button>
+    <button class="back-button" onclick="goBackToPrevious()">Back</button>
     <button class="button" onclick="showOnly('paymentsFinalConfirmation')">Proceed</button>
   </div>
 </div>
@@ -2855,10 +2861,10 @@ If the file status is “Invalid Banking,” verify whether the current informat
 
 <!-- Ending Balance Step -->
 <div class="container section" id="paymentsFinalConfirmation" style="display: none;">
-  <h2 style="text-align: center; font-weight: bold;">Ending Bal</h2><br>
+  <h2 style="text-align: center; font-weight: bold;">Ending Bal</h2>
 
   <!-- Disclosure Only -->
-  <div style="background-color: #f9f9f9; border-left: 5px solid #112663; padding: 15px; margin: 30px 0; font-size: 15px;">
+<div style="background-color: #e3e4fd; padding: 20px 40px; border-radius: 10px; color: #112663; margin: 15px 0; text-align: left;">
     <strong>Disclosure:</strong><br>
     If any of these payments are marked in red, it indicates insufficient funds. In that case, you will need to adjust based on the draft dates, while ensuring the payments still meet the deadline specified in the Settlement Letter. <br><br>
 
@@ -2874,87 +2880,99 @@ If the file status is “Invalid Banking,” verify whether the current informat
 
   <!-- Proceed Button -->
   <div class="button-grid grid-2" style="margin-top: 30px;">
-    <button class="back-button" onclick="goBackToPrevious()">⬅️ Back</button>
+    <button class="back-button" onclick="goBackToPrevious()">Back</button>
     <button class="button" onclick="showOnly('paymentsFinalSubmit')">Proceed</button>
   </div>
 </div>
 
 <!-- Save Offer Step -->
 <div class="container section" id="paymentsFinalSubmit" style="display: none;">
-  <h2 style="text-align: center; font-weight: bold;">Save Offer</h2><br>
-
-  <div class="left-align-text" style="margin-left: 20px; margin-top: 30px; margin-bottom: 20px;">
-    <label><input type="checkbox"> Change the status from "Submitted to Payments Processing/QC" to "Accepted".</label><br>
-    <label><input type="checkbox"> Return to the "Enrollment" tab and refresh the page.</label><br>
-    <label><input type="checkbox"> Check the available balance, ensuring that no amounts have gone negative.</label><br>
-    <label><input type="checkbox"> Verify the processed settlement details are accurate.</label><br>
-    <label><input type="checkbox"> Verify the payment method and amounts match the settlement letter.</label>
+  <h2 style="text-align: center; font-weight: bold;">Save Offer</h2>
+  <div style="background-color: #f5f6fe; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
+  <div class="left-align-text" style="margin-left: 20px; margin-top: 30px; margin-bottom: 20px; line-height: 1.8;">
+    <label><input type="checkbox"> Change the status from "Submitted to Payments Processing/QC" to "Accepted"</label><br>
+    <label><input type="checkbox"> Return to the "Enrollment" tab and refresh the page</label><br>
+    <label><input type="checkbox"> Check the available balance, ensuring that no amounts have gone negative</label><br>
+    <label><input type="checkbox"> Verify the processed settlement details are accurate</label><br>
+    <label><input type="checkbox"> Verify the payment method and amounts match the settlement letter</label>
   </div>
-
+  <img src="https://imgur.com/wcrXotr.png" alt="Agent Illustration"
+       style="position: absolute; bottom: 110px; right: 20px; max-width: 140px; height: auto; border-radius: 8px; pointer-events: none; opacity: 0.9;">
+</div>
   <!-- Proceed Button -->
   <div class="button-grid grid-2" style="margin-top: 30px;">
-    <button class="back-button" onclick="goBackToPrevious()">⬅️ Back</button>
+    <button class="back-button" onclick="goBackToPrevious()">Back</button>
     <button class="button" onclick="showOnly('paymentsComplete')">Proceed</button>
   </div>
 </div>
 
 <!-- Final Processing Steps -->
 <div class="container section" id="paymentsComplete" style="display: none;">
-  <h2 style="text-align: center; font-weight: bold;">Final Processing Steps</h2><br>
-
+  <h2 style="text-align: center; font-weight: bold;">Notation</h2>
+  <div style="background-color: #f5f6fe; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
   <!-- Add an Alert -->
   <h3 style="text-align: left; font-weight: bold; margin-top: 30px;">Add an Alert:</h3>
-  <div class="left-align-text" style="margin-left: 20px; margin-bottom: 30px;">
-    <label><input type="checkbox"> Click on "Add Alert".</label><br>
-    <label><input type="checkbox"> Add the last payment date.</label><br>
-    <label><input type="checkbox"> Add the Creditor's name.</label><br>
-    <label><input type="checkbox"> Add the last 4-digits of the account.</label><br>
-    <label><input type="checkbox"> Mention that this settlement is a term settlement with '[Creditor's Name + Last Four]' until '[Last Payment Date].'</label><br>
-    <label><input type="checkbox"> Click on "Save Alert".</label>
+  <div class="left-align-text" style="margin-left: 20px; margin-bottom: 30px; line-height: 1.8;">
+    <label><input type="checkbox"> Click on "Add Alert"</label><br>
+    <label><input type="checkbox"> Add the last payment date</label><br>
+    <label><input type="checkbox"> Add the Creditor's name</label><br>
+    <label><input type="checkbox"> Add the last 4-digits of the account</label><br>
+    <label><input type="checkbox"> Mention that this settlement is a term settlement with '[Creditor's Name + Last Four]' until '[Last Payment Date]'</label><br>
+    <label><input type="checkbox"> Click on "Save Alert"</label>
   </div>
   <!-- Notate the File -->
   <h3 style="text-align: left; font-weight: bold;">Notate the File:</h3>
-  <div class="left-align-text" style="margin-left: 20px; margin-bottom: 30px;">
-    <label><input type="checkbox"> Navigate to the "Notes" tab.</label><br>
-    <label><input type="checkbox"> Set the "Note Type" as "Payments".</label><br>
-    <label><input type="checkbox"> Add note → Use "Approved and Completed Settlement" template.</label><br>
-    <label><input type="checkbox"> Tag/Notify the assigned Negotiator in the note.</label><br>
-    <label><input type="checkbox"> Click on "Save Note".</label>
+  <div class="left-align-text" style="margin-left: 20px; margin-bottom: 30px; line-height: 1.8;">
+    <label><input type="checkbox"> Navigate to the "Notes" tab</label><br>
+    <label><input type="checkbox"> Set the "Note Type" as "Payments"</label><br>
+    <label><input type="checkbox"> Add note → Use "Approved and Completed Settlement" template</label><br>
+    <label><input type="checkbox"> Tag/Notify the assigned Negotiator in the note</label><br>
+    <label><input type="checkbox"> Click on "Save Note"</label>
   </div>
+  <img src="https://imgur.com/wcrXotr.png" alt="Agent Illustration"
+       style="position: absolute; bottom: 110px; right: 20px; max-width: 210px; height: auto; border-radius: 8px; pointer-events: none; opacity: 0.9;">
+</div>
+
+  <!-- Finish Button -->
+  <div class="button-grid grid-2" style="margin-top: 30px; text-align: left;">
+    <button class="back-button" onclick="goBackToPrevious()">Back</button>
+    <button class="back-button" onclick="showOnly('paymentsComplete1')">Proceed</button>
+  </div>
+</div>
+
+<div class="container section" id="paymentsComplete1" style="display: none;">
+  <h2 style="text-align: center; font-weight: bold;">Finalizing</h2>
+  <div style="background-color: #f5f6fe; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
   <!-- Send an Email -->
   <h3 style="text-align: left; font-weight: bold;">Send an Email:</h3>
-  <div class="left-align-text" style="margin-left: 20px; margin-bottom: 30px;">
-    <label><input type="checkbox"> Navigate to the "Emails" tab.</label><br>
-    <label><input type="checkbox"> Click on "Send Email".</label><br>
-    <label><input type="checkbox"> Enter the Company's email in the 'From' box.</label><br><br>
+  <div class="left-align-text" style="margin-left: 20px; margin-bottom: 30px; line-height: 1.8;">
+    <label><input type="checkbox"> Navigate to the "Emails" tab</label><br>
+    <label><input type="checkbox"> Click on "Send Email"</label><br>
+    <label><input type="checkbox"> Enter the Company's email in the 'From' box</label><br>
     <label><input type="radio" name="fromEmail"> Settlements@usclarity.com</label><br>
     <label><input type="radio" name="fromEmail"> Settlements@concordiapllc.com</label><br>
-    <label><input type="radio" name="fromEmail"> Settlements@palisadelegalgroup.com</label><br><br>
-    <label><input type="checkbox"> Choose the template depending on the assigned company.</label><br>
-    <label><input type="checkbox"> Navigate to the “Media Library” tab.</label><br>
-    <label><input type="checkbox"> Attach the "Settlement Letter".</label><br>
-    <label><input type="checkbox"> Click on "Send Email".</label>
+    <label><input type="radio" name="fromEmail"> Settlements@palisadelegalgroup.com</label><br>
+    <label><input type="checkbox"> Choose the template depending on the assigned company</label><br>
+    <label><input type="checkbox"> Navigate to the “Media Library” tab</label><br>
+    <label><input type="checkbox"> Attach the "Settlement Letter"</label><br>
+    <label><input type="checkbox"> Click on "Send Email"</label>
   </div>
 
   <!-- Update Account Status -->
   <h3 style="text-align: left; font-weight: bold;">Update the Account Status:</h3>
-  <div class="left-align-text" style="margin-left: 20px; margin-bottom: 30px;">
-    <label><input type="checkbox"> Navigate to the client dashboard.</label><br>
-    <label><input type="checkbox"> Click the "Edit" icon next to the client status.</label><br>
-    <label><input type="checkbox"> Change the status to “Term Settlement”.</label>
+  <div class="left-align-text" style="margin-left: 20px; margin-bottom: 30px; line-height: 1.8;">
+    <label><input type="checkbox"> Navigate to the client dashboard</label><br>
+    <label><input type="checkbox"> Click the "Edit" icon next to the client status</label><br>
+    <label><input type="checkbox"> Change the status to “Term Settlement”</label>
   </div>
-
-  <!-- Finish Button -->
+  <img src="https://imgur.com/wcrXotr.png" alt="Agent Illustration"
+       style="position: absolute; bottom: 110px; right: 20px; max-width: 210px; height: auto; border-radius: 8px; pointer-events: none; opacity: 0.9;">
+</div>
   <div class="button-grid grid-2" style="margin-top: 30px; text-align: left;">
-    <button class="back-button" onclick="goBackToPrevious()">⬅️ Back</button>
-    <button class="back-button" onclick="showOnly('homepage')">✅ Finish</button>
+    <button class="back-button" onclick="goBackToPrevious()">Back</button>
+    <button class="back-button" onclick="showOnly('payments1')">Finish</button>
   </div>
 </div>
-
-
-
-
-
 
 
 
