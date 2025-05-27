@@ -258,6 +258,37 @@
     font-size: 17px;
   }
 
+/* Container holding the grid */
+.button-grid.grid-3.home-buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 100%;
+  padding: 30px 40px;
+  box-sizing: border-box;
+  justify-items: center;
+}
+
+.home-grid-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.home-grid-button img {
+  width: 100%;
+  max-width: 500px; /* doubled width */
+  height: 100px;     /* optional: taller to match proportions */
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+  transition: transform 0.2s ease;
+}
+
+.home-grid-button:hover img {
+  transform: scale(1.05);
+}
 
 
 </style>
@@ -273,17 +304,36 @@
   <p>This portal is built to enhance efficiency, reduce errors, and maintain consistency across all client-facing processes</p>
 <h3>Start by selecting your department<h3>
 
-  <div class="button-grid grid-3">
-    <button class="button" onclick="showOnly('ancillarySupport')">Ancillary Support</button>
-    <button class="button" onclick="showOnly('ancillaryUnderwriting')">Ancillary Underwriting</button>
-    <button class="button" onclick="showOnly('customerService')">Customer Service</button>
-    <button class="button" onclick="showOnly('functionSupport')">Function Support</button>
-    <button class="button" onclick="showOnly('negotiations')">Negotiations</button>
-    <button class="button" onclick="showOnly('payments')">Payments</button>
-    <button class="button" onclick="showOnly('retention')">Retention</button>
-    <button class="button" onclick="showOnly('sales')">Sales</button>
-    <button class="button" onclick="showOnly('telemarketing')">Telemarketing</button>
-  </div>
+<div class="button-grid grid-3 home-buttons">
+  <button class="home-grid-button" onclick="showOnly('telemarketing')">
+    <img src="https://imgur.com/ZnNLlqq.jpg" alt="Telemarketing">
+  </button>
+  <button class="home-grid-button" onclick="showOnly('negotiations')">
+    <img src="https://imgur.com/cD7nLUu.jpg" alt="Negotiations">
+  </button>
+  <button class="home-grid-button" onclick="showOnly('functionSupport')">
+    <img src="https://imgur.com/1ogJVYO.jpg" alt="Function Support">
+  </button>
+  <button class="home-grid-button" onclick="showOnly('sales')">
+    <img src="https://imgur.com/Ad1cASF.jpg" alt="Sales">
+  </button>
+  <button class="home-grid-button" onclick="showOnly('payments')">
+    <img src="https://imgur.com/rtacuCd.jpg" alt="Payments">
+  </button>
+  <button class="home-grid-button" onclick="showOnly('ancillaryUnderwriting')">
+    <img src="https://imgur.com/ZPSjHAY.jpg" alt="Lending">
+  </button>
+  <button class="home-grid-button" onclick="showOnly('ancillarySupport')">
+    <img src="https://imgur.com/Rp2CzFR.jpg" alt="Ancillary Support">
+  </button>
+  <button class="home-grid-button" onclick="showOnly('customerService')">
+    <img src="https://imgur.com/1LQo1Qy.jpg" alt="Customer Service">
+  </button>
+  <button class="home-grid-button" onclick="showOnly('retention')">
+    <img src="https://imgur.com/LRbsMHn.jpg" alt="Retention">
+  </button>
+</div>
+
 </div>
 
   <!-- Department Sections -->
