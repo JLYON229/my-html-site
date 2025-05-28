@@ -305,14 +305,23 @@
 <h3>Start by selecting your department<h3>
 
 <div class="button-grid grid-3 home-buttons">
+  <button class="home-grid-button" onclick="showOnly('legalSales')">
+    <img src="https://imgur.com/3wPOsWB.jpg" alt="Legal Sales">
+  </button>
+  <button class="home-grid-button" onclick="showOnly('ancillary')">
+    <img src="https://imgur.com/Rp2CzFR.jpg" alt="Ancillary Support">
+  </button>
+  <button class="home-grid-button" onclick="showOnly('affiliateRelations')">
+    <img src="https://imgur.com/4hi8vFt.jpg" alt="Affiliate Relations">
+  </button>
   <button class="home-grid-button" onclick="showOnly('telemarketing')">
     <img src="https://imgur.com/ZnNLlqq.jpg" alt="Telemarketing">
   </button>
   <button class="home-grid-button" onclick="showOnly('negotiations')">
     <img src="https://imgur.com/cD7nLUu.jpg" alt="Negotiations">
   </button>
-  <button class="home-grid-button" onclick="showOnly('affiliateRelations')">
-    <img src="https://imgur.com/4hi8vFt.jpg" alt="Affiliate Relations">
+  <button class="home-grid-button" onclick="showOnly('lending')">
+    <img src="https://imgur.com/ZPSjHAY.jpg" alt="Lending">
   </button>
   <button class="home-grid-button" onclick="showOnly('sales')">
     <img src="https://imgur.com/Ad1cASF.jpg" alt="Sales">
@@ -320,22 +329,20 @@
   <button class="home-grid-button" onclick="showOnly('payments1')">
     <img src="https://imgur.com/rtacuCd.jpg" alt="Payments">
   </button>
-  <button class="home-grid-button" onclick="showOnly('lending')">
-    <img src="https://imgur.com/ZPSjHAY.jpg" alt="Lending">
+  <button class="home-grid-button" onclick="showOnly('retention')">
+    <img src="https://imgur.com/LRbsMHn.jpg" alt="Retention">
   </button>
-  <button class="home-grid-button" onclick="showOnly('ancillary')">
-    <img src="https://imgur.com/Rp2CzFR.jpg" alt="Ancillary Support">
+  <button class="home-grid-button" onclick="showOnly('legalNegotiations')">
+    <img src="https://imgur.com/VpD6202.jpg" alt="Legal Negotiations">
   </button>
   <button class="home-grid-button" onclick="showOnly('customerService')">
     <img src="https://imgur.com/1LQo1Qy.jpg" alt="Customer Service">
   </button>
-  <button class="home-grid-button" onclick="showOnly('retention')">
-    <img src="https://imgur.com/LRbsMHn.jpg" alt="Retention">
+  <button class="home-grid-button" onclick="showOnly('enrollments')">
+    <img src="https://imgur.com/IANEmvN.jpg" alt="Enrollments">
   </button>
 </div>
-
 </div>
-
   <!-- Department Sections -->
 
 
@@ -2393,16 +2400,37 @@ If the file status is “Invalid Banking,” verify whether the current informat
 
 
 
+  <div class="container section" id="enrollments">
+    <h2>Enrollments</h2>
+<button class="back-button" onclick="goBackToPrevious()">⬅️ Back</button>
+  </div>
 
 
 
 
 
 
+  <div class="container section" id="legalNegotiations">
+    <h2>Legal Negotiations</h2>
+<button class="back-button" onclick="goBackToPrevious()">⬅️ Back</button>
+  </div>
 
 
-  <div class="container section" id="functionSupport">
-    <h2>Function Support</h2>
+
+
+
+
+  <div class="container section" id="legalSales">
+    <h2>Legal Sales</h2>
+<button class="back-button" onclick="goBackToPrevious()">⬅️ Back</button>
+  </div>
+
+
+
+
+
+  <div class="container section" id="affiliateRelations">
+    <h2>Affiliate Relations</h2>
 <button class="back-button" onclick="goBackToPrevious()">⬅️ Back</button>
   </div>
 
@@ -3905,9 +3933,190 @@ If the file status is “Invalid Banking,” verify whether the current informat
 
 
   <div class="container section" id="sales">
-    <h2>Sales</h2>
-<button class="back-button" onclick="goBackToPrevious()">Back</button>
+  <!-- Centered Image Above Heading -->
+  <div style="text-align: center;">
+    <img src="https://imgur.com/d7iAMp9.png" alt="Telemarketing Icon" style="max-width: 120px; height: auto; margin-bottom: 10px;">
   </div>
+
+  <!-- Heading -->
+  <h2 style="text-align: center; font-weight: bold;">Sales</h2>
+
+  <!-- Buttons -->
+  <div class="button-grid grid-2">
+    <button class="button" onclick="showOnly('salesInbound')">Inbound Call</button>
+    <button class="button" onclick="showOnly('salesOutbound')">Outbound Call</button>
+  </div>
+  
+  <div class="button-grid" style="margin-top: 30px;">
+    <button class="button" style="width: 100%;" onclick="goBackToPrevious()">Back</button>
+  </div>
+</div>
+
+<!-- Inbound Script -->
+<div class="container section" id="salesInbound">
+<br><br><br><br><div style="background-color: #f9f1f1; padding: 50px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box;">
+    <div style="display: flex; align-items: flex-start; gap: 30px; flex-wrap: nowrap;">
+
+      <!-- Text Section -->
+      <div style="flex: 1; padding: 25px 40px; text-align: left; line-height: 1.6; min-width: 280px; display: flex; flex-direction: column; justify-content: center;">
+<h2 style="text-align: left; font-weight: bold; color: #112663; margin-top: 0; font-size: 32px;">Inbound Script:</h2>
+        <p style="color: #112663; margin: 0;text-align: left;">"Thank you for holding. Am I speaking with (clients name)?"</p>
+        <p style="color: #112663; margin: 10px 0;text-align: left;">"Hey (Client's name) my name is (Agent's alias) and this is a recorded line. I’m the financial consultant that’ll be assisting you today. How are you doing?"</p>
+        <p style="color: #112663; margin: 0;text-align: left;">"I see that you’re looking to borrow (loan amount) correct? What is your main goal, what are
+you trying to accomplish with the loan?"</p>
+<p style="color: #112663; margin: 10px 0;text-align: left;">"We’ll begin by reviewing your credit report and we’ll go over some compliance questions as
+well as our budget analysis, to compare your monthly expenses versus your income, then at
+that point we’ll submit your application to the underwriting department to see what we can
+get you qualified for. "</p>
+      </div>
+
+      <!-- Image Section -->
+      <div style="flex-shrink: 0; height: 0; overflow: visible;">
+        <img src="https://imgur.com/duQ42kd.png" alt="Agent Illustration"
+             style="max-width: 300px; height: auto; border-radius: 8px; transform: translateY(40px);">
+      </div>
+    </div>
+  </div>
+
+  <div class="button-grid grid-2">
+    <button class="button" onclick="showOnly('salesNotInterested')">Not Interested</button>
+    <button class="button" onclick="showOnly('salesCreditPull')">Review Credit Report</button>
+  </div>
+  <div class="button-grid" style="margin-top: 30px;">
+    <button class="button" style="width: 100%;" onclick="goBackToPrevious()">Back</button>
+  </div>
+</div>
+
+
+<div class="container section" id="salesCreditPull">
+    <h2 style="text-align: center; font-weight: bold; color: #112663;">Review Credit Report</h2>
+  <div style="background-color: #f9f1f1; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
+    <div style="text-align: left; line-height: 1.8;">
+      <label><input type="checkbox"> Navigate to the <strong>"Debts"</strong> tab</label><br>
+      <label><input type="checkbox"> Navigate to the <strong>"Uploaded Files"</strong> tab</label><br>
+      <label><input type="checkbox"> Choose the most recent <strong>"Credit Report"</strong></label>
+    </div>
+<div style="background-color: #f2e3e3; padding: 20px 40px; border-radius: 10px; color: #112663; margin: 15px 0; text-align: left;">
+  "I have your Credit Report here and it looks like your overall credit utilization is at ____%.<br>This means you have maxed out your credit cards to ______%. Let’s review the credit report together."<br><br>"The 1st account I see is with (Creditor Name) with a balance of ($Balance) and a minimum payment of (--$). Does that ring a bell?"
+</div>
+  </div>
+  <div class="button-grid grid-2">
+    <button class="button" onclick="showOnly('salesNotInterested')">Not Interested</button>
+    <button class="button" onclick="showOnly('salesCQ')">Compliance Questions</button>
+  </div>
+  <div class="button-grid" style="margin-top: 30px;">
+    <button class="button" style="width: 100%;" onclick="goBackToPrevious()">Back</button>
+  </div>
+</div> 
+
+<div class="container section" id="salesCQ">
+    <h2 style="text-align: center; font-weight: bold; color: #112663;">Compliance Questions</h2>
+  <div style="background-color: #f9f1f1; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
+    <h3 style="text-align: left; font-weight: bold; color: #112663;">These are the questions we ask the lead to ensure compliance with the regulations:</h3>
+    <div style="text-align: left; line-height: 1.8;">
+      <label><input type="checkbox"> Do you have any type of <strong>security clearance</strong>, <strong>military clearance</strong>, or a <strong>series license</strong>?</label><br>
+      <label><input type="checkbox"> If the lead has any type of security-clearance, advise them to get a signed approval letter from their supervisor</label><br>
+      <label><input type="checkbox"> Are there any personal loans or other accounts that are helping your credit and not showing on your credit report?</label><br>
+      <label><input type="checkbox"> Is there any company that you’ve hired that would reflect positively on your credit report?</label>
+    </div>
+ </div>
+  <div class="button-grid grid-2">
+    <button class="button" onclick="showOnly('salesNotInterested')">Not Interested</button>
+    <button class="button" onclick="showOnly('salesBA')">Budget Analysis</button>
+  </div>
+  <div class="button-grid" style="margin-top: 30px;">
+    <button class="button" style="width: 100%;" onclick="goBackToPrevious()">Back</button>
+  </div>
+</div> 
+
+<div class="container section" id="salesBA">
+    <h2 style="text-align: center; font-weight: bold; color: #112663;">Budget Analysis</h2>
+  <div style="background-color: #f9f1f1; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
+    <h3 style="text-align: left; font-weight: bold; color: #112663;">The list of information we gather from the client:</h3>
+    <div style="text-align: left; line-height: 1.8;">
+      <label><input type="checkbox"> Net Monthly Income: Multiply by 12 to compare with AGI (ensure they’re not the same)</label><br>
+      <label><input type="checkbox"> Housing: Rent or Mortgage?</label><br>
+        <label><input type="radio" name="Housing"> Mortgage → Does it include home insurance?</label><br>
+        <label><input type="radio" name="Housing"> Renting → Do you pay for renter’s insurance?</label><br>
+      <label><input type="checkbox"> Utilities: Water, electricity, gas, trash collection</label><br>
+      <label><input type="checkbox"> Auto Loans: Any car loan payments?</label><br>
+        <label><input type="radio" name="Housing"> No auto loan → Are you paying car insurance?</label><br>
+      <label><input type="checkbox"> Auto Other: Gas, maintenance, registration fees</label><br>
+      <label><input type="checkbox"> Communication Bills: Phone bill, internet, cable TV</label><br>
+      <label><input type="checkbox"> Food Expenses: Groceries, takeout, dining out</label><br>
+    </div>
+    <h3 style="text-align: left; font-weight: bold; color: #112663;">If by this point expenses haven’t reached 60% of income:</h3>
+    <div style="text-align: left; line-height: 1.8;">
+      <label><input type="checkbox"> Ask about medical care & life insurance bills</label><br>
+      <label><input type="checkbox"> Shopping & entertainment (clothes, subscriptions, gym, vacations, etc)</label><br>
+      <label><input type="checkbox"> If still not at 60%, start adding reasonable estimates to any category until it reaches 60%</label><br>
+    </div>
+    <h3 style="text-align: left; font-weight: bold; color: #112663;">Fill all the budget information on FORTH:</h3>
+    <div style="text-align: left; line-height: 1.8;">
+      <label><input type="checkbox"> Navigate to the <strong>Budget Analysis</strong> tab</label><br>
+      <label><input type="checkbox"> Fill the information</label><br>
+    </div>
+  </div>
+  <div class="button-grid grid-2">
+    <button class="button" onclick="showOnly('salesNotInterested')">Not Interested</button>
+    <button class="button" onclick="showOnly('salesHA')">Hardship Assessment</button>
+  </div>
+  <div class="button-grid" style="margin-top: 30px;">
+    <button class="button" style="width: 100%;" onclick="goBackToPrevious()">Back</button>
+  </div>
+</div>
+
+<div class="container section" id="salesHA">
+    <h2 style="text-align: center; font-weight: bold; color: #112663;">Hardship Assessment</h2>
+  <div style="background-color: #f9f1f1; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
+
+    <h3 style="text-align: left; font-weight: bold; color: #112663;">For Current Clients:</h3>
+<div style="background-color: #f2e3e3; padding: 20px 40px; border-radius: 10px; color: #112663; margin: 15px 0; text-align: left;">
+    <p style="text-align: left; color: #112663;">"(client’s name)- Based on your credit history, I do see that you are responsible, and you always make your payments on time, however, what happened that made you overextend your credit?"</p>
+</div>
+    <h3 style="text-align: left; font-weight: bold; color: #112663;">For Behind Clients:</h3>
+<div style="background-color: #f2e3e3; padding: 20px 40px; border-radius: 10px; color: #112663; margin: 15px 0; text-align: left;">
+    <p style="text-align: left; color: #112663;">"(client’s name)- Based on your credit history, I do see that you were responsible, and you used to make your payments on time, however, what happened that made you fall behind on these accounts?"</p>
+</div>
+    <h3 style="text-align: left; font-weight: bold; color: #112663;">Fill all the hardship information on FORTH:</h3>
+    <div style="text-align: left; line-height: 1.8;">
+      <label><input type="checkbox"> Navigate to the <strong>Edit Contact</strong> tab</label><br>
+      <label><input type="checkbox"> Navigate to the <strong>Hardship Information</strong> section</label><br>
+      <label><input type="checkbox"> Fill the the <strong>Hardship Description</strong></label><br>
+      <label><input type="checkbox"> Choose the <strong>Hardship Reason</strong></label><br>
+    </div>
+  </div>
+
+  <div class="button-grid grid-2">
+    <button class="button" onclick="showOnly('salesNotInterested')">Not Interested</button>
+    <button class="button" onclick="showOnly('salesHold')">Hold</button>
+  </div>
+  <div class="button-grid" style="margin-top: 30px;">
+    <button class="button" style="width: 100%;" onclick="goBackToPrevious()">Back</button>
+  </div>
+</div>
+
+<div class="container section" id="salesHold">
+    <h2 style="text-align: center; font-weight: bold; color: #112663;">Hold</h2>
+  <div style="background-color: #f9f1f1; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
+     <h3 style="text-align: left; font-weight: bold; color: #112663;">Inform the client that you will put them on hold:</h3>
+      <div style="background-color: #f2e3e3; padding: 20px 40px; border-radius: 10px; color: #112663; margin: 15px 0; text-align: left;">
+         <p style="text-align: left; color: #112663;">"(Client’s name), your application has been submitted to the review department. My head underwriter might have some questions for you, and (client’s name) if I can’t help you, I’ll make sure to point you in the right direction no matter what. This could take up to 5 minutes, so please bear with me."</p>
+      </div>
+     <h3 style="text-align: left; font-weight: bold; color: #112663;">While the client is on hold:</h3>
+       <div style="text-align: left; line-height: 1.8;">
+         <label><input type="checkbox"> Identify potential loan opportunities</label><br>
+         <label><input type="checkbox"> Gather key points to convince the client when pitching</label><br>
+         <label><input type="checkbox"> Perform any necessary calculations</label><br>
+<!-- Deny -->
+         <label><input type="checkbox"> Finalize the enrollment plan</label><br>
+         <label><input type="checkbox"> Create the FA</label><br>
+         <label><input type="checkbox"> Ensure the selected debts are accurate</label><br>
+<!-- Pitch -->
+       </div>
+  </div>
+</div>
+
 
 
 
