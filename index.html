@@ -125,6 +125,23 @@
     background-color: #44B2E5;
   }
 
+.dti-button {
+  margin-top: 10px;
+  width: 100%;
+  padding: 12px;
+  font-weight: bold;
+  background-color: #112663;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.dti-button:hover {
+  background-color: #44B2E5;
+  cursor: pointer;
+}
+
   .button-grid.grid-1 {
     display: flex;
     flex-direction: column;
@@ -4008,14 +4025,14 @@ If the file status is “Invalid Banking,” verify whether the current informat
       <!-- Text Section -->
       <div style="flex: 1; padding: 25px 40px; text-align: left; line-height: 1.6; min-width: 280px; display: flex; flex-direction: column; justify-content: center;">
 <h2 style="text-align: left; font-weight: bold; color: #112663; margin-top: 0; font-size: 32px;">Inbound Script:</h2>
-        <p style="color: #112663; margin: 0;text-align: left;">"Thank you for holding. Am I speaking with (clients name)?"</p>
-        <p style="color: #112663; margin: 10px 0;text-align: left;">"Hey (Client's name) my name is (Agent's alias) and this is a recorded line. I’m the financial consultant that’ll be assisting you today. How are you doing?"</p>
+        <p style="color: #112663; margin: 0;text-align: left;">"Thank you for holding. Am I speaking with (clients name)?"</p><br>
+        <p style="color: #112663; margin: 10px 0;text-align: left;">"Hey (Client's name) my name is (Agent's alias) and this is a recorded line. I’m the financial consultant that’ll be assisting you today. How are you doing?"</p><br>
         <p style="color: #112663; margin: 0;text-align: left;">"I see that you’re looking to borrow (loan amount) correct? What is your main goal, what are
-you trying to accomplish with the loan?"</p>
+you trying to accomplish with the loan?"</p><br>
 <p style="color: #112663; margin: 10px 0;text-align: left;">"We’ll begin by reviewing your credit report and we’ll go over some compliance questions as
 well as our budget analysis, to compare your monthly expenses versus your income, then at
 that point we’ll submit your application to the underwriting department to see what we can
-get you qualified for. "</p>
+get you qualified for."</p><br>
       </div>
 
       <!-- Image Section -->
@@ -4088,7 +4105,7 @@ get you qualified for. "</p>
         <label><input type="radio" name="Housing"> Renting → Do you pay for renter’s insurance?</label><br>
       <label><input type="checkbox"> Utilities: Water, electricity, gas, trash collection</label><br>
       <label><input type="checkbox"> Auto Loans: Any car loan payments?</label><br>
-        <label><input type="radio" name="Housing"> No auto loan → Are you paying car insurance?</label><br>
+        <label><input type="radio" name="Housing1"> No auto loan → Are you paying car insurance?</label><br>
       <label><input type="checkbox"> Auto Other: Gas, maintenance, registration fees</label><br>
       <label><input type="checkbox"> Communication Bills: Phone bill, internet, cable TV</label><br>
       <label><input type="checkbox"> Food Expenses: Groceries, takeout, dining out</label><br>
@@ -4151,19 +4168,497 @@ get you qualified for. "</p>
       <div style="background-color: #f2e3e3; padding: 20px 40px; border-radius: 10px; color: #112663; margin: 15px 0; text-align: left;">
          <p style="text-align: left; color: #112663;">"(Client’s name), your application has been submitted to the review department. My head underwriter might have some questions for you, and (client’s name) if I can’t help you, I’ll make sure to point you in the right direction no matter what. This could take up to 5 minutes, so please bear with me."</p>
       </div>
-     <h3 style="text-align: left; font-weight: bold; color: #112663;">While the client is on hold:</h3>
-       <div style="text-align: left; line-height: 1.8;">
-         <label><input type="checkbox"> Identify potential loan opportunities</label><br>
-         <label><input type="checkbox"> Gather key points to convince the client when pitching</label><br>
-         <label><input type="checkbox"> Perform any necessary calculations</label><br>
-<!-- Deny -->
-         <label><input type="checkbox"> Finalize the enrollment plan</label><br>
-         <label><input type="checkbox"> Create the FA</label><br>
-         <label><input type="checkbox"> Ensure the selected debts are accurate</label><br>
-<!-- Pitch -->
-       </div>
+  </div>
+  <div class="button-grid grid-2">
+    <button class="button" onclick="showOnly('salesNotInterested')">Not Interested</button>
+    <button class="button" onclick="showOnly('salesHold2')">Loan Opportunities</button>
+  </div>
+  <div class="button-grid" style="margin-top: 30px;">
+    <button class="button" style="width: 100%;" onclick="goBackToPrevious()">Back</button>
   </div>
 </div>
+
+<div class="container section" id="salesHold2">
+    <h2 style="text-align: center; font-weight: bold; color: #112663;">Loan Opportunities</h2>
+  <div style="background-color: #f9f1f1; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
+    <div style="text-align: left; line-height: 1.8;">
+      <label><input type="checkbox"> Navigate to the <strong>EVVO</strong> website</label><br>
+      <label><input type="checkbox"> Click <strong>SECURE LOGIN</strong> on the top right of the page</label><br>
+      <label><input type="checkbox"> Enter your <strong>Email & Password</strong></label><br>
+      <label><input type="checkbox"> Click the <strong>New Application</strong> button</label><br>
+      <label><input type="checkbox"> Disclosure of Terms <strong>Checkbox for Consent</strong></label><br>
+      <label><input type="checkbox"> Social Security Number</label><br>
+      <label><input type="checkbox"> Loan Amount</label><br>
+      <label><input type="checkbox"> Annual Income</label><br>
+      <label><input type="checkbox"> Click the blue button <strong>Verify</strong> on the bottom of the page</label><br>
+    </div>
+  </div>
+  <div class="button-grid grid-2">
+    <button class="button" onclick="showOnly('salesNotInterested')">Not Interested</button>
+    <button class="button" onclick="showOnly('salesHold3')">Client's Consent</button>
+  </div>
+  <div class="button-grid" style="margin-top: 30px;">
+    <button class="button" style="width: 100%;" onclick="goBackToPrevious()">Back</button>
+  </div>
+</div>
+
+<div class="container section" id="salesHold3">
+    <h2 style="text-align: center; font-weight: bold; color: #112663;">Client's Consent</h2>
+  <div style="background-color: #f9f1f1; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
+    <p style="text-align: left; color: #112663;">After clicking the <strong>VERIFY</strong> button, a window will appear informing the customer of their one-time consent.</p>
+    <div style="text-align: left; line-height: 1.8;">
+      <label><input type="checkbox"> Ask the client for <strong>consent</strong></label><br>
+      <label><input type="checkbox"> Click <strong>YES</strong></label><br>
+      <label><input type="checkbox"> Confirm how the client wants to receive consent</label><br>
+        <label><input type="radio" name="Consent1"> Email</label><br>
+        <label><input type="radio" name="Consent1"> Phone number</label><br>
+      <label><input type="checkbox"> Click <strong>SEND</strong></label><br>
+      <label><input type="checkbox"> Click the blue <strong>NEXT</strong> button</label><br>
+      <label><input type="checkbox"> Confirm if the client has read the <strong>Terms & Conditions</strong></label><br>
+      <label><input type="checkbox"> Click the blue <strong>AGREE TO TERMS</strong> button</label><br>
+    </div>
+  </div>
+  <div class="button-grid grid-2">
+    <button class="button" onclick="showOnly('salesNotInterested')">Not Interested</button>
+    <button class="button" onclick="showOnly('salesHold4')">Application Results</button>
+  </div>
+  <div class="button-grid" style="margin-top: 30px;">
+    <button class="button" style="width: 100%;" onclick="goBackToPrevious()">Back</button>
+  </div>
+</div> 
+
+<div class="container section" id="salesHold4">
+    <h2 style="text-align: center; font-weight: bold; color: #112663;">Application Results</h2>
+  <div style="background-color: #f9f1f1; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
+    <h3 style="text-align: left; font-weight: bold; color: #112663;">If client receives offers:</h3>
+<div style="background-color: #f2e3e3; padding: 20px 40px; border-radius: 10px; color: #112663; margin: 15px 0; text-align: left;">
+    <p style="text-align: left; color: #112663;">If the client does receive offers the preapprovals will be listed. You will have the ability to choose which lenders you would like to send to the client by checking the boxes on the left-hand side then hit the blue <strong>CONTINUE</strong> button to move forward, then verify the client's email then click send</p>
+</div>
+    <h3 style="text-align: left; font-weight: bold; color: #112663;">If client does NOT receive any offers:</h3>
+<div style="background-color: #f2e3e3; padding: 20px 40px; border-radius: 10px; color: #112663; margin: 15px 0; text-align: left;">
+    <p style="text-align: left; color: #112663;">If the client does not receive any offers the screen will show N/A. You will have the ability to choose which lenders you would like to send to the client by checking the boxes on the left-hand side then hit the blue <strong>CONTINUE</strong> button to move forward, then verify the client's email then click send</p>
+</div>
+  </div>
+  <div class="button-grid grid-2">
+    <button class="button" onclick="showOnly('salesNotInterested')">Not Interested</button>
+    <button class="button" onclick="showOnly('salesHold5')">Key points to convince the client</button>
+  </div>
+  <div class="button-grid" style="margin-top: 30px;">
+    <button class="button" style="width: 100%;" onclick="goBackToPrevious()">Back</button>
+  </div>
+</div>
+
+<div class="container section" id="salesHold5">
+    <h2 style="text-align: center; font-weight: bold; color: #112663;">Client-Focused Advantages</h2>
+  <div style="background-color: #f9f1f1; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
+    <h3 style="text-align: left; font-weight: bold; color: #112663;">Gather key points to convince the client when pitching:</h3>
+
+    <div style="text-align: left; line-height: 1.8;">
+      <label><input type="checkbox"> Look for selling points through the Credit Report</label><br>
+      <label><input type="checkbox"> Assess the client’s monthly savings</label><br>
+      <label><input type="checkbox"> Point out how much the program will cut down on fees and costs</label><br>
+    </div>
+  </div>
+
+  <div class="button-grid grid-2">
+    <button class="button" onclick="showOnly('salesNotInterested')">Not Interested</button>
+    <button class="button" onclick="showOnly('salesDTI')">Debt to Income Ratio</button>
+  </div>
+  <div class="button-grid" style="margin-top: 30px;">
+    <button class="button" style="width: 100%;" onclick="goBackToPrevious()">Back</button>
+  </div>
+</div>
+
+
+<div class="container section" id="salesDTI" style="width: 100%; font-family: 'Inter', sans-serif;">
+  <h2 style="text-align: center; font-weight: bold; color: #112663;">Debt-to-Income Ratio Calculator</h2>
+
+  <div style="background-color: #f9f1f1; padding: 25px 40px; border-radius: 20px; color: #112663; width: 100%; margin: 20px auto; box-sizing: border-box;">
+    <div>
+      <label>Total Monthly Debt Payments ($):<br>
+        <input type="number" id="totalDebt" placeholder="e.g. 2500" style="width: 100%; padding: 10px; margin-top: 5px; border-radius: 20px; border: 1px solid #ccc;" />
+      </label><br><br>
+
+      <label>Gross Monthly Income ($):<br>
+        <input type="number" id="grossIncome" placeholder="e.g. 5000" style="width: 100%; padding: 10px; margin-top: 5px; border-radius: 20px; border: 1px solid #ccc;" />
+      </label><br><br>
+
+      <button onclick="calculateDTI()" class="dti-button">Calculate DTI</button>
+    </div>
+
+<div id="dtiResult" style="margin-top: 30px; padding: 20px; background-color: #f2e3e3; border-radius: 20px; display: none; color: #112663; text-align: center;">
+  <div style="display: inline-flex; align-items: baseline; gap: 10px;">
+    <h3 style="color: #112663; margin: 0;">Result:</h3>
+    <p id="dtiOutput" style="font-size: 18px; font-weight: bold; margin: 0; color: #112663;"></p>
+  </div>
+  <p id="dtiMessage" style="font-weight: bold; margin-top: 15px; color: #112663;"></p>
+</div>
+  </div>
+
+  <div class="button-grid grid-2" style="margin-top: 30px;">
+    <button class="button" onclick="showOnly('salesNotInterested')">Not Interested</button>
+    <button class="button" onclick="showOnly('salesDeny')">Deny</button>
+  </div>
+
+  <div class="button-grid" style="margin-top: 30px;">
+    <button class="button" style="width: 100%;" onclick="goBackToPrevious()">Back</button>
+  </div>
+</div>
+
+<div class="container section" id="salesDeny">
+    <h2 style="text-align: center; font-weight: bold; color: #112663;">Deny</h2>
+  <div style="background-color: #f9f1f1; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
+     <h3 style="text-align: left; font-weight: bold; color: #112663;">Take the client off hold and say:</h3>
+      <div style="background-color: #f2e3e3; padding: 20px 40px; border-radius: 10px; color: #112663; margin: 15px 0; text-align: left;">
+         <p style="text-align: left; color: #112663;">"Thank you for your patience, Sir/Ma’am. I received your file back from the review department, and I do have a couple of updates. Do you have a pen and paper handy by any chance? Great. My name is (FULL AGENT NAME), and I am the account manager assigned to your file. The direct line that you can always reach me at is (Agent's number), and the file number that is assigned to your case is (provide file ID#)."</p>
+      </div>
+  </div>
+  <div class="button-grid grid-3">
+    <button class="button" onclick="showOnly('salesNotInterested')">Not Interested</button>
+    <button class="button" onclick="showOnly('salesDeny2')">EVVO Offers</button>
+    <button class="button" onclick="showOnly('salesDeny3')">No EVVO Offers</button>
+  </div>
+  <div class="button-grid-back">
+    <button class="back-button" onclick="goBackToPrevious()">Back</button>
+  </div>
+</div>
+
+
+
+<div class="container section" id="salesDeny2">
+    <h2 style="text-align: center; font-weight: bold; color: #112663;">EVVO Offers</h2>
+  <div style="background-color: #f9f1f1; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
+    <p style="text-align: left; color: #112663;">Now, do you have access to the email address you provided earlier?
+I’ve sent you the results from our lending partners that reviewed your application and
+determined what you’re eligible for, let me know when you have it open.</p>
+  </div>
+  <div class="button-grid grid-3">
+    <button class="button" onclick="showOnly('salesNotInterested')">Not Interested</button>
+    <button class="button" onclick="showOnly('salesDeny4')">Good FICO (650+)</button>
+    <button class="button" onclick="showOnly('salesDeny5')">Bad FICO (less than 650)</button>
+  </div>
+  <div class="button-grid-back">
+    <button class="back-button" onclick="goBackToPrevious()">Back</button>
+  </div>
+</div>
+
+
+
+<div class="container section" id="salesDeny3">
+  <h2 style="text-align: center; font-weight: bold; color: #112663;">No EVVO Offers</h2>
+  <div style="background-color: #f9f1f1; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
+    <div style="background-color: #f2e3e3; padding: 20px 40px; border-radius: 10px; color: #112663; margin: 15px 0; text-align: left;">
+      <p style="text-align: left; color: #112663;">"My department is the one that reviews your file and determines what you’re eligible for. Now (Client's Name), I want to talk with you about your credit worthiness."</p>
+    </div>
+  </div>
+  <div class="button-grid grid-3">
+    <button class="button" onclick="showOnly('salesNotInterested')">Not Interested</button>
+    <button class="button" onclick="showOnly('salesDeny4')">Good FICO (650+)</button>
+    <button class="button" onclick="showOnly('salesDeny5')">Bad FICO (less than 650)</button>
+  </div>
+  <div class="button-grid-back">
+    <button class="back-button" onclick="goBackToPrevious()">Back</button>
+  </div>
+</div>
+
+
+
+
+<div class="container section" id="salesDeny4">
+  <h2 style="text-align: center; font-weight: bold; color: #112663;">Good FICO Score</h2>
+  <div style="background-color: #f9f1f1; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
+
+"The first component that drives your credit profile is your FICO, and your FICO is good! This is not the problem"<br>
+
+"Now, the second component that drives your credit profile is the debt-to-income ratio. This is a fancy way of saying how much of your income goes to your credit report. Right now, (__%) of your income goes to your credit report each month, and that’s what the problem is because…. What a Lender looks at is if you can pay them back, and when so much of the income is gone on paper, it becomes hard everywhere you apply."<br><br><strong>(OR ANY OTHER ISSUES CAUSING FICO TO REDUCE, YOU ARE NOT LIMITED TO THESE VARIABLES)</strong><br><br>
+
+Unfortunately, at this moment there were no lending options available. Does that make sense so far? 
+
+  </div>
+  <div class="button-grid grid-2" style="margin-top: 30px;">
+    <button class="button" onclick="showOnly('salesNotInterested')">Not Interested</button>
+    <button class="button" onclick="showOnly('salesPitch')">Pitch</button>
+  </div>
+
+  <div class="button-grid" style="margin-top: 30px;">
+    <button class="button" style="width: 100%;" onclick="goBackToPrevious()">Back</button>
+  </div>
+</div>
+
+
+<div class="container section" id="salesDeny5">
+  <h2 style="text-align: center; font-weight: bold; color: #112663;">Bad FICO Score</h2>
+  <div style="background-color: #f9f1f1; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
+"The first component that drives your credit profile is your FICO. You know what that is. Have you been making your payments on time, have you maxed out your credit cards, and how much have you borrowed versus what you’ve paid down? Obviously, you’re responsible and make your payments on time, but some problems I see on your Credit Report are:<br>
+
+• You have late payments with____ account<br>
+
+• Your revolving credit line ratio is at____%<br>
+
+• You have accounts under collections<br><br>
+
+"Now, the second component that drives your credit profile is the debt-to-income ratio. This is a fancy way of saying how much of your income goes to your credit report. Right now, (__%) of your income goes to your credit report each month, and that’s what the problem is because…. What a Lender looks at is if you can pay them back, and when so much of the income is gone on paper, it becomes hard everywhere you apply."<br><br><strong>(OR ANY OTHER ISSUES CAUSING FICO TO REDUCE, YOU ARE NOT LIMITED TO THESE VARIABLES)</strong><br><br>
+
+Unfortunately, at this moment there were no lending options available. Does that make sense so far? 
+
+  </div>
+  <div class="button-grid grid-2" style="margin-top: 30px;">
+    <button class="button" onclick="showOnly('salesNotInterested')">Not Interested</button>
+    <button class="button" onclick="showOnly('salesPitch')">Pitch</button>
+  </div>
+  <div class="button-grid" style="margin-top: 30px;">
+    <button class="button" style="width: 100%;" onclick="goBackToPrevious()">Back</button>
+  </div>
+</div>
+
+
+<div class="container section" id="salesPitch">
+  <h2 style="text-align: center; font-weight: bold; color: #112663;">Pitch</h2>
+  <div class="button-grid grid-3">
+    <button class="button" onclick="showOnly('salesPitch1')">Current Clients</button>
+    <button class="button" onclick="showOnly('salesPitch2')">Behind Clients</button>
+    <button class="button" onclick="showOnly('salesPitch3')">Competitors</button>
+  </div>
+  <div class="button-grid-back">
+    <button class="back-button" onclick="goBackToPrevious()">Back</button>
+  </div>
+</div>
+
+
+<div class="container section" id="salesPitch1">
+  <h2 style="text-align: center; font-weight: bold; color: #112663;">Pitch</h2>
+  <div style="background-color: #f9f1f1; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
+
+"Well, (CLIENT’S NAME) we do have a second update on your file."<br><br>
+
+"Look, I see what the problem is, you’ve been maintaining these high interest payments for a while now and barely seeing the balances get reduced."<br><br>
+
+"Altogether you owe ($Balance) in debt, and each month you pay _____$ in minimum payments towards these accounts and other expenses…"<br><br>
+
+"Let me ask you this: If I were able to help you rectify and fix your financial situation by saving you ______$ a month and ______$ a year, on top of that get all of these accounts paid off all the way down to zero balance, at a monthly payment of ______$"<br><br>
+
+"Would that help you?"<br>
+
+  </div>
+  <div class="button-grid grid-2" style="margin-top: 30px;">
+    <button class="button" onclick="showOnly('salesNotInterested')">No</button>
+    <button class="button" onclick="showOnly('salesPitch11')">Yes</button>
+  </div>
+  <div class="button-grid" style="margin-top: 30px;">
+    <button class="button" style="width: 100%;" onclick="goBackToPrevious()">Back</button>
+  </div>
+</div>
+
+<div class="container section" id="salesPitch11">
+  <div style="background-color: #f9f1f1; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
+
+"(Client’s name) based on the financial analysis, I can see that our underwriting department managed to get you qualified for a monthly payment of___$ to get all these accounts paid off within a term of ___ months or less."<br><br>
+
+"You were approved for a debt resolution program, and the way the program works is that once a month you’ll have a payment debited from your checking account and deposited into your FDIC insured escrow account, which is a savings account that we open in your name to pay off the debts that you owe."<br><br>
+
+"The reason we say (month length) months or less is because there are no prepayment penalties because it’s not a loan, meaning that if you had a raise or some extra funds laying around and you decided to make extra payments, you can definitely do so, that will get you out of debt even sooner!"<br><br>
+
+There aren’t any upfront fees, all fees are included in your monthly payment, which also includes the (15%/25%/27.5%/29%) negotiation fee, and it’s a fixed fee based on your debt amount that doesn’t change like a compound interest rate would.<br><br>
+
+"We work with all your creditors, since we already have pre-established relationships with them where it’ll make this process seamless."<br><br>
+
+"Ultimately (clients name), all you pay is _____$ for approximately _____ months or less. Does that make sense?" <br><br>
+
+  </div>
+  <div class="button-grid grid-2" style="margin-top: 30px;">
+    <button class="button" onclick="showOnly('salesNotInterested')">No</button>
+    <button class="button" onclick="showOnly('salesFA')">Financial Analysis</button>
+  </div>
+  <div class="button-grid" style="margin-top: 30px;">
+    <button class="button" style="width: 100%;" onclick="goBackToPrevious()">Back</button>
+  </div>
+</div> 
+
+<div class="container section" id="salesPitch2">
+  <h2 style="text-align: center; font-weight: bold; color: #112663;">Pitch</h2>
+  <div style="background-color: #f9f1f1; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
+
+"Well, (CLIENT’S NAME) we do have a second update on your file."<br><br>
+
+"I can see that you’ve been making your minimum payments, but it’s tough when you’re dealing with high-interest rates and some accounts are behind. It’s like you’re caught in a cycle that doesn’t let you make much progress."<br><br>
+
+"You currently owe ($Balance) in total debt, and each month you’re paying _____$ in minimum payments towards your accounts and other expenses."<br><br>
+
+"Now, imagine if I could help you lower your monthly payments by ______$ and save you______$ annually. On top of that, I can help you pay off everything down to zero with a new, manageable monthly payment of ______$."<br><br>
+
+"Would that help you?"<br>
+
+  </div>
+  <div class="button-grid grid-2" style="margin-top: 30px;">
+    <button class="button" onclick="showOnly('salesNotInterested')">No</button>
+    <button class="button" onclick="showOnly('salesPitch21')">Yes</button>
+  </div>
+  <div class="button-grid" style="margin-top: 30px;">
+    <button class="button" style="width: 100%;" onclick="goBackToPrevious()">Back</button>
+  </div>
+</div>
+
+<div class="container section" id="salesPitch21">
+  <div style="background-color: #f9f1f1; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
+
+"(Client’s name) based on the financial analysis, I can see that our underwriting department managed to get you qualified for a monthly payment of___$ to get all these accounts paid off within a term of ___ months or less."<br><br>
+
+"You were approved for a debt resolution program, and the way the program works is that once a month you’ll have a payment debited from your checking account and deposited into your FDIC insured escrow account, which is a savings account that we open in your name to pay off the debts that you owe."<br><br>
+
+"The reason we say (month length) months or less is because there are no prepayment penalties because it’s not a loan, meaning that if you had a raise or some extra funds laying around and you decided to make extra payments, you can definitely do so, that will get you out of debt even sooner!"<br><br>
+
+"There aren’t any upfront fees, all fees are included in your monthly payment, which also includes the (15%/25%/27.5%/29%) negotiation fee, and it’s a fixed fee based on your debt amount that doesn’t change like a compound interest rate would."<br><br>
+"We work with all your creditors, since we already have pre-established relationships with them where it’ll make this process seamless."<br><br>
+
+"Ultimately (clients name), all you pay is _____$ for approximately _____ months or less. Does that make sense?"<br><br>
+  </div>
+  <div class="button-grid grid-2" style="margin-top: 30px;">
+    <button class="button" onclick="showOnly('salesNotInterested')">No</button>
+    <button class="button" onclick="showOnly('salesFA')">Financial Analysis</button>
+  </div>
+  <div class="button-grid" style="margin-top: 30px;">
+    <button class="button" style="width: 100%;" onclick="goBackToPrevious()">Back</button>
+  </div>
+</div> 
+
+
+
+<div class="container section" id="salesPitch3">
+  <h2 style="text-align: center; font-weight: bold; color: #112663;">Pitch</h2>
+    <div style="background-color: #f2e3e3; padding: 20px 40px; border-radius: 10px; color: #112663; margin: 15px 0; text-align: left;">
+
+"Well, (CLIENT’S NAME) we do have a second update on your file."<br><br>
+
+"So, each month you pay exactly $____ to (competitor name) and I can barely see any improvement on your credit profile."<br><br>
+
+"Let me ask you this; If I can take care of all these accounts the right way, at a lower payment of $_____, and possibly get you a refund of what you’ve been paying them, which would solve your immediate needs"<br><br>
+
+"Would that help you?"<br>
+
+  </div>
+  <div class="button-grid grid-2" style="margin-top: 30px;">
+    <button class="button" onclick="showOnly('salesNotInterested')">No</button>
+    <button class="button" onclick="showOnly('salesPitch31')">Yes</button>
+  </div>
+  <div class="button-grid" style="margin-top: 30px;">
+    <button class="button" style="width: 100%;" onclick="goBackToPrevious()">Back</button>
+  </div>
+</div>
+
+<div class="container section" id="salesPitch31">
+  <div style="background-color: #f9f1f1; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
+
+"(Client’s name) based on the financial analysis, I can see that our underwriting department managed to get you qualified for a monthly payment of___$ to get all these accounts paid off within a term of ___ months or less."<br><br>
+"You were approved for a debt resolution program, and the way the program works is that once a month you’ll have a payment debited from your checking account and deposited into your FDIC insured escrow account, which is a savings account that we open in your name to pay off the debts that you owe."<br><br>
+
+"The reason we say (month length) months or less is because there are no prepayment penalties because it’s not a loan, meaning that if you had a raise or some extra funds laying around and you decided to make extra payments, you can definitely do so, that will get you out of debt even sooner!"<br><br>
+
+"There aren’t any upfront fees, all fees are included in your monthly payment, which also includes the (25%/27.5%/29%) negotiation fee, and it’s a fixed fee based on your debt amount that doesn’t change like a compound interest rate would."<br><br>
+
+"We work with all your creditors, since we already have pre-established relationships with them where it’ll make this process seamless."<br><br>
+
+"Ultimately, (clients name), all you pay is _____$ for approximately _____ months or less. Does that make sense?"<br><br>
+
+  </div>
+  <div class="button-grid grid-2" style="margin-top: 30px;">
+    <button class="button" onclick="showOnly('salesNotInterested')">No</button>
+    <button class="button" onclick="showOnly('salesFA')">Financial Analysis</button>
+  </div>
+  <div class="button-grid" style="margin-top: 30px;">
+    <button class="button" style="width: 100%;" onclick="goBackToPrevious()">Back</button>
+  </div>
+</div> 
+
+
+<div class="container section" id="salesFA">
+    <h2 style="text-align: center; font-weight: bold; color: #112663;">Payment Prep</h2>
+  <div style="background-color: #f9f1f1; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
+    <h3 style=" text-align: left; color: #112663; margin: 0;">Sending Financial Analysis:</h3>
+    <div style="text-align: left; line-height: 1.8;">
+      <label><input type="checkbox"> Sign in Webhook</label><br>
+      <label><input type="checkbox"> Click on the sales tab</label><br>
+      <label><input type="checkbox"> Insert the contact ID</label><br>
+      <label><input type="checkbox"> FA is generated, simply click on “Send Email to Contact”</label><br>
+    </div>
+  </div>
+  <div class="button-grid grid-2" style="margin-top: 30px;">
+    <button class="button" onclick="showOnly('salesNotInterested')">No</button>
+    <button class="button" onclick="showOnly('salesPD')">Payment Dates</button>
+  </div>
+  <div class="button-grid" style="margin-top: 30px;">
+    <button class="button" style="width: 100%;" onclick="goBackToPrevious()">Back</button>
+  </div>
+</div>
+
+
+<div class="container section" id="salesPD">
+    <h2 style="text-align: center; font-weight: bold; color: #112663;">Payment Prep</h2>
+  <div style="background-color: #f9f1f1; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
+    <h3 style="text-align: left; color: #112663; margin: 0;">Adjusting Payment Dates:</h3>
+      <div style="background-color: #f2e3e3; padding: 20px 40px; border-radius: 10px; color: #112663; margin: 15px 0; text-align: left;">
+
+"Before we finalize the agreement and send you the enrollment documents, we’ll go ahead and set up the payment dates for your monthly deposit of ($ amount). When do you get paid each month?"<br><br>
+
+"I am going to schedule your payment for this Friday and recurring on the (Recurring Day) of each month. How does that sound?"<br><br>
+
+"It will always be on the same date, unless it is a public holiday or weekend, it will be pushed for the next business day and never the one before."<br><br>
+
+      </div>
+    <div style="text-align: left; line-height: 1.8;">
+      <label><input type="checkbox"> Navigate to the <strong>Enrollment</strong> tab</label><br>
+      <label><input type="checkbox"> Click on <strong>Edit Enrollment Plan</strong></label><br>
+      <label><input type="checkbox"> Click on <strong>Select Plan Account</strong> and change it from <strong>Lendify</strong> to <strong>Clarity Debt Resolution</strong></label><br>
+      <label><input type="checkbox"> Choose a base plan</label><br>
+      <label><input type="checkbox"> Edit the program length</label><br>
+      <label><input type="checkbox"> Select payment dates from the bottom left corner of the same page and set the recurring payment date for the following month</label><br>
+      <label><input type="checkbox"> Click on <strong>Save Enrollment Plan</strong></label><br>
+    </div>
+
+  </div>
+  <div class="button-grid grid-2" style="margin-top: 30px;">
+    <button class="button" onclick="showOnly('salesNotInterested')">No</button>
+    <button class="button" onclick="showOnly('salesBI')">Banking Information</button>
+  </div>
+  <div class="button-grid" style="margin-top: 30px;">
+    <button class="button" style="width: 100%;" onclick="goBackToPrevious()">Back</button>
+  </div>
+</div>
+
+
+<div class="container section" id="salesBI">
+    <h2 style="text-align: center; font-weight: bold; color: #112663;">Payment Prep</h2>
+  <div style="background-color: #f9f1f1; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
+    <h3 style="color: #112663; margin: 0;">Collecting Banking Information:</h3>
+      <div style="background-color: #f2e3e3; padding: 20px 40px; border-radius: 10px; color: #112663; margin: 15px 0; text-align: left;">
+"Now go ahead and provide me with the routing and account number you will be using for the monthly program payment deposits, so we can get it plugged into the agreement."
+      </div>
+    <div style="text-align: left; line-height: 1.8;">
+      <label><input type="checkbox"> Navigate to <strong>Bank Account</strong> tab</label><br>
+      <label><input type="checkbox"> Fill the information on <strong>FORTH</strong></label><br>
+      <label><input type="checkbox"> Make sure to select <strong>Save Enrollment Plan</strong></label><br>
+      <label><input type="checkbox"> Verify if it’s a checking or savings account</label><br>
+      <label><input type="checkbox"> Enter the <strong>routing number</strong></label><br>
+      <label><input type="checkbox"> Enter the <strong>the account number</strong></label><br>
+      <label><input type="checkbox"> Click on <strong>Save Bank</strong></label><br>
+    </div>
+  </div>
+  <div class="button-grid grid-2" style="margin-top: 30px;">
+    <button class="button" onclick="showOnly('salesNotInterested')">No</button>
+    <button class="button" onclick="showOnly('salesContract')">Contract</button>
+  </div>
+  <div class="button-grid" style="margin-top: 30px;">
+    <button class="button" style="width: 100%;" onclick="goBackToPrevious()">Back</button>
+  </div>
+</div>
+
+<div class="container section" id="salesContract">
+
+
+</div>
+
+
+
+
 
 
 
@@ -4694,6 +5189,33 @@ function searchTable() {
     row.style.display = text.includes(input) ? "" : "none";
   });
 }
+
+  function calculateDTI() {
+    const debt = parseFloat(document.getElementById('totalDebt').value);
+    const income = parseFloat(document.getElementById('grossIncome').value);
+
+    if (!debt || !income || income <= 0) {
+      alert("Please enter valid numeric values for both fields.");
+      return;
+    }
+
+    const ratio = (debt / income) * 100;
+    const rounded = ratio.toFixed(2);
+
+    let message = "";
+    if (ratio <= 36) {
+      message = "Good! The DTI ratio is within a healthy range.";
+    } else if (ratio <= 40) {
+      message = "Caution. The DTI is borderline.";
+    } else {
+      message = "High DTI. The client may be overextended.";
+    }
+
+    document.getElementById('dtiResult').style.display = 'block';
+    document.getElementById('dtiOutput').innerText = `DTI Ratio: ${rounded}%`;
+    document.getElementById('dtiMessage').innerText = message;
+  }
+
 
 </script>
 </body>
