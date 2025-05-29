@@ -4389,7 +4389,7 @@ Unfortunately, at this moment there were no lending options available. Does that
 <div class="container section" id="salesDeny5">
   <h2 style="text-align: center; font-weight: bold; color: #112663;">Bad FICO Score</h2>
   <div style="background-color: #f9f1f1; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
-"The first component that drives your credit profile is your FICO. You know what that is. Have you been making your payments on time, have you maxed out your credit cards, and how much have you borrowed versus what you’ve paid down? Obviously, you’re responsible and make your payments on time, but some problems I see on your Credit Report are:<br>
+"The first component that drives your credit profile is your FICO. You know what that is. Have you been making your payments on time, have you maxed out your credit cards, and how much have you borrowed versus what you’ve paid down? Obviously, you’re responsible and make your payments on time, but some problems I see on your Credit Report are:<br><br>
 
 • You have late payments with____ account<br>
 
@@ -4578,7 +4578,7 @@ There aren’t any upfront fees, all fees are included in your monthly payment, 
       <label><input type="checkbox"> Sign in Webhook</label><br>
       <label><input type="checkbox"> Click on the sales tab</label><br>
       <label><input type="checkbox"> Insert the contact ID</label><br>
-      <label><input type="checkbox"> FA is generated, simply click on “Send Email to Contact”</label><br>
+      <label><input type="checkbox"> FA is generated, simply click on <strong>Send Email to Contact</strong></label><br>
     </div>
   </div>
   <div class="button-grid grid-2" style="margin-top: 30px;">
@@ -4628,7 +4628,7 @@ There aren’t any upfront fees, all fees are included in your monthly payment, 
 <div class="container section" id="salesBI">
     <h2 style="text-align: center; font-weight: bold; color: #112663;">Payment Prep</h2>
   <div style="background-color: #f9f1f1; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
-    <h3 style="color: #112663; margin: 0;">Collecting Banking Information:</h3>
+    <h3 style="color: #112663; margin: 0; text-align: left;">Collecting Banking Information:</h3>
       <div style="background-color: #f2e3e3; padding: 20px 40px; border-radius: 10px; color: #112663; margin: 15px 0; text-align: left;">
 "Now go ahead and provide me with the routing and account number you will be using for the monthly program payment deposits, so we can get it plugged into the agreement."
       </div>
@@ -4652,10 +4652,202 @@ There aren’t any upfront fees, all fees are included in your monthly payment, 
 </div>
 
 <div class="container section" id="salesContract">
-
-
+    <h2 style="text-align: center; font-weight: bold; color: #112663;">Contract</h2>
+  <div style="background-color: #f9f1f1; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
+    <h3 style="color: #112663; margin: 0; text-align: left;">Signing the Contract:</h3>
+    <div style="text-align: left; line-height: 1.8;">
+      <label><input type="checkbox"> Navigate to the <strong>Docs</strong> tab</label><br>
+      <label><input type="checkbox"> Click on <strong>Generate Documents</strong></label><br>
+      <label><input type="checkbox"> Select the package to use <strong>the contract</strong> depending on the client’s state</label><br>
+      <label><input type="checkbox"> Change the signer type to <strong>Contact</strong></label><br>
+      <label><input type="checkbox"> Send it for signature</label><br>
+      <label><input type="checkbox"> Guide the client on how to sign it</label><br>
+    </div>
+  </div>
+  <div class="button-grid grid-2" style="margin-top: 30px;">
+    <button class="button" onclick="showOnly('salesNotInterested')">No</button>
+    <button class="button" onclick="showOnly('salesContract1')">Contract Script</button>
+  </div>
+  <div class="button-grid" style="margin-top: 30px;">
+    <button class="button" style="width: 100%;" onclick="goBackToPrevious()">Back</button>
+  </div>
 </div>
 
+
+
+<div class="container section" id="salesContract1">
+    <h2 style="text-align: center; font-weight: bold; color: #112663;">Contract</h2>
+  <div style="background-color: #f9f1f1; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
+    <h3 style="color: #112663; margin: 0; text-align: left;">Guiding the client on how to sign it:</h3>
+      <div style="background-color: #f2e3e3; padding: 20px 40px; border-radius: 10px; color: #112663; margin: 15px 0; text-align: left;">
+
+"Ok, you’re going to see an email titled: <strong>(Customer Name) – Congratulations! Your document is ready for signature!</strong> Please open that email."<br><br>
+
+"<strong>Step 1:</strong> Click where it says “Review & Sign Now” in light blue writing in the middle of the email"<br>
+
+"<strong>Step 2:</strong> Click the checkbox where it says you agree to completing your agreement electronically"<br>
+
+"<strong>Step 3:</strong> Please click the button in Green that says <strong>Begin Signing</strong>"<br>
+
+"<strong>Step 4:</strong> Once you click on one of the initials on the left, it will ask you to adopt an initial and signature"<br><br>
+
+"Draw signature and initials, then click “Adopt & Confirm Signature”'<br><br>
+
+"After drawing the signature and initials, the client must click on each box that says <strong>SIGN HERE/INITIAL HERE</strong> marked in DARK RED."<br><br>
+
+"Once you have completed the Initials and Signature fields, go to the bottom of the page and click the <strong>Finish Document</strong> button."<br><br>
+
+"When the process is complete, the system displays the <strong>Signature Package Completed</strong> window."<br><br>
+
+      </div>
+  </div>
+  <div class="button-grid grid-2" style="margin-top: 30px;">
+    <button class="button" onclick="showOnly('salesNotInterested')">No</button>
+    <button class="button" onclick="showOnly('salesQA')">QA Prep</button>
+  </div>
+  <div class="button-grid" style="margin-top: 30px;">
+    <button class="button" style="width: 100%;" onclick="goBackToPrevious()">Back</button>
+  </div>
+</div>
+
+<div class="container section" id="salesQA">
+    <h2 style="text-align: center; font-weight: bold; color: #112663;">QA prep</h2>
+  <div style="background-color: #f9f1f1; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
+      <div style="background-color: #f2e3e3; padding: 20px 40px; border-radius: 10px; color: #112663; margin: 15px 0; text-align: left;">
+
+"There is one last step that we need to go over and then I’ll be transferring you over to the enrollment call."<br><br>
+
+"We’re going to review a couple of things to make sure you have a complete understanding of the program and there’s complete transparency on my end."<br><br>
+
+"You understand that there will be an impact on your credit worthiness and that is COMPLETELY normal, especially in the beginning as your accounts close and we don’t pay them right away while we are in the process of reaching the new terms for your settlement."<br><br>
+
+"Now what I tell my clients in your situation is that you credit is unusable right now, and right now it’s that you can’t borrow money because your credit is overextended, and you’re stuck with high interest payments where the balances barely get reduced with minimum monthly payments."<br>
+      </div>
+  </div>
+  <div class="button-grid grid-2" style="margin-top: 30px;">
+    <button class="button" onclick="showOnly('salesNotInterested')">No</button>
+    <button class="button" onclick="showOnly('salesQA1')">QA Prep</button>
+  </div>
+  <div class="button-grid" style="margin-top: 30px;">
+    <button class="button" style="width: 100%;" onclick="goBackToPrevious()">Back</button>
+  </div>
+</div>
+
+<div class="container section" id="salesQA1">
+    <h2 style="text-align: center; font-weight: bold; color: #112663;">QA prep</h2>
+  <div style="background-color: #f9f1f1; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
+    <h3 style="color: #112663; margin: 0; text-align: left;">If not current/collections say the following:</h3>
+      <div style="background-color: #f2e3e3; padding: 20px 40px; border-radius: 10px; color: #112663; margin: 15px 0; text-align: left;">
+
+"We both know the real problem are these accounts that are under collections and the high balances that are holding you back."<br><br>
+
+"Now, we are providing you with such a low monthly obligation of ($___) for the next (term length) to resolve all these problems once and for all and help you achieve financial freedom."<br><br>
+
+      </div>
+    <h3 style="color: #112663; margin: 0; text-align: left;">If not current:</h3>
+      <div style="background-color: #f2e3e3; padding: 20px 40px; border-radius: 10px; color: #112663; margin: 15px 0; text-align: left;">
+
+"We both know the real problem is these payments you’ve been making toward the creditors, which are VERY high and mostly interest, and now we are saving you $ ____ a month, and $ _____ a year."<br><br>
+
+"This way, you’re not struggling check to check, and the main objective is to have more control of your financial situation. Does that make sense?"<br><br>
+
+      </div>
+    <h3 style="color: #112663; margin: 0; text-align: left;">Skip if fully behind:</h3>
+      <div style="background-color: #f2e3e3; padding: 20px 40px; border-radius: 10px; color: #112663; margin: 15px 0; text-align: left;">
+
+"You understand that we will be unable to settle any enrolled account that is maintained as current to the creditor, which means of course you will not be making payments to the creditors at the same time you are making payments in the program, correct?"<br><br>
+
+      </div>
+  </div>
+  <div class="button-grid grid-2" style="margin-top: 30px;">
+    <button class="button" onclick="showOnly('salesNotInterested')">No</button>
+    <button class="button" onclick="showOnly('salesQA2')">QA Prep</button>
+  </div>
+  <div class="button-grid" style="margin-top: 30px;">
+    <button class="button" style="width: 100%;" onclick="goBackToPrevious()">Back</button>
+  </div>
+</div>
+
+<div class="container section" id="salesQA2">
+    <h2 style="text-align: center; font-weight: bold; color: #112663;">QA prep</h2>
+  <div style="background-color: #f9f1f1; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
+     <div style="background-color: #f2e3e3; padding: 20px 40px; border-radius: 10px; color: #112663; margin: 15px 0; text-align: left;">
+
+"You understand that negotiations will begin when there are at least enough funds in your trust/escrow account and that interest and fees may accrue on these accounts until they have been resolved."<br><br>
+
+"It doesn’t matter if the balances decrease or increase. You have a debt resolution payment we quoted you, which is ($PAYMENT) for the next (Month Length) months, which will cover all fees and interest that accrue. Does that make sense?"<br><br>
+
+"As this is a pay-as-you-go program, on average, our clients can expect their first settlement between 4 to 6 months, however the timing can depend on factors such as the mix of creditors, the type of debt, the amount, how long the debt is past due, and the creditor’s willingness to negotiate."<br><br>
+
+"As the funds accrue in your FDIC insured escrow account, our team will be negotiating with your creditors and keep you informed of all offers before settlement is reached."<br><br>
+
+"Also be advised your creditor may take legal action against you in an attempt to collect the debt."<br><br>
+
+"That is extremely rare and highly unlikely it usually happens if you just borrowed all this money last month and never made a payment, or let’s say you start missing payments to both us and the creditors, you can’t just abandon your debt obligate to everyone. I know you won’t do that (CLIENTNAME), but we must go over every scenario even if it’s unlikely."<br><br>
+
+"The most important thing for you to do is to make sure you are current on your monthly program deposits to minimize the chances of this happening."<br><br>
+
+     </div>
+  </div>
+  <div class="button-grid grid-2" style="margin-top: 30px;">
+    <button class="button" onclick="showOnly('salesNotInterested')">No</button>
+    <button class="button" onclick="showOnly('salesVLP')">VLP Pitch</button>
+  </div>
+  <div class="button-grid" style="margin-top: 30px;">
+    <button class="button" style="width: 100%;" onclick="goBackToPrevious()">Back</button>
+  </div>
+</div>
+
+
+<div class="container section" id="salesVLP">
+
+    <h2 style="text-align: center; font-weight: bold; color: #112663;">Veritas Legal Group</h2>
+  <div style="background-color: #f9f1f1; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
+     <div style="background-color: #f2e3e3; padding: 20px 40px; border-radius: 10px; color: #112663; margin: 15px 0; text-align: left;">
+
+"While we are not lawyers or licensed to practice law, we want to make sure you are supported if this occurs. If you opt to include Veritas Legal Group’s services as part of your program, they will engage a network of attorneys that specialize in resolving debt litigation cases. So, if one of your creditors were to go down this path, we will work with Veritas Legal Group to determine the best course of action to resolve the debt and may engage an attorney in the Veritas Legal Group to negotiate a settlement with the opposing law firm or represent you in court if necessary. The cost of the plan is a $550 enrollment onetime fee, which can be split into 4 payments of $137.50 with $59.99 per month starting the second month. To qualify for this service, you must have made all your Veritas Legal Group payments and program deposits on time and in the full amount. If you have opted to include Veritas Legal Group services in your program, it is important to note you will be responsible for court fees and related costs."
+
+     </div>
+  </div>
+
+  <div class="button-grid grid-2" style="margin-top: 30px;">
+    <button class="button" onclick="showOnly('salesNotInterested')">No</button>
+    <button class="button" onclick="showOnly('salesQA3')">Continue</button>
+  </div>
+  <div class="button-grid" style="margin-top: 30px;">
+    <button class="button" style="width: 100%;" onclick="goBackToPrevious()">Back</button>
+  </div>
+</div>
+
+<div class="container section" id="salesQA3">
+  <div style="background-color: #f9f1f1; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
+     <div style="background-color: #f2e3e3; padding: 20px 40px; border-radius: 10px; color: #112663; margin: 15px 0; text-align: left;">
+
+"Be aware that the creditor has the right to contact you to collect the debt that is past due."<br><br>
+
+"Our customers have chosen to handle the calls in a few different ways."<br><br>
+
+"Some clients change their phone number and others simply ignore the calls. What I’ve seen our most successful clients do is after the creditor reaches out to them and asks them why they missed the payment, they simply tell them “I know I’ve missed my payment, and I will make the payment as soon as I can”, then they end the call."<br><br>
+
+"Savings of six hundred dollars or more on a settlement may result in the creditor issuing a 1099C, which means the amount you saved could be taxed as income."<br><br>
+
+"However, if you were insolvent at the time the debt was forgiven, it may exempt you from this tax."<br><br>
+
+"We recommend you consult with the tax professional as we do not provide tax advice or tax services."<br><br>
+
+"Finally, if you stay consistent with your program and make a minimum of 6 consecutive payments, you may be qualified for a loan to resolve your debts much sooner than scheduled (CLIENTNAME), congratulations on taking your first step to becoming debt free. I’m very glad I was able to help you today."<br><br>
+
+"If you have no further questions, I’ll be transferring you over to the enrollment call."<br><br>
+
+"Feel free to provide my contact information to any friends, neighbors or family members that are looking for a loan or are God forbid in the same situation or worse, I would be more than happy to assist them."<br><br>
+
+     </div>
+  </div>
+  <div class="button-grid grid-2" style="margin-top: 30px;">
+    <button class="button" onclick="goBackToPrevious()">Back</button>
+    <button class="button" onclick="showOnly('sales')">Finish</button>
+  </div>
+</div>
 
 
 
