@@ -3360,20 +3360,16 @@ Note: If the client doesn’t want to sign, offer a snapshot of settled and enro
   <h3 style="text-align: left;">How to handle it:</h3>
     <div style="text-align: left; line-height: 1.8;">
   <label><input type="checkbox"> Check with the Payments Department to split the EPF.</label><br>
-  <label><input type="checkbox"> Consult the Team Lead assigned to the file for any necessary exceptions.</label><br>
-  <label><input type="checkbox"> Explore the possibility of lowering the monthly drafts.</label>
+  <label><input type="checkbox"> Consult the Team Lead assigned to the file for any necessary exceptions</label><br>
+  <label><input type="checkbox"> Explore the possibility of lowering the monthly drafts</label>
     </div>
   <img src="https://imgur.com/BiCDo1m.png" alt="Agent Illustration"
        style="position: absolute; bottom: 200px; right: 20px; max-width: 110px; height: auto; border-radius: 8px; pointer-events: none; opacity: 0.9;">
 </div>
-  <div class="button-grid-full" style="margin-top: 40px;">
-    <button class="button" onclick="showOnly('retentionSuccess')">Successfully Retained</button>
-    <button class="button" onclick="showOnly('retentionFailed')">Wasn’t Able To Retain</button>
-  </div>
-
-  <div class="button-grid-back" style="margin-top: 20px;">
+<div class="button-grid grid-2" style="margin-top: 30px;">
 <button class="back-button" onclick="goBackToPrevious()">Back</button>
-  </div>
+  <button class="back-button" onclick="showOnly('homepage')">Finish</button>
+</div>
 </div>
 
 <!-- Retention Cancel - Bankruptcy -->
@@ -3392,48 +3388,57 @@ I understand you are considering bankruptcy, but it has serious downsides. It im
        style="position: absolute; bottom: 200px; right: 20px; max-width: 110px; height: auto; border-radius: 8px; pointer-events: none; opacity: 0.9;">
 
 </div>
-  <div class="button-grid-full" style="margin-top: 40px;">
-    <button class="button" onclick="showOnly('retentionSuccess')">Successfully Retained</button>
-    <button class="button" onclick="showOnly('retentionFailed')">Wasn’t Able To Retain</button>
-  </div>
-  <div class="button-grid-back">
-    <button class="back-button" onclick="goBackToPrevious()">Back</button>
-  </div>
+<div class="button-grid grid-2" style="margin-top: 30px;">
+<button class="back-button" onclick="goBackToPrevious()">Back</button>
+  <button class="back-button" onclick="showOnly('homepage')">Finish</button>
+</div>
 </div>
 
 <!-- Retention Cancel - Lack of Progress -->
 <div class="container section" id="retentionCancelProgress">
-  <h2 style="text-align: center; font-weight: bold;">Lack of Progress</h2><br>
-  <p style="font-weight: bold; text-align: left;">“It’s taking so long to settle my accounts”</p>
-  <p style="text-align: left;">I understand your concerns and I want to assist you. I will assign our negotiations team to expedite the settlement process. I will personally call you back with updates within 2 to 3 business days to help resolve this issue.</p>
+  <h2 style="text-align: center; font-weight: bold;">Lack of Progress</h2>
+  <div style="background-color: #eaf3ee; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
+<div style="background-color: #d5e7dd; padding: 20px 20px; border-radius: 10px; color: #112663; margin: 15px 0; text-align: center;">
+I understand your concerns and I want to assist you. I will assign our negotiations team to expedite the settlement process. I will personally call you back with updates within 2 to 3 business days to help resolve this issue.
+</div>
   <p style="font-weight: bold; text-align: left;">How to handle it:</p>
-  <label><input type="checkbox"> Assign the negotiations team to expedite the settlement process.</label><br>
-  <label><input type="checkbox"> Inform the client that you will provide them with updates promptly.</label><br>
-  <label><input type="checkbox"> Ask the client if they have any additional funds they can contribute to their escrow account to facilitate faster settlements.</label>
-  <div class="button-grid-full" style="margin-top: 40px;">
-    <button class="button" onclick="showOnly('retentionSuccess')">✅ Successfully Retained</button>
-    <button class="button" onclick="showOnly('retentionFailed')">❌ Wasn’t Able To Retain</button>
-  </div>
-  <div class="button-grid-back">
-    <button class="back-button" onclick="goBackToPrevious()">⬅️ Back</button>
-  </div>
+    <div style="text-align: left; line-height: 1.8;">
+  <label><input type="checkbox"> Assign the negotiations team to expedite the settlement process</label><br>
+  <label><input type="checkbox"> Inform the client that you will provide them with updates promptly</label><br>
+  <label><input type="checkbox"> Ask the client if they have any additional funds they can contribute to their escrow account to facilitate faster settlements</label><br>
+  <label><input type="checkbox"> Notate the outcome of the call</label><br>
+</div>
+  <img src="https://imgur.com/BiCDo1m.png" alt="Agent Illustration"
+       style="position: absolute; bottom: 200px; right: 20px; max-width: 110px; height: auto; border-radius: 8px; pointer-events: none; opacity: 0.9;">
+</div>
+<div class="button-grid grid-2" style="margin-top: 30px;">
+<button class="back-button" onclick="goBackToPrevious()">Back</button>
+  <button class="back-button" onclick="showOnly('homepage')">Finish</button>
+</div>
 </div>
 
 <!-- Retention Cancel - Legal Fees Concerns -->
 <div class="container section" id="retentionCancelLegalFees">
   <h2 style="text-align: center; font-weight: bold;">Legal Fees Concerns</h2><br>
-  <p style="font-weight: bold; text-align: left;">“I am concerned about fees such as the legal plan fees”</p>
-  <p style="text-align: left;">I understand your concerns. But keep in mind that the legal plan is optional and designed to provide legal protection. However, if you don’t want them, I will consult with my team lead to see if we can cancel the legal plan for you. I will get back to you with updates as soon as possible.</p>
-  <p style="font-weight: bold; text-align: left;">How to handle it:</p>
-  <label><input type="checkbox"> Get back to your Team Lead to assist in the possibility of removing the legal plan.</label><br>
-  <label><input type="checkbox"> Ask for a refund by getting back to your team lead <strong>if the client threatened with a BBB review</strong>.</label>
-  <div class="button-grid-full" style="margin-top: 40px;">
-    <button class="button" onclick="showOnly('retentionSuccess')">✅ Successfully Retained</button>
-    <button class="button" onclick="showOnly('retentionFailed')">❌ Wasn’t Able To Retain</button>
-  </div>
-  <div class="button-grid-back">
-    <button class="back-button" onclick="goBackToPrevious()">⬅️ Back</button>
-  </div>
+    <div style="background-color: #eaf3ee; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
+      <div style="background-color: #d5e7dd; padding: 20px 20px; border-radius: 10px; color: #112663; margin: 15px 0; text-align: center;">
+I understand your concerns. But keep in mind that the legal plan is optional and designed to provide legal protection. However, if you don’t want them, I will consult with my team lead to see if we can cancel the legal plan for you. I will get back to you with updates as soon as possible.
+
+</div>
+  <h3 style="text-align: left;">How to handle it:</h3>
+    <div style="text-align: left; line-height: 1.8;">
+  <label><input type="checkbox"> Get back to your Team Lead to assist in the possibility of removing the legal plan</label><br>
+  <label><input type="checkbox"> Ask for a refund by getting back to your team lead <strong>if the client threatened with a BBB review</strong></label><br>
+  <label><input type="checkbox"> Notate the outcome of the call</label><br>
+    </div>
+  <img src="https://imgur.com/BiCDo1m.png" alt="Agent Illustration"
+       style="position: absolute; bottom: 200px; right: 20px; max-width: 110px; height: auto; border-radius: 8px; pointer-events: none; opacity: 0.9;">
+
+</div>
+<div class="button-grid grid-2" style="margin-top: 30px;">
+<button class="back-button" onclick="goBackToPrevious()">Back</button>
+  <button class="back-button" onclick="showOnly('homepage')">Finish</button>
+</div>
 </div>
 
 <!-- Retention Cancel - Family Member Helping -->
@@ -3451,107 +3456,109 @@ I understand you are considering bankruptcy, but it has serious downsides. It im
   <img src="https://imgur.com/BiCDo1m.png" alt="Agent Illustration"
        style="position: absolute; bottom: 200px; right: 20px; max-width: 110px; height: auto; border-radius: 8px; pointer-events: none; opacity: 0.9;">
 </div>
-  <div class="button-grid-full" style="margin-top: 40px;">
-    <button class="button" onclick="showOnly('retentionSuccess')">Successfully Retained</button>
-    <button class="button" onclick="showOnly('retentionFailed')">Wasn’t Able To Retain</button>
-  </div>
-  <div class="button-grid-back">
-    <button class="back-button" onclick="goBackToPrevious()">Back</button>
-  </div>
+<div class="button-grid grid-2" style="margin-top: 30px;">
+<button class="back-button" onclick="goBackToPrevious()">Back</button>
+  <button class="back-button" onclick="showOnly('homepage')">Finish</button>
+</div>
 </div>
 
 <!-- Retention Cancel - Manage Independently -->
 <div class="container section" id="retentionCancelManageSelf">
-  <h2 style="text-align: center; font-weight: bold;">Manage Debts Independently</h2><br>
-  <p style="font-weight: bold; text-align: left;">“I want to handle my debt by myself with the creditors”</p>
-  <p style="text-align: left;">Of course, you can address your debt on your own. However, having a professional with over 10 years of experience can be more beneficial. In addition, creditors won’t give you good settlement offers as good as we will get you.</p>
-  <p style="font-weight: bold; text-align: left;">How to handle it:</p>
-  <label><input type="checkbox"> Advise the client about the potential consequences of canceling.</label><br>
-  <label><input type="checkbox"> Emphasize that our team has the expertise and experience in dealing with these creditors to achieve the best possible outcomes.</label>
-  <div class="button-grid-full" style="margin-top: 40px;">
-    <button class="button" onclick="showOnly('retentionSuccess')">✅ Successfully Retained</button>
-    <button class="button" onclick="showOnly('retentionFailed')">❌ Wasn’t Able To Retain</button>
-  </div>
-  <div class="button-grid-back">
-    <button class="back-button" onclick="goBackToPrevious()">⬅️ Back</button>
-  </div>
+  <h2 style="text-align: center; font-weight: bold;">Manage Debts Independently</h2>
+  <div style="background-color: #eaf3ee; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
+<div style="background-color: #d5e7dd; padding: 20px 20px; border-radius: 10px; color: #112663; margin: 15px 0; text-align: center;">
+Of course, you can address your debt on your own. However, having a professional with over 10 years of experience can be more beneficial. In addition, creditors won’t give you good settlement offers as good as we will get you.
+</div>
+  <h3 style="text-align: left;">How to handle it:</h3>
+    <div style="text-align: left; line-height: 1.8;">
+  <label><input type="checkbox"> Advise the client about the potential consequences of canceling</label><br>
+  <label><input type="checkbox"> Emphasize that our team has the expertise and experience in dealing with these creditors to achieve the best possible outcomes</label><br>
+  <label><input type="checkbox"> Notate the outcome of the call</label><br>
+</div>
+  <img src="https://imgur.com/BiCDo1m.png" alt="Agent Illustration"
+       style="position: absolute; bottom: 200px; right: 20px; max-width: 110px; height: auto; border-radius: 8px; pointer-events: none; opacity: 0.9;">
+</div>
+<div class="button-grid grid-2" style="margin-top: 30px;">
+<button class="back-button" onclick="goBackToPrevious()">Back</button>
+  <button class="back-button" onclick="showOnly('homepage')">Finish</button>
+</div>
 </div>
 
 <!-- Retention Cancel - Lack of Communication -->
 <div class="container section" id="retentionCancelCommunication">
-  <h2 style="text-align: center; font-weight: bold;">Lack of Communication</h2><br>
-  <p style="font-weight: bold; text-align: left;">“You guys do not update me on my file. I have no insight on anything”</p>
-  <p style="text-align: left;">I apologize for the lack of communication. We usually provide updates, and to address this, I will assign a team lead to investigate and set up monthly reviews to keep you informed. Does that sound good?</p>
-  <p style="font-weight: bold; text-align: left;">How to handle it:</p>
-  <label><input type="checkbox"> Assure the client that any progress will be communicated to them promptly.</label><br>
-  <label><input type="checkbox"> Tag the Team Lead assigned to the file to perform a Monthly Account Review (MAR) call with the client</label>
-  <div class="button-grid-full" style="margin-top: 40px;">
-    <button class="button" onclick="showOnly('retentionSuccess')">✅ Successfully Retained</button>
-    <button class="button" onclick="showOnly('retentionFailed')">❌ Wasn’t Able To Retain</button>
-  </div>
-  <div class="button-grid-back">
-    <button class="back-button" onclick="goBackToPrevious()">⬅️ Back</button>
-  </div>
+  <h2 style="text-align: center; font-weight: bold;">Lack of Communication</h2>
+  <div style="background-color: #eaf3ee; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
+<div style="background-color: #d5e7dd; padding: 20px 20px; border-radius: 10px; color: #112663; margin: 15px 0; text-align: center;">
+I apologize for the lack of communication. We usually provide updates, and to address this, I will assign a team lead to investigate and set up monthly reviews to keep you informed. Does that sound good?
+</div>
+  <h3 style="text-align: left;">How to handle it:</h3>
+    <div style="text-align: left; line-height: 1.8;">
+  <label><input type="checkbox"> Assure the client that any progress will be communicated to them promptly</label><br>
+  <label><input type="checkbox"> Tag the Team Lead assigned to the file to perform a Monthly Account Review (MAR) call with the client</label><br>
+  <label><input type="checkbox"> Notate the outcome of the call</label><br>
+</div>
+  <img src="https://imgur.com/BiCDo1m.png" alt="Agent Illustration"
+       style="position: absolute; bottom: 200px; right: 20px; max-width: 110px; height: auto; border-radius: 8px; pointer-events: none; opacity: 0.9;">
+
+</div>
+<div class="button-grid grid-2" style="margin-top: 30px;">
+<button class="back-button" onclick="goBackToPrevious()">Back</button>
+  <button class="back-button" onclick="showOnly('homepage')">Finish</button>
+</div>
 </div>
 
 <!-- Retention Cancel - Misinformed About the Program -->
 <div class="container section" id="retentionCancelMisinformed">
-  <h2 style="text-align: center; font-weight: bold;">Misinformed about the Program</h2><br>
-  <p style="font-weight: bold; text-align: left;">“I thought that this was a debt consolidation loan”</p>
-  <p style="text-align: left;">I apologize for any confusion. Our main service is debt settlement, helping you settle debts for less. Additionally, we do offer a loan program, but it has certain qualifications.
-  You need to have made at least six successful payments. Once you qualify, our loan team will reach out to discuss the loan program with you. How does that sound?</p>
-  <p style="font-weight: bold; text-align: left;">“I did not know it was going to ruin my credit score like this.”</p>
-  <p style="text-align: left;">I apologize for any confusion. I understand your frustration with your credit score. While the program may affect it initially, it's important to note that having outstanding debts also affects your score.
-  As your accounts are resolved, your score will improve over time.</p>
-  <p style="font-weight: bold; text-align: left;">How to handle it:</p>
-  <label><input type="checkbox"> Check with the loans department to see if the client qualifies for a loan.</label><br>
-  <label><input type="checkbox"> Educate the client that credit score impact is temporary and improves as settlements are completed.</label>
-  <div class="button-grid-full" style="margin-top: 40px;">
-    <button class="button" onclick="showOnly('retentionSuccess')">✅ Successfully Retained</button>
-    <button class="button" onclick="showOnly('retentionFailed')">❌ Wasn’t Able To Retain</button>
-  </div>
-  <div class="button-grid-back">
-    <button class="back-button" onclick="goBackToPrevious()">⬅️ Back</button>
-  </div>
+  <h2 style="text-align: center; font-weight: bold;">Misinformed about the Program</h2>
+  <div style="background-color: #eaf3ee; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
+<div style="background-color: #d5e7dd; padding: 20px 20px; border-radius: 10px; color: #112663; margin: 15px 0; text-align: left;">
+  <h3 style="text-align: left;">“I thought that this was a debt consolidation loan”</h3>
+I apologize for any confusion. Our main service is debt settlement, helping you settle debts for less. Additionally, we do offer a loan program, but it has certain qualifications.
+  You need to have made at least six successful payments. Once you qualify, our loan team will reach out to discuss the loan program with you. How does that sound?
+  <h3 style="text-align: left;">“I did not know it was going to ruin my credit score like this.”</h3>
+I apologize for any confusion. I understand your frustration with your credit score. While the program may affect it initially, it's important to note that having outstanding debts also affects your score.
+  As your accounts are resolved, your score will improve over time.
+</div>
+  <h3 style="text-align: left;">How to handle it:</h3>
+    <div style="text-align: left; line-height: 1.8;">
+  <label><input type="checkbox"> Check with the loans department to see if the client qualifies for a loan</label><br>
+  <label><input type="checkbox"> Educate the client that credit score impact is temporary and improves as settlements are completed</label><br>
+  <label><input type="checkbox"> Notate the outcome of the call</label><br>
+</div>
+  <img src="https://imgur.com/BiCDo1m.png" alt="Agent Illustration"
+       style="position: absolute; bottom: 200px; right: 20px; max-width: 110px; height: auto; border-radius: 8px; pointer-events: none; opacity: 0.9;">
+</div>
+<div class="button-grid grid-2" style="margin-top: 30px;">
+<button class="back-button" onclick="goBackToPrevious()">Back</button>
+  <button class="back-button" onclick="showOnly('homepage')">Finish</button>
+</div>
 </div>
 
 <!-- Retention Cancel - Harassed by Creditors -->
 <div class="container section" id="retentionCancelHarassed">
-  <h2 style="text-align: center; font-weight: bold;">Harassed by Creditors</h2><br>
-  <p style="font-weight: bold; text-align: left;">“My creditors are calling me non-stop and its getting frustrating”</p>
-  <p style="text-align: left;">I'm sorry to hear that. To address this issue, we can send you a written communication document issued under the FDCPA.
-  This document is designed to protect you from creditors. You can easily print it, fill it out, and mail it to the creditor's address. And I will check if we have sent them the POA.</p>
-  <p style="font-weight: bold; text-align: left;">How to handle it:</p>
-  <label><input type="checkbox"> Check if we sent the creditors a POA.</label><br>
-  <label><input type="checkbox"> Send the client the RWC letter.</label>
-  <div class="button-grid-full" style="margin-top: 40px;">
-    <button class="button" onclick="showOnly('retentionSuccess')">✅ Successfully Retained</button>
-    <button class="button" onclick="showOnly('retentionFailed')">❌ Wasn’t Able To Retain</button>
-  </div>
-  <div class="button-grid-back">
-    <button class="back-button" onclick="goBackToPrevious()">⬅️ Back</button>
-  </div>
+  <h2 style="text-align: center; font-weight: bold;">Harassed by Creditors</h2>
+  <div style="background-color: #eaf3ee; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
+<div style="background-color: #d5e7dd; padding: 20px 20px; border-radius: 10px; color: #112663; margin: 15px 0; text-align: center;">
+I'm sorry to hear that. To address this issue, we can send you a written communication document issued under the FDCPA.
+  This document is designed to protect you from creditors. You can easily print it, fill it out, and mail it to the creditor's address. And I will check if we have sent them the POA.
 </div>
+  <h3 style="text-align: left;">How to handle it:</h3>
+    <div style="text-align: left; line-height: 1.8;">
+  <label><input type="checkbox"> Check if we sent the creditors a POA</label><br>
+  <label><input type="checkbox"> Send the client the RWC letter</label><br>
+  <label><input type="checkbox"> Notate the outcome of the call</label><br>
 
-<!-- Retention Success -->
-<div class="container section" id="retentionSuccess">
-  <h2 style="text-align: center;">Great work! 💪</h2>
-  <p style="text-align: center;">You’ve helped the client stay committed to their financial goals. Your effort made a real difference.</p>
-  <div class="button-grid grid-2" style="margin-top: 30px;">
-<button class="back-button" onclick="goBackToPrevious()">⬅️ Back</button>
-    <button class="back-button" onclick="showOnly('homepage')">✅ Finish</button>
-  </div>
 </div>
-
-<!-- Retention Failed -->
-<div class="container section" id="retentionFailed">
-  <h2 style="text-align: center;">You gave it your best 🙏</h2>
-  <p style="text-align: center;">Some clients just aren’t ready, and that’s okay. What counts is your patience, empathy, and effort.</p>
+  <img src="https://imgur.com/BiCDo1m.png" alt="Agent Illustration"
+       style="position: absolute; bottom: 200px; right: 20px; max-width: 110px; height: auto; border-radius: 8px; pointer-events: none; opacity: 0.9;">
+</div>
 <div class="button-grid grid-2" style="margin-top: 30px;">
-<button class="back-button" onclick="goBackToPrevious()">⬅️ Back</button>
-  <button class="back-button" onclick="showOnly('homepage')">✅ Finish</button>
+<button class="back-button" onclick="goBackToPrevious()">Back</button>
+  <button class="back-button" onclick="showOnly('homepage')">Finish</button>
 </div>
 </div>
+
+
 
 <!-- Retention Outbound Start! -->
 <div class="container section" id="retentionOutbound">
@@ -3582,293 +3589,417 @@ I understand you are considering bankruptcy, but it has serious downsides. It im
 <!-- Retention Outbound NSF Start -->
 <div class="container section" id="retentionOutboundNSF">
   <h2 style="text-align: center; font-weight: bold;">Handling NSFs</h2>
-  <p style="font-weight: bold; text-align: left;">Steps to successfully resolve NSFs:</p>
-  <label><input type="checkbox"> Assign yourself to the file immediately once you begin speaking with the client.</label><br>
-  <label><input type="checkbox"> Reschedule the missed draft.</label>
-
   <div class="button-grid grid-2" style="margin-top: 30px;">
     <button class="button" onclick="showOnly('nsfOneMissed')">One Missed Draft</button>
     <button class="button" onclick="showOnly('nsfMultiple')">Multiple Missed Drafts</button>
   </div>
   <div class="button-grid-back">
-<button class="back-button" onclick="goBackToPrevious()">⬅️ Back</button>
+<button class="back-button" onclick="goBackToPrevious()">Back</button>
   </div>
 </div>
 
 <!-- NSF One Missed Draft -->
 <div class="container section" id="nsfOneMissed">
   <h2 style="text-align: center; font-weight: bold;">One Missed Draft</h2>
-  <label><input type="checkbox"> Navigate to the Enrollment tab.</label><br>
-  <label><input type="checkbox"> Find the draft that was missed.</label><br>
-  <label><input type="checkbox"> Click the blue "Edit" button.</label><br>
-  <label><input type="checkbox"> Navigate to "Process Date"→ Enter the new date for rescheduling.</label><br>
-  <label><input type="checkbox"> Navigate to Action → Select "Rescheduled".</label><br>
-  <label><input type="checkbox"> Navigate to Auth Via → Choose "E-signature/Wet signature".</label><br>
-  <label><input type="checkbox"> Add note → Use “NSF Rescheduled” template.</label><br>
-  <label><input type="checkbox"> Tag "Settlement at Risk".</label><br>
-  <label><input type="checkbox"> Navigate to the Enrollment tab → click on "Resume Payments".</label><br>
-  <label><input type="checkbox"> Read Disclosures.</label>
+  <div style="background-color: #eaf3ee; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
 
+  <h3 style="text-align: left;">Steps to successfully resolve NSFs:</h3>
+    <div style="text-align: left; line-height: 1.8;">
+  <label><input type="checkbox"> Assign yourself to the file immediately once you begin speaking with the client</label><br>
+  <label><input type="checkbox"> Reschedule the missed draft</label><br>
+  <label><input type="checkbox"> Navigate to the Enrollment tab</label><br>
+  <label><input type="checkbox"> Find the draft that was missed</label><br>
+  <label><input type="checkbox"> Click the blue "Edit" button</label><br>
+  <label><input type="checkbox"> Navigate to "Process Date"→ Enter the new date for rescheduling</label><br>
+  <label><input type="checkbox"> Navigate to Action → Select "Rescheduled"</label><br>
+  <label><input type="checkbox"> Navigate to Auth Via → Choose "E-signature/Wet signature"</label><br>
+  <label><input type="checkbox"> Add note → Use “NSF Rescheduled” template</label><br>
+  <label><input type="checkbox"> Tag "Settlement at Risk"</label><br>
+  <label><input type="checkbox"> Navigate to the Enrollment tab → click on "Resume Payments"</label><br>
+  <label><input type="checkbox"> Read Disclosures</label><br>
+</div>
+  <img src="https://imgur.com/BiCDo1m.png" alt="Agent Illustration"
+       style="position: absolute; bottom: 200px; right: 20px; max-width: 170px; height: auto; border-radius: 8px; pointer-events: none; opacity: 0.9;">
+</div>
   <div class="button-grid grid-2" style="margin-top: 30px;">
     <button class="button" onclick="showOnly('nsfOneActive')">Active Settlement</button>
     <button class="button" onclick="showOnly('nsfOneNoActive')">No Active Settlement</button>
   </div>
   <div class="button-grid-back">
-<button class="back-button" onclick="goBackToPrevious()">⬅️ Back</button>
+<button class="back-button" onclick="goBackToPrevious()">Back</button>
   </div>
 </div>
 
 <!-- NSF One Missed - Active Settlement -->
 <div class="container section" id="nsfOneActive">
   <h2 style="text-align: center; font-weight: bold;">Active Settlement</h2>
-  <p style="text-align: left; font-weight: bold;">Read Disclosure:</p>
-  <p style="text-align: left;">“By changing [State Draft Change] you are aware that you are placing your settlement with [CREDITOR] at risk. You have been advised that we cannot promise [CREDITOR] will take a late payment. You have also been advised that if the settlement is lost, there is a possibility we will not be able to settle this account again, and the creditor may move forward with legal action. Is this correct?”</p>
-
+  <div style="background-color: #eaf3ee; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
+<div style="background-color: #d5e7dd; padding: 20px 20px; border-radius: 10px; color: #112663; margin: 15px 0; text-align: center;">
+“By changing [State Draft Change] you are aware that you are placing your settlement with [CREDITOR] at risk. You have been advised that we cannot promise [CREDITOR] will take a late payment. You have also been advised that if the settlement is lost, there is a possibility we will not be able to settle this account again, and the creditor may move forward with legal action. Is this correct?”
+</div>
+    <div style="text-align: left; line-height: 1.8;">
   <label><input type="checkbox"> Send a confirmation document</label><br>
-  <label><input type="checkbox"> Navigate to the Documents tab → click on "Generate Document"</label>
-  <h3 style="text-align: center; font-weight: bold;">Select the appropriate email template based on the client’s gateway</h3>
+  <label><input type="checkbox"> Navigate to the <strong>Documents</strong> tab</label><br>
+  <label><input type="checkbox"> Click on <strong>Generate Document</strong></label><br>
+</div>
+</div>
   <div class="button-grid grid-3">
     <button class="button" onclick="showOnly('nsfCFT')">CFT</button>
     <button class="button" onclick="showOnly('nsfFORTH')">FORTH</button>
     <button class="button" onclick="showOnly('nsfRAM')">RAM</button>
   </div>
   <div class="button-grid-back">
-<button class="back-button" onclick="goBackToPrevious()">⬅️ Back</button>
+<button class="back-button" onclick="goBackToPrevious()">Back</button>
   </div>
 </div>
 
 <!-- NSF CFT -->
 <div class="container section" id="nsfCFT">
   <h2 style="text-align: center; font-weight: bold;">CFT</h2>
+  <div style="background-color: #eaf3ee; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
+    <div style="text-align: left; line-height: 1.8;">
   <label><input type="radio" name="cftDoc"> Draft Modification Form: For normal missed payments and bank change requests</label><br>
-  <label><input type="radio" name="cftDoc"> SPAA Consumer English Document: This is sent whenever there are 3 or more payments missed on the file.</label><br>
-  <label><input type="radio" name="cftDoc"> Request for Reinstatement of Account: Sent when a CET account is closed and we need to reinstate the client.</label><br>
-  <p style="text-align: left;">If a hold is indicated on the file, make sure you fill in the email form mentioned below and send it to one of the team leads so that we can request to release the hold by sending an email to CFT.</p>
-  <label><input type="checkbox"> Navigate to the Calls tab → click on "Log Call".</label>
+  <label><input type="radio" name="cftDoc"> SPAA Consumer English Document: This is sent whenever there are 3 or more payments missed on the file</label><br>
+  <label><input type="radio" name="cftDoc"> Request for Reinstatement of Account: Sent when a CET account is closed and we need to reinstate the client</label><br>
+</div>
+<div style="background-color: #d5e7dd; padding: 20px 20px; border-radius: 10px; color: #112663; margin: 15px 0; text-align: center;">
+If a hold is indicated on the file, make sure you fill in the email form mentioned below and send it to one of the team leads so that we can request to release the hold by sending an email to CFT.
+</div>
+    <div style="text-align: left; line-height: 1.8;">
+  <label><input type="checkbox"> Navigate to the <strong>Calls</strong> tab</label><br>
+  <label><input type="checkbox"> Click on <strong>Log Call</strong></label>
+</div>
+</div>
 <div class="button-grid grid-2" style="margin-top: 30px;">
-<button class="back-button" onclick="goBackToPrevious()">⬅️ Back</button>
-  <button class="back-button" onclick="showOnly('homepage')">✅ Finish</button>
+<button class="back-button" onclick="goBackToPrevious()">Back</button>
+  <button class="back-button" onclick="showOnly('homepage')">Finish</button>
 </div>
 </div>
 
 <!-- NSF FORTH -->
 <div class="container section" id="nsfFORTH">
   <h2 style="text-align: center; font-weight: bold;">FORTH</h2>
+  <div style="background-color: #eaf3ee; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
+    <div style="text-align: left; line-height: 1.8;">
   <label><input type="radio" name="forthDoc"> Amended Authorization: For missed payments.</label><br>
   <label><input type="radio" name="forthDoc"> Forth Bank Change Request: If the banking information was updated.</label><br>
   <label><input type="radio" name="forthDoc"> Forth Risk Return Letter: If the client has requested account closure.</label><br>
-  <p style="text-align: left;">Once these documents are signed, make sure they are uploaded to the file and request the release of the hold.</p>
-  <label><input type="checkbox"> Navigate to the Calls tab → click on "Log Call".</label>
+</div>
+<div style="background-color: #d5e7dd; padding: 20px 20px; border-radius: 10px; color: #112663; margin: 15px 0; text-align: center;">
+Once these documents are signed, make sure they are uploaded to the file and request the release of the hold.
+</div>
+    <div style="text-align: left; line-height: 1.8;">
+  <label><input type="checkbox"> Navigate to the <strong>Calls</strong> tab</label><br>
+  <label><input type="checkbox"> Click on <strong>Log Call</strong></label>
+</div>
+</div>
 <div class="button-grid grid-2" style="margin-top: 30px;">
-<button class="back-button" onclick="goBackToPrevious()">⬅️ Back</button>
-  <button class="back-button" onclick="showOnly('homepage')">✅ Finish</button>
+<button class="back-button" onclick="goBackToPrevious()">Back</button>
+  <button class="back-button" onclick="showOnly('homepage')">Finish</button>
 </div></div>
 
 <!-- NSF RAM -->
 <div class="container section" id="nsfRAM">
   <h2 style="text-align: center; font-weight: bold;">RAM</h2>
+  <div style="background-color: #eaf3ee; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
+    <div style="text-align: left; line-height: 1.8;">
   <label><input type="radio" name="ramDoc"> RAM Agreement: for missed payments and bank change request.</label><br>
-  <label><input type="checkbox"> Navigate to the Calls tab → click on "Log Call".</label>
+    </div>
+    <div style="text-align: left; line-height: 1.8;">
+  <label><input type="checkbox"> Navigate to the <strong>Calls</strong> tab</label><br>
+  <label><input type="checkbox"> Click on <strong>Log Call</strong></label>
+</div>
+</div>
 <div class="button-grid grid-2" style="margin-top: 30px;">
-<button class="back-button" onclick="goBackToPrevious()">⬅️ Back</button>
-  <button class="back-button" onclick="showOnly('homepage')">✅ Finish</button>
+<button class="back-button" onclick="goBackToPrevious()">Back</button>
+  <button class="back-button" onclick="showOnly('homepage')">Finish</button>
 </div>
 </div>
 
 <!-- NSF One Missed - No Active Settlement -->
 <div class="container section" id="nsfOneNoActive">
   <h2 style="text-align: center; font-weight: bold;">No Active Settlement</h2>
-  <p style="text-align: left; font-weight: bold;">Read Disclosure:</p>
-  <p style="text-align: left;">“By changing [State Draft Change] you are aware that this will slow our progress in reaching a settlement. Is this correct?”</p>
-
+  <div style="background-color: #eaf3ee; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
+<div style="background-color: #d5e7dd; padding: 20px 20px; border-radius: 10px; color: #112663; margin: 15px 0; text-align: center;">
+ “By changing [State Draft Change] you are aware that this will slow our progress in reaching a settlement. Is this correct?”
+</div>
+    <div style="text-align: left; line-height: 1.8;">
   <label><input type="checkbox"> Send a confirmation document</label><br>
-  <label><input type="checkbox"> Navigate to the Documents tab → click on "Generate Document"</label>
-
-
-  <h3 style="text-align: center; font-weight: bold;">Select the appropriate email template based on the client’s gateway</h3>
+  <label><input type="checkbox"> Navigate to the <strong>Documents</strong> tab</label><br>
+  <label><input type="checkbox"> Click on <strong>Generate Document</strong></label><br>
+</div>
+</div>
   <div class="button-grid grid-3">
     <button class="button" onclick="showOnly('nsfNoActiveCFT')">CFT</button>
     <button class="button" onclick="showOnly('nsfNoActiveFORTH')">FORTH</button>
     <button class="button" onclick="showOnly('nsfNoActiveRAM')">RAM</button>
   </div>
   <div class="button-grid-back">
-<button class="back-button" onclick="goBackToPrevious()">⬅️ Back</button>
+<button class="back-button" onclick="goBackToPrevious()">Back</button>
   </div>
 </div>
 
 <!-- NSF No Active - CFT -->
 <div class="container section" id="nsfNoActiveCFT">
   <h2 style="text-align: center; font-weight: bold;">CFT</h2>
+  <div style="background-color: #eaf3ee; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
+    <div style="text-align: left; line-height: 1.8;">
   <label><input type="radio" name="cftNoActiveDoc"> Draft Modification Form: For normal missed payments and bank change requests</label><br>
-  <label><input type="radio" name="cftNoActiveDoc"> SPAA Consumer English Document: This is sent whenever there are 3 or more payments missed on the file.</label><br>
-  <label><input type="radio" name="cftNoActiveDoc"> Request for Reinstatement of Account: Sent when a CET account is closed and we need to reinstate the client.</label><br>
-  <p style="text-align: left;">If a hold is indicated on the file, make sure you fill in the email form mentioned below and send it to one of the team leads so that we can request to release the hold by sending an email to CFT.</p>
-  <label><input type="checkbox"> Navigate to the Calls tab → click on "Log Call".</label>
+  <label><input type="radio" name="cftNoActiveDoc"> SPAA Consumer English Document: This is sent whenever there are 3 or more payments missed on the file</label><br>
+  <label><input type="radio" name="cftNoActiveDoc"> Request for Reinstatement of Account: Sent when a CET account is closed and we need to reinstate the client</label><br>
+</div>
+<div style="background-color: #d5e7dd; padding: 20px 20px; border-radius: 10px; color: #112663; margin: 15px 0; text-align: center;">
+If a hold is indicated on the file, make sure you fill in the email form mentioned below and send it to one of the team leads so that we can request to release the hold by sending an email to CFT.
+</div>
+    <div style="text-align: left; line-height: 1.8;">
+  <label><input type="checkbox"> Navigate to the <strong>Calls</strong> tab</label><br>
+  <label><input type="checkbox"> Click on <strong>Log Call</strong></label>
+</div>
+</div>
 <div class="button-grid grid-2" style="margin-top: 30px;">
-<button class="back-button" onclick="goBackToPrevious()">⬅️ Back</button>
-  <button class="back-button" onclick="showOnly('homepage')">✅ Finish</button>
+<button class="back-button" onclick="goBackToPrevious()">Back</button>
+  <button class="back-button" onclick="showOnly('homepage')">Finish</button>
 </div>
 </div>
 
 <!-- NSF No Active - FORTH -->
 <div class="container section" id="nsfNoActiveFORTH">
   <h2 style="text-align: center; font-weight: bold;">FORTH</h2>
-  <label><input type="radio" name="forthNoActiveDoc"> Amended Authorization: For missed payments.</label><br>
-  <label><input type="radio" name="forthNoActiveDoc"> Forth Bank Change Request: If the banking information was updated.</label><br>
-  <label><input type="radio" name="forthNoActiveDoc"> Forth Risk Return Letter: If the client has requested account closure.</label><br>
-  <p style="text-align: left;">Once these documents are signed, make sure they are uploaded to the file and request the release of the hold.</p>
-  <label><input type="checkbox"> Navigate to the Calls tab → click on "Log Call".</label>
+  <div style="background-color: #eaf3ee; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
+
+  <label><input type="radio" name="forthNoActiveDoc"> Amended Authorization: For missed payments</label><br>
+  <label><input type="radio" name="forthNoActiveDoc"> Forth Bank Change Request: If the banking information was updated</label><br>
+  <label><input type="radio" name="forthNoActiveDoc"> Forth Risk Return Letter: If the client has requested account closure</label><br>
+
+<div style="background-color: #d5e7dd; padding: 20px 20px; border-radius: 10px; color: #112663; margin: 15px 0; text-align: center;">
+Once these documents are signed, make sure they are uploaded to the file and request the release of the hold.
+</div>
+    <div style="text-align: left; line-height: 1.8;">
+  <label><input type="checkbox"> Navigate to the <strong>Calls</strong> tab</label><br>
+  <label><input type="checkbox"> Click on <strong>Log Call</strong></label>
+</div>
+</div>
 <div class="button-grid grid-2" style="margin-top: 30px;">
-<button class="back-button" onclick="goBackToPrevious()">⬅️ Back</button>
-  <button class="back-button" onclick="showOnly('homepage')">✅ Finish</button>
+<button class="back-button" onclick="goBackToPrevious()">Back</button>
+  <button class="back-button" onclick="showOnly('homepage')">Finish</button>
 </div>
 </div>
 
 <!-- NSF No Active - RAM -->
 <div class="container section" id="nsfNoActiveRAM">
   <h2 style="text-align: center; font-weight: bold;">RAM</h2>
+  <div style="background-color: #eaf3ee; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
+    <div style="text-align: left; line-height: 1.8;">
   <label><input type="radio" name="ramNoActiveDoc"> RAM Agreement: for missed payments and bank change request.</label><br>
-  <label><input type="checkbox"> Navigate to the Calls tab → click on "Log Call".</label>
+  <label><input type="checkbox"> Navigate to the <strong>Calls</strong> tab</label><br>
+  <label><input type="checkbox"> Click on <strong>Log Call</strong></label>
+</div>
+</div>
 <div class="button-grid grid-2" style="margin-top: 30px;">
-<button class="back-button" onclick="goBackToPrevious()">⬅️ Back</button>
-  <button class="back-button" onclick="showOnly('homepage')">✅ Finish</button>
+<button class="back-button" onclick="goBackToPrevious()">Back</button>
+  <button class="back-button" onclick="showOnly('homepage')">Finish</button>
 </div>
 </div>
 
 <!-- NSF Multiple Missed Drafts Start -->
 <div class="container section" id="nsfMultiple">
   <h2 style="text-align: center; font-weight: bold;">Multiple Missed Drafts</h2>
-  <p style="text-align: left; font-weight: bold;">Steps to successfully resolve NSFs:</p>
-  <label><input type="checkbox"> Navigate to the Enrollment tab → click on "Adjust Payments".</label><br>
-  <label><input type="checkbox"> Select the drafts you want to edit → tick the checkboxes next to them.</label><br>
-  <label><input type="checkbox"> Click the blue "Edit" button.</label><br>
-  <label><input type="checkbox"> Navigate to "Process Date"→ Enter the new date for rescheduling.</label><br>
-  <label><input type="checkbox"> Navigate to Action → Select "Rescheduled".</label><br>
-  <label><input type="checkbox"> Navigate to Auth Via → Choose "E-signature/Wet signature".</label><br>
-  <label><input type="checkbox"> Add note → Use “NSF Rescheduled” template.</label><br>
-  <label><input type="checkbox"> Tag "Settlement at Risk".</label><br>
-  <label><input type="checkbox"> Navigate to the Enrollment tab → click on "Resume Payments".</label><br>
-  <label><input type="checkbox"> Read Disclosures.</label>
-
+  <div style="background-color: #eaf3ee; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
+    <div style="text-align: left; line-height: 1.8;">
+  <h3 style="text-align: left;">Steps to successfully resolve NSFs:</h3>
+  <label><input type="checkbox"> Assign yourself to the file immediately once you begin speaking with the client</label><br>
+  <label><input type="checkbox"> Reschedule the missed draft</label><br>
+  <label><input type="checkbox"> Navigate to the Enrollment tab → click on "Adjust Payments"</label><br>
+  <label><input type="checkbox"> Select the drafts you want to edit → tick the checkboxes next to them</label><br>
+  <label><input type="checkbox"> Click the blue "Edit" button</label><br>
+  <label><input type="checkbox"> Navigate to "Process Date"→ Enter the new date for rescheduling</label><br>
+  <label><input type="checkbox"> Navigate to Action → Select "Rescheduled"</label><br>
+  <label><input type="checkbox"> Navigate to Auth Via → Choose "E-signature/Wet signature"</label><br>
+  <label><input type="checkbox"> Add note → Use “NSF Rescheduled” template</label><br>
+  <label><input type="checkbox"> Tag "Settlement at Risk"</label><br>
+  <label><input type="checkbox"> Navigate to the Enrollment tab → click on "Resume Payments"</label><br>
+  <label><input type="checkbox"> Read Disclosures</label>
+</div>
+  <img src="https://imgur.com/BiCDo1m.png" alt="Agent Illustration"
+       style="position: absolute; bottom: 200px; right: 20px; max-width: 170px; height: auto; border-radius: 8px; pointer-events: none; opacity: 0.9;">
+</div>
   <div class="button-grid grid-2" style="margin-top: 30px;">
     <button class="button" onclick="showOnly('nsfMultipleActive')">Active Settlement</button>
     <button class="button" onclick="showOnly('nsfMultipleNoActive')">No Active Settlement</button>
   </div>
   <div class="button-grid-back">
-<button class="back-button" onclick="goBackToPrevious()">⬅️ Back</button>
+<button class="back-button" onclick="goBackToPrevious()">Back</button>
   </div>
 </div>
 
 <!-- NSF Multiple - Active Settlement -->
 <div class="container section" id="nsfMultipleActive">
   <h2 style="text-align: center; font-weight: bold;">Active Settlement</h2>
-  <p style="text-align: left; font-weight: bold;">Read Disclosure:</p>
-  <p style="text-align: left;">“By changing [State Draft Change] you are aware that you are placing your settlement with [CREDITOR] at risk. You have been advised that we cannot promise [CREDITOR] will take a late payment. You have also been advised that if the settlement is lost, there is a possibility we will not be able to settle this account again, and the creditor may move forward with legal action. Is this correct?”</p>
-
-  <label><input type="checkbox"> Send a confirmation document:<br>Navigate to the Documents tab → click on "Generate Document"</label>
-  <h3 style="text-align: center; font-weight: bold;">Select the appropriate email template based on the client’s gateway</h3>
+  <div style="background-color: #eaf3ee; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
+<div style="background-color: #d5e7dd; padding: 20px 20px; border-radius: 10px; color: #112663; margin: 15px 0; text-align: center;">
+  “By changing [State Draft Change] you are aware that you are placing your settlement with [CREDITOR] at risk. You have been advised that we cannot promise [CREDITOR] will take a late payment. You have also been advised that if the settlement is lost, there is a possibility we will not be able to settle this account again, and the creditor may move forward with legal action. Is this correct?”
+</div>
+    <div style="text-align: left; line-height: 1.8;">
+  <label><input type="checkbox"> Navigate to the <strong>Documents</strong> tab</label><br>
+  <label><input type="checkbox"> Click on <strong>Generate Document</strong></label><br>
+</div>
+</div>
   <div class="button-grid grid-3">
     <button class="button" onclick="showOnly('nsfMultipleActiveCFT')">CFT</button>
     <button class="button" onclick="showOnly('nsfMultipleActiveFORTH')">FORTH</button>
     <button class="button" onclick="showOnly('nsfMultipleActiveRAM')">RAM</button>
   </div>
   <div class="button-grid-back">
-<button class="back-button" onclick="goBackToPrevious()">⬅️ Back</button>
+<button class="back-button" onclick="goBackToPrevious()">Back</button>
   </div>
 </div>
 
 <!-- NSF Multiple Active - CFT -->
 <div class="container section" id="nsfMultipleActiveCFT">
-  <h2 style="text-align: center; font-weight: bold;">CFT</h2>
+  <h2 style="text-align: center; font-weight: bold;">CFT</h2>  
+<div style="background-color: #eaf3ee; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
+    <div style="text-align: left; line-height: 1.8;">
   <label><input type="radio" name="cftMultipleActiveDoc"> Draft Modification Form: For normal missed payments and bank change requests</label><br>
   <label><input type="radio" name="cftMultipleActiveDoc"> SPAA Consumer English Document: This is sent whenever there are 3 or more payments missed on the file.</label><br>
   <label><input type="radio" name="cftMultipleActiveDoc"> Request for Reinstatement of Account: Sent when a CET account is closed and we need to reinstate the client.</label><br>
-  <p style="text-align: left;">If a hold is indicated on the file, make sure you fill in the email form mentioned below and send it to one of the team leads so that we can request to release the hold by sending an email to CFT.</p>
-  <label><input type="checkbox"> Navigate to the Calls tab → click on "Log Call".</label>
+</div>
+<div style="background-color: #d5e7dd; padding: 20px 20px; border-radius: 10px; color: #112663; margin: 15px 0; text-align: center;">
+If a hold is indicated on the file, make sure you fill in the email form mentioned below and send it to one of the team leads so that we can request to release the hold by sending an email to CFT.
+</div>
+
+    <div style="text-align: left; line-height: 1.8;">
+  <label><input type="checkbox"> Navigate to the <strong>Calls</strong> tab</label><br>
+  <label><input type="checkbox"> Click on <strong>Log Call</strong></label>
+</div>
+</div>
 <div class="button-grid grid-2" style="margin-top: 30px;">
-<button class="back-button" onclick="goBackToPrevious()">⬅️ Back</button>
-  <button class="back-button" onclick="showOnly('homepage')">✅ Finish</button>
+<button class="back-button" onclick="goBackToPrevious()">Back</button>
+  <button class="back-button" onclick="showOnly('homepage')">Finish</button>
 </div>
 </div>
 
 <!-- NSF Multiple Active - FORTH -->
 <div class="container section" id="nsfMultipleActiveFORTH">
   <h2 style="text-align: center; font-weight: bold;">FORTH</h2>
+  <div style="background-color: #eaf3ee; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
+    <div style="text-align: left; line-height: 1.8;">
   <label><input type="radio" name="forthMultipleActiveDoc"> Amended Authorization: For missed payments.</label><br>
   <label><input type="radio" name="forthMultipleActiveDoc"> Forth Bank Change Request: If the banking information was updated.</label><br>
   <label><input type="radio" name="forthMultipleActiveDoc"> Forth Risk Return Letter: If the client has requested account closure.</label><br>
-  <p style="text-align: left;">Once these documents are signed, make sure they are uploaded to the file and request the release of the hold.</p>
-  <label><input type="checkbox"> Navigate to the Calls tab → click on "Log Call".</label>
+</div>
+<div style="background-color: #d5e7dd; padding: 20px 20px; border-radius: 10px; color: #112663; margin: 15px 0; text-align: center;">
+Once these documents are signed, make sure they are uploaded to the file and request the release of the hold.
+</div>
+    <div style="text-align: left; line-height: 1.8;">
+  <label><input type="checkbox"> Navigate to the <strong>Calls</strong> tab</label><br>
+  <label><input type="checkbox"> Click on <strong>Log Call</strong></label>
+</div>
+</div>
 <div class="button-grid grid-2" style="margin-top: 30px;">
-<button class="back-button" onclick="goBackToPrevious()">⬅️ Back</button>
-  <button class="back-button" onclick="showOnly('homepage')">✅ Finish</button>
+<button class="back-button" onclick="goBackToPrevious()">Back</button>
+  <button class="back-button" onclick="showOnly('homepage')">Finish</button>
 </div>
 </div>
 
 <!-- NSF Multiple Active - RAM -->
 <div class="container section" id="nsfMultipleActiveRAM">
   <h2 style="text-align: center; font-weight: bold;">RAM</h2>
+  <div style="background-color: #eaf3ee; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
+    <div style="text-align: left; line-height: 1.8;">
   <label><input type="radio" name="ramMultipleActiveDoc"> RAM Agreement: for missed payments and bank change request.</label><br>
-  <label><input type="checkbox"> Navigate to the Calls tab → click on "Log Call".</label>
+  <label><input type="checkbox"> Navigate to the <strong>Calls</strong> tab</label><br>
+  <label><input type="checkbox"> Click on <strong>Log Call</strong></label>
+</div>
+</div>
 <div class="button-grid grid-2" style="margin-top: 30px;">
-<button class="back-button" onclick="goBackToPrevious()">⬅️ Back</button>
-  <button class="back-button" onclick="showOnly('homepage')">✅ Finish</button>
+<button class="back-button" onclick="goBackToPrevious()">Back</button>
+  <button class="back-button" onclick="showOnly('homepage')">Finish</button>
 </div>
 </div>
 
 <!-- NSF Multiple - No Active Settlement -->
 <div class="container section" id="nsfMultipleNoActive">
   <h2 style="text-align: center; font-weight: bold;">No Active Settlement</h2>
-  <p style="text-align: left; font-weight: bold;">Read Disclosure:</p>
-  <p style="text-align: left;">“By changing [State Draft Change] you are aware that this will slow our progress in reaching a settlement. Is this correct?”</p>
-  <label><input type="checkbox"> Send a confirmation document:<br>Navigate to the Documents tab → click on "Generate Document"</label>
-  <h3 style="text-align: center; font-weight: bold;">Select the appropriate email template based on the client’s gateway</h3>
+  <div style="background-color: #eaf3ee; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
+<div style="background-color: #d5e7dd; padding: 20px 20px; border-radius: 10px; color: #112663; margin: 15px 0; text-align: center;">
+“By changing [State Draft Change] you are aware that this will slow our progress in reaching a settlement. Is this correct?”
+</div>
+    <div style="text-align: left; line-height: 1.8;">
+  <label><input type="checkbox"> Navigate to the <strong>Documents</strong> tab</label><br>
+  <label><input type="checkbox"> Click on <strong>Generate Document</strong></label><br>
+</div>
+</div>
+
   <div class="button-grid grid-3">
     <button class="button" onclick="showOnly('nsfMultipleNoActiveCFT')">CFT</button>
     <button class="button" onclick="showOnly('nsfMultipleNoActiveFORTH')">FORTH</button>
     <button class="button" onclick="showOnly('nsfMultipleNoActiveRAM')">RAM</button>
   </div>
   <div class="button-grid-back">
-<button class="back-button" onclick="goBackToPrevious()">⬅️ Back</button>
+<button class="back-button" onclick="goBackToPrevious()">Back</button>
   </div>
 </div>
 
 <!-- NSF Multiple No Active - CFT -->
 <div class="container section" id="nsfMultipleNoActiveCFT">
-  <h2 style="text-align: center; font-weight: bold;">CFT</h2>
-  <label><input type="radio" name="cftMultipleNoActiveDoc"> Draft Modification Form: For normal missed payments and bank change requests</label><br>
-  <label><input type="radio" name="cftMultipleNoActiveDoc"> SPAA Consumer English Document: This is sent whenever there are 3 or more payments missed on the file.</label><br>
-  <label><input type="radio" name="cftMultipleNoActiveDoc"> Request for Reinstatement of Account: Sent when a CET account is closed and we need to reinstate the client.</label><br>
-  <p style="text-align: left;">If a hold is indicated on the file, make sure you fill in the email form mentioned below and send it to one of the team leads so that we can request to release the hold by sending an email to CFT.</p>
-  <label><input type="checkbox"> Navigate to the Calls tab → click on "Log Call".</label>
+  <h2 style="text-align: center; font-weight: bold;">CFT</h2>  
+<div style="background-color: #eaf3ee; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
+    <div style="text-align: left; line-height: 1.8;">
+  <label><input type="radio" name="cftMultipleActiveDoc"> Draft Modification Form: For normal missed payments and bank change requests</label><br>
+  <label><input type="radio" name="cftMultipleActiveDoc"> SPAA Consumer English Document: This is sent whenever there are 3 or more payments missed on the file.</label><br>
+  <label><input type="radio" name="cftMultipleActiveDoc"> Request for Reinstatement of Account: Sent when a CET account is closed and we need to reinstate the client.</label><br>
+</div>
+<div style="background-color: #d5e7dd; padding: 20px 20px; border-radius: 10px; color: #112663; margin: 15px 0; text-align: center;">
+If a hold is indicated on the file, make sure you fill in the email form mentioned below and send it to one of the team leads so that we can request to release the hold by sending an email to CFT.
+</div>
+
+    <div style="text-align: left; line-height: 1.8;">
+  <label><input type="checkbox"> Navigate to the <strong>Calls</strong> tab</label><br>
+  <label><input type="checkbox"> Click on <strong>Log Call</strong></label>
+</div>
+</div>
 <div class="button-grid grid-2" style="margin-top: 30px;">
-<button class="back-button" onclick="goBackToPrevious()">⬅️ Back</button>
-  <button class="back-button" onclick="showOnly('homepage')">✅ Finish</button>
+<button class="back-button" onclick="goBackToPrevious()">Back</button>
+  <button class="back-button" onclick="showOnly('homepage')">Finish</button>
 </div>
 </div>
 
 <!-- NSF Multiple No Active - FORTH -->
 <div class="container section" id="nsfMultipleNoActiveFORTH">
   <h2 style="text-align: center; font-weight: bold;">FORTH</h2>
-  <label><input type="radio" name="forthMultipleNoActiveDoc"> Amended Authorization: For missed payments.</label><br>
-  <label><input type="radio" name="forthMultipleNoActiveDoc"> Forth Bank Change Request: If the banking information was updated.</label><br>
-  <label><input type="radio" name="forthMultipleNoActiveDoc"> Forth Risk Return Letter: If the client has requested account closure.</label><br>
-  <p style="text-align: left;">Once these documents are signed, make sure they are uploaded to the file and request the release of the hold.</p>
-  <label><input type="checkbox"> Navigate to the Calls tab → click on "Log Call".</label>
+  <div style="background-color: #eaf3ee; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
+    <div style="text-align: left; line-height: 1.8;">
+  <label><input type="radio" name="forthMultipleActiveDoc"> Amended Authorization: For missed payments.</label><br>
+  <label><input type="radio" name="forthMultipleActiveDoc"> Forth Bank Change Request: If the banking information was updated.</label><br>
+  <label><input type="radio" name="forthMultipleActiveDoc"> Forth Risk Return Letter: If the client has requested account closure.</label><br>
+</div>
+<div style="background-color: #d5e7dd; padding: 20px 20px; border-radius: 10px; color: #112663; margin: 15px 0; text-align: center;">
+Once these documents are signed, make sure they are uploaded to the file and request the release of the hold.
+</div>
+    <div style="text-align: left; line-height: 1.8;">
+  <label><input type="checkbox"> Navigate to the <strong>Calls</strong> tab</label><br>
+  <label><input type="checkbox"> Click on <strong>Log Call</strong></label>
+</div>
+</div>
 <div class="button-grid grid-2" style="margin-top: 30px;">
-<button class="back-button" onclick="goBackToPrevious()">⬅️ Back</button>
-  <button class="back-button" onclick="showOnly('homepage')">✅ Finish</button>
+<button class="back-button" onclick="goBackToPrevious()">Back</button>
+  <button class="back-button" onclick="showOnly('homepage')">Finish</button>
 </div>
 </div>
 
 <!-- NSF Multiple No Active - RAM -->
 <div class="container section" id="nsfMultipleNoActiveRAM">
   <h2 style="text-align: center; font-weight: bold;">RAM</h2>
-  <label><input type="radio" name="ramMultipleNoActiveDoc"> RAM Agreement: for missed payments and bank change request.</label><br>
-  <label><input type="checkbox"> Navigate to the Calls tab → click on "Log Call".</label>
+  <div style="background-color: #eaf3ee; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
+    <div style="text-align: left; line-height: 1.8;">
+  <label><input type="radio" name="ramMultipleActiveDoc"> RAM Agreement: for missed payments and bank change request.</label><br>
+  <label><input type="checkbox"> Navigate to the <strong>Calls</strong> tab</label><br>
+  <label><input type="checkbox"> Click on <strong>Log Call</strong></label>
+</div>
+</div>
 <div class="button-grid grid-2" style="margin-top: 30px;">
-<button class="back-button" onclick="goBackToPrevious()">⬅️ Back</button>
-  <button class="back-button" onclick="showOnly('homepage')">✅ Finish</button>
+<button class="back-button" onclick="goBackToPrevious()">Back</button>
+  <button class="back-button" onclick="showOnly('homepage')">Finish</button>
 </div>
 </div>
 <!-- End NSF -->
@@ -3876,53 +4007,55 @@ I understand you are considering bankruptcy, but it has serious downsides. It im
 <!-- Retention Outbound - Adjusting the Draft Amount for Active Settlements -->
 <div class="container section" id="retentionOutboundAdjustDraft">
   <h2 style="text-align: center; font-weight: bold;">Adjusting the Draft Amount for Active Settlements</h2>
-  <p style="text-align: left;">When a client wants to reduce their draft to cover only the active settlement, follow these steps to calculate the new amount:</p>
+  <div style="background-color: #eaf3ee; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
+    <div style="text-align: left; line-height: 1.8;">
+  <h3 style="text-align: left;">Review Earned Performance Fees (EPFs):</h3>
+  <label><input type="checkbox"> Go to the Summary Review section</label><br>
+  <label><input type="checkbox"> Check for EPFs that are still uncollected and select the ones that are open</label><br>
 
-  <h3 style="text-align: left; font-weight: bold;">Review Earned Performance Fees (EPFs):</h3>
-  <label><input type="checkbox"> Go to the Summary Review section.</label><br>
-  <label><input type="checkbox"> Check for EPFs that are still uncollected and select the ones that are open.</label><br>
+  <h3 style="text-align: left;">Identify Fees for the Target Month:</h3>
+  <label><input type="checkbox"> Navigate to the Enrollment section</label><br>
+  <label><input type="checkbox"> Go to Transactions and select the month for which the client wants to lower the draft</label><br>
+  <label><input type="checkbox"> Review all fees applicable for that month</label><br>
 
-  <h3 style="text-align: left; font-weight: bold;">Identify Fees for the Target Month:</h3>
-  <label><input type="checkbox"> Navigate to the Enrollment section.</label><br>
-  <label><input type="checkbox"> Go to Transactions and select the month for which the client wants to lower the draft.</label><br>
-  <label><input type="checkbox"> Review all fees applicable for that month.</label><br>
-
-  <h3 style="text-align: left; font-weight: bold;">Calculate the New Draft Amount:</h3>
+  <h3 style="text-align: left;">Calculate the New Draft Amount:</h3>
   <label><input type="checkbox"> Use the following equation: ((Fees + Active Settlement Amount) = New Draft Amount)</label><br>
 
-  <h3 style="text-align: left; font-weight: bold;">Distribute the EPFs Over Multiple Months:</h3>
-  <label><input type="checkbox"> If necessary, break down the EPFs over a period (e.g., 5 months).</label><br>
-  <label><input type="checkbox"> Adjust the draft amount accordingly, ensuring it only covers the active settlement and the distributed EPFs.</label><br>
+  <h3 style="text-align: left;">Distribute the EPFs Over Multiple Months:</h3>
+  <label><input type="checkbox"> If necessary, break down the EPFs over a period (e.g., 5 months)</label><br>
+  <label><input type="checkbox"> Adjust the draft amount accordingly, ensuring it only covers the active settlement and the distributed EPFs</label><br>
 
-  <h3 style="text-align: left; font-weight: bold;">Notify the Necessary Teams:</h3>
-  <label><input type="checkbox"> Inform Settlement at Risk Team.</label><br>
-  <label><input type="checkbox"> Inform Payment Processing Team.</label><br>
-
+  <h3 style="text-align: left;">Notify the Necessary Teams:</h3>
+  <label><input type="checkbox"> Inform Settlement at Risk Team</label><br>
+  <label><input type="checkbox"> Inform Payment Processing Team</label><br>
+</div>
+</div>
+  <img src="https://imgur.com/BiCDo1m.png" alt="Agent Illustration"
+       style="position: absolute; bottom: 120px; right: 20px; max-width: 210px; height: auto; border-radius: 8px; pointer-events: none; opacity: 0.9;">
 <div class="button-grid grid-2" style="margin-top: 30px;">
-<button class="back-button" onclick="goBackToPrevious()">⬅️ Back</button>
-  <button class="back-button" onclick="showOnly('homepage')">✅ Finish</button>
+<button class="back-button" onclick="goBackToPrevious()">Back</button>
+  <button class="back-button" onclick="showOnly('homepage')">Finish</button>
 </div>
 </div>
 
 <!-- Retention Outbound - Add a New Payment Start -->
 <div class="container section" id="retentionOutboundAddPayment">
   <h2 style="text-align: center; font-weight: bold;">Adding a New Payment</h2>
-  <p style="text-align: center; font-weight: bold;">There are two main situations where you may need to add a new payment:</p>
   <div class="button-grid grid-2">
     <button class="button" onclick="showOnly('addUnauthorizedPayment')">Unauthorized Payment</button>
     <button class="button" onclick="showOnly('splitPayment')">Splitting a Payment</button>
   </div>
   <div class="button-grid-back" style="margin-top: 30px;">
-    <button class="back-button" onclick="goBackToPrevious()">⬅️ Back</button>
+    <button class="back-button" onclick="goBackToPrevious()">Back</button>
   </div>
 </div>
 
 <!-- Unauthorized Payment -->
 <div class="container section" id="addUnauthorizedPayment">
   <h2 style="text-align: center; font-weight: bold;">Unauthorized Payment</h2>
-  <p style="text-align: left;">Once a payment is marked as unauthorized, it cannot be rescheduled in the system.</p>
-  <p style="text-align: left; font-weight: bold;">You must add a new payment to replace the missed one:</p>
-
+  <div style="background-color: #eaf3ee; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
+  <h3 style="text-align: left;">You must add a new payment to replace the missed one:</h3>
+  <div style="text-align: left; line-height: 1.8;">
   <label><input type="checkbox"> Navigate to the Enrollment tab → click on "Add Payment"</label><br>
   <label><input type="checkbox"> Select the appropriate gateway</label><br>
   <label><input type="checkbox"> Choose ACH Client Debit as the type</label><br>
@@ -3931,18 +4064,22 @@ I understand you are considering bankruptcy, but it has serious downsides. It im
   <label><input type="checkbox"> In the memo field, type AF for payoff</label><br>
   <label><input type="checkbox"> Under action, select Schedule Transaction</label><br>
   <label><input type="checkbox"> Click Save to finalize the draft</label><br>
-
+  </div>
+</div>
+  <img src="https://imgur.com/BiCDo1m.png" alt="Agent Illustration"
+       style="position: absolute; bottom: 120px; right: 20px; max-width: 100px; height: auto; border-radius: 8px; pointer-events: none; opacity: 0.9;">
 <div class="button-grid grid-2" style="margin-top: 30px;">
-<button class="back-button" onclick="goBackToPrevious()">⬅️ Back</button>
-  <button class="back-button" onclick="showOnly('homepage')">✅ Finish</button>
+<button class="back-button" onclick="goBackToPrevious()">Back</button>
+  <button class="back-button" onclick="showOnly('homepage')">Finish</button>
 </div>
 </div>
 
 <!-- Splitting a Payment -->
 <div class="container section" id="splitPayment">
   <h2 style="text-align: center; font-weight: bold;">Splitting a Payment</h2>
-  <p style="text-align: left;">In some cases, a client may request to split a payment into smaller amounts.</p>
-
+  <div style="background-color: #eaf3ee; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
+  <h3 style="text-align: left;">In some cases, a client may request to split a payment into smaller amounts.</h3>
+    <div style="text-align: left; line-height: 1.8;">
   <label><input type="checkbox"> Edit the original payment (e.g., reduce a $500 payment to $250)</label><br>
   <label><input type="checkbox"> Add a new payment for the remaining $250 to ensure the full amount is still covered</label><br>
   <label><input type="checkbox"> Navigate to the Enrollment tab → click on "Add Payment"</label><br>
@@ -3953,10 +4090,13 @@ I understand you are considering bankruptcy, but it has serious downsides. It im
   <label><input type="checkbox"> In the memo field, type AF for payoff</label><br>
   <label><input type="checkbox"> Under action, select Schedule Transaction</label><br>
   <label><input type="checkbox"> Click Save to finalize the draft</label><br>
-
+</div>
+</div>
+  <img src="https://imgur.com/BiCDo1m.png" alt="Agent Illustration"
+       style="position: absolute; bottom: 120px; right: 20px; max-width: 100px; height: auto; border-radius: 8px; pointer-events: none; opacity: 0.9;">
 <div class="button-grid grid-2" style="margin-top: 30px;">
-<button class="back-button" onclick="goBackToPrevious()">⬅️ Back</button>
-  <button class="back-button" onclick="showOnly('homepage')">✅ Finish</button>
+<button class="back-button" onclick="goBackToPrevious()">Back</button>
+  <button class="back-button" onclick="showOnly('homepage')">Finish</button>
 </div>
 </div>
 <!-- Retention Outbound - Add a New Payment End -->
