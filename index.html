@@ -3176,6 +3176,8 @@ If the file status is “Invalid Banking,” verify whether the current informat
 <div style="background-color: #d5e7dd; padding: 20px 20px; border-radius: 10px; color: #112663; margin: 15px 0; text-align: center;">
 Note: If the client doesn’t want to sign, offer a snapshot of settled and enrolled debts instead.
 </div>
+  <img src="https://imgur.com/BiCDo1m.png" alt="Agent Illustration"
+       style="position: absolute; bottom: 250px; right: 20px; max-width: 160px; height: auto; border-radius: 8px; pointer-events: none; opacity: 0.9;">
   </div>
   <div class="button-grid grid-2" style="margin-top: 30px; text-align: left;">
     <button class="back-button" onclick="goBackToPrevious()">Back</button>
@@ -3215,6 +3217,9 @@ Note: If the client doesn’t want to sign, offer a snapshot of settled and enro
 <div style="background-color: #d5e7dd; padding: 20px 20px; border-radius: 10px; color: #112663; margin: 15px 0; text-align: center;">
 Note: If the client doesn’t want to sign, offer a snapshot of settled and enrolled debts instead.
 </div>
+  <img src="https://imgur.com/BiCDo1m.png" alt="Agent Illustration"
+       style="position: absolute; bottom: 250px; right: 20px; max-width: 160px; height: auto; border-radius: 8px; pointer-events: none; opacity: 0.9;">
+
   </div>
   <div class="button-grid grid-2" style="margin-top: 30px; text-align: left;">
     <button class="back-button" onclick="goBackToPrevious()">Back</button>
@@ -3359,7 +3364,7 @@ Note: If the client doesn’t want to sign, offer a snapshot of settled and enro
 </div>
   <h3 style="text-align: left;">How to handle it:</h3>
     <div style="text-align: left; line-height: 1.8;">
-  <label><input type="checkbox"> Check with the Payments Department to split the EPF.</label><br>
+  <label><input type="checkbox"> Check with the Payments Department to split the EPF</label><br>
   <label><input type="checkbox"> Consult the Team Lead assigned to the file for any necessary exceptions</label><br>
   <label><input type="checkbox"> Explore the possibility of lowering the monthly drafts</label>
     </div>
@@ -3574,12 +3579,12 @@ I'm sorry to hear that. To address this issue, we can send you a written communi
   <label><input type="checkbox"> Verify Email Address</label><br>
   <label><input type="checkbox"> Verify Additional Phone Numbers</label>
   </div>
-</div>
   <div class="button-grid grid-3">
     <button class="button" onclick="showOnly('retentionOutboundAddPayment')">Adding a New Payment</button>
     <button class="button" onclick="showOnly('retentionOutboundAdjustDraft')">Adjusting Drafts for Active Settlements</button>
     <button class="button" onclick="showOnly('retentionOutboundNSF')">Non-Sufficient Funds (NSFs)</button>
   </div>
+</div>
   <div class="button-grid-back">
     <button class="back-button" onclick="goBackToPrevious()">Back</button>
   </div>
@@ -3681,7 +3686,7 @@ If a hold is indicated on the file, make sure you fill in the email form mention
   <h2 style="text-align: center; font-weight: bold;">FORTH</h2>
   <div style="background-color: #eaf3ee; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
     <div style="text-align: left; line-height: 1.8;">
-  <label><input type="radio" name="forthDoc"> Amended Authorization: For missed payments.</label><br>
+  <label><input type="radio" name="forthDoc"> Amended Authorization: For missed payments</label><br>
   <label><input type="radio" name="forthDoc"> Forth Bank Change Request: If the banking information was updated.</label><br>
   <label><input type="radio" name="forthDoc"> Forth Risk Return Letter: If the client has requested account closure.</label><br>
 </div>
@@ -3703,7 +3708,7 @@ Once these documents are signed, make sure they are uploaded to the file and req
   <h2 style="text-align: center; font-weight: bold;">RAM</h2>
   <div style="background-color: #eaf3ee; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
     <div style="text-align: left; line-height: 1.8;">
-  <label><input type="radio" name="ramDoc"> RAM Agreement: for missed payments and bank change request.</label><br>
+  <label><input type="radio" name="ramDoc"> RAM Agreement: for missed payments and bank change request</label><br>
     </div>
     <div style="text-align: left; line-height: 1.8;">
   <label><input type="checkbox"> Navigate to the <strong>Calls</strong> tab</label><br>
@@ -3766,11 +3771,11 @@ If a hold is indicated on the file, make sure you fill in the email form mention
 <div class="container section" id="nsfNoActiveFORTH">
   <h2 style="text-align: center; font-weight: bold;">FORTH</h2>
   <div style="background-color: #eaf3ee; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
-
+    <div style="text-align: left; line-height: 1.8;">
   <label><input type="radio" name="forthNoActiveDoc"> Amended Authorization: For missed payments</label><br>
   <label><input type="radio" name="forthNoActiveDoc"> Forth Bank Change Request: If the banking information was updated</label><br>
   <label><input type="radio" name="forthNoActiveDoc"> Forth Risk Return Letter: If the client has requested account closure</label><br>
-
+    </div>
 <div style="background-color: #d5e7dd; padding: 20px 20px; border-radius: 10px; color: #112663; margin: 15px 0; text-align: center;">
 Once these documents are signed, make sure they are uploaded to the file and request the release of the hold.
 </div>
@@ -3790,7 +3795,7 @@ Once these documents are signed, make sure they are uploaded to the file and req
   <h2 style="text-align: center; font-weight: bold;">RAM</h2>
   <div style="background-color: #eaf3ee; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
     <div style="text-align: left; line-height: 1.8;">
-  <label><input type="radio" name="ramNoActiveDoc"> RAM Agreement: for missed payments and bank change request.</label><br>
+  <label><input type="radio" name="ramNoActiveDoc"> RAM Agreement: for missed payments and bank change request</label><br>
   <label><input type="checkbox"> Navigate to the <strong>Calls</strong> tab</label><br>
   <label><input type="checkbox"> Click on <strong>Log Call</strong></label>
 </div>
@@ -3883,7 +3888,7 @@ If a hold is indicated on the file, make sure you fill in the email form mention
   <h2 style="text-align: center; font-weight: bold;">FORTH</h2>
   <div style="background-color: #eaf3ee; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
     <div style="text-align: left; line-height: 1.8;">
-  <label><input type="radio" name="forthMultipleActiveDoc"> Amended Authorization: For missed payments.</label><br>
+  <label><input type="radio" name="forthMultipleActiveDoc"> Amended Authorization: For missed payments</label><br>
   <label><input type="radio" name="forthMultipleActiveDoc"> Forth Bank Change Request: If the banking information was updated.</label><br>
   <label><input type="radio" name="forthMultipleActiveDoc"> Forth Risk Return Letter: If the client has requested account closure.</label><br>
 </div>
@@ -3906,7 +3911,7 @@ Once these documents are signed, make sure they are uploaded to the file and req
   <h2 style="text-align: center; font-weight: bold;">RAM</h2>
   <div style="background-color: #eaf3ee; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
     <div style="text-align: left; line-height: 1.8;">
-  <label><input type="radio" name="ramMultipleActiveDoc"> RAM Agreement: for missed payments and bank change request.</label><br>
+  <label><input type="radio" name="ramMultipleActiveDoc"> RAM Agreement: for missed payments and bank change request</label><br>
   <label><input type="checkbox"> Navigate to the <strong>Calls</strong> tab</label><br>
   <label><input type="checkbox"> Click on <strong>Log Call</strong></label>
 </div>
@@ -3969,7 +3974,7 @@ If a hold is indicated on the file, make sure you fill in the email form mention
   <h2 style="text-align: center; font-weight: bold;">FORTH</h2>
   <div style="background-color: #eaf3ee; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
     <div style="text-align: left; line-height: 1.8;">
-  <label><input type="radio" name="forthMultipleActiveDoc"> Amended Authorization: For missed payments.</label><br>
+  <label><input type="radio" name="forthMultipleActiveDoc"> Amended Authorization: For missed payments</label><br>
   <label><input type="radio" name="forthMultipleActiveDoc"> Forth Bank Change Request: If the banking information was updated.</label><br>
   <label><input type="radio" name="forthMultipleActiveDoc"> Forth Risk Return Letter: If the client has requested account closure.</label><br>
 </div>
@@ -3992,7 +3997,7 @@ Once these documents are signed, make sure they are uploaded to the file and req
   <h2 style="text-align: center; font-weight: bold;">RAM</h2>
   <div style="background-color: #eaf3ee; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
     <div style="text-align: left; line-height: 1.8;">
-  <label><input type="radio" name="ramMultipleActiveDoc"> RAM Agreement: for missed payments and bank change request.</label><br>
+  <label><input type="radio" name="ramMultipleActiveDoc"> RAM Agreement: for missed payments and bank change request</label><br>
   <label><input type="checkbox"> Navigate to the <strong>Calls</strong> tab</label><br>
   <label><input type="checkbox"> Click on <strong>Log Call</strong></label>
 </div>
