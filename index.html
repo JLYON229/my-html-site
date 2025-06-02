@@ -333,7 +333,7 @@
   <button class="home-grid-button" onclick="showOnly('telemarketing')">
     <img src="https://imgur.com/ZnNLlqq.jpg" alt="Telemarketing">
   </button>
-  <button class="home-grid-button" onclick="showOnly('negotiations')">
+  <button class="home-grid-button" onclick="showOnly('negotiationProcess')">
     <img src="https://imgur.com/cD7nLUu.jpg" alt="Negotiations">
   </button>
   <button class="home-grid-button" onclick="showOnly('lending')">
@@ -342,7 +342,7 @@
   <button class="home-grid-button" onclick="showOnly('sales')">
     <img src="https://imgur.com/Ad1cASF.jpg" alt="Sales">
   </button>
-  <button class="home-grid-button" onclick="showOnly('payments1')">
+  <button class="home-grid-button" onclick="showOnly('payments')">
     <img src="https://imgur.com/rtacuCd.jpg" alt="Payments">
   </button>
   <button class="home-grid-button" onclick="showOnly('retention')">
@@ -2513,25 +2513,11 @@ If the file status is “Invalid Banking,” verify whether the current informat
 
 
 
-<!-- Negotiations Section -->
-<div class="container section" id="negotiations" style="display: none;">
-
-  <!-- Centered Image Above Heading -->
+<!-- Negotiation Process -->
+<div class="container section" id="negotiationProcess" style="display: none;">
   <div style="text-align: center;">
     <img src="https://imgur.com/ZcJbNB6.png" alt="Negotiations Icon" style="max-width: 120px; height: auto; margin-bottom: 10px;">
   </div>
-
-  <!-- Heading -->
-  <h2 style="text-align: center; font-weight: bold;">Negotiations</h2>
-
-  <div class="button-grid grid-2" style="margin-top: 30px;">
-    <button class="back-button" onclick="goBackToPrevious()">Back</button>
-    <button class="button" onclick="showOnly('negotiationProcess')">Let's begin!</button>
-  </div>
-</div>
-
-<!-- Negotiation Process -->
-<div class="container section" id="negotiationProcess" style="display: none;">
   <h2 style="text-align: center; font-weight: bold;">Verify Funds Availability</h2>
     <div style="background-color: #faf4fb ; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
   <h3 style="font-weight: bold; margin-top: 30px; text-align: left;">Assess Account Status:</h3>
@@ -2603,7 +2589,7 @@ If the file status is “Invalid Banking,” verify whether the current informat
 </div>
   <div class="button-grid-full" style="margin-top: 40px;">
     <button class="back-button" onclick="goBackToPrevious()">Back</button>
-    <button class="back-button" onclick="showOnly('negotiations')">Finish</button>
+    <button class="back-button" onclick="showOnly('negotiationProcess')">Finish</button>
   </div>
 </div>
 
@@ -2615,20 +2601,10 @@ If the file status is “Invalid Banking,” verify whether the current informat
 
 
 <!-- Payments Section -->
-<div class="container section" id="payments1" style="display: none;">
+<div class="container section" id="payments" style="display: none;">
   <div style="text-align: center;">
     <img src="https://imgur.com/Jzt6xXZ.png" alt="Payments Icon" style="max-width: 120px; height: auto; margin-bottom: 10px;">
   </div>
-  <h2 style="text-align: center; font-weight: bold;">Payments</h2>
-
-  <div class="button-grid grid-2" style="margin-top: 30px;">
-    <button class="back-button" onclick="goBackToPrevious()">Back</button>
-    <button class="button" onclick="showOnly('payments')">Let's begin!</button>
-  </div>
-</div>
-
-
-<div class="container section" id="payments" style="display: none;">
   <h2 style="text-align: center; font-weight: bold;">Payments Processing</h2>
   <div style="background-color: #f5f6fe; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
   <div style="display: flex; flex-wrap: wrap; gap: 40px; justify-content: space-between; margin-top: 30px;">
@@ -3075,7 +3051,7 @@ If the file status is “Invalid Banking,” verify whether the current informat
 </div>
   <div class="button-grid grid-2" style="margin-top: 30px; text-align: left;">
     <button class="back-button" onclick="goBackToPrevious()">Back</button>
-    <button class="back-button" onclick="showOnly('payments1')">Finish</button>
+    <button class="back-button" onclick="showOnly('payments')">Finish</button>
   </div>
 </div>
 
@@ -4130,7 +4106,7 @@ Once these documents are signed, make sure they are uploaded to the file and req
   <div class="container section" id="sales">
   <!-- Centered Image Above Heading -->
   <div style="text-align: center;">
-    <img src="https://imgur.com/d7iAMp9.png" alt="Telemarketing Icon" style="max-width: 120px; height: auto; margin-bottom: 10px;">
+    <img src="https://imgur.com/d7iAMp9.png" alt="Sales Icon" style="max-width: 120px; height: auto; margin-bottom: 10px;">
   </div>
 
   <!-- Heading -->
@@ -4319,6 +4295,10 @@ get you qualified for."</p><br>
       <label><input type="checkbox"> Disclosure of Terms <strong>Checkbox for Consent</strong></label><br>
       <label><input type="checkbox"> Social Security Number</label><br>
       <label><input type="checkbox"> Loan Amount</label><br>
+      <label><input type="checkbox"> Loan Purpose</label><br>
+      <label><input type="checkbox"> Educational Levels</label><br>
+      <label><input type="checkbox"> Pay Frequency</label><br>
+      <label><input type="checkbox"> Property Status</label><br>
       <label><input type="checkbox"> Annual Income</label><br>
       <label><input type="checkbox"> Click the blue button <strong>Verify</strong> on the bottom of the page</label><br>
     </div>
@@ -6093,6 +6073,22 @@ Fear not. We’re going to help you with the whole situation. Let’s finish the
     <button class="button" onclick="showOnly('salesInbound')">Sales Process</button>
   </div>
 </div>
+
+
+<div class="container section" id="salesOutbound"> 
+
+    <div class="button-grid grid-3 left-align">
+      <button class="button" onclick="showOnly('XXXX')">XXXX</button>
+      <button class="button" onclick="showOnly('XXXX')">XXXX</button>
+      <button class="button" onclick="showOnly('XXXX')">XXXX</button>
+    </div>
+
+  <div class="button-grid" style="margin-top: 30px;">
+    <button class="button" style="width: 100%;" onclick="goBackToPrevious()">Back</button>
+  </div>
+
+</div> 
+
 
 
 
