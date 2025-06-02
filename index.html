@@ -377,8 +377,8 @@
   </div>
 
  <h2>Lending</h2>
-  <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-bottom: 30px;">
-    <button class="button" style="flex: 1 1 250px;" onclick="showOnly('lendigUnderwriting')">Lending Underwriting</button>
+  <div class="button-grid grid-2" style="margin-top: 30px;">
+    <button class="button" style="flex: 1 1 250px;" onclick="showOnly('lendingUnderwriting')">Lending Underwriting</button>
     <button class="button" style="flex: 1 1 250px;" onclick="showOnly('lendingSpecialist')">Lending Specialist</button>
   </div>
   <div class="button-grid" style="margin-top: 30px;">
@@ -386,23 +386,396 @@
   </div>
   </div>
 
-<div class="container section" id="lendigUnderwriting">
-<div style="text-align: center;">
-  <img src="https://imgur.com/rv4FbPe.gif" alt="Loading Animation" style="max-width: 100%; height: auto;">
+<div class="container section" id="lendingUnderwriting">
+  <h2 style="text-align: center; font-weight: bold;">Pre-screening</h2>
+  <div style="background-color: #f6ffff; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
+
+  <div class="left-align-text" style="margin-left: 20px; margin-bottom: 20px; line-height: 1.8;">
+    <label><input type="checkbox"> Verify State Eligibility</label><br>
+    <label><input type="checkbox"> Use the <strong>Pre-Screening Calculator</strong></label><br>
+    <label><input type="checkbox"> Fill the <strong>Monthly Draft</strong> amount by Reviewing the client’s last six consecutive draft payments</strong></label><br>
+    <label><input type="radio" name="Pre-screeningCheck"> <strong>If the draft amounts are the same</strong>, use that consistent amount as the <strong>Monthly Draft</strong></label><br>
+    <label><input type="radio" name="Pre-screeningCheck"> <strong>If the draft amounts vary</strong>, take the lowest amount from the six and use that as the <strong>Monthly Draft</strong></label><br>
+    <label><input type="checkbox"> Navigate to the <strong>Debts</strong> tab in the client’s file</label><br>
+    <label><input type="checkbox"> Locate the total enrolled debt</label><br>
+    <label><input type="checkbox"> Enter this number in the <strong>Current Debts</strong> field</label><br>
+    <label><input type="checkbox"> Locate the <strong>Earned Performance Fees (EPFs)</strong> percentage in the client’s file and paste it into the <strong>EPF FEE</strong> field</label><br>
+    <label><input type="radio" name="Pre-screeningCheck1"> <strong>If the client has an active legal account</strong> locate the most recent balance and enter it in the <strong>LEGAL ACCT AMT</strong> field</label><br>
+    <label><input type="radio" name="Pre-screeningCheck1"> <strong>If the client has any unpaid settlement payments or unpaid Earned Performance Fees (EPFs)</strong> enter the total outstanding amount in the <strong>Settlement commitment</strong> field</label><br>
+    <label><input type="checkbox"> Include a buffer amount of $200 to $250 in the <strong>Unpaid fees</strong> field to account for any unpaid fees that may not yet be reflected in the file</label><br>
+    <label><input type="checkbox"> Locate the <strong>Available Balance</strong> in the client’s escrow account and enter that amount in the <strong>Escrow</strong> field</label><br>
+    <label><input type="checkbox"> Review the results to assess the client’s financial status, if the client’s available balance is running in the negative, they are not eligible for a loan</label><br>
+    <label><input type="checkbox"> Add a note → Use <strong>Loan Pre-Screen</strong></label><br>
+    <label><input type="checkbox"> Update the <strong>Fresh Leads List</strong></label>
+  </div>
+  </div>
+
+  <div class="button-grid grid-2" style="margin-top: 30px;">
+    <button class="button" style="flex: 1 1 250px;" onclick="goBackToPrevious()">Back</button>
+    <button class="button" style="flex: 1 1 250px;" onclick="showOnly('lendingUWCR')">Credit Report</button>
+  </div>
 </div>
+
+<div class="container section" id="lendingUWCR">
+  <h2 style="text-align: center; font-weight: bold;">Pulling the Client’s Credit Report</h2>
+  <div style="background-color: #f6ffff; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
+    <div class="left-align-text" style="margin-left: 20px; margin-bottom: 20px; line-height: 1.8;">
+      <label><input type="checkbox"> Log In to <strong>Xactus360</strong></label><br>
+      <label><input type="checkbox"> Click on <strong>Order Credit ReportX</strong>from the main menu</label><br>
+      <label><input type="checkbox"> Gather Client Information from <strong>FORTH</strong></label><br>
+        <div style="margin-left: 25px;">
+          <label><input type="checkbox"> First and Last Name</label><br>
+          <label><input type="checkbox"> Date of Birth</label><br>
+          <label><input type="checkbox"> Social Security Number (SSN)</label><br>
+          <label><input type="checkbox"> Full Address</label><br>
+        </div>
+      <label><input type="checkbox"> Submit the Request</label><br>
+      <label><input type="checkbox"> Save the Credit Report</label><br>
+      <label><input type="checkbox"> Upload the Credit Report to FORTH</label><br>
+        <div style="margin-left: 25px;">
+          <label><input type="checkbox"> Go to the client’s profile in FORTH</label><br>
+          <label><input type="checkbox"> Navigate to the <strong>Docs</strong> section</label><br>
+          <label><input type="checkbox"> Drag and drop the saved credit report into the <strong>Client Documents</strong> field</label><br>
+        </div>
+      <label><input type="checkbox"> Navigate to the <strong>Notes</strong> tab</label><br>
+      <label><input type="checkbox"> Add a note → Use <strong>Document Uploaded</strong></label><br>
+      <label><input type="checkbox"> Tag the <strong>Assigned Underwriter</strong> on the file</label>
+    </div>
+  </div>
+  <div class="button-grid grid-2" style="margin-top: 30px;">
+    <button class="button" style="flex: 1 1 250px;" onclick="goBackToPrevious()">Back</button>
+    <button class="button" style="flex: 1 1 250px;" onclick="showOnly('lendingUWFF')">Funding Form</button>
+  </div>
+</div>
+
+
+<div class="container section" id="lendingUWFF">
+  <h2 style="text-align: center; font-weight: bold;">Funding Form</h2>
+  <div style="background-color: #f6ffff; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
+    <div class="left-align-text" style="margin-left: 20px; margin-bottom: 20px; line-height: 1.8;">
+      <h3 style="text-align: left;">Identify the Client Needing a Funding Form:</h3>
+      <label><input type="checkbox"> Access the <strong>Lending USA</strong> dashboard</label><br>
+      <label><input type="checkbox"> Look for clients labeled as <strong>Need Funding Form</strong></label><br>
+      <label><input type="checkbox"> Select a client to work on</label><br>
+      <h3 style="text-align: left;">Access the Client’s File:</h3>
+      <label><input type="checkbox"> Retrieve the client’s ID and open their file</label><br>
+      <label><input type="checkbox"> Ensure you have visibility over their enrolled debts and related documentation</label><br>
+      <h3 style="text-align: left;">Open the Funding Form Template:</h3>
+      <label><input type="checkbox"> Open the Excel-based <strong>Funding Form</strong></label><br>
+      <label><input type="checkbox"> This form will require detailed financial inputs about the client’s debts</label><br>
+      <h3 style="text-align: left;">Collect Financial Data from the Client File:</h3>
+      <label><input type="checkbox"> Original balance of each enrolled debt</label><br>
+      <label><input type="checkbox"> Current balance or settlement amounts (especially if a debt is settled but not fully paid)</label><br>
+      <label><input type="checkbox"> Creditor names, account numbers, and other identifying information</label><br>
+      <h3 style="text-align: left;">Cross-Check and Update the Funding Form Using the Credit Report:</h3>
+      <label><input type="checkbox"> Use the credit report to confirm or adjust balances, statuses, or any missing creditors</label><br>
+      <label><input type="checkbox"> Double-check that the data entered is up to date and reflects the most accurate financial standing</label><br>
+      <h3 style="text-align: left;">Save and Submit the Form:</h3>
+      <label><input type="checkbox"> Save the updated funding form using the client’s name or ID and Upload it on the file</label><br>
+      <label><input type="checkbox"> Notate the file using the <strong>LOAN FUNDING FORM REVIEW REQUEST</strong> template</label><br>
+      <label><input type="checkbox"> Submit your request by creating a task and tagging the <strong>(Payment - Lending) Team</strong></label><br>
+      <label><input type="checkbox"> choose the <strong>settlement at risk task</strong> type</label>
+    </div>
+  </div>
+  <div class="button-grid grid-2" style="margin-top: 30px;">
+    <button class="button" style="flex: 1 1 250px;" onclick="goBackToPrevious()">Back</button>
+    <button class="button" style="flex: 1 1 250px;" onclick="showOnly('lendingUWF')">Funding</button>
+  </div>
+</div>
+
+
+<div class="container section" id="lendingUWF">
+  <h2 style="text-align: center; font-weight: bold;">Submitting the Funding</h2>
+  <div style="background-color: #f6ffff; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
+    <div class="left-align-text" style="margin-left: 20px; margin-bottom: 20px; line-height: 1.8;">
+
+      <label><input type="checkbox"> Upload <strong>Payment Proof</strong></label><br>
+      <label><input type="checkbox"> Click on the <strong>Funding Form</strong></label><br>
+      <label><input type="checkbox"> Fill out all required fields using accurate client information pulled from FORTH</label><br>
+        <div style="margin-left: 25px;">
+          <label><input type="checkbox"> Bank Name</label><br>
+          <label><input type="checkbox"> Bank ABA Routing Number</label><br>
+          <label><input type="checkbox"> Bank Account Number</label><br>
+          <label><input type="checkbox"> Date of Enrollment</label><br>
+          <label><input type="checkbox"> Monthly Draft Date</label><br>
+          <label><input type="checkbox"> Total of Successful Payments</label><br>
+          <label><input type="checkbox"> CDA Balance</label><br>
+          <label><input type="checkbox"> Monthly Savings Amount</label><br>
+        </div>
+      <h3 style="text-align: left;">Statement of Enrolled Debts:</h3>
+      <label><input type="checkbox"> Click on <strong>Add New</strong></label><br>
+      <label><input type="checkbox"> Refer to the Funding Form</label><br>
+      <label><input type="checkbox"> Sign and Submit</label>
+    </div>
+  </div>
+  <div class="button-grid grid-2" style="margin-top: 30px;">
+    <button class="button" style="flex: 1 1 250px;" onclick="goBackToPrevious()">Back</button>
+    <button class="button" style="flex: 1 1 250px;" onclick="showOnly('lendingUWCD')">Update the file</button>
+  </div>
+</div>
+
+<div class="container section" id="lendingUWCD">
+  <h2 style="text-align: center; font-weight: bold;">Update the file</h2>
+  <div style="background-color: #f6ffff; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
+    <div class="left-align-text" style="margin-left: 20px; margin-bottom: 20px; line-height: 1.8;">
+      <h3 style="text-align: left;">Update the client’s file:</h3>
+      <label><input type="checkbox"> Navigate to the <strong>Edit Contact</strong> section</label><br>
+      <label><input type="checkbox"> Enter the exact loan amount provided by the lender</label><br>
+      <label><input type="checkbox"> Change the client status to <strong>Funded </strong></label><br>
+      <h3 style="text-align: left;">Cancel all scheduled drafts:</h3>
+      <label><input type="checkbox"> This includes settlement payments, EPFs, and any other pending drafts</label><br>
+      <h3 style="text-align: left;">Notate the file properly:</h3>
+      <label><input type="checkbox"> Use the <strong>Client Signed Contract</strong> note template</label><br>
+      <label><input type="checkbox"> Clearly state the lender’s name and the exact loan amount</label><br>
+      <label><input type="checkbox"> Tag the <strong>Loan Specialist</strong>, <strong>Payment Processor</strong>, and the <strong>Underwriter</strong> who submitted the file and Ancillary Support (only if a legal plan is active)</label>
+    </div>
+  </div>
+  <div class="button-grid grid-2" style="margin-top: 30px;">
+    <button class="button" style="flex: 1 1 250px;" onclick="goBackToPrevious()">Back</button>
+    <button class="button" style="flex: 1 1 250px;" onclick="showOnly('lendingUWCD2')">Canceling Drafts</button>
+  </div>
+</div>
+
+
+<div class="container section" id="lendingUWCD2">
+  <h2 style="text-align: center; font-weight: bold;">Canceling Scheduled Drafts</h2>
+  <div style="background-color: #f6ffff; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
+    <div class="left-align-text" style="margin-left: 20px; margin-bottom: 20px; line-height: 1.8;">
+      <h3 style="text-align: left;">Steps to Cancel Scheduled Drafts</h3>
+      <label><input type="checkbox"> Navigate to the <strong>Enrollment</strong> tab</label><br>
+      <label><input type="checkbox"> Click on <strong>Adjust Payments</strong> tab</label><br>
+      <label><input type="checkbox"> Click on <strong>Select All</strong></label><br>
+      <label><input type="checkbox"> Click on <strong>Cancel the transactions</strong></label><br>
+      <label><input type="checkbox"> Click on <strong>Save</strong></label><br>
+      <label><input type="checkbox"> Click on <strong>Rest Client</strong></label><br>
+      <label><input type="checkbox"> Choose the <strong>All Cancelled Transactions</strong> option and hit <strong>Rest Client</strong></label><br>
+      <h3 style="text-align: left;">Update the client’s file:</h3>
+      <label><input type="checkbox"> Search for the client’s file on the LUSA dashboard using their email address</label><br>
+      <label><input type="checkbox"> Click on <strong>Take Action</strong></label><br>
+      <label><input type="checkbox"> Click on <strong>Complete Certificate of Settlement</strong></label><br>
+      <label><input type="checkbox"> Make sure to mark these amounts as <strong>Actual</strong> instead of <strong>Estimated</strong></label>
+    </div>
+  </div>
+  <div class="button-grid grid-2" style="margin-top: 30px;">
+    <button class="button" style="flex: 1 1 250px;" onclick="goBackToPrevious()">Back</button>
+    <button class="button" style="flex: 1 1 250px;" onclick="showOnly('lending')">Finish</button>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div class="container section" id="lendingSpecialist">
+  <h2 style="text-align: center; font-weight: bold;">Pre-Screening</h2>
+  <div style="background-color: #f6ffff; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
+    <div class="left-align-text" style="margin-left: 20px; margin-bottom: 20px; line-height: 1.8;">
+      <h3 style="text-align: left;">Quick Pre-Screen:</h3>
+      <label><input type="checkbox"> Verify State Eligibility</label><br>
+      <label><input type="checkbox"> Review enrolled debts (some creditors cannot be applied if the client has them enrolled)</label><br>
+      <label><input type="checkbox"> Review the client’s last six consecutive draft payments</label><br>
+      <label><input type="checkbox"> Review the client’s loan history</label><br>
+    </div> 
+  </div> 
+  <div class="button-grid grid-2" style="margin-top: 30px;">
+    <button class="button" style="flex: 1 1 250px;" onclick="goBackToPrevious()">Back</button>
+    <button class="button" style="flex: 1 1 250px;" onclick="showOnly('lendingLSP')">Pitch</button>
+  </div>
+</div>
+
+
+<div class="container section" id="lendingLSP">
+  <h2 style="text-align: center; font-weight: bold;">Pitch</h2>
+  <div style="background-color: #f6ffff; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
+    <div class="left-align-text" style="margin-left: 20px; margin-bottom: 20px; line-height: 1.8;">
+      <div style="background-color: #e2ffff; padding: 20px 20px; border-radius: 10px; color: #112663; margin: 15px 0; text-align: left;">
+
+We’ve partnered with a company called Lending USA, which has a loan program called FreshStart. They are helping a good amount of clients of ours to help settle all their enrolled debt and graduate from the program much faster.
+
+
+Pretty much what this means to you is that if you wish to simply explore the possibilities of obtaining a debt consolidating loan:<br><br>
+
+1. Upon approval, their loan will pay all of your enrolled debt, at the settled amount.<br><br>
+
+2. With the loan proceeds on hand, we’ll be able to get you faster settlements – and typically save you more money.<br><br>
+
+3. Because you’ll graduate faster from our program, those harassing calls and letters from creditors will stop.<br><br>
+
+4. In addition I would like to provide you with a bit more information in regards to this process. Keep in mind that the loan amt may be higher and or the same than your actual debt amount. Due to the fact that we would rather be safe and have money left over than to be short and have to see if you may deposit additional funds towards the program. With that being said, the terms may be higher than anticipated, but keep in mind that we are going to negotiate for more than 50% which will result in us having money remaining from the loan. At that point any and all remaining funds will be credited back to the lender and go towards the principal balance of your loan. You will only be responsible in paying back the amount used for your debt which at that point the initial terms you had signed for will be reduced.<br><br>
+
+5. Finally, once you start making your loan payments, they will report positively to the credit agencies, in addition to the debt recently paid through our program, in efforts to start rebuilding your credit sooner than anticipated.<br><br>
+
+With that being said is this something that sounds interesting to you?
+
+      </div>
+    </div>
+  </div>
+  <div class="button-grid grid-2" style="margin-top: 30px;">
+    <button class="button" style="flex: 1 1 250px;" onclick="showOnly('lendingLSPNo')">No</button>
+    <button class="button" style="flex: 1 1 250px;" onclick="showOnly('lendingLSP1')">Yes</button>
+  </div>
   <div class="button-grid" style="margin-top: 30px;">
     <button class="button" style="width: 100%;" onclick="goBackToPrevious()">Back</button>
   </div>
 </div>
 
-<div class="container section" id="lendingSpecialist">
-<div style="text-align: center;">
-  <img src="https://imgur.com/rv4FbPe.gif" alt="Loading Animation" style="max-width: 100%; height: auto;">
-</div>
+<div class="container section" id="lendingLSP1">
+
+  <h2 style="text-align: center; font-weight: bold;">Most Suitable Lender?</h2>
+
+  <div class="button-grid grid-2" style="margin-top: 30px;">
+    <button class="button" style="flex: 1 1 250px;" onclick="showOnly('lendingLSLOANOSITY')">LOANOSITY</button>
+    <button class="button" style="flex: 1 1 250px;" onclick="showOnly('lendingLSLUSA')">LUSA</button>
+  </div>
   <div class="button-grid" style="margin-top: 30px;">
     <button class="button" style="width: 100%;" onclick="goBackToPrevious()">Back</button>
   </div>
 </div>
+
+
+
+
+<div class="container section" id="lendingLSLOANOSITY">
+  <h2 style="text-align: center; font-weight: bold;">Pitch</h2>
+  <div style="background-color: #f6ffff; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
+    <div class="left-align-text" style="margin-left: 20px; margin-bottom: 20px; line-height: 1.8;">
+      <label><input type="checkbox"> Ask the pre-requisites</label><br>
+      <label><input type="checkbox"> Get the consent for soft credit pull</label><br>
+    </div>
+<div style="background-color: #e2ffff; padding: 20px 20px; border-radius: 10px; color: #112663; margin: 15px 0; text-align: left;">
+
+Great! I just need to ask you a few questions to make sure you meet the lender’s basic requirements. Then we’ll go over the information you’ll need to complete the loan application with Lending USA:<br><br>
+
+1. In the last 3 years, have you had a Bankruptcy and/or a Foreclosure?<br><br>
+2. Are you currently working?<br><br>
+3. May I have consent to obtain updated balances? <br><br>
+
+Do we have your verbal consent to perform a soft credit pull? 
+
+</div>
+
+  </div>
+  <div class="button-grid grid-2" style="margin-top: 30px;">
+    <button class="button" style="flex: 1 1 250px;" onclick="showOnly('lendingLSPNE')">Not Eligible</button>
+    <button class="button" style="flex: 1 1 250px;" onclick="showOnly('lendingLSPE')">Eligible</button>
+  </div>
+  <div class="button-grid" style="margin-top: 30px;">
+    <button class="button" style="width: 100%;" onclick="goBackToPrevious()">Back</button>
+  </div>
+</div>
+
+
+
+<div class="container section" id="lendingLSLUSA">
+  <h2 style="text-align: center; font-weight: bold;">Pitch</h2>
+  <div style="background-color: #f6ffff; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
+    <div class="left-align-text" style="margin-left: 20px; margin-bottom: 20px; line-height: 1.8;">
+      <label><input type="checkbox"> Ask the pre-requisites</label><br>
+      <label><input type="checkbox"> Get the consent for soft credit pull</label><br>
+    </div>
+<div style="background-color: #e2ffff; padding: 20px 20px; border-radius: 10px; color: #112663; margin: 15px 0; text-align: left;">
+
+Great! I just need to ask you a few questions to make sure you meet the lender’s basic requirements. Then we’ll go over the information you’ll need to complete the loan application with Lending USA:<br><br>
+
+1. Do you have a mortgage or auto loan? [If client says YES to either] Are you current on that [those] payment(s)?<br><br>
+2. Are you employed? Any chance of that changing in the next 30 days?<br><br>
+3. Do you make at least $2,000 monthly gross income?<br><br>
+4. Can you provide proof that you're a legal resident of the United States (driver's license, passport, residence card, SS card, birth certificate)?<br><br>
+5. Have you voluntarily surrendered a vehicle or had one repossessed in the last 5 years?<br><br>
+6. Do you understand the loan will include each settlement pay off and our settlement fees?<br><br>
+
+Do we have your verbal consent to perform a soft credit pull? 
+
+</div>
+
+  </div>
+  <div class="button-grid grid-2" style="margin-top: 30px;">
+    <button class="button" style="flex: 1 1 250px;" onclick="showOnly('lendingLSPNE')">Not Eligible</button>
+    <button class="button" style="flex: 1 1 250px;" onclick="showOnly('lendingLSPE')">Eligible</button>
+  </div>
+  <div class="button-grid" style="margin-top: 30px;">
+    <button class="button" style="width: 100%;" onclick="goBackToPrevious()">Back</button>
+  </div>
+</div>
+
+
+<div class="container section" id="lendingLSPE">
+  <h2 style="text-align: center; font-weight: bold;">Eligible</h2>
+  <div style="background-color: #f6ffff; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
+    <div class="left-align-text" style="margin-left: 20px; margin-bottom: 20px; line-height: 1.8;">
+      <label><input type="checkbox"> Assign the file to yourself</label><br>
+      <label><input type="checkbox"> Change the file's status to <strong>Loan consent obtained</strong></label><br>
+      <label><input type="checkbox"> Update lending status</label><br>
+      <label><input type="checkbox"> Change the date on <strong>Loan consent received from client</strong> to the actual consent date</label><br>
+      <label><input type="checkbox"> Post <strong>Loan consent obtained</strong> note template</label><br>
+      <label><input type="checkbox"> Track status on the lender’s portal</label><br>
+      <label><input type="checkbox"> Call Client for Approval, look for <strong>Approved</strong> or <strong>Contract sent</strong> on the portal beforehand</label><br>      
+      <label><input type="checkbox"> Get the Client to sign the contract</label><br>
+    </div>
+  </div>
+
+  <div class="button-grid grid-2" style="margin-top: 30px;">
+    <button class="button" style="flex: 1 1 250px;" onclick="goBackToPrevious()">Back</button>
+    <button class="button" style="flex: 1 1 250px;" onclick="showOnly('lending')">Finish</button>
+  </div>
+</div>
+
+
+<div class="container section" id="lendingLSPNE">
+  <h2 style="text-align: center; font-weight: bold;">Not Eligible</h2>
+  <div style="background-color: #f6ffff; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
+    <div class="left-align-text" style="margin-left: 20px; margin-bottom: 20px; line-height: 1.8;">
+      <div style="background-color: #e2ffff; padding: 20px 20px; border-radius: 10px; color: #112663; margin: 15px 0; text-align: left;">
+“Based on the information we reviewed, it looks like you don’t currently meet the lender’s requirements. Unfortunately, that means we’re not able to move forward at this time. However, you're welcome to reach back out once all the requirements are met, and we’ll also be in touch if we partner with a lender who may be able to consider your application.”
+      </div>
+      <label><input type="checkbox"> Post <strong>LOAN UW REQUIREMENTS NOT MET PER CLIENT</strong> note template</label><br>
+    </div>
+  </div>
+  <div class="button-grid grid-2" style="margin-top: 30px;">
+    <button class="button" style="flex: 1 1 250px;" onclick="goBackToPrevious()">Back</button>
+    <button class="button" style="flex: 1 1 250px;" onclick="showOnly('lending')">Finish</button>
+  </div>
+</div>
+
+<div class="container section" id="lendingLSPNo">
+  <h2 style="text-align: center; font-weight: bold;">Rebuttals</h2>
+  <div style="background-color: #f6ffff; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
+    <div class="left-align-text" style="margin-left: 20px; margin-bottom: 20px; line-height: 1.8;">
+      <div style="background-color: #e2ffff; padding: 20px 20px; border-radius: 10px; color: #112663; margin: 15px 0; text-align: left;">
+
+  <h3 style="text-align: left;">The interest rate is too high:</h3>
+
+“I understand your concern. LUSA actually offers a promotional option—if you pay off the full principal within the first three months, you won’t have to pay any interest at all. And even after that, there’s no prepayment penalty, so if you decide to pay it off early at any point, you can stop the interest from continuing to build.”
+
+  <h3 style="text-align: left;">The monthly draft is too high" / "The term is too long:</h3>
+
+“That makes sense. Just so you know, the loan amount is an estimate. After we settle and pay off your accounts, any extra funds are returned to LUSA. If that refund is 10% or more of the loan’s original principal, you’ll have the opportunity to renegotiate your terms—possibly lowering your monthly payment or shortening the loan term.”
+
+  <h3 style="text-align: left;">The interest rate is too high:</h3>
+
+“It’s okay to feel unsure. I just want to share that waiting for a settlement offer can sometimes take a while, and in the meantime, accounts can move into pre-legal or legal stages. Taking the loan lets you eliminate that stress, clear the debts faster, and be done with them for good.”
+
+
+      </div>
+    </div>
+  </div>
+  <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-bottom: 30px;">
+    <button class="button" style="flex: 1 1 250px;" onclick="showOnly('lending')">Not Interested</button>
+    <button class="button" style="flex: 1 1 250px;" onclick="showOnly('lendingLSP1')">Proceed</button>
+  </div>
+  <div class="button-grid" style="margin-top: 30px;">
+    <button class="button" style="width: 100%;" onclick="goBackToPrevious()">Back</button>
+  </div>
+</div>
+
+
+
 
 
 
@@ -1530,7 +1903,7 @@ The client does not wish to proceed. Kindly thank them for their time and end th
     <div style="text-align: left; line-height: 1.8;">
     <label><input type="checkbox"> Create a task for the Team Color "Draft Decrease Request" to be viewed by the Team Lead</label><br>    
     <label><input type="checkbox"> If approved by the Team Lead → Create a task under ACH Team</label><br>
-    <label><input type="checkbox"> Add a note → notify "Payments ACH"</label><br>
+    <label><input type="checkbox"> Add a note → notify <strong>Payments ACH</strong></label><br>
     <label><input type="checkbox"> Include the reason, the amount, and duration of decrease</label><br>
     <label><input type="checkbox"> Inform client they’ll receive an email and may need to e-sign</label>
   </div>
