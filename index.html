@@ -816,7 +816,7 @@ Do we have your verbal consent to perform a soft credit pull?
 <!-- Ancillary Support Start -->
 <div class="container section" id="ancillarySupport">
 <div style="text-align: center;">
-  <img src="https://imgur.com/rv4FbPe.gif" alt="Loading Animation" style="max-width: 100%; height: auto;">
+  <img src="https://imgur.com/Lci762y.gif" alt="Loading Animation" style="max-width: 100%; height: auto;">
 </div>
   <div class="button-grid" style="margin-top: 30px;">
     <button class="button" style="width: 100%;" onclick="goBackToPrevious()">Back</button>
@@ -2835,11 +2835,548 @@ If the file status is “Invalid Banking,” verify whether the current informat
 
 
 <div class="container section" id="enrollments">
-<div style="text-align: center;">
-  <img src="https://imgur.com/rv4FbPe.gif" alt="Loading Animation" style="max-width: 100%; height: auto;">
-</div>
+  <div style="text-align: center;">
+    <img src="https://imgur.com/ZrTTmT1.png" alt="Enrollments Icon" style="max-width: 120px; height: auto; margin-bottom: 10px;">
+  </div>
+  <h2 style="text-align: center; font-weight: bold;">Enrollments</h2>
+
+  <div class="button-grid-full">
+    <button class="button" onclick="showOnly('enrollmentsQA')">Quality Assurance</button>
+    <button class="button" onclick="showOnly('enrollmentsUnderwriting')">Underwriting</button>
+  </div>
   <div class="button-grid" style="margin-top: 30px;">
     <button class="button" style="width: 100%;" onclick="goBackToPrevious()">Back</button>
+  </div>
+</div>
+
+
+<div class="container section" id="enrollmentsQA">
+  <h2 style="text-align: center; font-weight: bold;">Greet & Introduce</h2>
+
+  <!-- Flex Container for Text and Image -->
+  <div style="display: flex; justify-content: space-between; align-items: center; background-color: #fefff5; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
+    
+    <!-- Left: Text Block -->
+    <div style="flex: 1; padding-right: 20px;">
+      Hello, my name is {Your Name}, the quality assurance agent for {Assigned Company}. <br><br>
+
+      I’m here to verify that you understand the process from start to finish. Please note that this call will be recorded. <br><br>
+
+      To begin, could you please state your first and last name? (Client Provides Name) <br><br>
+
+      Throughout this conversation, I’ll ask you a series of questions. It’s important that you answer each with “Yes” or “No.” Is that clear? (Client Accepts Yes/No Answer)<br><br>
+
+      To proceed, please state your Date of Birth.<br><br>
+    </div>
+
+    <!-- Right: Image Block -->
+    <div style="flex-shrink: 0;">
+      <img src="https://imgur.com/J0K2Klk.png" alt="Agent Illustration"
+           style="max-width: 300px; height: auto; border-radius: 8px;">
+    </div>
+  </div>
+
+  <div class="button-grid-full">
+    <button class="button" onclick="goBackToPrevious()">Back</button>
+    <button class="button" onclick="showOnly('enrollmentsQAPC')">Program Confirmation</button>
+  </div>
+</div>
+
+
+<div class="container section" id="enrollmentsQAPC">
+  <h2 style="text-align: center; font-weight: bold;">Program Confirmation Questions</h2>
+  <div style="background-color: #fefff5; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
+  <h3 style="font-weight: bold; margin-top: 30px; text-align: left;">Question 1:</h3>
+    <div style="background-color: #fcffe2; padding: 20px 20px; border-radius: 10px; color: #112663; margin: 15px 0; text-align: left;">
+
+<strong>Does your employer require you to maintain any type of security or military clearance?</strong><br><br>
+
+<strong>If Yes:</strong> I must disclose that if a person defaults on a contract, like a credit card, there could be negative consequences, including loss of security clearance, commission, or employment. This may apply to individuals in the military, law enforcement, or those working with military contracts or in the financial services industry. Do you understand this?<br><br>
+
+<strong>If No:</strong> Okay, that doesn’t apply to you. Let’s continue.<br><br>
+
+
+    </div>
+  </div>
+  <div class="button-grid-full">
+    <button class="button" onclick="goBackToPrevious()">Back</button>
+    <button class="button" onclick="showOnly('enrollmentsQAPC1')">Next Question</button>
+  </div>
+</div>
+
+
+<div class="container section" id="enrollmentsQAPC1">
+  <h2 style="text-align: center; font-weight: bold;">Program Confirmation Questions</h2>
+  <div style="background-color: #fefff5; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
+  <h3 style="font-weight: bold; margin-top: 30px; text-align: left;">Question 2:</h3>
+
+    <div style="background-color: #fcffe2; padding: 20px 20px; border-radius: 10px; color: #112663; margin: 15px 0; text-align: left;">
+<strong>As you know, we are not a debt consolidation company. We only make payments to your creditors when you agree to a settlement. Is that clear?</strong><br><br>
+
+<strong>If Yes:</strong> Great, that understanding is crucial for the success of your settlement process.<br><br>
+
+<strong>If No:</strong> Let me clarify, we negotiate settlements directly, not regular payments to creditors. Shall I go over this again?<br><br>
+    </div>
+  </div>
+  <div class="button-grid-full">
+    <button class="button" onclick="goBackToPrevious()">Back</button>
+    <button class="button" onclick="showOnly('enrollmentsQAPC2')">Next Question</button>
+  </div>
+</div>
+
+
+<div class="container section" id="enrollmentsQAPC2">
+  <h2 style="text-align: center; font-weight: bold;">Program Confirmation Questions</h2>
+  <div style="background-color: #fefff5; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
+  <h3 style="font-weight: bold; margin-top: 30px; text-align: left;">Question 3:</h3>
+
+    <div style="background-color: #fcffe2; padding: 20px 20px; border-radius: 10px; color: #112663; margin: 15px 0; text-align: left;">
+<strong>Do you understand that our service involves debt settlement and is not a loan?</strong><br><br>
+
+<strong>If Yes:</strong> Excellent. Keeping this distinction clear helps set the right expectations.<br><br>
+
+<strong>If No:</strong> Remember, this is not a loan; it’s a settlement process where we negotiate to reduce your total debt.<br><br>
+
+    </div>
+  </div>
+  <div class="button-grid-full">
+    <button class="button" onclick="goBackToPrevious()">Back</button>
+    <button class="button" onclick="showOnly('enrollmentsQAPC3')">Next Question</button>
+  </div>
+</div>
+
+
+<div class="container section" id="enrollmentsQAPC3">
+  <h2 style="text-align: center; font-weight: bold;">Program Confirmation Questions</h2>
+  <div style="background-color: #fefff5; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
+  <h3 style="font-weight: bold; margin-top: 30px; text-align: left;">Question 4:</h3>
+
+    <div style="background-color: #fcffe2; padding: 20px 20px; border-radius: 10px; color: #112663; margin: 15px 0; text-align: left;">
+<strong>You agree and understand that we only collect fees after we've successfully reached settlements on your behalf, right?</strong><br><br>
+
+<strong>If Yes:</strong> Thank you for your understanding. This ensures our goals are aligned with your financial relief.<br><br>
+
+<strong>If No:</strong> Let’s review this part. Our fees are contingent upon successfully negotiating a settlement for you.<br><br>
+
+    </div>
+  </div>
+  <div class="button-grid-full">
+    <button class="button" onclick="goBackToPrevious()">Back</button>
+    <button class="button" onclick="showOnly('enrollmentsQAPC4')">Next Question</button>
+  </div>
+</div>
+
+
+<div class="container section" id="enrollmentsQAPC4">
+  <h2 style="text-align: center; font-weight: bold;">Program Confirmation Questions</h2>
+  <div style="background-color: #fefff5; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
+  <h3 style="font-weight: bold; margin-top: 30px; text-align: left;">Question 5:</h3>
+
+    <div style="background-color: #fcffe2; padding: 20px 20px; border-radius: 10px; color: #112663; margin: 15px 0; text-align: left;">
+<strong>Are you aware that your enrolled debts may accrue additional fees and interest until settled, but understand we negotiate based on the current debt at settlement time?</strong><br><br>
+
+<strong>If Yes:</strong> That’s right. Despite accruing fees, our negotiation is aimed at reducing your overall debt balance.<br><br>
+
+<strong>If No:</strong> Although interest and fees continue, we negotiate to lower your debt from what it is at the time of settlement.<br><br>
+
+    </div>
+  </div>
+  <div class="button-grid-full">
+    <button class="button" onclick="goBackToPrevious()">Back</button>
+    <button class="button" onclick="showOnly('enrollmentsQAPC5')">Next Question</button>
+  </div>
+</div>
+
+
+<div class="container section" id="enrollmentsQAPC5">
+  <h2 style="text-align: center; font-weight: bold;">Program Confirmation Questions</h2>
+  <div style="background-color: #fefff5; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
+  <h3 style="font-weight: bold; margin-top: 30px; text-align: left;">Question 6:</h3>
+
+    <div style="background-color: #fcffe2; padding: 20px 20px; border-radius: 10px; color: #112663; margin: 15px 0; text-align: left;">
+
+<strong>Clarity will not charge our earned performance fee until we have reached a settlement on your behalf and payment has been sent to the creditor.</strong><br><br>
+
+<strong>This fee is 25% of the account balance at enrollment and included in your monthly draft. Do you understand when fees are collected?</strong><br><br>
+
+<strong>If Yes:</strong> Thank you for your understanding. This clarity helps ensure there are no surprises as we work towards settling your debts.<br><br>
+
+<strong>If No:</strong> We collect fees only after successfully negotiating a settlement and the first payment has been made to your creditor.<br><br>
+
+    </div>
+  </div>
+  <div class="button-grid-full">
+    <button class="button" onclick="goBackToPrevious()">Back</button>
+    <button class="button" onclick="showOnly('enrollmentsQAPC6')">Next Question</button>
+  </div>
+</div>
+
+
+<div class="container section" id="enrollmentsQAPC6">
+  <h2 style="text-align: center; font-weight: bold;">Program Confirmation Questions</h2>
+  <div style="background-color: #fefff5; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
+  <h3 style="font-weight: bold; margin-top: 30px; text-align: left;">Question 7:</h3>
+
+    <div style="background-color: #fcffe2; padding: 20px 20px; border-radius: 10px; color: #112663; margin: 15px 0; text-align: left;">
+
+<strong>Do you understand that your funds are deposited into your personal FDIC-insured trust account while they accrue towards settlement?</strong><br><br>
+
+<strong>If Yes:</strong> Great, keeping your funds in a secured trust account is crucial during the settlement process.<br><br>
+
+<strong>If No:</strong> The funds you contribute are held in a personal FDIC-insured trust account. This protects your money until we can reach settlements with your creditors.<br><br>
+
+    </div>
+  </div>
+  <div class="button-grid-full">
+    <button class="button" onclick="goBackToPrevious()">Back</button>
+    <button class="button" onclick="showOnly('enrollmentsQAPC7')">Next Question</button>
+  </div>
+</div>
+
+
+<div class="container section" id="enrollmentsQAPC7">
+  <h2 style="text-align: center; font-weight: bold;">Program Confirmation Questions</h2>
+  <div style="background-color: #fefff5; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
+  <h3 style="font-weight: bold; margin-top: 30px; text-align: left;">Question 8:</h3>
+
+    <div style="background-color: #fcffe2; padding: 20px 20px; border-radius: 10px; color: #112663; margin: 15px 0; text-align: left;">
+
+<strong>You understand that the first settlement typically occurs within four to six months, correct?</strong><br><br>
+
+<strong>If Yes:</strong> Excellent. It’s important to have realistic expectations about the timeline.<br><br>
+
+<strong>If No:</strong> The first settlement can take time due to negotiations. We aim for the four to six-month range, but this can vary.<br><br>
+
+    </div>
+  </div>
+  <div class="button-grid-full">
+    <button class="button" onclick="goBackToPrevious()">Back</button>
+    <button class="button" onclick="showOnly('enrollmentsQAPC8')">Next Question</button>
+  </div>
+</div>
+
+
+<div class="container section" id="enrollmentsQAPC8">
+  <h2 style="text-align: center; font-weight: bold;">Program Confirmation Questions</h2>
+  <div style="background-color: #fefff5; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
+  <h3 style="font-weight: bold; margin-top: 30px; text-align: left;">Question 9:</h3>
+
+    <div style="background-color: #fcffe2; padding: 20px 20px; border-radius: 10px; color: #112663; margin: 15px 0; text-align: left;">
+
+<strong>Just to confirm, you haven’t received any legal or collection notices from your creditors, have you?</strong><br><br>
+
+<strong>If Yes:</strong> Can you please send us the legal document you received before we can complete your file enrollment.<br><br>
+
+<strong>If No:</strong> That’s good to hear. Please inform us if your situation changes.<br><br>
+
+    </div>
+  </div>
+  <div class="button-grid-full">
+    <button class="button" onclick="goBackToPrevious()">Back</button>
+    <button class="button" onclick="showOnly('enrollmentsQAPC9')">Next Question</button>
+  </div>
+</div>
+
+
+<div class="container section" id="enrollmentsQAPC9">
+  <h2 style="text-align: center; font-weight: bold;">Program Confirmation Questions</h2>
+  <div style="background-color: #fefff5; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
+  <h3 style="font-weight: bold; margin-top: 30px; text-align: left;">Question 10:</h3>
+
+    <div style="background-color: #fcffe2; padding: 20px 20px; border-radius: 10px; color: #112663; margin: 15px 0; text-align: left;">
+
+<strong>You understand that creditors might continue to contact you during this process, and you feel prepared to handle such situations, correct?</strong><br><br>
+
+<strong>If Yes:</strong> Very good. We will provide tips on handling these interactions.<br><br>
+
+<strong>If No:</strong> We can guide you on effectively handling calls and communications from creditors.<br><br>
+
+    </div>
+  </div>
+  <div class="button-grid-full">
+    <button class="button" onclick="goBackToPrevious()">Back</button>
+    <button class="button" onclick="showOnly('enrollmentsQAPC10')">Next Question</button>
+  </div>
+</div>
+
+
+<div class="container section" id="enrollmentsQAPC10">
+  <h2 style="text-align: center; font-weight: bold;">Program Confirmation Questions</h2>
+  <div style="background-color: #fefff5; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
+  <h3 style="font-weight: bold; margin-top: 30px; text-align: left;">Question 11:</h3>
+
+    <div style="background-color: #fcffe2; padding: 20px 20px; border-radius: 10px; color: #112663; margin: 15px 0; text-align: left;">
+
+<strong>You understand that creditors have various means to collect debts, including legal actions, and you will inform us promptly if you receive any legal documents, correct?</strong><br><br>
+
+<strong>If Yes:</strong> Quick communication helps us manage any legal proceedings efficiently.<br><br>
+
+<strong>If No:</strong> Informing us of any legal documents you receive is crucial, so we can address them on your behalf.<br><br>
+
+    </div>
+  </div>
+  <div class="button-grid-full">
+    <button class="button" onclick="goBackToPrevious()">Back</button>
+    <button class="button" onclick="showOnly('enrollmentsQAPC11')">Next Question</button>
+  </div>
+</div>
+
+
+<div class="container section" id="enrollmentsQAPC11">
+  <h2 style="text-align: center; font-weight: bold;">Program Confirmation Questions</h2>
+  <div style="background-color: #fefff5; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
+  <h3 style="font-weight: bold; margin-top: 30px; text-align: left;">Question 12:</h3>
+
+    <div style="background-color: #fcffe2; padding: 20px 20px; border-radius: 10px; color: #112663; margin: 15px 0; text-align: left;">
+
+<strong>You acknowledge that your credit score may initially be impacted, but the goal is to become debt-free, leading to future financial health, correct?</strong><br><br>
+
+<strong>If Yes:</strong> Exactly, improving your financial situation is our primary goal.<br><br>
+
+<strong>If No:</strong> While there may be a short-term impact, the long-term benefit is becoming debt-free.<br><br>
+
+    </div>
+  </div>
+  <div class="button-grid-full">
+    <button class="button" onclick="goBackToPrevious()">Back</button>
+    <button class="button" onclick="showOnly('enrollmentsQAPC12')">Next Question</button>
+  </div>
+</div>
+
+
+<div class="container section" id="enrollmentsQAPC12">
+  <h2 style="text-align: center; font-weight: bold;">Program Confirmation Questions</h2>
+  <div style="background-color: #fefff5; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
+  <h3 style="font-weight: bold; margin-top: 30px; text-align: left;">Question 13:</h3>
+
+    <div style="background-color: #fcffe2; padding: 20px 20px; border-radius: 10px; color: #112663; margin: 15px 0; text-align: left;">
+
+<strong>You acknowledge that any forgiven debt over $600 may be taxable, and you are prepared to consult with a tax professional if you receive a 1099-C form, correct?</strong><br><br>
+
+<strong>If Yes:</strong> Staying informed about potential tax implications is wise.<br><br>
+
+<strong>If No:</strong> It’s important to consult a tax professional about potential obligations from forgiven debts.<br><br>
+
+    </div>
+  </div>
+  <div class="button-grid-full">
+    <button class="button" onclick="goBackToPrevious()">Back</button>
+    <button class="button" onclick="showOnly('enrollmentsQAPC13')">Next Question</button>
+  </div>
+</div>
+
+
+<div class="container section" id="enrollmentsQAPC13">
+  <h2 style="text-align: center; font-weight: bold;">Program Confirmation Questions</h2>
+  <div style="background-color: #fefff5; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
+  <h3 style="font-weight: bold; margin-top: 30px; text-align: left;">Question 14:</h3>
+
+    <div style="background-color: #fcffe2; padding: 20px 20px; border-radius: 10px; color: #112663; margin: 15px 0; text-align: left;">
+
+<strong>As a reminder, we are not a debt consolidation company. We only make payments to your creditors when you agree to a settlement. Is that clear?</strong><br><br>
+
+<strong>If Yes:</strong> Great, that understanding is crucial for the success of your settlement process.<br><br>
+
+<strong>If No:</strong> Let me clarify, we negotiate settlements directly. Would you like me to go over this again?<br><br>
+
+    </div>
+  </div>
+  <div class="button-grid-full">
+    <button class="button" onclick="goBackToPrevious()">Back</button>
+    <button class="button" onclick="showOnly('enrollmentsQAFNN')">Finalize & Notate</button>
+  </div>
+</div>
+
+
+<div class="container section" id="enrollmentsQAFNN">
+  <h2 style="text-align: center; font-weight: bold;">Finalize & Notate</h2>
+
+  <div style="background-color: #fefff5; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
+
+    <div style="text-align: left; line-height: 1.8;">
+      <label><input type="checkbox"> Navigate to the <strong>Notes</strong> tab</label><br>
+      <label><input type="checkbox"> Add a Note → Use <strong>Enrollment Call Completed</strong> template</label><br>
+    </div>
+  </div>
+  <div class="button-grid-full">
+    <button class="button" onclick="goBackToPrevious()">Back</button>
+    <button class="button" onclick="showOnly('homepage')">Finish</button>
+  </div>
+</div>
+
+<div class="container section" id="enrollmentsUnderwriting">
+  <h2 style="text-align: center; font-weight: bold;">Underwriting Process</h2>
+  <div style="background-color: #fefff5; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
+    <div style="text-align: left; line-height: 1.8;">
+      <h3 style="font-weight: bold; margin-top: 30px; text-align: left;">Locate the contract:</h3>
+      <label><input type="checkbox"> Navigate to the <strong>Enrollment</strong> tab</label><br>
+      <label><input type="checkbox"> Click on the <strong>Submitted</strong> section</label><br>
+      <label><input type="checkbox"> Click on the <strong>Client's Name</strong> to open their file</label><br>
+      <label><input type="checkbox"> Check the <strong>Last Note</strong> column to determine the state of the file before opening it</label><br>
+      <label><input type="checkbox"> Copy the <strong>Client’s SSN</strong> & use it to check for duplicates</label><br>
+      <label><input type="checkbox"> Go to the <strong>Enrollment</strong> tab</label><br>
+      <label><input type="checkbox"> Select <strong>Return File</strong></label><br>
+      <label><input type="checkbox"> Enter the reason for the return in the <strong>Notes</strong> section</label><br>
+
+      <h3 style="font-weight: bold; margin-top: 30px; text-align: left;">Verify Client Personal Information:</h3>
+      <label><input type="checkbox"> Click on the <strong>Docs</strong> tab</label><br>
+      <label><input type="checkbox"> Go to <strong>Uploaded Files</strong></label><br>
+      <label><input type="checkbox"> Look for the file labeled <strong>Contract</strong></label><br>
+
+       <div style="margin-left: 25px;">
+         <label><input type="checkbox"> Full Social Security Number (SSN)</label><br>
+         <label><input type="checkbox"> Date of Birth</label><br>
+         <label><input type="checkbox"> Client’s Full Name</label><br>
+         <label><input type="checkbox"> Initials and Signature, must be clearly readable</label><br>
+       </div>
+    </div>
+  </div>
+  <div class="button-grid-full">
+    <button class="button" onclick="goBackToPrevious()">Back</button>
+    <button class="button" onclick="showOnly('enrollmentsUnderwritingBI')">Banking Information</button>
+  </div>
+</div>
+
+<div class="container section" id="enrollmentsUnderwritingBI">
+  <h2 style="text-align: center; font-weight: bold;">Underwriting Process</h2>
+  <div style="background-color: #fefff5; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
+    <div style="text-align: left; line-height: 1.8;">
+      <h3 style="font-weight: bold; margin-top: 30px; text-align: left;">Verify Client's Banking Information:</h3>
+      <label><input type="checkbox"> Navigate to the <strong>Bank Account</strong> tab</label><br>
+      <label><input type="checkbox"> Verify <strong>Bank Name</strong></label><br>
+      <label><input type="checkbox"> Verify <strong>Account Number</strong></label><br>
+      <label><input type="checkbox"> Verify <strong>Routing Number</strong></label><br>
+      <label><input type="checkbox"> Verify <strong>Mailing Address</strong></label><br>
+
+      <h3 style="font-weight: bold; margin-top: 30px; text-align: left;">Verify Credit Report Information:</h3>
+      <label><input type="checkbox"> Navigate to the <strong>Uploaded Files</strong> tab</label><br>
+      <label><input type="checkbox"> <strong>Age</strong> of the credit report is no more than 30 days</label><br>
+      <label><input type="checkbox"> <strong>Credit Report</strong> belongs to the correct client</label><br>
+      <label><input type="checkbox"> <strong>Payments</strong> in the contract matches the ones on FORTH</label><br>
+      <label><input type="checkbox"> <strong>Account numbers</strong> match what’s entered into the system</label><br>
+      <label><input type="checkbox"> <strong>Debt amounts</strong> should align with what’s listed in the file with the contract</label><br>
+      <label><input type="checkbox"> <strong>For non-credit card debts</strong> there must be at least one reported payment in the report</label><br>
+      <label><input type="checkbox"> If any of the debts belong to any high-risk creditor, <strong>we can’t enroll it</strong>, and it needs to be removed</label><br>
+    </div>
+  </div>
+  <div class="button-grid-full">
+    <button class="button" onclick="goBackToPrevious()">Back</button>
+    <button class="button" onclick="showOnly('enrollmentsUnderwritingFE')">File Eligibility</button>
+  </div>
+</div>
+
+<div class="container section" id="enrollmentsUnderwritingFE">
+  <h2 style="text-align: center; font-weight: bold;">Underwriting Process</h2>
+  <div style="background-color: #fefff5; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
+    <div style="text-align: left; line-height: 1.8;">
+      <h3 style="font-weight: bold; margin-top: 30px; text-align: left;">Confirm File Eligibility:</h3>
+      <label><input type="checkbox"> Debt Load</label><br>
+      <label><input type="checkbox"> Program Length</label><br>
+      <label><input type="checkbox"> Credit Score</label><br>
+      <label><input type="checkbox"> State</label><br>
+      <label><input type="checkbox"> Company Assignment</label><br>
+        <div style="margin-left: 25px;">
+            <label><input type="radio" name="CompanyAssignment"> Clarity Debt Resolution (CDR): Negotiation fee must be 25%</label><br>
+            <label><input type="radio" name="CompanyAssignment"> Concordia Legal Advisors (CLA): Negotiation fee must be 27.5%</label><br>
+        </div>
+      <label><input type="checkbox"> Budget & Hardship</label><br>
+
+      <h3 style="font-weight: bold; margin-top: 30px; text-align: left;">Check Draft Amount:</h3>
+      <label><input type="checkbox"> Navigate to the <strong>Uploaded Files</strong> tab</label><br>
+      <label><input type="checkbox"> Open the <strong>FORTH Authorization</strong> file</label><br>
+      <label><input type="checkbox"> Review the <strong>FORTH Authorization Pages</strong></label><br>
+        <div style="margin-left: 25px;">
+          <label><input type="checkbox"> Draft Amounts</label><br>
+          <label><input type="checkbox"> Draft Dates</label><br>
+          <label><input type="checkbox"> Number of Drafts</label><br>
+        </div>
+    </div>
+  </div>
+  <div class="button-grid-full">
+    <button class="button" onclick="goBackToPrevious()">Back</button>
+    <button class="button" onclick="showOnly('enrollmentsUnderwritingLP')">Legal Plan</button>
+  </div>
+</div>
+
+
+<div class="container section" id="enrollmentsUnderwritingLP">
+  <h2 style="text-align: center; font-weight: bold;">Underwriting Process</h2>
+  <div style="background-color: #fefff5; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
+    <div style="text-align: left; line-height: 1.8;">
+      <h3 style="font-weight: bold; margin-top: 30px; text-align: left;">Verify Legal Plan:</h3>
+      <label><input type="checkbox"> Navigate to the <strong>Docs</strong> tab</label><br>
+      <label><input type="checkbox"> Search for  <strong>a signed VLP contract</strong></label><br>
+      <label><input type="checkbox"> Enrollment Fee: $550</label><br>
+      <label><input type="checkbox"> Monthly Fee: $59.99</label><br>
+    </div>
+  <div style="background-color: #fcffe2; padding: 20px 20px; border-radius: 10px; color: #112663; margin: 15px 0; text-align: center;">
+    Sometimes the fee may differ if there is an exception on the file, so you need to check the notes and the contract
+  </div>
+  </div>
+  <div class="button-grid-full">
+    <button class="button" onclick="goBackToPrevious()">Back</button>
+    <button class="button" onclick="showOnly('enrollmentsUnderwritingQA')">QA Call Confirmation</button>
+  </div>
+</div>
+
+<div class="container section" id="enrollmentsUnderwritingQA">
+  <h2 style="text-align: center; font-weight: bold;">Underwriting Process</h2>
+  <div style="background-color: #fefff5; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
+  <div style="background-color: #fcffe2; padding: 20px 20px; border-radius: 10px; color: #112663; margin: 15px 0; text-align: left;">
+  <h3 style="margin-top: 15px; text-align: left;">The QA call status will fall under one of the following:</h3>
+  <ul style="padding-left: 20px; margin-top: 0; line-height: 1.8;">
+    <li><strong>Agent-Completed Call</strong><br>Check the <strong>Notes</strong> tab for confirmation.</li>
+    
+    <li><strong>Automated Call</strong><br>
+      Use the <strong>QA Call Log</strong> link to find the recording.<br>
+      If a recording is found, verify by listening, then <strong>download and upload to FORTH</strong>.</li>
+
+    <li><strong>Call Not Found</strong><br>
+      Attempt up to <strong>6 follow-up calls</strong>. If still no answer, <strong>return the file</strong>.</li>
+  </ul>
+  </div>
+  </div>
+  <div class="button-grid-full">
+    <button class="button" onclick="goBackToPrevious()">Back</button>
+    <button class="button" onclick="showOnly('enrollmentsUnderwritingFtE')">Finalizing</button>
+  </div>
+</div>
+
+
+<div class="container section" id="enrollmentsUnderwritingFtE">
+  <h2 style="text-align: center; font-weight: bold;">Underwriting Process</h2>
+  <div style="background-color: #fefff5; padding: 25px 40px; border-radius: 12px; color: #112663; width: 100%; box-sizing: border-box; margin-top: 20px;">
+  <h3 style="margin-top: 15px; text-align: left;">Finalizing the Enrollment</h3>
+    <div style="text-align: left; line-height: 1.8;">
+
+    <label><input type="checkbox"> Click <strong>Submit to Forth Pay</strong>, then choose <strong>FORTH Authorization</strong> and click <strong>Submit</strong></label><br>
+    <label><input type="checkbox"> Choose <strong>FORTH Authorization</strong> and click <strong>Submit</strong></label><br>
+    <label><input type="checkbox"> Click <strong>Submit</strong>.</label><br>
+    <label><input type="checkbox"> Adjust the <strong>Purchase Status</strong> as per guidelines</label><br>
+      <div style="margin-left: 25px;">
+      <label><input type="radio" name="PurchaseStatus"> Purchase Eligible</label><br>
+      <label><input type="radio" name="PurchaseStatus"> Rev-Share</label>
+      </div>
+    <label><input type="checkbox"> Click <strong>Edit Contact</strong> → choose <strong>Underwriting</strong></label><br>
+    <label><input type="checkbox"> From the dropdown set the appropriate <strong>Purchase Status</strong></label><br>
+    <label><input type="checkbox"> Use <strong>Purchase Eligible</strong> if the file meets all guidelines and no exceptions were made</label><br>
+    <label><input type="checkbox"> Use <strong>Rev-Share</strong> if the file has any of the following conditions:</label>
+    <ul style="padding-left: 30px; margin-top: 5px; margin-bottom: 10px;">
+      <li>Credit score below 500</li>
+      <li>Debt load under $10,000</li>
+      <li>Only one debt enrolled</li>
+      <li>Client resides in Minnesota</li>
+      <li>Enrolled with a DS competitor</li>
+      <li>Enrolled debt is a tribal loan</li>
+      <li>Evertrust creditors (always Rev-Share)</li>
+    </ul>
+      <label><input type="checkbox"> Navigate to the <strong>Enrollment</strong> tab</label><br>
+      <label><input type="checkbox"> Click on <strong>Approve File</strong></label><br>
+      <label><input type="checkbox"> Click on <strong>Complete Enrollment</strong></label><br>
+  </div>
+  <div class="button-grid-full">
+    <button class="button" onclick="goBackToPrevious()">Back</button>
+    <button class="button" onclick="showOnly('homepage')">Finish</button>
   </div>
 </div>
 
@@ -2847,9 +3384,21 @@ If the file status is “Invalid Banking,” verify whether the current informat
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 <div class="container section" id="legalNegotiations">
 <div style="text-align: center;">
-  <img src="https://imgur.com/rv4FbPe.gif" alt="Loading Animation" style="max-width: 100%; height: auto;">
+  <img src="https://imgur.com/Lci762y.gif" alt="Loading Animation" style="max-width: 100%; height: auto;">
 </div>
   <div class="button-grid" style="margin-top: 30px;">
     <button class="button" style="width: 100%;" onclick="goBackToPrevious()">Back</button>
@@ -2862,13 +3411,15 @@ If the file status is “Invalid Banking,” verify whether the current informat
 
 
 <div class="container section" id="legalSales">
-<div style="text-align: center;">
-  <img src="https://imgur.com/rv4FbPe.gif" alt="Loading Animation" style="max-width: 100%; height: auto;">
-</div>
+  <div style="text-align: center;">
+    <img src="https://i.imgur.com/VZjCmQu.gif" alt="Loading Animation" style="max-width: 100%; height: auto;">
+  </div>
   <div class="button-grid" style="margin-top: 30px;">
     <button class="button" style="width: 100%;" onclick="goBackToPrevious()">Back</button>
   </div>
 </div>
+
+
 
 
 
@@ -6936,6 +7487,18 @@ Fear not. We’re going to help you with the whole situation. Let’s finish the
     <button class="button" onclick="showOnly('telemarketing')">Finish</button>
   </div>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
