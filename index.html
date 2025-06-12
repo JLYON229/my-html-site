@@ -307,12 +307,12 @@
   transform: scale(1.05);
 }
 
-.banner-sticky {
-  position: sticky;
-  top: 0; /* stick to top of viewport */
-  margin-left: -20px; /* extend beyond left edge */
-  width: calc(100% + 40px); /* 20px left + 20px right = 40px */
-  z-index: 10;
+.banner-fixed {
+  position: fixed;
+  top: 0;
+  left: -10px;
+  width: calc(100% + 20px);
+  z-index: 999;
   background-color: white;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
@@ -323,21 +323,25 @@
   display: block;
 }
 
+body {
+  margin: 0;
+  padding-top: 60px; /* Adjust if your banner is taller/shorter */
+}
+
 </style>
 
 
 </head>
 <body>
+
+<div class="banner-fixed" id="topBanner">
+  <img src="https://imgur.com/sZWtrWX.png" alt="Banner" class="banner-image">
+</div>
+
 <div class="container section active" id="homepage">
 
-  <div class="banner-sticky">
-    <img 
-      src="https://imgur.com/sZWtrWX.png" 
-      alt="Banner" 
-      class="banner-image">
-  </div>
 
-<br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
   <h1>Navigate your way through the SOP's with confidence!</h1>
     <p style="padding: 15px 25px; border-radius: 12px; text-align: center; color: #112663;">Start by selecting your department</p>
@@ -7915,6 +7919,33 @@ function searchTable() {
     document.getElementById('dtiOutput').innerText = `DTI Ratio: ${rounded}%`;
     document.getElementById('dtiMessage').innerText = message;
   }
+
+function showOnly(idToShow) {
+  const allSections = document.querySelectorAll('.section');
+  allSections.forEach(sec => {
+    if (sec.classList.contains('active')) {
+      sec.classList.remove('active');
+      setTimeout(() => (sec.style.display = 'none'), 300);
+    }
+  });
+
+  const next = document.getElementById(idToShow);
+  next.style.display = 'block';
+  setTimeout(() => next.classList.add('active'), 10);
+
+  // Show/hide top banner
+  const banner = document.getElementById('topBanner');
+  if (idToShow === 'homepage') {
+    banner.style.display = 'block';
+  } else {
+    banner.style.display = 'none';
+  }
+
+  const current = historyStack[historyStack.length - 1];
+  if (current !== idToShow) {
+    historyStack.push(idToShow);
+  }
+}
 
 
 </script>
