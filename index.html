@@ -307,12 +307,12 @@
   transform: scale(1.05);
 }
 
-.banner-fixed {
-  position: fixed;
-  top: 0px; /* shifted down */
-  left: -10px; /* extend left */
-  width: calc(100% + 20px); /* 10px extra on each side */
-  z-index: 999;
+.banner-sticky {
+  position: sticky;
+  top: 11px;              /* offset from the top of viewport */
+  margin-left: -10px;     /* stretch left */
+  width: calc(100% + 20px); /* stretch right */
+  z-index: 10;
   background-color: white;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
@@ -328,16 +328,16 @@
 
 </head>
 <body>
-  <div class="container section active" id="homepage">
+<div class="container section active" id="homepage">
 
-<div class="banner-fixed">
-  <img 
-    src="https://imgur.com/sZWtrWX.png" 
-    alt="Banner" 
-    class="banner-image">
-</div>
+  <div class="banner-sticky">
+    <img 
+      src="https://imgur.com/sZWtrWX.png" 
+      alt="Banner" 
+      class="banner-image">
+  </div>
 
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br>
 
   <h1>Navigate your way through the SOP's with confidence!</h1>
     <p style="padding: 15px 25px; border-radius: 12px; text-align: center; color: #112663;">Start by selecting your department</p>
