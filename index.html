@@ -336,10 +336,6 @@ body {
 </head>
 <body>
 
-<div class="banner-fixed" id="topBanner">
-  <img src="https://imgur.com/sZWtrWX.png" alt="Banner" class="banner-image">
-</div>
-
 <div class="container section active" id="homepage">
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
@@ -454,7 +450,7 @@ body {
     <label><input type="checkbox"> Use the <strong>Pre-Screening Calculator</strong></label><br>
     <label><input type="checkbox"> Fill the <strong>Monthly Draft</strong> amount by Reviewing the client’s last six consecutive draft payments</strong></label><br>
     <label><input type="radio" name="Pre-screeningCheck"> <strong>If the draft amounts are the same</strong>, use that consistent amount as the <strong>Monthly Draft</strong></label><br>
-    <label><input type="radio" name="Pre-screeningCheck"> <strong>If the draft amounts vary</strong>, take the lowest amount from the six and use that as the <strong>Monthly Draft</strong></label><br>
+    <label><input type="radio" name="Pre-screeningCheck"> <strong>If the draft amounts vary</strong>, take the lowest amount from the six and use that as the <strong>Monthly Draft</strong> (only applicable for LendingUSA)</label><br>
     <label><input type="checkbox"> Navigate to the <strong>Debts</strong> tab in the client’s file</label><br>
     <label><input type="checkbox"> Locate the total enrolled debt</label><br>
     <label><input type="checkbox"> Enter this number in the <strong>Current Debts</strong> field</label><br>
@@ -532,10 +528,15 @@ body {
       <label><input type="checkbox"> Use the credit report to confirm or adjust balances, statuses, or any missing creditors</label><br>
       <label><input type="checkbox"> Double-check that the data entered is up to date and reflects the most accurate financial standing</label><br>
       <h3 style="text-align: left;">Save and Submit the Form:</h3>
-      <label><input type="checkbox"> Save the updated funding form using the client’s name or ID and Upload it on the file</label><br>
+      <label><input type="checkbox"> Save the updated funding form using the <strong>Loan Underwriting</strong> OneDrive folder</label><br>
       <label><input type="checkbox"> Notate the file using the <strong>LOAN FUNDING FORM REVIEW REQUEST</strong> template</label><br>
-      <label><input type="checkbox"> Submit your request by creating a task and tagging the <strong>(Payment - Lending) Team</strong></label><br>
+      <label><input type="checkbox"> Submit your request in the Funding Form requests tab in the  <strong>Payments - Lending TASKS</strong> excel sheet</label><br>
       <label><input type="checkbox"> choose the <strong>settlement at risk task</strong> type</label>
+      <h3 style="text-align: left;">Update the client’s file:</h3>
+      <label><input type="checkbox"> Navigate to the Edit Contact section <strong>Lending Status</strong></label><br>
+      <label><input type="checkbox"> Enter the Loan Pre-Qualified Date</label><br>
+      <label><input type="checkbox"> Enter the Max Amount Financed</label><br>
+      <label><input type="checkbox"> Enter the the EPFs calculated per Loan</strong> type</label>
     </div>
   </div>
   <div class="button-grid grid-2" style="margin-top: 30px;">
@@ -553,9 +554,8 @@ body {
 
       <label><input type="checkbox"> Upload <strong>Payment Proof</strong></label><br>
       <label><input type="checkbox"> Click on the <strong>Funding Form</strong></label><br>
-      <label><input type="checkbox"> Fill out all required fields using accurate client information pulled from FORTH</label><br>
+      <label><input type="checkbox"> Fill out all required fields using accurate client information accordingly</label><br>
         <div style="margin-left: 25px;">
-          <label><input type="checkbox"> Bank Name</label><br>
           <label><input type="checkbox"> Bank ABA Routing Number</label><br>
           <label><input type="checkbox"> Bank Account Number</label><br>
           <label><input type="checkbox"> Date of Enrollment</label><br>
@@ -584,9 +584,10 @@ body {
       <h3 style="text-align: left;">Update the client’s file:</h3>
       <label><input type="checkbox"> Navigate to the <strong>Edit Contact</strong> section</label><br>
       <label><input type="checkbox"> Enter the exact loan amount provided by the lender</label><br>
+      <label><input type="checkbox"> Enter the Loan Funding Date</label><br>
       <label><input type="checkbox"> Change the client status to <strong>Funded </strong></label><br>
-      <h3 style="text-align: left;">Cancel all scheduled drafts:</h3>
-      <label><input type="checkbox"> This includes settlement payments, EPFs, and any other pending drafts</label><br>
+      <h3 style="text-align: left;">Cancel scheduled drafts:</h3>
+      <label><input type="checkbox"> We only cancel the <strong>ACH Monthly Debit</strong> & the <strong>Complete Legal Plan Monthly Fee</strong></label><br>
       <h3 style="text-align: left;">Notate the file properly:</h3>
       <label><input type="checkbox"> Use the <strong>Client Signed Contract</strong> note template</label><br>
       <label><input type="checkbox"> Clearly state the lender’s name and the exact loan amount</label><br>
@@ -612,8 +613,8 @@ body {
       <label><input type="checkbox"> Click on <strong>Cancel the transactions</strong></label><br>
       <label><input type="checkbox"> Click on <strong>Save</strong></label><br>
       <label><input type="checkbox"> Click on <strong>Rest Client</strong></label><br>
-      <label><input type="checkbox"> Choose the <strong>All Cancelled Transactions</strong> option and hit <strong>Rest Client</strong></label><br>
-      <h3 style="text-align: left;">Update the client’s file:</h3>
+      <label><input type="checkbox"> Choose the <strong>ACH Debits</strong> & the <strong>Complete Legal Plan Monthly Fee</strong></label><br>
+      <h3 style="text-align: left;">Update the client’s file: (only after the file is ready for graduation)</h3>
       <label><input type="checkbox"> Search for the client’s file on the LUSA dashboard using their email address</label><br>
       <label><input type="checkbox"> Click on <strong>Take Action</strong></label><br>
       <label><input type="checkbox"> Click on <strong>Complete Certificate of Settlement</strong></label><br>
@@ -781,7 +782,7 @@ Do we have your verbal consent to perform a soft credit pull?
       <label><input type="checkbox"> Assign the file to yourself</label><br>
       <label><input type="checkbox"> Change the file's status to <strong>Loan consent obtained</strong></label><br>
       <label><input type="checkbox"> Update lending status</label><br>
-      <label><input type="checkbox"> Change the date on <strong>Loan consent received from client</strong> to the actual consent date</label><br>
+      <label><input type="checkbox"> Enter the Lender’s Name & change the date on <strong>Loan consent received from client</strong> to the actual consent date</label><br>
       <label><input type="checkbox"> Post <strong>Loan consent obtained</strong> note template</label><br>
       <label><input type="checkbox"> Track status on the lender’s portal</label><br>
       <label><input type="checkbox"> Call Client for Approval, look for <strong>Approved</strong> or <strong>Contract sent</strong> on the portal beforehand</label><br>      
@@ -3536,7 +3537,7 @@ If the file status is “Invalid Banking,” verify whether the current informat
 
     <label><input type="checkbox"> Click <strong>Submit to Forth Pay</strong>, then choose <strong>FORTH Authorization</strong> and click <strong>Submit</strong></label><br>
     <label><input type="checkbox"> Choose <strong>FORTH Authorization</strong> and click <strong>Submit</strong></label><br>
-    <label><input type="checkbox"> Click <strong>Submit</strong>.</label><br>
+    <label><input type="checkbox"> Click <strong>Submit</strong></label><br>
     <label><input type="checkbox"> Adjust the <strong>Purchase Status</strong> as per guidelines</label><br>
       <div style="margin-left: 25px;">
       <label><input type="radio" name="PurchaseStatus"> Purchase Eligible</label><br>
@@ -3559,6 +3560,8 @@ If the file status is “Invalid Banking,” verify whether the current informat
       <label><input type="checkbox"> Click on <strong>Approve File</strong></label><br>
       <label><input type="checkbox"> Click on <strong>Complete Enrollment</strong></label><br>
   </div>
+  <img src="https://imgur.com/qXYvjXP.png" alt="Agent Illustration"
+       style="position: absolute; bottom: 110px; right: 20px; max-width: 229px; height: auto; border-radius: 8px; pointer-events: none; opacity: 0.9;">
   </div>
 
   <div class="button-grid-full">
