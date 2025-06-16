@@ -310,8 +310,8 @@
 .banner-fixed {
   position: fixed;
   top: 0;
-  left: -10px;
-  width: calc(100% + 20px);
+  left: 0;
+  width: 100%;
   z-index: 999;
   background-color: white;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
@@ -321,11 +321,11 @@
   width: 100%;
   height: auto;
   display: block;
+  max-height: 400px; /* ← increased from 80px to 120px */
 }
 
-body {
-  margin: 0;
-  padding-top: 60px; /* Adjust if your banner is taller/shorter */
+#homepage {
+  padding-top: 400px; /* ← match the new banner height */
 }
 
 
@@ -336,8 +336,11 @@ body {
 </head>
 <body>
 
-<div class="container section active" id="homepage">
+<div class="banner-fixed" id="topBanner">
+  <img src="https://imgur.com/sZWtrWX.png" alt="Banner" class="banner-image">
+</div>
 
+<div class="container section active" id="homepage">
   <h1>Navigate your way through the SOP's with confidence!</h1>
     <p style="padding: 15px 25px; border-radius: 12px; text-align: center; color: #112663;">Start by selecting your department</p>
 
